@@ -1,16 +1,17 @@
 /* 
   FILE: common.css
-  ĐÂY LÀ GÌ? : File phong cách chung cho toàn bộ website Portfolio.
-  HỖ TRỢ : Dark Mode (Mặc định - Midnight Cyber Luxe) & Light Mode (Warm Editorial Paper), Glassmorphism, Theme Switcher, Toast Notification.
+  ĐÂY LÀ GÌ? : File phong cách chung cho toàn bộ website Portfolio Khương Tuấn Anh.
+  HỖ TRỢ : Dark Mode (Midnight Cyber Luxe) & Light Mode (Warm Editorial Luxe), Glassmorphism, Theme Switcher, Toast Notification.
 */
 
 :root {
   /* ========== BẢNG MÀU DARK MODE (MẶC ĐỊNH - MIDNIGHT LUXE) ========== */
-  --bg-gradient: radial-gradient(circle at 15% 15%, rgba(30, 27, 75, 0.4) 0%, rgba(11, 15, 25, 0.98) 50%),
-                 radial-gradient(circle at 85% 85%, rgba(14, 116, 144, 0.15) 0%, rgba(11, 15, 25, 1) 50%);
+  --bg-gradient: radial-gradient(circle at 15% 15%, rgba(30, 27, 75, 0.45) 0%, rgba(11, 15, 25, 0.98) 50%),
+                 radial-gradient(circle at 85% 85%, rgba(14, 116, 144, 0.2) 0%, rgba(11, 15, 25, 1) 50%);
   --bg-color: #0b0f19;
-  --surface: rgba(17, 24, 39, 0.75);
-  --surface-hover: rgba(30, 41, 59, 0.85);
+  --surface: rgba(17, 24, 39, 0.8);
+  --surface-hover: rgba(30, 41, 59, 0.9);
+  --surface-card: rgba(17, 24, 39, 0.85);
   --surface-glass: rgba(255, 255, 255, 0.04);
   --surface-glass-border: rgba(255, 255, 255, 0.08);
   --surface-glass-hover: rgba(255, 255, 255, 0.12);
@@ -26,40 +27,44 @@
   --accent-glow-strong: rgba(245, 158, 11, 0.45);
 
   --card-border: rgba(255, 255, 255, 0.08);
-  --card-border-hover: rgba(245, 158, 11, 0.4);
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.1);
+  --card-border-hover: rgba(245, 158, 11, 0.45);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.15);
 
   --radius: 20px;
   --radius-sm: 12px;
+  --radius-pill: 50px;
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ========== BẢNG MÀU LIGHT MODE (WARM PREMIUM EDITORIAL) ========== */
+/* ========== BẢNG MÀU LIGHT MODE (WARM EDITORIAL LUXE) ========== */
 [data-theme="light"] {
-  --bg-gradient: radial-gradient(circle at 10% 10%, rgba(245, 237, 224, 0.8) 0%, rgba(253, 250, 245, 1) 60%),
-                 radial-gradient(circle at 90% 90%, rgba(230, 220, 205, 0.5) 0%, rgba(253, 250, 245, 1) 50%);
+  --bg-gradient: radial-gradient(circle at 10% 10%, rgba(245, 237, 224, 0.85) 0%, rgba(253, 250, 245, 1) 60%),
+                 radial-gradient(circle at 90% 90%, rgba(230, 220, 205, 0.6) 0%, rgba(253, 250, 245, 1) 50%);
   --bg-color: #fdfaf5;
-  --surface: #ffffff;
-  --surface-hover: #f8f4ed;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-hover: #f5efe6;
+  --surface-card: #ffffff;
   --surface-glass: rgba(255, 255, 255, 0.85);
-  --surface-glass-border: rgba(180, 150, 110, 0.2);
-  --surface-glass-hover: rgba(255, 255, 255, 0.95);
+  --surface-glass-border: rgba(180, 150, 110, 0.25);
+  --surface-glass-hover: rgba(255, 255, 255, 0.98);
 
   --text: #111827;
   --text-muted: #4b5563;
   --text-dim: #9ca3af;
 
-  --accent: #2c3e50;           /* Xanh đen sâu */
+  --accent: #d97706;           /* Amber đậm ấm áp */
   --accent-secondary: #0284c7;
-  --accent-light: #9c7c5e;     /* Be đồng */
-  --accent-glow: rgba(156, 124, 94, 0.2);
-  --accent-glow-strong: rgba(44, 62, 80, 0.3);
+  --accent-light: #b45309;
+  --accent-glow: rgba(217, 119, 6, 0.2);
+  --accent-glow-strong: rgba(217, 119, 6, 0.35);
 
-  --card-border: rgba(229, 224, 216, 0.8);
-  --card-border-hover: rgba(156, 124, 94, 0.5);
-  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 12px 30px rgba(44, 62, 80, 0.08);
+  --card-border: rgba(229, 224, 216, 0.85);
+  --card-border-hover: rgba(217, 119, 6, 0.5);
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 35px rgba(44, 62, 80, 0.1);
 }
 
 /* RESET CƠ BẢN */
@@ -81,7 +86,7 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ANIMATION HIỆN DẦN */
+/* ANIMATIONS */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -109,14 +114,13 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 1.5rem;
-  padding: 14px 34px;
+  padding: 13px 32px;
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
   color: #0b0f19;
   font-weight: 700;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   transition: var(--transition);
   box-shadow: 0 8px 25px var(--accent-glow);
@@ -137,13 +141,14 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 32px;
+  padding: 12px 28px;
   background: var(--surface-glass);
   color: var(--text);
   border: 1px solid var(--card-border);
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.92rem;
   transition: var(--transition);
   backdrop-filter: blur(10px);
 }
@@ -160,9 +165,9 @@ body {
   position: sticky;
   top: 0;
   background: var(--surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 1rem 3rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 1rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,12 +179,12 @@ body {
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   text-decoration: none;
   color: var(--text);
   font-weight: 700;
@@ -191,71 +196,87 @@ body {
   color: var(--accent);
 }
 
-.back-btn {
+.nav-link-btn {
   color: var(--text-muted);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.88rem;
   padding: 8px 18px;
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--card-border);
   background: var(--surface-glass);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: var(--transition);
 }
 
-.back-btn:hover {
-  background: var(--surface-hover);
-  color: var(--accent);
+.nav-link-btn:hover {
+  color: var(--text);
   border-color: var(--accent);
+  background: var(--surface-glass-hover);
+  transform: translateY(-2px);
 }
 
-/* ========== NÚT CHUYỂN THEME (THEME TOGGLE) ========== */
+/* THEME TOGGLE BUTTON */
 .theme-toggle {
   background: var(--surface-glass);
   border: 1px solid var(--card-border);
   color: var(--text);
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: var(--transition);
 }
 
 .theme-toggle:hover {
-  transform: rotate(20deg) scale(1.1);
   border-color: var(--accent);
   color: var(--accent);
+  transform: rotate(20deg) scale(1.08);
   box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* ========== TOAST NOTIFICATION (COPY STATUS) ========== */
+/* TOAST NOTIFICATION */
 .toast-notification {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 2rem;
+  right: 2rem;
   background: var(--surface);
-  border: 1px solid var(--accent);
   color: var(--text);
-  padding: 12px 24px;
-  border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(16px);
-  z-index: 9999;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow-lg);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  font-size: 0.92rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  z-index: 99999;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: var(--transition);
+  backdrop-filter: blur(16px);
 }
 
 .toast-notification.show {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* RESPONSIVE COMMON */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.9rem 1.2rem;
+  }
+  .logo {
+    font-size: 1.15rem;
+  }
 }

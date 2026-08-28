@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi Tiết Dự Án | KHƯƠNG TUẤN ANH</title>
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="project-detail.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
   <!-- READING PROGRESS BAR -->
   <div id="readingProgress" class="reading-progress-bar"></div>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
+    
+    <div class="breadcrumb-nav">
+      <a href="index.html">Profile</a>
+      <i class="fas fa-chevron-right breadcrumb-sep"></i>
+      <a href="projects.html">Dự Án</a>
+      <i class="fas fa-chevron-right breadcrumb-sep"></i>
+      <span class="breadcrumb-current" id="breadcrumbProject">Chi Tiết</span>
+    </div>
+
     <div class="navbar-right">
-      <a href="projects.html" class="back-btn"><i class="fas fa-arrow-left"></i> Danh sách Dự án</a>
+      <a href="projects.html" class="nav-link-btn"><i class="fas fa-arrow-left"></i> Danh sách Dự án</a>
+      <button class="theme-toggle" id="themeToggle" title="Đổi giao diện"><i class="fas fa-sun"></i></button>
     </div>
   </nav>
 
@@ -24,7 +37,7 @@
     <div class="detail-content">
 
       <!-- PHẦN ĐẦU TRANG CHI TIẾT -->
-      <div class="detail-header">
+      <header class="detail-header">
         <div class="detail-meta-top">
           <span class="detail-type" id="projectType">Loại dự án</span>
           <span class="duration-badge" id="projectDuration"><i class="far fa-calendar-alt"></i> Thời gian</span>
@@ -37,10 +50,10 @@
 
         <!-- FRAMEWORKS BADGES -->
         <div class="frameworks-container" id="frameworksContainer" style="display:none;">
-          <span class="frameworks-label"><i class="fas fa-layer-group"></i> Framework & Mô hình:</span>
+          <span class="frameworks-label"><i class="fas fa-layer-group"></i> Frameworks:</span>
           <div class="frameworks-list" id="frameworksList"></div>
         </div>
-      </div>
+      </header>
 
       <!-- KPI HERO STRIP -->
       <div class="kpi-hero-strip" id="kpiHeroStrip" style="display:none;">
@@ -65,7 +78,7 @@
         <div class="findings-list" id="findingsList"></div>
       </section>
 
-      <!-- 4. BÀI HỌC RÚT RA & KEY TAKEAWAYS (MỚI) -->
+      <!-- 4. BÀI HỌC RÚT RA & KEY TAKEAWAYS -->
       <section class="detail-section" id="takeawaysSection" style="display:none;">
         <h2><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Bài Học & Đúc Rút Chuyên Môn</h2>
         <div class="takeaways-grid" id="takeawaysList"></div>
@@ -83,7 +96,7 @@
         <div class="tools-list" id="toolsList"></div>
       </section>
 
-      <!-- 7. PREV / NEXT PROJECT NAVIGATION (MỚI) -->
+      <!-- 7. PREV / NEXT PROJECT NAVIGATION -->
       <div class="project-nav-bar" id="projectNavBar">
         <a href="#" id="prevProjectBtn" class="project-nav-btn prev">
           <i class="fas fa-chevron-left"></i>
@@ -108,7 +121,7 @@
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
           </svg>
-          Xem Chi Tiết Báo Cáo (Google Docs)
+          Xem Toàn Bộ Báo Cáo / Tài Liệu Gốc
         </a>
       </div>
 
@@ -141,6 +154,7 @@
         document.getElementById('projectTitle').textContent = project.title;
         document.getElementById('projectDescription').textContent = project.description || '';
         document.getElementById('projectDuration').innerHTML = `<i class="far fa-calendar-alt"></i> ${project.duration || '2026'}`;
+        document.getElementById('breadcrumbProject').textContent = project.title;
         document.title = `${project.title} - KHƯƠNG TUẤN ANH`;
 
         const catColor = project.categoryColor || 'var(--accent)';
@@ -251,7 +265,10 @@
 
         // 7. Render Công Cụ
         const toolsList = document.getElementById('toolsList');
-        toolsList.innerHTML = project.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('');
+        toolsList.innerHTML = project.tools.map(tool => {
+          const color = toolColors[tool] || '#6b7280';
+          return `<span class="tool-tag" style="--tag-color: ${color};"><i class="fas fa-check-circle" style="color: ${color};"></i> ${tool}</span>`;
+        }).join('');
 
         // 8. Prev / Next Navigation Logic
         const allIds = Object.keys(projectsData).map(Number);
@@ -283,9 +300,10 @@
           }
         }
       } else {
-        document.body.innerHTML = '<h1 style="text-align:center; padding: 10rem 1rem; color: var(--text);">Dự án không tồn tại hoặc đã bị gỡ bỏ.</h1>';
+        document.body.innerHTML = '<div style="text-align:center; padding: 10rem 1rem; color: var(--text);"><h2>Dự án không tồn tại hoặc đã bị gỡ bỏ.</h2><br><a href="projects.html" class="btn-primary">Quay lại danh sách dự án</a></div>';
       }
     });
   </script>
 </body>
+
 </html>

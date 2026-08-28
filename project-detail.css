@@ -1,7 +1,7 @@
 /* 
   FILE: project-detail.css
-  ĐÂY LÀ GÌ? : Styling dành riêng cho Trang chi tiết dự án (Case Study View)
-  HỖ TRỢ : Reading progress bar, Framework badges, Process phase cards, Takeaways, Prev/Next navigation
+  ĐÂY LÀ GÌ? : File phong cách dành riêng cho Trang chi tiết dự án (Case Study View)
+  HỖ TRỢ : Breadcrumbs, Reading progress bar, Framework badges, Process phase cards, Takeaways, Prev/Next navigation.
 */
 
 /* ================== READING PROGRESS BAR ================== */
@@ -17,6 +17,46 @@
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
+/* ================== BREADCRUMB IN NAVBAR ================== */
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.breadcrumb-nav a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb-sep {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+}
+
+.breadcrumb-current {
+  color: var(--accent);
+  font-weight: 600;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 850px) {
+  .breadcrumb-nav {
+    display: none;
+  }
+}
+
 /* ================== CONTAINER & LAYOUT ================== */
 .detail-container {
   min-height: 100vh;
@@ -24,13 +64,19 @@
 }
 
 .detail-content {
-  max-width: 880px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 /* ================== DETAIL HEADER ================== */
 .detail-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-sm);
 }
 
 .detail-meta-top {
@@ -48,7 +94,7 @@
   background: var(--accent-glow);
   color: var(--accent);
   border: 1px solid rgba(245, 158, 11, 0.3);
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -62,7 +108,7 @@
   background: var(--surface-glass);
   color: var(--text-muted);
   border: 1px solid var(--card-border);
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   font-weight: 600;
 }
 
@@ -76,7 +122,7 @@
   background: var(--surface-glass);
   color: var(--text-muted);
   border: 1px solid var(--card-border);
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
@@ -90,12 +136,11 @@
 
 .detail-header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   color: var(--text);
   margin-bottom: 1rem;
-  line-height: 1.25;
+  line-height: 1.3;
   font-weight: 700;
-  letter-spacing: 0.01em;
 }
 
 .detail-header p {
@@ -115,7 +160,7 @@
   background: var(--surface-glass);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
 .frameworks-label {
@@ -137,7 +182,7 @@
 
 .framework-pill {
   font-size: 0.78rem;
-  padding: 3px 10px;
+  padding: 3px 12px;
   background: var(--surface-hover);
   color: var(--text);
   border: 1px solid var(--card-border);
@@ -147,128 +192,99 @@
 
 /* ================== KPI HERO STRIP ================== */
 .kpi-hero-strip {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.8rem;
 }
 
 .kpi-hero-card {
   background: var(--surface);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-sm);
-  padding: 1.5rem 1rem;
+  border-radius: var(--radius);
+  padding: 1.5rem 1.2rem;
   text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.kpi-hero-card::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
-  opacity: 0.6;
 }
 
 .kpi-hero-card:hover {
   transform: translateY(-4px);
   border-color: var(--card-border-hover);
-  box-shadow: var(--shadow-lg);
 }
 
 .kpi-hero-icon {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  line-height: 1;
+  margin-bottom: 0.4rem;
 }
 
 .kpi-hero-number {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
-  font-family: 'Playfair Display', serif;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.3rem;
 }
 
 .kpi-hero-label {
   font-size: 0.82rem;
   color: var(--text-muted);
-  font-weight: 500;
-  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 /* ================== SECTIONS ================== */
 .detail-section {
   background: var(--surface);
-  backdrop-filter: blur(16px);
-  padding: 2.2rem 2.4rem;
-  border-radius: var(--radius);
-  margin-bottom: 2rem;
   border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 2.2rem;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(16px);
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.detail-section:hover {
-  border-color: var(--card-border-hover);
 }
 
 .detail-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--card-border);
-  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* OBJECTIVES LIST */
+/* 1. MỤC TIÊU LIST */
 .objectives-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .objectives-list li {
-  padding: 1rem 1.2rem 1rem 2.8rem;
   position: relative;
-  color: var(--text-muted);
+  padding-left: 28px;
   font-size: 0.98rem;
-  line-height: 1.7;
-  background: var(--surface-glass);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
-}
-
-.objectives-list li:hover {
   color: var(--text);
-  border-color: var(--card-border-hover);
-  transform: translateX(4px);
+  line-height: 1.7;
 }
 
 .objectives-list li::before {
-  content: "✓";
+  content: '✓';
   position: absolute;
-  left: 1.1rem;
+  left: 0;
+  top: 0;
   color: var(--accent);
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-/* ================== PROCESS PHASE CARDS ================== */
+/* 2. QUY TRÌNH (PROCESS CARDS GRID) */
 .process-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.2rem;
 }
 
@@ -278,15 +294,12 @@
   border-radius: var(--radius-sm);
   padding: 1.4rem;
   transition: var(--transition);
-  display: flex;
-  flex-direction: column;
 }
 
 .process-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--card-border-hover);
   background: var(--surface-hover);
-  box-shadow: var(--shadow-sm);
+  border-color: var(--card-border-hover);
+  transform: translateY(-3px);
 }
 
 .process-card-header {
@@ -297,35 +310,32 @@
 }
 
 .process-step-num {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: var(--accent);
   background: var(--accent-glow);
   padding: 2px 8px;
-  border-radius: 12px;
-  letter-spacing: 0.05em;
+  border-radius: 6px;
 }
 
 .process-step-icon {
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: 1.2rem;
 }
 
 .process-card h4 {
   font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 0.5rem;
-  font-weight: 700;
 }
 
 .process-card p {
-  color: var(--text-muted);
   font-size: 0.88rem;
+  color: var(--text-muted);
   line-height: 1.6;
-  margin: 0;
 }
 
-/* ================== FINDINGS & INSIGHT CARDS ================== */
+/* 3. KẾT QUẢ & FINDINGS */
 .findings-list {
   display: flex;
   flex-direction: column;
@@ -333,146 +343,88 @@
 }
 
 .finding-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  padding: 1.2rem 1.5rem;
   background: var(--surface-glass);
   border-left: 4px solid var(--accent);
-  border-radius: 0 12px 12px 0;
-  border: 1px solid var(--card-border);
-  border-left: 4px solid var(--accent);
+  border-top: 1px solid var(--card-border);
+  border-right: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.2rem 1.5rem;
   transition: var(--transition);
 }
 
 .finding-card:hover {
-  transform: translateX(6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--card-border-hover);
+  background: var(--surface-hover);
 }
 
 .finding-badge {
-  font-size: 0.78rem;
+  display: inline-block;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: #0b0f19;
-  background: var(--accent);
-  padding: 3px 10px;
-  border-radius: 20px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  letter-spacing: 0.03em;
-}
-
-[data-theme="light"] .finding-badge {
-  color: #ffffff;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
 }
 
 .finding-text {
   font-size: 0.95rem;
+  color: var(--text);
   line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0;
 }
 
 .finding-text strong {
-  color: var(--text);
+  color: var(--accent-light);
 }
 
-/* ================== TAKEAWAYS / BÀI HỌC RÚT RA ================== */
-.takeaways-grid {
+/* 4. TAKEAWAYS & SKILLS */
+.takeaways-grid,
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.2rem;
 }
 
-.takeaway-card {
+.takeaway-card,
+.skill-card {
   display: flex;
-  align-items: flex-start;
   gap: 1rem;
-  padding: 1.3rem;
   background: var(--surface-glass);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
+  padding: 1.4rem;
   transition: var(--transition);
 }
 
-.takeaway-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-sm);
-}
-
-.takeaway-icon {
-  font-size: 1.6rem;
-  line-height: 1;
-  background: var(--surface-hover);
-  padding: 10px;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
-.takeaway-info h4 {
-  margin: 0 0 0.4rem 0;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.takeaway-info p {
-  margin: 0;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
-
-/* ================== SKILLS & TOOLS ================== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
-}
-
-.skill-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.3rem;
-  background: var(--surface-glass);
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
+.takeaway-card:hover,
 .skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  background: var(--surface-hover);
   border-color: var(--card-border-hover);
+  transform: translateY(-3px);
 }
 
+.takeaway-icon,
 .skill-icon {
-  font-size: 1.6rem;
-  line-height: 1;
-  background: var(--surface-hover);
-  padding: 10px;
-  border-radius: 12px;
+  font-size: 1.8rem;
   flex-shrink: 0;
 }
 
+.takeaway-info h4,
 .skill-info h4 {
-  margin: 0 0 0.3rem 0;
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
+  margin-bottom: 0.4rem;
 }
 
+.takeaway-info p,
 .skill-info p {
-  margin: 0;
   font-size: 0.88rem;
-  line-height: 1.6;
   color: var(--text-muted);
+  line-height: 1.6;
 }
 
+/* 6. TOOLS LIST */
 .tools-list {
   display: flex;
   flex-wrap: wrap;
@@ -480,41 +432,38 @@
 }
 
 .tool-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
   padding: 8px 18px;
   background: var(--surface-glass);
-  color: var(--text);
   border: 1px solid var(--card-border);
-  border-radius: 25px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: var(--transition);
+  border-radius: var(--radius-pill);
+  color: var(--text);
 }
 
-.tool-tag:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* ================== PREV / NEXT NAVIGATION ================== */
+/* 7. PREV / NEXT NAVIGATION BAR */
 .project-nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin: 3rem 0 1rem;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .project-nav-btn {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.2rem 1.5rem;
+  padding: 1.2rem 1.6rem;
   background: var(--surface);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   text-decoration: none;
   color: var(--text);
   transition: var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
 .project-nav-btn.next {
@@ -525,59 +474,51 @@
 .project-nav-btn:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-}
-
-.project-nav-btn i {
-  font-size: 1.1rem;
-  color: var(--accent);
+  box-shadow: var(--shadow-md);
 }
 
 .nav-sub {
   display: block;
   font-size: 0.75rem;
-  text-transform: uppercase;
   color: var(--text-muted);
+  text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: 2px;
+  letter-spacing: 0.04em;
 }
 
 .nav-title {
   display: block;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 260px;
+  margin-top: 2px;
 }
 
-/* ================== CTA ================== */
+.project-nav-btn:hover .nav-title {
+  color: var(--accent);
+}
+
+/* 8. DETAIL CTA */
 .detail-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--card-border);
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
 .doc-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.9rem 2rem;
+  gap: 10px;
+  padding: 13px 30px;
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
   color: #0b0f19;
-  border-radius: 50px;
-  font-size: 0.98rem;
   font-weight: 700;
+  border-radius: var(--radius-pill);
   text-decoration: none;
-  letter-spacing: 0.02em;
+  font-size: 0.95rem;
   transition: var(--transition);
   box-shadow: 0 8px 25px var(--accent-glow);
 }
@@ -587,7 +528,7 @@
 }
 
 .doc-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: 0 12px 30px var(--accent-glow-strong);
 }
 
@@ -597,34 +538,27 @@
   fill: currentColor;
 }
 
-/* ================== RESPONSIVE ================== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .detail-container {
-    padding: 2rem 1rem 4rem;
+  .detail-header {
+    padding: 1.5rem;
   }
   .detail-header h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   .detail-section {
     padding: 1.5rem;
   }
-  .kpi-hero-strip {
-    grid-template-columns: 1fr;
-  }
-  .process-cards-grid {
-    grid-template-columns: 1fr;
-  }
   .project-nav-bar {
     grid-template-columns: 1fr;
   }
-  .project-nav-btn.next {
-    justify-content: flex-start;
-    text-align: left;
+  .detail-cta {
+    flex-direction: column;
+    align-items: stretch;
   }
-  .project-nav-btn.next div {
-    order: 2;
-  }
-  .project-nav-btn.next i {
-    order: 1;
+  .detail-cta a {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 }

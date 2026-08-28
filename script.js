@@ -1,21 +1,78 @@
 /* 
   FILE: script.js
-  ĐÂY LÀ GÌ? : Bộ não điều khiển dữ liệu, theme, hiệu ứng và tương tác cho Portfolio Khương Tuấn Anh.
+  ĐÂY LÀ GÌ? : Bộ não điều khiển dữ liệu dự án, theme Dark/Light, hiệu ứng và tương tác cho Portfolio Khương Tuấn Anh.
 */
+
+// ================== CẤU HÌNH DANH MỤC DỰ ÁN ==================
+const categoriesConfig = {
+  all: {
+    id: "all",
+    name: "Tất Cả Dự Án",
+    icon: "fas fa-layer-group",
+    desc: "Toàn bộ các dự án thực tế & đồ án học thuật trong các lĩnh vực Marketing, Content & Design."
+  },
+  research: {
+    id: "research",
+    name: "Nghiên Cứu Thị Trường",
+    icon: "fas fa-chart-pie",
+    desc: "Đào sâu insight người tiêu dùng, phân tích định vị 7P, SWOT, STP & khảo sát thực địa chuyên sâu."
+  },
+  content: {
+    id: "content",
+    name: "Kế Hoạch Content",
+    icon: "fas fa-pen-nib",
+    desc: "Xây dựng Content Pillar, Content Angle, phễu chuyển đổi và lịch biên tập 30 ngày cho Social Media."
+  },
+  branding: {
+    id: "branding",
+    name: "Nhận Diện Thương Hiệu",
+    icon: "fas fa-palette",
+    desc: "Quy chuẩn Brand DNA, Moodboard, bảng màu, font chữ, Key Visual & ứng dụng nhận diện đa nền tảng."
+  },
+  design: {
+    id: "design",
+    name: "Media & Banner Ads",
+    icon: "fas fa-image",
+    desc: "Sản xuất ấn phẩm quảng cáo, bộ 19+ kích thước Banner Ads chuẩn GDN, Facebook Ads & tối ưu CTR."
+  },
+  seo: {
+    id: "seo",
+    name: "SEO Content",
+    icon: "fas fa-search",
+    desc: "Nghiên cứu Search Intent, cấu trúc dàn bài H1-H3 chuẩn SEO On-Page, tối ưu thứ hạng tìm kiếm tự nhiên."
+  }
+};
+
+// Map màu sắc cho từng tool
+const toolColors = {
+  'Google Forms': '#4285f4',
+  'Google Sheets': '#0f9d58',
+  'Canva': '#00c4cc',
+  'Facebook': '#1877f2',
+  'Instagram': '#e1306c',
+  'TikTok': '#000000',
+  'AI Tools': '#8b5cf6',
+  'GDN Standard': '#fbbc04',
+  'Facebook Ads': '#1877f2',
+  'Web Banner': '#f97316'
+};
 
 // ================== DỮ LIỆU CÁC DỰ ÁN ==================
 const projectsData = {
   1: {
+    id: 1,
     title: "Nghiên Cứu Nhận Thức Thương Hiệu: Circle K vs GS25",
     type: "Đồ Án Nghiên Cứu",
     category: "research",
-    categoryName: "Đồ Án Nghiên Cứu",
+    categoryName: "Nghiên Cứu Thị Trường",
+    categoryIcon: "fas fa-chart-pie",
     categoryColor: "#38bdf8",
     duration: "Học kỳ 1 — 2026",
-    results: "Báo cáo 160+ trang • 100+ Khảo sát",
+    results: "Báo cáo 160+ trang • 100+ Khảo sát thực tế",
     tools: ["Google Forms", "Google Sheets", "Canva"],
     googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
     description: "Nghiên cứu hành vi tiêu dùng và định vị cạnh tranh 7P Marketing Mix giữa hai chuỗi cửa hàng tiện lợi hàng đầu Việt Nam.",
+    featured: true,
     kpis: [
       { number: "160+", label: "Trang báo cáo", icon: "📄" },
       { number: "100+", label: "Mẫu khảo sát", icon: "📊" },
@@ -35,7 +92,7 @@ const projectsData = {
       { icon: "🧠", name: "Phân Tích Định Vị Thương Hiệu (Branding)", desc: "Vận dụng thành thạo mô hình 7P Marketing Mix, SWOT, STP và AIDA để bóc tách chiến lược cạnh tranh giữa hai gã khổng lồ bán lẻ." },
       { icon: "📈", name: "Đọc Hiểu Hành Vi Tiêu Dùng (Consumer Insight)", desc: "Phân tích tâm lý mua hàng ngẫu hứng, các yếu tố giữ chân khách hàng (retention drivers) và xu hướng tiêu dùng Gen Z / Millennial." },
       { icon: "💡", name: "Tư Duy Chiến Lược Bán Lẻ (CVS Strategy)", desc: "Đánh giá hiệu quả mô hình 24/7, chiến lược trưng bày sản phẩm (merchandising), tối ưu hóa trải nghiệm điểm bán (POS experience)." },
-      { icon: "✍️", name: "Kỹ Năng Quản Lý & Viết Báo Cáo Chuyên Sâu", desc: "Tổng hợp, cấu trúc hóa và trình trình báo cáo nghiên cứu 160+ trang với tư duy logic, lập luận chặt chẽ và bằng chứng khoa học." }
+      { icon: "✍️", name: "Kỹ Năng Quản Lý & Viết Báo Cáo Chuyên Sâu", desc: "Tổng hợp, cấu trúc hóa và trình bày báo cáo nghiên cứu 160+ trang với tư duy logic, lập luận chặt chẽ và bằng chứng khoa học." }
     ],
     objectives: [
       "Đánh giá và so sánh trải nghiệm sản phẩm & dịch vụ tại Circle K và GS25",
@@ -60,10 +117,12 @@ const projectsData = {
   },
 
   2: {
+    id: 2,
     title: "Kế Hoạch Content Facebook & Instagram",
     type: "Kế Hoạch Nội Dung",
     category: "content",
-    categoryName: "Kế Hoạch Nội Dung",
+    categoryName: "Kế Hoạch Content",
+    categoryIcon: "fas fa-pen-nib",
     categoryColor: "#f59e0b",
     description: "Nghiên cứu khách hàng, đối thủ & định vị thương hiệu; xây dựng content pillar, content angle và lịch nội dung tuần/tháng cho mạng xã hội.",
     duration: "Tháng 05/2026",
@@ -108,10 +167,12 @@ const projectsData = {
   },
 
   3: {
+    id: 3,
     title: "Xây Dựng Bộ Nhận Diện Thương Hiệu Cơ Bản",
     type: "Branding & Visual",
     category: "branding",
-    categoryName: "Branding & Visual",
+    categoryName: "Nhận Diện Thương Hiệu",
+    categoryIcon: "fas fa-palette",
     categoryColor: "#a78bfa",
     description: "Nghiên cứu định vị & khách hàng mục tiêu; xây dựng moodboard, bảng màu, kiểu chữ, key visual và ứng dụng nhận diện truyền thông.",
     duration: "Tháng 04/2026",
@@ -156,10 +217,12 @@ const projectsData = {
   },
 
   4: {
+    id: 4,
     title: "Thiết Kế Banner Ads — Tinh Dầu Thiên Nhiên",
     type: "Media & Ad Design",
     category: "design",
-    categoryName: "Media Design",
+    categoryName: "Media & Banner Ads",
+    categoryIcon: "fas fa-image",
     categoryColor: "#fb923c",
     description: "Bộ thiết kế banner quảng cáo trực tuyến đa kích thước (GDN / Web Ads) cho thương hiệu Tinh Dầu Thiên Nhiên bao gồm 19 kích thước chuẩn (KV, 300x250, 728x90, 300x600...).",
     duration: "Tháng 03/2026",
@@ -204,10 +267,12 @@ const projectsData = {
   },
 
   5: {
+    id: 5,
     title: "Viết Bài Chuẩn SEO Chuyên Sâu",
     type: "SEO Content Writing",
     category: "seo",
     categoryName: "SEO Content",
+    categoryIcon: "fas fa-search",
     categoryColor: "#4ade80",
     description: "Nghiên cứu từ khóa & search intent; xây dựng dàn ý cấu trúc H1-H3; viết và tối ưu bài viết chuẩn SEO tăng thứ hạng tự nhiên.",
     duration: "Tháng 02/2026",
@@ -252,7 +317,7 @@ const projectsData = {
   }
 };
 
-// ================== CÁC CHỨC NĂNG ĐIỀU KHIỂN ==================
+// ================== CÁC CHỨC NĂNG ĐIỀU HƯỚNG & HELPER ==================
 
 function goToProject(projectId) {
   window.location.href = `project-detail.html?id=${projectId}`;
@@ -261,6 +326,28 @@ function goToProject(projectId) {
 function getProjectFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get('id');
+}
+
+// Tính số lượng dự án theo từng danh mục
+function getCategoryCounts() {
+  const counts = { all: 0 };
+  Object.keys(categoriesConfig).forEach(cat => {
+    counts[cat] = 0;
+  });
+
+  const projectIds = Object.keys(projectsData);
+  counts.all = projectIds.length;
+
+  projectIds.forEach(id => {
+    const cat = projectsData[id].category;
+    if (counts[cat] !== undefined) {
+      counts[cat]++;
+    } else {
+      counts[cat] = 1;
+    }
+  });
+
+  return counts;
 }
 
 // ========== MANAGEMENT DÙNG CHUNG KHI DOM LOAD ==========
@@ -367,7 +454,7 @@ function initTypewriter() {
 
       if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        typingSpeed = 1800; // Nghỉ khi gõ xong
+        typingSpeed = 1800;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -408,5 +495,3 @@ function initSmoothScroll() {
     });
   });
 }
-
-console.log('%cPortfolio Khương Tuấn Anh - Ultra Modern Edition Loaded!', 'color: #f59e0b; font-family: Inter; font-weight: bold; font-size: 14px;');
