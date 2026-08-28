@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Dự Án | KHƯƠNG TUẤN ANH</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="project-detail.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <!-- READING PROGRESS BAR -->
+  <div id="readingProgress" class="reading-progress-bar"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
+    <div class="navbar-right">
+      <a href="projects.html" class="back-btn"><i class="fas fa-arrow-left"></i> Danh sách Dự án</a>
+    </div>
+  </nav>
+
+  <div class="detail-container">
+    <div class="detail-content">
+
+      <!-- PHẦN ĐẦU TRANG CHI TIẾT -->
+      <div class="detail-header">
+        <div class="detail-meta-top">
+          <span class="detail-type" id="projectType">Loại dự án</span>
+          <span class="duration-badge" id="projectDuration"><i class="far fa-calendar-alt"></i> Thời gian</span>
+          <button class="share-btn" id="shareBtn" onclick="copyProjectLink()" title="Sao chép liên kết dự án">
+            <i class="fas fa-share-alt"></i> Chia sẻ
+          </button>
+        </div>
+        <h1 id="projectTitle">Tên Dự Án</h1>
+        <p id="projectDescription">Mô tả dự án</p>
+
+        <!-- FRAMEWORKS BADGES -->
+        <div class="frameworks-container" id="frameworksContainer" style="display:none;">
+          <span class="frameworks-label"><i class="fas fa-layer-group"></i> Framework & Mô hình:</span>
+          <div class="frameworks-list" id="frameworksList"></div>
+        </div>
+      </div>
+
+      <!-- KPI HERO STRIP -->
+      <div class="kpi-hero-strip" id="kpiHeroStrip" style="display:none;">
+        <!-- JavaScript sẽ render KPI cards vào đây -->
+      </div>
+
+      <!-- 1. MỤC TIÊU DỰ ÁN -->
+      <section class="detail-section">
+        <h2><i class="fas fa-bullseye" style="color:var(--accent);"></i> Mục Tiêu & Phạm Vi Dự Án</h2>
+        <ul class="objectives-list" id="objectivesList"></ul>
+      </section>
+
+      <!-- 2. QUY TRÌNH THỰC HIỆN (PHASE CARDS) -->
+      <section class="detail-section">
+        <h2><i class="fas fa-stream" style="color:var(--accent);"></i> Quy Trình Triển Khai Thực Tế</h2>
+        <div class="process-cards-grid" id="processList"></div>
+      </section>
+
+      <!-- 3. KẾT QUẢ NGHIÊN CỨU THỰC TẾ / ĐIỂM NỔI BẬT -->
+      <section class="detail-section" id="findingsSection" style="display:none;">
+        <h2 id="findingsTitle"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Kết Quả & Insight Nổi Bật</h2>
+        <div class="findings-list" id="findingsList"></div>
+      </section>
+
+      <!-- 4. BÀI HỌC RÚT RA & KEY TAKEAWAYS (MỚI) -->
+      <section class="detail-section" id="takeawaysSection" style="display:none;">
+        <h2><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Bài Học & Đúc Rút Chuyên Môn</h2>
+        <div class="takeaways-grid" id="takeawaysList"></div>
+      </section>
+
+      <!-- 5. KỸ NĂNG & NĂNG LỰC THÀNH THẠO -->
+      <section class="detail-section" id="skillsSection" style="display:none;">
+        <h2><i class="fas fa-bolt" style="color:var(--accent);"></i> Kỹ Năng Thành Thạo Từ Dự Án</h2>
+        <div class="skills-grid" id="skillsList"></div>
+      </section>
+
+      <!-- 6. CÔNG CỤ & CÔNG NGHỆ -->
+      <section class="detail-section">
+        <h2><i class="fas fa-tools" style="color:var(--accent);"></i> Công Cụ & Nền Tảng Áp Dụng</h2>
+        <div class="tools-list" id="toolsList"></div>
+      </section>
+
+      <!-- 7. PREV / NEXT PROJECT NAVIGATION (MỚI) -->
+      <div class="project-nav-bar" id="projectNavBar">
+        <a href="#" id="prevProjectBtn" class="project-nav-btn prev">
+          <i class="fas fa-chevron-left"></i>
+          <div>
+            <span class="nav-sub">Dự án trước</span>
+            <span class="nav-title" id="prevProjectTitle">Tên dự án</span>
+          </div>
+        </a>
+        <a href="#" id="nextProjectBtn" class="project-nav-btn next">
+          <div>
+            <span class="nav-sub">Dự án tiếp theo</span>
+            <span class="nav-title" id="nextProjectTitle">Tên dự án</span>
+          </div>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+
+      <!-- 8. NÚT ĐIỀU HƯỚNG VÀ XEM BÁO CÁO FULL -->
+      <div class="detail-cta">
+        <a href="projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
+        <a id="docLink" href="#" target="_blank" rel="noopener noreferrer" class="doc-btn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+          </svg>
+          Xem Chi Tiết Báo Cáo (Google Docs)
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Copy link dự án
+    function copyProjectLink() {
+      copyToClipboard(window.location.href, 'Đã sao chép link dự án!');
+    }
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const bar = document.getElementById('readingProgress');
+      if (bar) bar.style.width = scrolled + '%';
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectId = parseInt(getProjectFromURL()) || 1;
+      const project = projectsData[projectId];
+
+      if (project) {
+        // Điền thông tin cơ bản
+        document.getElementById('projectType').textContent = project.type;
+        document.getElementById('projectTitle').textContent = project.title;
+        document.getElementById('projectDescription').textContent = project.description || '';
+        document.getElementById('projectDuration').innerHTML = `<i class="far fa-calendar-alt"></i> ${project.duration || '2026'}`;
+        document.title = `${project.title} - KHƯƠNG TUẤN ANH`;
+
+        const catColor = project.categoryColor || 'var(--accent)';
+
+        // 0. Render KPI Hero Strip
+        if (project.kpis && project.kpis.length > 0) {
+          const kpiStrip = document.getElementById('kpiHeroStrip');
+          kpiStrip.style.display = 'grid';
+          kpiStrip.innerHTML = project.kpis.map(kpi => `
+            <div class="kpi-hero-card">
+              <div class="kpi-hero-icon">${kpi.icon}</div>
+              <div class="kpi-hero-number" style="color:${catColor}">${kpi.number}</div>
+              <div class="kpi-hero-label">${kpi.label}</div>
+            </div>
+          `).join('');
+        }
+
+        // 1. Render Frameworks Badges
+        if (project.frameworks && project.frameworks.length > 0) {
+          const fwContainer = document.getElementById('frameworksContainer');
+          const fwList = document.getElementById('frameworksList');
+          fwContainer.style.display = 'flex';
+          fwList.innerHTML = project.frameworks.map(fw => `
+            <span class="framework-pill">${fw}</span>
+          `).join('');
+        }
+
+        // 2. Render Mục Tiêu
+        const objectivesList = document.getElementById('objectivesList');
+        objectivesList.innerHTML = project.objectives.map(obj => `
+          <li>${obj}</li>
+        `).join('');
+
+        // 3. Render Quy Trình (Process Cards)
+        const processList = document.getElementById('processList');
+        processList.innerHTML = project.process.map((step, index) => {
+          if (typeof step === 'object') {
+            return `
+              <div class="process-card">
+                <div class="process-card-header">
+                  <span class="process-step-num">0${index + 1}</span>
+                  <span class="process-step-icon">${step.icon || '📌'}</span>
+                </div>
+                <h4>${step.title}</h4>
+                <p>${step.desc}</p>
+              </div>
+            `;
+          } else {
+            return `
+              <div class="process-card">
+                <div class="process-card-header">
+                  <span class="process-step-num">0${index + 1}</span>
+                </div>
+                <p>${step}</p>
+              </div>
+            `;
+          }
+        }).join('');
+
+        // 4. Render Kết Quả Nghiên Cứu / Điểm Nổi Bật
+        if (project.findings && project.findings.length > 0) {
+          const findingsSection = document.getElementById('findingsSection');
+          const findingsTitle = document.getElementById('findingsTitle');
+          const findingsList = document.getElementById('findingsList');
+          findingsSection.style.display = 'block';
+          if (project.findingsTitle) {
+            findingsTitle.innerHTML = `<i class="fas fa-lightbulb" style="color:var(--accent);"></i> ${project.findingsTitle}`;
+          }
+          findingsList.innerHTML = project.findings.map((finding, index) => `
+            <div class="finding-card">
+              <span class="finding-badge">Insight 0${index + 1}</span>
+              <p class="finding-text">${finding}</p>
+            </div>
+          `).join('');
+        }
+
+        // 5. Render Bài Học Rút Ra (Takeaways)
+        if (project.takeaways && project.takeaways.length > 0) {
+          const takeawaysSection = document.getElementById('takeawaysSection');
+          const takeawaysList = document.getElementById('takeawaysList');
+          takeawaysSection.style.display = 'block';
+          takeawaysList.innerHTML = project.takeaways.map(t => `
+            <div class="takeaway-card">
+              <div class="takeaway-icon">${t.icon}</div>
+              <div class="takeaway-info">
+                <h4>${t.title}</h4>
+                <p>${t.desc}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        // 6. Render Kỹ Năng Thành Thạo
+        if (project.skills && project.skills.length > 0) {
+          const skillsSection = document.getElementById('skillsSection');
+          const skillsList = document.getElementById('skillsList');
+          skillsSection.style.display = 'block';
+          skillsList.innerHTML = project.skills.map(skill => `
+            <div class="skill-card">
+              <div class="skill-icon">${skill.icon}</div>
+              <div class="skill-info">
+                <h4>${skill.name}</h4>
+                <p>${skill.desc}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        // 7. Render Công Cụ
+        const toolsList = document.getElementById('toolsList');
+        toolsList.innerHTML = project.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('');
+
+        // 8. Prev / Next Navigation Logic
+        const allIds = Object.keys(projectsData).map(Number);
+        const currentIndex = allIds.indexOf(projectId);
+
+        const prevIndex = currentIndex > 0 ? currentIndex - 1 : allIds.length - 1;
+        const nextIndex = currentIndex < allIds.length - 1 ? currentIndex + 1 : 0;
+
+        const prevProj = projectsData[allIds[prevIndex]];
+        const nextProj = projectsData[allIds[nextIndex]];
+
+        document.getElementById('prevProjectBtn').href = `project-detail.html?id=${allIds[prevIndex]}`;
+        document.getElementById('prevProjectTitle').textContent = prevProj.title;
+
+        document.getElementById('nextProjectBtn').href = `project-detail.html?id=${allIds[nextIndex]}`;
+        document.getElementById('nextProjectTitle').textContent = nextProj.title;
+
+        // 9. Gán link tài liệu / ấn phẩm vào nút ở cuối trang
+        const docLink = document.getElementById('docLink');
+        if (project.googleDocUrl) {
+          docLink.href = project.googleDocUrl.startsWith('http') ? project.googleDocUrl : encodeURI(project.googleDocUrl);
+          if (project.buttonText) {
+            docLink.innerHTML = `
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:currentColor;margin-right:8px;">
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+              </svg>
+              ${project.buttonText}
+            `;
+          }
+        }
+      } else {
+        document.body.innerHTML = '<h1 style="text-align:center; padding: 10rem 1rem; color: var(--text);">Dự án không tồn tại hoặc đã bị gỡ bỏ.</h1>';
+      }
+    });
+  </script>
+</body>
+</html>

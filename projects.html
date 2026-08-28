@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự Án | KHƯƠNG TUẤN ANH</title>
+  <meta name="description" content="Danh sách các dự án thực tế & học thuật trong lĩnh vực Digital Marketing, Content Strategy và Visual Branding của Khương Tuấn Anh.">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
+    <div class="navbar-right">
+      <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Về Profile</a>
+    </div>
+  </nav>
+
+  <section class="projects-hero">
+    <h1>Dự Án <span>Của Tôi</span></h1>
+    <p>Những dự án thực tế & học thuật trong lĩnh vực Digital Marketing, Content Strategy & Visual Branding</p>
+  </section>
+
+  <!-- THANH BỘ LỌC VÀ TÌM KIẾM -->
+  <div class="filter-search-container">
+    <div class="search-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm dự án, công cụ, chủ đề...">
+    </div>
+
+    <div class="filter-pills" id="filterPills">
+      <button class="filter-pill active" data-category="all">Tất cả</button>
+      <button class="filter-pill" data-category="research">Nghiên Cứu</button>
+      <button class="filter-pill" data-category="content">Kế Hoạch Content</button>
+      <button class="filter-pill" data-category="branding">Branding</button>
+      <button class="filter-pill" data-category="design">Media Design</button>
+      <button class="filter-pill" data-category="seo">SEO Content</button>
+    </div>
+  </div>
+
+  <div class="projects-container">
+    <div class="projects-grid" id="projectsGrid">
+      <!-- JavaScript sẽ tự động đổ dữ liệu dự án vào đây -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Map màu sắc cho từng tool
+    const toolColors = {
+      'Google Forms': '#4285f4', 'Google Sheets': '#0f9d58', 'Canva': '#00c4cc',
+      'Facebook': '#1877f2', 'Instagram': '#e1306c', 'TikTok': '#000000',
+      'AI Tools': '#8b5cf6', 'GDN Standard': '#fbbc04', 'Facebook Ads': '#1877f2',
+      'Web Banner': '#f97316'
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectsGrid = document.getElementById('projectsGrid');
+      const searchInput = document.getElementById('searchInput');
+      const filterPills = document.getElementById('filterPills');
+
+      let currentCategory = 'all';
+      let currentSearchQuery = '';
+
+      function renderProjects() {
+        projectsGrid.innerHTML = '';
+        const projectIds = Object.keys(projectsData);
+        let count = 0;
+
+        projectIds.forEach(id => {
+          const project = projectsData[id];
+          const matchesCategory = currentCategory === 'all' || project.category === currentCategory;
+          const query = currentSearchQuery.toLowerCase();
+          const matchesSearch = !query ||
+            project.title.toLowerCase().includes(query) ||
+            project.type.toLowerCase().includes(query) ||
+            (project.description && project.description.toLowerCase().includes(query)) ||
+            project.tools.some(t => t.toLowerCase().includes(query));
+
+          if (matchesCategory && matchesSearch) {
+            count++;
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.onclick = () => goToProject(id);
+
+            const catColor = project.categoryColor || 'var(--accent)';
+
+            // Render KPI mini strip nếu có
+            const kpiHtml = project.kpis ? `
+              <div class="card-kpi-strip">
+                ${project.kpis.map(k => `
+                  <div class="card-kpi-item">
+                    <span class="card-kpi-number">${k.number}</span>
+                    <span class="card-kpi-label">${k.label}</span>
+                  </div>
+                `).join('')}
+              </div>` : '';
+
+            // Render tools với màu riêng
+            const toolsHtml = project.tools.map(t => {
+              const color = toolColors[t] || '#6b7280';
+              return `<span class="tool-pill" style="--tool-color:${color}">${t}</span>`;
+            }).join('');
+
+            card.innerHTML = `
+              <div class="card-top-bar" style="background: linear-gradient(90deg, ${catColor}, transparent);"></div>
+              <div class="project-header">
+                <span class="project-type" style="color:${catColor}; background:${catColor}22; border-color:${catColor}44;">${project.type}</span>
+              </div>
+              <h3>${project.title}</h3>
+              <p>${project.description || ''}</p>
+              ${kpiHtml}
+              <div class="tools-pill-row">${toolsHtml}</div>
+              <div class="card-btn-container">
+                <span class="card-btn">Xem Chi Tiết <i class="fas fa-arrow-right"></i></span>
+              </div>
+            `;
+
+            projectsGrid.appendChild(card);
+          }
+        });
+
+        if (count === 0) {
+          projectsGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+              <i class="fas fa-folder-open" style="font-size: 3rem; color: var(--card-border-hover); margin-bottom: 1rem; display: block;"></i>
+              <h3 style="margin-bottom:0.5rem;">Không tìm thấy dự án phù hợp</h3>
+              <p>Thử thay đổi từ khóa hoặc chọn danh mục khác xem sao!</p>
+            </div>`;
+        }
+      }
+
+      filterPills.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-pill')) {
+          document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+          e.target.classList.add('active');
+          currentCategory = e.target.getAttribute('data-category');
+          renderProjects();
+        }
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        currentSearchQuery = e.target.value;
+        renderProjects();
+      });
+
+      renderProjects();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,598 @@
+/* 
+  FILE: index.css
+  ĐÂY LÀ GÌ? : Styling dành riêng cho Trang chủ (Trang Profile Khương Tuấn Anh)
+  PHONG CÁCH : Modern Glassmorphism & Cyber Luxe UI
+*/
+
+/* ================== PHẦN BỐ CỤC CHÍNH (LAYOUT) ================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  min-height: 100vh;
+}
+
+/* ================== CỘT BÊN TRÁI (SIDEBAR) ================== */
+.sidebar {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2.5rem 2rem;
+  border-right: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* HUY HIỆU TRẠNG THÁI (STATUS PILL) */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+[data-theme="light"] .status-pill {
+  background: rgba(34, 197, 94, 0.15);
+  color: #15803d;
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* AVATAR & PROFILES */
+.profile {
+  text-align: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1.5rem;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--card-border);
+  box-shadow: 0 0 25px var(--accent-glow);
+  transition: var(--transition);
+}
+
+.avatar-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.avatar-wrapper:hover .avatar {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px var(--accent-glow-strong);
+}
+
+.profile h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.typewriter-container {
+  height: 28px;
+  margin-bottom: 1rem;
+}
+
+.typewriter-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-right: 2px solid var(--accent);
+  padding-right: 4px;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent); }
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.personal-info {
+  margin: 1rem 0;
+  text-align: left;
+  border-top: 1px solid var(--card-border);
+  padding-top: 1.2rem;
+}
+
+.personal-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.personal-info p strong {
+  color: var(--text);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.address-new {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+/* THÔNG TIN LIÊN HỆ & SAO CHÉP */
+.contact-info {
+  margin: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.9rem;
+  background: var(--surface-glass);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-btn span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-btn i.fa-copy {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.contact-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.contact-btn:hover i.fa-copy {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.social-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface-glass);
+  border: 1px solid var(--card-border);
+  transition: var(--transition);
+}
+
+.social-link img {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.social-link:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent);
+  background: var(--surface-hover);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* ================== PHẦN NỘI DUNG CHÍNH (CỘT PHẢI) ================== */
+.main-content {
+  padding: 3.5rem 3.5rem;
+}
+
+.main-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.main-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  border-radius: 2px;
+}
+
+/* QUICK METRICS HIGHLIGHT GRID */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.metric-card {
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(16px);
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  opacity: 0.6;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.metric-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.metric-label {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ================== GIỚI THIỆU (HIGHLIGHT LIST) ================== */
+.about, .objective, .skills, .tools-section, .experience {
+  margin-bottom: 3.5rem;
+}
+
+.highlight-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.highlight-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  padding: 1.4rem 1.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  transition: var(--transition);
+}
+
+.highlight-list li:hover {
+  border-color: var(--card-border-hover);
+  transform: translateX(6px);
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.highlight-list li i {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.highlight-list li strong {
+  color: var(--text);
+}
+
+/* ================== THẺ MỤC TIÊU NGHỀ NGHIỆP ================== */
+.objective-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.objective-card {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.objective-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.objective-card .card-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-glow);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.objective-card.highlight .card-tag {
+  color: var(--accent-secondary);
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.objective-card h4 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+
+.objective-card ul {
+  padding-left: 1.2rem;
+}
+
+.objective-card ul li {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+/* ================== LƯỚI KỸ NĂNG (SKILLS GRID) ================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  padding: 1.8rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--card-border);
+  transition: var(--transition);
+}
+
+.skill-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.skill-item i {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.skill-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.skill-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ================== CÔNG CỤ VÀ NỀN TẢNG (TOOLS SECTION) ================== */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.tool-card {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.tool-card i {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-top: 2px;
+  min-width: 30px;
+}
+
+.tool-card strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.tool-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ================== PHẦN HÀNH TRÌNH (EXPERIENCE) ================== */
+.item {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+  border: 1px solid var(--card-border);
+  border-left-width: 4px;
+  border-left-color: var(--accent);
+  transition: var(--transition);
+}
+
+.item:hover {
+  transform: translateX(8px);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+.item span {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 0.88rem;
+  background: var(--accent-glow);
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+
+.item p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--card-border);
+    padding: 2rem 1.5rem;
+  }
+
+  .main-content {
+    padding: 2.5rem 1.5rem;
+  }
+}
