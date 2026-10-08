@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dự Án Thực Chiến | KHƯƠNG TUẤN ANH</title>
-  <meta name="description" content="Danh sách các dự án thực tế & đồ án học thuật trong lĩnh vực Digital Marketing, Content Strategy, Branding và Media Design của Khương Tuấn Anh.">
+  <title>Portfolio Content Creator | Khương Tuấn Anh</title>
+  <meta name="description" content="Các case học tập và concept cá nhân về Content Social, thiết kế nội dung và SEO của Khương Tuấn Anh.">
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="projects.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
@@ -27,29 +27,29 @@
     <div class="hero-badge">
       <i class="fas fa-briefcase"></i> SHOWCASE & CASE STUDIES
     </div>
-    <h1>Dự Án <span>Thực Chiến</span></h1>
-    <p>Tổng hợp các dự án nghiên cứu, kế hoạch nội dung đa kênh, thiết kế nhận diện thương hiệu và SEO Content chuyên sâu.</p>
+    <h1>Content <span>& Case</span></h1>
+    <p>Đồ án học tập và concept cá nhân: từ kế hoạch social, thiết kế bài đăng đến những bài viết SEO mình muốn đọc và tự viết.</p>
 
     <!-- QUICK STATS BAR -->
     <div class="quick-stats-strip">
       <div class="stat-box">
-        <span class="stat-val" id="totalProjectsCount">5</span>
-        <span class="stat-lbl">Dự Án Hoàn Thành</span>
+        <span class="stat-val" id="totalProjectsCount">6</span>
+        <span class="stat-lbl">Đồ án & concept cá nhân</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-box">
         <span class="stat-val">160+</span>
-        <span class="stat-lbl">Trang Báo Cáo Chuyên Sâu</span>
+        <span class="stat-lbl">Trang báo cáo nhóm</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-box">
         <span class="stat-val">19+</span>
-        <span class="stat-lbl">Kích Thước Banner Ads Standard</span>
+        <span class="stat-lbl">Kích thước banner trong đồ án</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-box">
         <span class="stat-val">30</span>
-        <span class="stat-lbl">Ngày Content Calendar Chuẩn Phễu</span>
+        <span class="stat-lbl">Ngày lịch nội dung trong đồ án</span>
       </div>
     </div>
   </header>
@@ -57,7 +57,7 @@
   <!-- TOOLBAR: BỘ LỌC DANH MỤC & TÌM KIẾM -->
   <section class="toolbar-section">
     <div class="toolbar-container">
-      
+
       <!-- Ô TÌM KIẾM THÔNG MINH -->
       <div class="search-box">
         <i class="fas fa-search search-icon"></i>
@@ -82,9 +82,9 @@
       <div class="cat-info-text">
         <div class="cat-info-top">
           <h2 id="catInfoTitle">Tất Cả Dự Án</h2>
-          <span class="cat-count-pill" id="catCountPill">5 dự án</span>
+          <span class="cat-count-pill" id="catCountPill">6 dự án</span>
         </div>
-        <p id="catInfoDesc">Toàn bộ các dự án thực tế & đồ án học thuật trong các lĩnh vực Marketing, Content & Design.</p>
+        <p id="catInfoDesc">Case học tập và concept cá nhân trong Content, Social, SEO và thiết kế truyền thông.</p>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
       // 1. Khởi tạo thanh bộ lọc danh mục với số lượng động
       function renderCategoryPills() {
         const counts = getCategoryCounts();
-        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 5;
+        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 6;
 
         filterPillsBar.innerHTML = Object.keys(categoriesConfig).map(catKey => {
           const cat = categoriesConfig[catKey];
@@ -139,7 +139,7 @@
         catInfoTitle.textContent = catConfig.name;
         catInfoDesc.textContent = catConfig.desc;
         catInfoIcon.innerHTML = `<i class="${catConfig.icon}"></i>`;
-        
+
         if (currentSearchQuery.trim()) {
           catCountPill.textContent = `${matchCount} kết quả tìm kiếm`;
         } else {
@@ -157,7 +157,7 @@
           const project = projectsData[id];
           const matchesCategory = (currentCategory === 'all') || (project.category === currentCategory);
           const query = currentSearchQuery.toLowerCase().trim();
-          
+
           const matchesSearch = !query ||
             project.title.toLowerCase().includes(query) ||
             project.type.toLowerCase().includes(query) ||
@@ -201,7 +201,7 @@
 
             card.innerHTML = `
               <div class="card-top-bar" style="background: linear-gradient(90deg, ${catColor}, transparent);"></div>
-              
+
               <div class="project-header">
                 <div class="project-cat-badge" style="color:${catColor}; background:${catColor}18; border-color:${catColor}44;">
                   <i class="${project.categoryIcon || 'fas fa-folder'}"></i>

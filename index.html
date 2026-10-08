@@ -1,252 +1,225 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html lang="vi" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROFILE | KHƯƠNG TUẤN ANH - Content Strategist & Digital Marketing</title>
-  <meta name="description"
-    content="Portfolio cá nhân Khương Tuấn Anh - Content Marketing, Social Media, SEO Content và Brand Identity.">
+  <title>Khương Tuấn Anh | Sinh viên Digital Marketing · Content Creator</title>
+  <meta name="description" content="Portfolio của Khương Tuấn Anh, sinh viên năm 2 ngành Digital Marketing tại VTC Academy. Xem đồ án học tập, concept social và bài viết SEO tự nghiên cứu.">
+  <meta name="theme-color" content="#faf7f0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="index.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-
-<body>
+<body class="profile-page">
   <div class="container">
-
-    <!-- PHẦN CỘT BÊN TRÁI (SIDEBAR) -->
-    <aside class="sidebar">
-      <div>
+    <aside class="sidebar" aria-label="Thông tin cá nhân">
+      <div class="sidebar-main">
         <div class="sidebar-header">
           <div class="status-pill">
-            <span class="status-dot"></span> Sẵn sàng nhận dự án
+            <span class="status-dot" aria-hidden="true"></span>
+            Sinh viên năm 2 · Digital Marketing
           </div>
-          <button class="theme-toggle" id="themeToggle" title="Đổi giao diện"><i class="fas fa-sun"></i></button>
         </div>
 
         <div class="profile">
           <div class="avatar-wrapper">
-            <img src="image/avatar.jpg" alt="Khương Tuấn Anh" class="avatar">
+            <img src="image/avatar.jpg" alt="Ảnh chân dung Khương Tuấn Anh" class="avatar">
           </div>
           <h1>KHƯƠNG TUẤN ANH</h1>
-
-          <div class="typewriter-container">
-            <span class="typewriter-text"
-              data-phrases='["CONTENT MARKETING", "SOCIAL MEDIA STRATEGY", "SEO CONTENT WRITING", "BRAND IDENTITY"]'>CONTENT
-              MARKETING</span>
+          <div class="typewriter-container" aria-label="Các mảng nội dung quan tâm">
+            <span class="typewriter-text" data-phrases='["CONTENT CREATOR", "CONTENT SOCIAL", "SEO CONTENT"]'>CONTENT CREATOR</span>
           </div>
-
-          <p class="tagline">"Sáng tạo để giải phóng cảm xúc, hệ thống để kiến tạo giá trị."</p>
+          <p class="tagline">Mình thích tìm hiểu một chủ đề rồi xếp ý lại thành nội dung rõ ràng, dễ theo dõi.</p>
         </div>
 
         <div class="personal-info">
-          <p><strong>Ngày sinh:</strong> 03/03/2004</p>
-          <p><strong>Quê quán:</strong> Ninh Bình ( Nam Định cũ )</p>
-          <p class="address-new"><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 5px;"></i>
-            Trang Túc Đông - Đồng Thịnh - Ninh Bình</p>
+          <p><strong>Đang học:</strong> Digital Marketing</p>
+          <p><strong>Trường:</strong> VTC Academy</p>
+          <p><strong>Định hướng:</strong> Content Creator</p>
         </div>
 
         <div class="contact-info">
-          <div class="contact-btn" onclick="copyToClipboard('anhkhuong134@gmail.com', 'Đã sao chép Email!')"
-            title="Nhấp để sao chép Email">
-            <span><i class="fas fa-envelope" style="color: var(--accent);"></i> anhkhuong134@gmail.com</span>
-            <i class="fas fa-copy"></i>
-          </div>
-          <div class="contact-btn" onclick="copyToClipboard('0384201443', 'Đã sao chép Số điện thoại!')"
-            title="Nhấp để sao chép SĐT">
-            <span><i class="fas fa-phone" style="color: var(--accent);"></i> 0384 201 443</span>
-            <i class="fas fa-copy"></i>
-          </div>
-        </div>
-
-        <!-- QUICK ACTION LINK DẪN SANG DỰ ÁN -->
-        <div style="margin-top: 1.2rem;">
-          <a href="projects.html" class="sidebar-projects-btn">
-            <i class="fas fa-layer-group"></i>
-            <span>Xem Danh Sách Dự Án</span>
-            <i class="fas fa-arrow-right"></i>
+          <a class="contact-btn" href="mailto:anhkhuong134@gmail.com" title="Gửi email">
+            <span><i class="fas fa-envelope" aria-hidden="true"></i> anhkhuong134@gmail.com</span>
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+          <a class="contact-btn" href="tel:+84384201443" title="Gọi điện">
+            <span><i class="fas fa-phone" aria-hidden="true"></i> 0384 201 443</span>
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
         </div>
+
+        <a href="projects.html" class="sidebar-projects-btn">
+          <span><i class="fas fa-layer-group" aria-hidden="true"></i> Xem danh sách dự án</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
 
-      <div class="social-links">
-        <a href="https://zalo.me/0384201443" target="_blank" rel="noopener noreferrer" title="Zalo"
-          class="social-link zalo">
-          <img src="image/zalo.jpg" alt="Zalo">
+      <nav class="social-links" aria-label="Mạng xã hội">
+        <a href="https://zalo.me/0384201443" target="_blank" rel="noopener noreferrer" title="Zalo" aria-label="Mở Zalo" class="social-link zalo">
+          <img src="image/zalo.jpg" alt="">
         </a>
-        <a href="https://www.facebook.com/AIOnlOe" target="_blank" rel="noopener noreferrer" title="Facebook"
-          class="social-link facebook">
-          <img src="image/facebook.jpg" alt="Facebook">
+        <a href="https://www.facebook.com/AIOnlOe" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Mở Facebook" class="social-link facebook">
+          <img src="image/facebook.jpg" alt="">
         </a>
-        <a href="https://www.tiktok.com/@anhkhuong134" target="_blank" rel="noopener noreferrer" title="TikTok"
-          class="social-link tiktok">
-          <img src="image/tiktok.jpg" alt="TikTok">
+        <a href="https://www.tiktok.com/@anhkhuong134" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="Mở TikTok" class="social-link tiktok">
+          <img src="image/tiktok.jpg" alt="">
         </a>
-      </div>
+      </nav>
     </aside>
 
-    <!-- PHẦN NỘI DUNG CHÍNH BÊN PHẢI -->
     <main class="main-content">
-
-      <!-- GIỚI THIỆU NGHỀ NGHIỆP -->
-      <section class="about reveal">
-        <h2><i class="fas fa-user-astronaut" style="color: var(--accent);"></i> Giới Thiệu Nghề Nghiệp</h2>
+      <section class="about reveal" id="ve-minh" aria-labelledby="about-title">
+        <h2 id="about-title"><i class="fas fa-user-astronaut" aria-hidden="true"></i> Giới thiệu nghề nghiệp</h2>
         <ul class="highlight-list">
           <li>
-            <i class="fas fa-check-circle"></i>
-            <span><strong>Định hướng:</strong> Sinh viên chuyên ngành Digital Marketing, tập trung phát triển chuyên sâu
-              trong lĩnh vực <strong>Content Marketing</strong> & Chiến lược Nội dung số.</span>
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+            <span><strong>Hiện tại:</strong> Mình là sinh viên năm 2 ngành Digital Marketing tại VTC Academy.</span>
           </li>
           <li>
-            <i class="fas fa-check-circle"></i>
-            <span><strong>Năng lực chuyên môn:</strong> Nghiên cứu thị trường, phân tích insight khách hàng, lập kế
-              hoạch nội dung Facebook & Instagram, viết bài chuẩn SEO cấu trúc On-page.</span>
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+            <span><strong>Vị trí hướng đến:</strong> Content Creator. Mình muốn bắt đầu từ việc tìm hiểu chủ đề, lên ý tưởng rồi viết nội dung cho các kênh số.</span>
           </li>
           <li>
-            <i class="fas fa-check-circle"></i>
-            <span><strong>Thiết kế truyền thông:</strong> Xây dựng bộ nhận diện thương hiệu cơ bản, thiết kế banner,
-              poster & bài đăng mạng xã hội chuẩn phân cấp thị giác.</span>
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+            <span><strong>Đã thực hành:</strong> Lập kế hoạch nội dung social, viết bài SEO mẫu và thiết kế ấn phẩm cơ bản trong đồ án, bài tập và concept cá nhân.</span>
           </li>
           <li>
-            <i class="fas fa-check-circle"></i>
-            <span><strong>Phương châm làm việc:</strong> Kết hợp tư duy nội dung sáng tạo, hình ảnh thị giác sắc bén và
-              dữ liệu thực tế để kiến tạo sản phẩm chuẩn định vị thương hiệu.</span>
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+            <span><strong>Phần video:</strong> Portfolio hiện có ý tưởng, kịch bản và shot list; mình chưa quay hoặc dựng video trong các case này.</span>
           </li>
         </ul>
       </section>
 
-      <!-- MỤC TIÊU NGHỀ NGHIỆP -->
-      <section class="objective reveal">
-        <h2><i class="fas fa-bullseye" style="color: var(--accent);"></i> Mục Tiêu Nghề Nghiệp</h2>
+      <section class="objective reveal" id="muc-tieu" aria-labelledby="objective-title">
+        <h2 id="objective-title"><i class="fas fa-bullseye" aria-hidden="true"></i> Mục tiêu nghề nghiệp</h2>
         <div class="objective-grid">
-          <div class="objective-card">
-            <div class="card-tag">MỤC TIÊU NGẮN HẠN</div>
-            <h4>Vị Trí Content Marketing</h4>
+          <article class="objective-card">
+            <span class="card-tag">MỤC TIÊU TRƯỚC MẮT</span>
+            <h3>Ứng tuyển vị trí Content Creator</h3>
             <ul>
-              <li>Vận dụng kỹ năng nghiên cứu khách hàng, phát triển ý tưởng & lập kế hoạch nội dung.</li>
-              <li>Triển khai viết bài SEO, thiết kế hình ảnh truyền thông cho các nền tảng số.</li>
-              <li>Nâng cao năng lực quản trị kênh mạng xã hội & đo lường hiệu quả truyền thông.</li>
+              <li>Tham gia tìm hiểu sản phẩm, người đọc và mục tiêu của nội dung.</li>
+              <li>Thực hành viết bài, caption và chuẩn bị ý tưởng cho các định dạng social.</li>
+              <li>Học cách nhận brief, phối hợp với thiết kế và chỉnh sửa theo góp ý.</li>
             </ul>
-          </div>
-          <div class="objective-card highlight">
-            <div class="card-tag">MỤC TIÊU DÀI HẠN</div>
-            <h4>Content Strategist</h4>
+          </article>
+          <article class="objective-card highlight">
+            <span class="card-tag">HƯỚNG PHÁT TRIỂN</span>
+            <h3>Vững hơn về Content Marketing</h3>
             <ul>
-              <li>Trở thành chuyên gia hoạch định chiến lược nội dung đa nền tảng.</li>
-              <li>Xây dựng chiến lược truyền thông dựa trên insight người dùng & mục tiêu phát triển của thương hiệu.
-              </li>
+              <li>Cải thiện khả năng lập kế hoạch nội dung theo kênh và mục tiêu.</li>
+              <li>Tập đọc số liệu cơ bản để biết nội dung nào cần giữ, sửa hoặc thử lại.</li>
             </ul>
-          </div>
+          </article>
         </div>
       </section>
 
-      <!-- NĂNG LỰC CỐT LÕI -->
-      <section class="skills reveal">
-        <h2><i class="fas fa-bolt" style="color: var(--accent);"></i> Năng Lực Cốt Lõi</h2>
+      <section class="featured-work reveal" id="san-pham" aria-labelledby="work-title">
+        <h2 id="work-title"><i class="fas fa-folder-open" aria-hidden="true"></i> Sản phẩm tiêu biểu</h2>
+        <div class="featured-work-list">
+          <article class="featured-work-card">
+            <span class="work-icon"><i class="fas fa-calendar-days" aria-hidden="true"></i></span>
+            <div>
+              <span class="work-label">CONCEPT SOCIAL · 7 NGÀY</span>
+              <h3>Đồ mặc nhà: nội dung từ những câu hỏi trước khi mua</h3>
+              <p>Concept cá nhân gồm lịch nội dung, caption mẫu, hướng hình ảnh và một kịch bản video chưa quay. Ảnh tham khảo có ghi nguồn; đây không phải dự án của thương hiệu.</p>
+              <a href="social-content-sample.html">Xem concept và nguồn ảnh <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="featured-work-card">
+            <span class="work-icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></span>
+            <div>
+              <span class="work-label">BÀI SEO TỰ NGHIÊN CỨU · CHƯA ĐĂNG</span>
+              <h3>Gunpla, build PC, Dragon Ball và RPG 2D</h3>
+              <p>Bốn bài mẫu tập trung vào câu hỏi người mới thường tìm kiếm. Nội dung có dẫn nguồn và phân biệt phần thông tin với nhận xét cá nhân.</p>
+              <a href="seo-samples.html">Đọc các bài mẫu <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="featured-work-card">
+            <span class="work-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+            <div>
+              <span class="work-label">ĐỒ ÁN VÀ BÀI TẬP</span>
+              <h3>Kế hoạch nội dung, nghiên cứu và thiết kế</h3>
+              <p>Các sản phẩm trong quá trình học được lưu riêng để người xem phân biệt bài tập học tập với concept tự nghiên cứu.</p>
+              <a href="projects.html">Mở danh sách dự án <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills reveal" id="ky-nang" aria-labelledby="skills-title">
+        <h2 id="skills-title"><i class="fas fa-bolt" aria-hidden="true"></i> Những việc mình đang rèn luyện</h2>
         <div class="skills-grid">
-          <div class="skill-item">
-            <i class="fab fa-facebook-square"></i>
-            <h4>Lập Kế Hoạch Content Social</h4>
-            <p>Xây dựng kế hoạch nội dung Facebook & Instagram dựa trên mục tiêu, insight & định vị thương hiệu. Xác
-              định content pillar/angle, lập calendar, viết caption & phối hợp hình ảnh.</p>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-search-dollar"></i>
-            <h4>Viết Bài Chuẩn SEO</h4>
-            <p>Nghiên cứu chủ đề & từ khóa. Xây dựng dàn ý bài viết cấu trúc H1-H3 chuẩn SEO, phân bổ từ khóa tự nhiên,
-              tối ưu hình ảnh & liên kết nội bộ.</p>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-palette"></i>
-            <h4>Xây Dựng Nhận Diện Thương Hiệu</h4>
-            <p>Xây dựng bộ nhận diện thương hiệu cơ bản từ tính cách thương hiệu: xác định màu sắc chủ đạo, font chữ,
-              moodboard, key visual & chuẩn hóa ấn phẩm.</p>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-image"></i>
-            <h4>Thiết Kế Truyền Thông & Quảng Cáo</h4>
-            <p>Thiết kế banner, poster, social post, carousel & quảng cáo trực tuyến chuẩn phân cấp thị giác, bảo đảm
-              thiết kế nhất quán với thương hiệu.</p>
-          </div>
+          <article class="skill-item">
+            <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            <h3>Lập kế hoạch content social</h3>
+            <p>Sắp xếp chủ đề thành tuyến nội dung, đưa ý tưởng vào lịch đăng và viết caption theo mục tiêu từng bài.</p>
+          </article>
+          <article class="skill-item">
+            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+            <h3>Viết bài SEO</h3>
+            <p>Lên dàn ý, chia heading, kiểm tra thông tin theo nguồn và ghi xuất xứ ảnh. Các bài mẫu trên trang chưa xuất bản.</p>
+          </article>
+          <article class="skill-item">
+            <i class="fas fa-palette" aria-hidden="true"></i>
+            <h3>Thiết kế ấn phẩm cơ bản</h3>
+            <p>Dùng Canva để thực hành bố cục bài đăng, carousel và banner theo nội dung của bài tập hoặc concept.</p>
+          </article>
+          <article class="skill-item">
+            <i class="fas fa-clapperboard" aria-hidden="true"></i>
+            <h3>Ý tưởng và kịch bản video</h3>
+            <p>Phác thảo nội dung và shot list để chuẩn bị cho khâu quay. Đây là phần riêng với kế hoạch bài đăng; chưa có video đã quay.</p>
+          </article>
         </div>
       </section>
 
-      <!-- CÔNG CỤ VÀ NỀN TẢNG -->
-      <section class="tools-section reveal">
-        <h2><i class="fas fa-laptop-code" style="color: var(--accent);"></i> Công Cụ & Nền Tảng</h2>
+      <section class="tools-section reveal" aria-labelledby="tools-title">
+        <h2 id="tools-title"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Công cụ mình đã dùng</h2>
         <div class="tools-grid">
-          <div class="tool-card">
-            <i class="fas fa-paint-brush"></i>
-            <div>
-              <strong>Canva</strong>
-              <p>Bộ nhận diện cơ bản; thiết kế banner, poster, social post & banner quảng cáo.</p>
-            </div>
-          </div>
-          <div class="tool-card">
-            <i class="fas fa-poll-h"></i>
-            <div>
-              <strong>Google Forms & Sheets</strong>
-              <p>Thiết kế khảo sát online, tổng hợp & xử lý dữ liệu nghiên cứu.</p>
-            </div>
-          </div>
-          <div class="tool-card">
-            <i class="fab fa-instagram"></i>
-            <div>
-              <strong>Facebook & Instagram</strong>
-              <p>Lập kế hoạch nội dung fanpage, bài đăng, carousel & story.</p>
-            </div>
-          </div>
-          <div class="tool-card">
-            <i class="fab fa-tiktok"></i>
-            <div>
-              <strong>TikTok</strong>
-              <p>Nghiên cứu xu hướng & phát triển ý tưởng video ngắn.</p>
-            </div>
-          </div>
-          <div class="tool-card">
-            <i class="fas fa-robot"></i>
-            <div>
-              <strong>Công Cụ AI</strong>
-              <p>Hỗ trợ nghiên cứu, phát triển ý tưởng, lập dàn ý & biên tập nội dung.</p>
-            </div>
-          </div>
+          <article class="tool-card">
+            <i class="fas fa-paintbrush" aria-hidden="true"></i>
+            <div><strong>Canva</strong><p>Thực hành thiết kế bài đăng, carousel và banner cơ bản.</p></div>
+          </article>
+          <article class="tool-card">
+            <i class="fas fa-table" aria-hidden="true"></i>
+            <div><strong>Google Docs & Sheets</strong><p>Soạn nội dung, lập lịch và tổng hợp thông tin cho bài tập.</p></div>
+          </article>
+          <article class="tool-card">
+            <i class="fas fa-hashtag" aria-hidden="true"></i>
+            <div><strong>Facebook & Instagram</strong><p>Lên ý tưởng định dạng và kế hoạch bài đăng cho social.</p></div>
+          </article>
         </div>
       </section>
 
-      <!-- HỌC VẤN & TRẢI NGHIỆM -->
-      <section class="experience reveal">
-        <h2><i class="fas fa-graduation-cap" style="color: var(--accent);"></i> Học Vấn & Trải Nghiệm</h2>
-        <div class="item">
+      <section class="experience reveal" id="hoc-van" aria-labelledby="experience-title">
+        <h2 id="experience-title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Học vấn & trải nghiệm</h2>
+        <article class="item">
           <h3>VTC Academy</h3>
-          <span>Hiện tại</span>
-          <p>Chuyên ngành Digital Marketing. Tập trung vào Content Marketing, SEO và xây dựng chiến lược truyền thông.
-          </p>
-        </div>
-        <div class="item">
+          <span>Sinh viên năm 2 · Hiện tại</span>
+          <p>Ngành Digital Marketing. Đang học và thực hành Content Marketing, SEO, lập kế hoạch social và thiết kế truyền thông.</p>
+        </article>
+        <article class="item">
           <h3>Quân đội Nhân dân Việt Nam</h3>
-          <span>T2/2023 - T5/2025</span>
-          <p>Giai đoạn rèn luyện kỷ luật thép, sức chịu đựng tâm lý và tinh thần trách nhiệm cao. Đây là nền tảng giúp
-            tôi duy trì sự ổn định và tập trung trong mọi dự án áp lực cao.</p>
-        </div>
+          <span>02/2023 – 05/2025</span>
+          <p>Trải nghiệm rèn luyện tính kỷ luật và phối hợp theo nhiệm vụ được giao.</p>
+        </article>
       </section>
 
-      <!-- BANNER DẪN SANG TRANG DỰ ÁN -->
-      <div class="projects-cta-banner reveal">
+      <section class="projects-cta-banner reveal" id="lien-he" aria-label="Liên hệ và xem thêm dự án">
         <div class="cta-banner-content">
-          <h3>Khám Phá Các Dự Án & Case Studies</h3>
-          <p>Bao gồm đồ án nghiên cứu Circle K vs GS25 (160+ trang), kế hoạch Content Social 30 ngày, thiết kế Banner Ads 19 sizes & bài viết SEO.</p>
+          <h2>Bạn muốn trao đổi về vị trí Content Creator?</h2>
+          <p>Mình có thể gửi thêm bài tập hoặc trao đổi rõ hơn về phần mình đã thực hiện trong từng sản phẩm.</p>
         </div>
-        <a href="projects.html" class="btn-primary">Xem Toàn Bộ Dự Án <i class="fas fa-arrow-right"></i></a>
-      </div>
-
+        <div class="cta-actions">
+          <a class="btn-primary" href="mailto:anhkhuong134@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Gửi email</a>
+          <a class="btn-secondary" href="projects.html">Xem các dự án <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </section>
     </main>
   </div>
-
   <script src="script.js"></script>
 </body>
-
 </html>

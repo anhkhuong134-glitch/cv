@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <title>Chi Tiết Dự Án | KHƯƠNG TUẤN ANH</title>
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="project-detail.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
@@ -18,7 +18,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
-    
+
     <div class="breadcrumb-nav">
       <a href="index.html">Profile</a>
       <i class="fas fa-chevron-right breadcrumb-sep"></i>
@@ -68,25 +68,25 @@
 
       <!-- 2. QUY TRÌNH THỰC HIỆN (PHASE CARDS) -->
       <section class="detail-section">
-        <h2><i class="fas fa-stream" style="color:var(--accent);"></i> Quy Trình Triển Khai Thực Tế</h2>
+        <h2><i class="fas fa-stream" style="color:var(--accent);"></i> Cách Tiếp Cận & Các Bước Làm</h2>
         <div class="process-cards-grid" id="processList"></div>
       </section>
 
       <!-- 3. KẾT QUẢ NGHIÊN CỨU THỰC TẾ / ĐIỂM NỔI BẬT -->
       <section class="detail-section" id="findingsSection" style="display:none;">
-        <h2 id="findingsTitle"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Kết Quả & Insight Nổi Bật</h2>
+        <h2 id="findingsTitle"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Điểm Đáng Chú Ý</h2>
         <div class="findings-list" id="findingsList"></div>
       </section>
 
       <!-- 4. BÀI HỌC RÚT RA & KEY TAKEAWAYS -->
       <section class="detail-section" id="takeawaysSection" style="display:none;">
-        <h2><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Bài Học & Đúc Rút Chuyên Môn</h2>
+        <h2><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Bài Học Rút Ra</h2>
         <div class="takeaways-grid" id="takeawaysList"></div>
       </section>
 
       <!-- 5. KỸ NĂNG & NĂNG LỰC THÀNH THẠO -->
       <section class="detail-section" id="skillsSection" style="display:none;">
-        <h2><i class="fas fa-bolt" style="color:var(--accent);"></i> Kỹ Năng Thành Thạo Từ Dự Án</h2>
+        <h2><i class="fas fa-bolt" style="color:var(--accent);"></i> Kỹ Năng Áp Dụng Trong Case</h2>
         <div class="skills-grid" id="skillsList"></div>
       </section>
 
@@ -114,14 +114,14 @@
         </a>
       </div>
 
-      <!-- 8. NÚT ĐIỀU HƯỚNG VÀ XEM BÁO CÁO FULL -->
+      <!-- 8. NÚT ĐIỀU HƯỚNG VÀ XEM SẢN PHẨM / TÀI LIỆU -->
       <div class="detail-cta">
         <a href="projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
         <a id="docLink" href="#" target="_blank" rel="noopener noreferrer" class="doc-btn">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
           </svg>
-          Xem Toàn Bộ Báo Cáo / Tài Liệu Gốc
+          Mở sản phẩm / tài liệu
         </a>
       </div>
 
@@ -289,6 +289,7 @@
         // 9. Gán link tài liệu / ấn phẩm vào nút ở cuối trang
         const docLink = document.getElementById('docLink');
         if (project.googleDocUrl) {
+          docLink.style.display = 'inline-flex';
           docLink.href = project.googleDocUrl.startsWith('http') ? project.googleDocUrl : encodeURI(project.googleDocUrl);
           if (project.buttonText) {
             docLink.innerHTML = `
@@ -298,6 +299,8 @@
               ${project.buttonText}
             `;
           }
+        } else {
+          docLink.style.display = 'none';
         }
       } else {
         document.body.innerHTML = '<div style="text-align:center; padding: 10rem 1rem; color: var(--text);"><h2>Dự án không tồn tại hoặc đã bị gỡ bỏ.</h2><br><a href="projects.html" class="btn-primary">Quay lại danh sách dự án</a></div>';

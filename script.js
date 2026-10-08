@@ -9,37 +9,37 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Toàn bộ các dự án thực tế & đồ án học thuật trong các lĩnh vực Marketing, Content & Design."
+    desc: "Các đồ án học tập và concept cá nhân trong Content, Social, SEO và thiết kế truyền thông."
   },
   research: {
     id: "research",
     name: "Nghiên Cứu Thị Trường",
     icon: "fas fa-chart-pie",
-    desc: "Đào sâu insight người tiêu dùng, phân tích định vị 7P, SWOT, STP & khảo sát thực địa chuyên sâu."
+    desc: "Đồ án nhóm so sánh Circle K và GS25; trình bày phương pháp nghiên cứu và các nhận xét trong báo cáo."
   },
   content: {
     id: "content",
     name: "Kế Hoạch Content",
     icon: "fas fa-pen-nib",
-    desc: "Xây dựng Content Pillar, Content Angle, phễu chuyển đổi và lịch biên tập 30 ngày cho Social Media."
+    desc: "Lập tuyến nội dung, chọn góc khai thác, viết caption và dựng lịch đăng cho Facebook, Instagram hoặc TikTok."
   },
   branding: {
     id: "branding",
     name: "Nhận Diện Thương Hiệu",
     icon: "fas fa-palette",
-    desc: "Quy chuẩn Brand DNA, Moodboard, bảng màu, font chữ, Key Visual & ứng dụng nhận diện đa nền tảng."
+    desc: "Đồ án nhận diện cơ bản: moodboard, bảng màu, kiểu chữ và ứng dụng lên các ấn phẩm."
   },
   design: {
     id: "design",
     name: "Media & Banner Ads",
     icon: "fas fa-image",
-    desc: "Sản xuất ấn phẩm quảng cáo, bộ 19+ kích thước Banner Ads chuẩn GDN, Facebook Ads & tối ưu CTR."
+    desc: "Thiết kế ấn phẩm quảng cáo và thích ứng key visual qua các kích thước banner trong đồ án."
   },
   seo: {
     id: "seo",
     name: "SEO Content",
     icon: "fas fa-search",
-    desc: "Nghiên cứu Search Intent, cấu trúc dàn bài H1-H3 chuẩn SEO On-Page, tối ưu thứ hạng tìm kiếm tự nhiên."
+    desc: "Bài mẫu theo search intent, tiêu đề và cấu trúc rõ ràng; chưa xuất bản và chưa có dữ liệu thứ hạng."
   }
 };
 
@@ -62,7 +62,7 @@ const projectsData = {
   1: {
     id: 1,
     title: "Nghiên Cứu Nhận Thức Thương Hiệu: Circle K vs GS25",
-    type: "Đồ Án Nghiên Cứu",
+    type: "Đồ Án Nhóm · Nghiên Cứu Thị Trường",
     category: "research",
     categoryName: "Nghiên Cứu Thị Trường",
     categoryIcon: "fas fa-chart-pie",
@@ -119,38 +119,37 @@ const projectsData = {
   2: {
     id: 2,
     title: "Kế Hoạch Content Facebook & Instagram",
-    type: "Kế Hoạch Nội Dung",
+    type: "Đồ Án Học Tập · Content Social",
     category: "content",
     categoryName: "Kế Hoạch Content",
     categoryIcon: "fas fa-pen-nib",
     categoryColor: "#f59e0b",
-    description: "Nghiên cứu khách hàng, đối thủ & định vị thương hiệu; xây dựng content pillar, content angle và lịch nội dung tuần/tháng cho mạng xã hội.",
+    description: "Đồ án học tập về kế hoạch nội dung Facebook & Instagram, gồm lịch biên tập và các bài mẫu. Concept social đồ mặc nhà là sản phẩm riêng, được liệt kê ở case số 6.",
     duration: "Tháng 05/2026",
     results: "Bản kế hoạch Content • Lịch biên tập 30 ngày • 10 Bài mẫu & Caption",
     tools: ["Canva", "Facebook", "Instagram", "Google Sheets"],
-    googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
     kpis: [
       { number: "30",   label: "Ngày lịch nội dung", icon: "📅" },
       { number: "10+",  label: "Bài mẫu & Caption", icon: "✍️" },
       { number: "4",    label: "Content Pillars", icon: "🎯" }
     ],
 
-    findingsTitle: "Định Hướng Nội Dung Nổi Bật",
+    findingsTitle: "Cấu Trúc Của Kế Hoạch",
     findings: [
-      "<strong>Content Pillars Chiến Lược:</strong> Phân bổ 4 tuyến nội dung cốt lõi: Giáo dục sản phẩm, Giải trí & Xu hướng, Chứng thực (Social Proof) và <strong>Chuyển đổi trực tiếp</strong>.",
-      "<strong>Content Calendar Linh Hoạt:</strong> Thiết lập lịch đăng bài chi tiết theo tuần/tháng với các định dạng đa dạng: <strong>Single Post, Instagram Carousel & Story tương tác</strong>.",
-      "<strong>Copywriting & Brand Voice:</strong> Viết caption chuẩn giọng điệu thương hiệu kết hợp <strong>lời kêu gọi hành động (CTA)</strong> giúp tăng tỷ lệ tương tác & chuyển đổi."
+      "<strong>Phân tuyến nội dung:</strong> Chia các chủ đề thành nhóm để lịch đăng có nhịp, thay vì lặp lại một kiểu bài.",
+      "<strong>Chọn định dạng:</strong> Dùng bài tĩnh, carousel và story theo nội dung cần truyền tải.",
+      "<strong>Viết caption:</strong> Mỗi bài có một ý chính và một hành động gợi ý; đây là kế hoạch học tập, chưa có số liệu sau đăng."
     ],
     skills: [
-      { icon: "📝", name: "Content Planning & Scheduling", desc: "Lập lịch nội dung khoa học, phân bổ định dạng và thời gian đăng bài tối ưu theo thuật toán mạng xã hội." },
-      { icon: "🎯", name: "Content Pillar & Angle", desc: "Nghiên cứu góc nhìn nội dung sáng tạo, đánh trúng tâm lý và nỗi đau của khách hàng mục tiêu." },
-      { icon: "💬", name: "Copywriting & Social Engagement", desc: "Soạn thảo tiêu đề gây chú ý, caption lôi cuốn và lời kêu gọi hành động (CTA) chuyển đổi cao." }
+      { icon: "📝", name: "Content Planning & Scheduling", desc: "Lập lịch nội dung, phân bổ định dạng và gắn mục tiêu cho từng bài." },
+      { icon: "🎯", name: "Content Pillar & Angle", desc: "Tổ chức chủ đề thành các tuyến và tìm nhiều góc kể cho cùng một sản phẩm." },
+      { icon: "💬", name: "Copywriting & Social Engagement", desc: "Viết tiêu đề, caption và câu hỏi gợi tương tác; chưa có dữ liệu để khẳng định hiệu quả chuyển đổi." }
     ],
     objectives: [
       "Nghiên cứu thương hiệu, sản phẩm, đối thủ cạnh tranh và chân dung khách hàng mục tiêu",
       "Xây dựng hệ thống Content Pillars & Content Angles rõ ràng cho từng giai đoạn truyền thông",
       "Thiết lập lịch biên tập nội dung (Content Calendar) chi tiết theo tuần hoặc tháng",
-      "Tối ưu bài viết, caption, hình ảnh minh họa & story phù hợp với thuật toán Facebook và Instagram"
+      "Chọn format, caption và hình minh họa phù hợp với Facebook và Instagram"
     ],
     process: [
       { icon: "🔍", title: "Nghiên Cứu Thị Trường", desc: "Phân tích tuyến nội dung của đối thủ và hành vi tương tác của khách hàng trên Social Media" },
@@ -169,7 +168,7 @@ const projectsData = {
   3: {
     id: 3,
     title: "Xây Dựng Bộ Nhận Diện Thương Hiệu Cơ Bản",
-    type: "Branding & Visual",
+    type: "Đồ Án Học Tập · Branding",
     category: "branding",
     categoryName: "Nhận Diện Thương Hiệu",
     categoryIcon: "fas fa-palette",
@@ -178,7 +177,6 @@ const projectsData = {
     duration: "Tháng 04/2026",
     results: "Brand Guidelines • Moodboard • Key Visual • Khung bài đăng Social",
     tools: ["Canva", "Google Sheets", "AI Tools"],
-    googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
     kpis: [
       { number: "1",    label: "Brand Guidelines hoàn chỉnh", icon: "📐" },
       { number: "5",    label: "Tính cách thương hiệu", icon: "💡" },
@@ -268,51 +266,93 @@ const projectsData = {
 
   5: {
     id: 5,
-    title: "Viết Bài Chuẩn SEO Chuyên Sâu",
-    type: "SEO Content Writing",
+    title: "Bộ Bài SEO Mẫu Theo Sở Thích",
+    type: "Concept Cá Nhân · SEO Content",
     category: "seo",
     categoryName: "SEO Content",
     categoryIcon: "fas fa-search",
-    categoryColor: "#4ade80",
-    description: "Nghiên cứu từ khóa & search intent; xây dựng dàn ý cấu trúc H1-H3; viết và tối ưu bài viết chuẩn SEO tăng thứ hạng tự nhiên.",
-    duration: "Tháng 02/2026",
-    results: "Bài viết SEO Hoàn chỉnh • Bộ Từ khóa & Intent • Dàn ý H1-H3 chuẩn",
-    tools: ["Google Sheets", "AI Tools", "Canva"],
-    googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
+    categoryColor: "#87513c",
+    description: "Bốn bài mẫu về mô hình lắp ráp, build PC, Dragon Ball và game/RPG. Mỗi bài có cấu trúc rõ, ảnh chụp tư liệu có ghi nguồn và đường dẫn tham khảo; chưa xuất bản.",
+    duration: "Concept cá nhân · 10/2026",
+    results: "4 bài mẫu • 4 chủ đề sở thích • 0 bài đã xuất bản",
+    tools: ["HTML & CSS", "Google Search Central", "Nguồn chính thức theo chủ đề"],
+    googleDocUrl: "seo-samples.html",
+    buttonText: "Mở bộ sưu tập bài SEO mẫu →",
+    featured: true,
     kpis: [
-      { number: "3+",  label: "Nhóm Search Intent", icon: "🔎" },
-      { number: "H1-H3", label: "Cấu trúc chuẩn SEO", icon: "📝" },
-      { number: "100%", label: "On-page tối ưu", icon: "✅" }
+      { number: "04", label: "Bài mẫu đã viết", icon: "📝" },
+      { number: "04", label: "Chủ đề sở thích", icon: "🔎" },
+      { number: "0", label: "Bài đã xuất bản", icon: "↗️" }
     ],
-
-    findingsTitle: "Kết Quả Tối Ưu Nội Dung SEO",
+    findingsTitle: "Bốn Góc Nội Dung Trong Bộ Mẫu",
     findings: [
-      "<strong>Search Intent Chính Xác:</strong> Phân tích chính xác ý định tìm kiếm (Search Intent) giúp xây dựng nội dung giải quyết đúng thắc mắc của người dùng.",
-      "<strong>Cấu Trúc Chuẩn H1-H3:</strong> Triển khai cấu trúc H1, H2, H3 mạch lạc, phân bổ từ khóa chính & từ khóa liên quan tự nhiên không gây chán.",
-      "<strong>Tối Ưu On-Page Toàn Diện:</strong> Tối ưu Meta Title, Meta Description, ảnh minh họa Alt tag, Internal Link và CTA kêu gọi hành động hiệu quả."
-    ],
-    skills: [
-      { icon: "🔎", name: "Keyword & Search Intent Research", desc: "Nghiên cứu từ khóa ngành, phân loại nhóm ý định tìm kiếm và xây dựng Topic Cluster." },
-      { icon: "✍️", name: "SEO Structure Writing (H1-H3)", desc: "Xây dựng dàn ý bài viết chuẩn SEO, triển khai nội dung hữu ích, dễ đọc và giữ chân độc giả lâu hơn." },
-      { icon: "🔗", name: "On-Page SEO Optimization", desc: "Tối ưu Meta tags, ảnh Alt, liên kết nội bộ (Internal link) và giọng điệu thương hiệu độc đáo." }
+      "<strong>Mô hình lắp ráp:</strong> Hướng dẫn người mới chọn bộ đầu tiên, đọc hướng dẫn và chuẩn bị mặt bàn làm việc.",
+      "<strong>Build PC:</strong> Bắt đầu từ nhu cầu và ngân sách, sau đó kiểm tra tương thích linh kiện trước khi mua.",
+      "<strong>Dragon Ball & RPG 2D:</strong> Bài giải thích theo sở thích, có đường dẫn tham khảo chính thức và ảnh tư liệu được ghi nguồn."
     ],
     objectives: [
-      "Nghiên cứu từ khóa chính, từ khóa phụ và phân tích ý định tìm kiếm của người dùng (Search Intent)",
-      "Xây dựng dàn ý bài viết cấu trúc H1, H2, H3 logic, mạch lạc và dễ đọc",
-      "Viết tiêu đề chuẩn SEO, đoạn mô tả (Meta Description) hấp dẫn kích thích tỷ lệ nhấp (CTR)",
-      "Tối ưu hình ảnh, liên kết nội bộ và lời kêu gọi hành động (CTA) giữ chân người đọc"
+      "Chọn một câu hỏi có thật trong từng sở thích thay vì gom nhiều từ khóa vào một bài",
+      "Viết bốn bài mẫu với cấu trúc H1, H2, H3 và đường dẫn tham khảo rõ ràng",
+      "Chuẩn bị title, meta description, slug và alt text như một gói on-page",
+      "Tách thông tin theo nguồn, lời khuyên biên tập và nội dung cần cập nhật trước khi xuất bản"
     ],
     process: [
-      { icon: "🔎", title: "Nghiên Cứu Từ Khóa", desc: "Phân tích Search Intent, độ khó và lưu lượng tìm kiếm để chọn bộ từ khóa hạt nhân" },
-      { icon: "📑", title: "Xây Dựng Topic Cluster & Outline", desc: "Thiết lập cấu trúc phân cấp thẻ H1, H2, H3 bao phủ trọn vẹn thắc mắc của độc giả" },
-      { icon: "✍️", title: "Biên Soạn Nội Dung Chuẩn SEO", desc: "Viết bài chuẩn văn phong, phân bổ từ khóa tự nhiên và tối ưu tỷ lệ đọc lướt (Readability)" },
-      { icon: "🔗", title: "Tối Ưu On-Page & Internal Link", desc: "Tối ưu Meta Title, Meta Description, thẻ Alt hình ảnh và liên kết nội bộ kêu gọi hành động (CTA)" }
+      { icon: "🎯", title: "Chọn Chủ Đề", desc: "Lấy mô hình lắp ráp, PC, Dragon Ball và game/RPG làm bốn nhóm nội dung khác nhau." },
+      { icon: "🔎", title: "Xác Định Câu Hỏi", desc: "Mỗi bài trả lời một nhu cầu rõ: bắt đầu từ đâu, chọn gì, hoặc sắp xếp thứ tự ra sao." },
+      { icon: "✍️", title: "Viết & Biên Tập", desc: "Viết theo câu hỏi cụ thể, bỏ câu chung chung và ghi rõ chỗ nào cần kiểm tra lại." },
+      { icon: "🧭", title: "Gắn Nguồn & Ghi Chú", desc: "Dẫn nguồn chính thức; ghi rõ bài chưa đăng và thông tin nào cần cập nhật trước khi dùng thật." }
     ],
-    frameworks: ["Search Intent Mapping", "Topic Cluster Model", "On-Page SEO Standard", "E-E-A-T Framework"],
+    frameworks: ["Search Intent", "H1–H3", "Meta Title & Description", "Image Alt", "Source Notes"],
     takeaways: [
-      { icon: "🔎", title: "Search Intent là trên hết", desc: "Google xếp hạng nội dung dựa trên mức độ giải quyết vấn đề của người dùng, không phải chỉ nhồi nhét từ khóa." },
-      { icon: "📑", title: "Cấu trúc rõ ràng giữ chân người đọc", desc: "Một dàn bài H1-H3 mạch lạc giúp độc giả dễ tìm thấy câu trả lời nhanh, giảm tỷ lệ thoát trang (Bounce Rate)." },
-      { icon: "🎯", title: "SEO kết hợp chuyển đổi", desc: "Lưu lượng truy cập chỉ có giá trị khi đi kèm lời kêu gọi hành động (CTA) hợp lý, dẫn dắt người đọc sang hành vi tiếp theo." }
+      { icon: "🧭", title: "Viết từ điều mình thật sự quan tâm", desc: "Chủ đề quen giúp bài có ví dụ cụ thể hơn; chỗ nào cần kiến thức chuyên môn thì phải dẫn nguồn." },
+      { icon: "✂️", title: "Một bài chỉ nên giải quyết một việc", desc: "Người đọc tìm cách chọn bộ lắp ráp cần câu trả lời khác với người đang xem thứ tự một series anime." },
+      { icon: "🔄", title: "Bài mẫu chưa phải kết quả SEO", desc: "Muốn kết luận hiệu quả cần xuất bản, theo dõi truy vấn và cập nhật theo dữ liệu thật." }
+    ]
+  },
+
+  6: {
+    id: 6,
+    title: "Một Tuần Content Social: Đồ Mặc Nhà Theo Nhịp Sống",
+    type: "Concept Cá Nhân · Ngành Đồ Mặc Nhà",
+    category: "content",
+    categoryName: "Kế Hoạch Content",
+    categoryIcon: "fas fa-pen-nib",
+    categoryColor: "#87513c",
+    description: "Concept ứng tuyển tự xây dựng cho ngành đồ mặc nhà, lấy cảm hứng từ danh mục sản phẩm công khai của Vingoria. Không phải dự án được thương hiệu đặt hàng hay phê duyệt.",
+    duration: "Concept cá nhân · 10/2026",
+    results: "Lịch 7 ngày • 3 ảnh moodboard có nguồn • 1 kịch bản/shot list (chưa quay)",
+    tools: ["Facebook", "Instagram", "Content Calendar", "Visual Direction"],
+    googleDocUrl: "social-content-sample.html",
+    buttonText: "Mở kế hoạch social & moodboard",
+    featured: true,
+    kpis: [
+      { number: "7", label: "Ngày nội dung đề xuất", icon: "📅" },
+      { number: "3", label: "Tuyến nội dung", icon: "🧵" },
+      { number: "01", label: "Script + shot list", icon: "🎬" }
+    ],
+    findingsTitle: "Điểm Chính Của Concept",
+    findings: [
+      "<strong>Góc kể:</strong> Đồ mặc nhà đi cùng những việc bình thường trong ngày, không chỉ xuất hiện như ảnh sản phẩm trên nền trơn.",
+      "<strong>Định dạng:</strong> Kết hợp bài tĩnh, carousel, story hỏi đáp và một video script 15 giây; mỗi định dạng có mục tiêu riêng.",
+      "<strong>Ranh giới sản xuất:</strong> Bộ này có ảnh moodboard, caption nháp và kịch bản/shot list. Chưa quay, dựng hay đăng nên chưa có số liệu."
+    ],
+    objectives: [
+      "Thử chuyển một nhóm sản phẩm đồ mặc nhà thành các chủ đề gần với nhịp sinh hoạt hàng ngày",
+      "Xây lịch social mẫu 7 ngày, có mục tiêu và định dạng rõ cho từng bài",
+      "Chọn ảnh tư liệu làm moodboard, ghi nguồn và nêu rõ giới hạn sử dụng",
+      "Viết một script và shot list để thể hiện phần ý tưởng/tiền kỳ riêng với khâu quay dựng"
+    ],
+    process: [
+      { icon: "🔎", title: "Đọc Brief Công Khai", desc: "Chỉ dùng danh mục đồ mặc nhà đang được giới thiệu; không suy đoán về chất liệu, công năng hay giá của sản phẩm cụ thể." },
+      { icon: "🧭", title: "Chọn Góc Kể", desc: "Dùng các khoảnh khắc ở nhà làm bối cảnh; để thông tin chi tiết của sản phẩm chờ brief chính thức." },
+      { icon: "📅", title: "Lên Lịch Nội Dung", desc: "Phân bổ bài khám phá, hỏi đáp và hỗ trợ cân nhắc trong một tuần mẫu." },
+      { icon: "🎨", title: "Ảnh tham khảo & Script", desc: "Chọn ảnh moodboard có ghi nguồn; viết lời thoại và shot list riêng với khâu quay dựng." }
+    ],
+    frameworks: ["Social Content Calendar", "Content Pillars", "Visual Direction", "Short-Form Script"],
+    takeaways: [
+      { icon: "🧵", title: "Từ sản phẩm ra tình huống", desc: "Một sản phẩm dễ kể hơn khi đặt cạnh nhu cầu cụ thể của người dùng, thay vì lặp lại lời giới thiệu chung." },
+      { icon: "📱", title: "Mỗi định dạng có việc riêng", desc: "Carousel để giải thích, story để hỏi nhanh, video script để gợi một cảnh; không cần ép mọi bài thành video." },
+      { icon: "🎥", title: "Bàn giao rõ phần việc", desc: "Concept có thể dừng ở script và shot list nếu phần quay dựng do người khác đảm nhận." }
     ]
   }
 };
@@ -361,12 +401,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 1. CHỨC NĂNG THEME TOGGLE (DARK / LIGHT MODE)
 function initThemeToggle() {
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-  if (currentTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-  }
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', currentTheme);
 
   const toggleBtns = document.querySelectorAll('.theme-toggle');
   toggleBtns.forEach(btn => {
@@ -375,11 +411,7 @@ function initThemeToggle() {
       const activeTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = activeTheme === 'light' ? 'dark' : 'light';
       
-      if (newTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-      }
+      document.documentElement.setAttribute('data-theme', newTheme);
       
       localStorage.setItem('theme', newTheme);
       toggleBtns.forEach(b => updateThemeIcon(b, newTheme));
