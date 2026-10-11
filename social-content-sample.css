@@ -482,6 +482,29 @@
   margin: 0;
 }
 
+/* SAMPLE POSTS STACK & MULTI-POST CARDS */
+.sample-posts-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.sample-caption-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: var(--editorial-paper-subtle);
+  color: var(--editorial-clay);
+  border: 1px solid var(--editorial-line);
+}
+
 /* VIDEO STORYBOARD BOUNDARY */
 .video-boundary {
   padding: 1.2rem 1.4rem;
