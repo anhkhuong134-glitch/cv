@@ -213,54 +213,6 @@ const projectsData = {
     ]
   },
 
-  2: {
-    id: 2,
-    title: "Kế Hoạch Content Facebook & Instagram",
-    type: "Đồ Án Học Tập · Content Social",
-    category: "content",
-    categoryName: "Kế Hoạch Content",
-    categoryIcon: "fas fa-pen-nib",
-    categoryColor: "#f59e0b",
-    description: "Đồ án học tập về kế hoạch nội dung Facebook & Instagram, gồm lịch biên tập và các bài mẫu. Concept social đồ mặc nhà là sản phẩm riêng, được liệt kê ở case số 6.",
-    duration: "Tháng 05/2026",
-    results: "Bản kế hoạch Content • Lịch biên tập 30 ngày • 10 Bài mẫu & Caption",
-    tools: ["Canva", "Facebook", "Instagram", "Google Sheets"],
-    kpis: [
-      { number: "30",   label: "Ngày lịch nội dung", icon: "📅" },
-      { number: "10+",  label: "Bài mẫu & Caption", icon: "✍️" },
-      { number: "4",    label: "Content Pillars", icon: "🎯" }
-    ],
-
-    findingsTitle: "Cấu Trúc Của Kế Hoạch",
-    findings: [
-      "<strong>Phân tuyến nội dung:</strong> Chia các chủ đề thành nhóm để lịch đăng có nhịp, thay vì lặp lại một kiểu bài.",
-      "<strong>Chọn định dạng:</strong> Dùng bài tĩnh, carousel và story theo nội dung cần truyền tải.",
-      "<strong>Viết caption:</strong> Mỗi bài có một ý chính và một hành động gợi ý; đây là kế hoạch học tập, chưa có số liệu sau đăng."
-    ],
-    skills: [
-      { icon: "📝", name: "Content Planning & Scheduling", desc: "Lập lịch nội dung, phân bổ định dạng và gắn mục tiêu cho từng bài." },
-      { icon: "🎯", name: "Content Pillar & Angle", desc: "Tổ chức chủ đề thành các tuyến và tìm nhiều góc kể cho cùng một sản phẩm." },
-      { icon: "💬", name: "Copywriting & Social Engagement", desc: "Viết tiêu đề, caption và câu hỏi gợi tương tác; chưa có dữ liệu để khẳng định hiệu quả chuyển đổi." }
-    ],
-    objectives: [
-      "Nghiên cứu thương hiệu, sản phẩm, đối thủ cạnh tranh và chân dung khách hàng mục tiêu",
-      "Xây dựng hệ thống Content Pillars & Content Angles rõ ràng cho từng giai đoạn truyền thông",
-      "Thiết lập lịch biên tập nội dung (Content Calendar) chi tiết theo tuần hoặc tháng",
-      "Chọn format, caption và hình minh họa phù hợp với Facebook và Instagram"
-    ],
-    process: [
-      { icon: "🔍", title: "Nghiên Cứu Thị Trường", desc: "Phân tích tuyến nội dung của đối thủ và hành vi tương tác của khách hàng trên Social Media" },
-      { icon: "🎯", title: "Xác Định Mục Tiêu", desc: "Phân chia tỷ lệ nội dung theo phễu marketing (Awareness → Engagement → Conversion)" },
-      { icon: "📅", title: "Lập Content Calendar", desc: "Thiết lập lịch đăng bài chi tiết với thời gian, định dạng, tiêu đề & thông điệp cốt lõi" },
-      { icon: "✍️", title: "Sáng Tạo Nội Dung Mẫu", desc: "Viết 5–10 bài mẫu hoàn chỉnh kèm thiết kế hình ảnh/carousel theo chuẩn nhận diện thương hiệu" }
-    ],
-    frameworks: ["Content Pillar Model", "Marketing Funnel", "Brand Voice Framework", "Content Calendar"],
-    takeaways: [
-      { icon: "📝", title: "Lập kế hoạch có hệ thống", desc: "Hiểu được tầm quan trọng của Content Calendar — không chỉ đăng bài ngẫu hứng mà phải có chiến lược rõ từng tuần." },
-      { icon: "🎯", title: "Tư duy theo phễu chuyển đổi", desc: "Mỗi bài đăng phải phục vụ một mục tiêu cụ thể trong phễu (Awareness/Engagement/Conversion) — không content nào là vô nghĩa." },
-      { icon: "💬", title: "Brand Voice nhất quán", desc: "Viết caption cho nhiều post liên tiếp giúp tôi hiểu sâu tầm quan trọng của giọng điệu thương hiệu đồng nhất." }
-    ]
-  },
 
   3: {
     id: 3,
