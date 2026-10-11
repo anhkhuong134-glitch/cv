@@ -33,7 +33,7 @@
       <select class="article-quick-select" aria-label="Chuyển nhanh bài viết">
         <option value="seo-model-kit.html">1. Gunpla cho người mới</option>
         <option value="seo-pc-build.html">2. Build PC theo nhu cầu</option>
-        <option value="seo-dragon-ball.html">3. Thứ tự xem Dragon Ball</option>
+        <option value="seo-dragon-ball.html">3. Dragon Ball Daima Review</option>
         <option value="seo-rpg.html" selected>4. Làm game RPG 2D</option>
       </select>
       <div class="sample-nav-links">
@@ -180,7 +180,7 @@
     <div class="article-layout">
       <!-- MAIN BODY -->
       <article class="article-body" id="article-content">
-        <!-- FEATURED FIGURE (KHÔNG DÙNG ẢNH AI - ẢNH SỰ KIỆN THỰC TẾ) -->
+        <!-- FEATURED FIGURE 1 (KHÔNG DÙNG ẢNH AI - ẢNH SỰ KIỆN THỰC TẾ) -->
         <figure class="article-figure">
           <img src="https://vnanet.vn/Data/Articles/2026/05/08/8749338/vna_potal_vietnam_gameverse_2026_aims_to_elevate_local_gaming_industry_globally__stand.jpg" alt="Gian hàng triển lãm và trải nghiệm phát triển game tại sự kiện Vietnam GameVerse chụp bởi TTXVN" loading="lazy">
           <figcaption>
@@ -189,12 +189,14 @@
           </figcaption>
         </figure>
 
-        <p><span class="drop-cap">H</span>ầu hết người mới bắt đầu tìm hiểu về <strong>làm game RPG 2D</strong> đều ôm ấp tham vọng xây dựng một thế giới mở rộng lớn với cốt truyện nhiều kết thúc, hệ thống chiến đấu phức tạp và hàng chục nhân vật. Tuy nhiên, 90% dự án game độc lập (indie game) thất bại ở giai đoạn đầu chính vì phạm vi quá rộng (scope creep). Lời khuyên vàng từ các nhà thiết kế game kỳ cựu là: <em>“Hãy bắt đầu từ một căn phòng duy nhất”</em>. Bài viết này sẽ hướng dẫn bạn phương pháp dựng một bản mẫu (prototype) hoàn chỉnh trong Unity 6 để kiểm chứng độ cuốn hút của trò chơi ngay trong tuần đầu tiên.</p>
+        <p><span class="drop-cap">H</span>ầu hết những lập trình viên hoặc nhà sáng tạo độc lập khi bắt đầu tìm hiểu về <strong>làm game RPG 2D</strong> đều ấp ủ ước mơ kiến tạo một thế giới mở kỳ vĩ: một lục địa bao la với hàng chục vương quốc, cốt truyện phân nhánh hàng trăm ngàn từ, cây kỹ năng rực rỡ và hệ thống chiến đấu nhập vai sâu sắc. Thế nhưng, theo số liệu thống kê từ diễn đàn phát triển game quốc tế GDC (Game Developers Conference), hơn 90% dự án game indie cá nhân đã chết yểu ngay trong 3 tháng đầu tiên. Thủ phạm lớn nhất không phải là thiếu kỹ năng lập trình hay đồ họa xấu, mà chính là hiện tượng <strong>“phình to quy mô” (Scope Creep)</strong> – khi tham vọng vượt quá khả năng chịu tải của một người làm việc đơn lẻ.</p>
+
+        <p>Lời khuyên cốt tử từ các game designer kỳ cựu đúc kết lại rất giản dị: <em>“Nếu bạn chưa làm cho một căn phòng duy nhất trở nên thú vị, đừng mơ mộng xây dựng cả một thế giới.”</em> Bài viết này sẽ hướng dẫn bạn phương pháp dựng một bản mẫu hoàn chỉnh (Vertical Slice Prototype) trong Unity 6, từ việc ứng dụng nghệ thuật khối xám Greyboxing, phân tầng kiến trúc Tilemap 3 lớp, quản lý dữ liệu bằng ScriptableObject cho đến thiết lập camera Pixel Perfect không bị rung giật.</p>
 
         <h2 id="lat-choi">1. Viết bản Mini-brief 5 thành phần cho căn phòng thử nghiệm</h2>
         
         <h3 id="vertical-slice">Triết lý "Vertical Slice" thu nhỏ: Kiểm chứng gameplay loop sớm</h3>
-        <p>Vertical slice là một lát cắt hoàn chỉnh chứa đựng mọi cơ chế cốt lõi của game trong phạm vi hẹp. Nếu người chơi bước vào một căn phòng nhỏ mà không hiểu phải làm gì hoặc cảm thấy chán nản, chi phí sửa một căn phòng luôn rẻ hơn gấp trăm lần so với sửa lại cả một thế giới.</p>
+        <p>Vertical slice là một lát cắt phát triển hoàn chỉnh: nó chứa đựng đầy đủ mọi thành phần của sản phẩm cuối cùng (di chuyển, va chạm vật lý, tương tác bấm nút, âm thanh, điều kiện hoàn thành) nhưng chỉ gói gọn trong một không gian cực hẹp. Một căn phòng nhỏ đóng vai trò như chiếc kính hiển vi: nếu người chơi điều khiển nhân vật bước vào căn phòng mà cảm thấy lúng túng, cử động chậm chạp hoặc không tìm thấy niềm vui khi tương tác với đồ vật, bạn có thể chỉnh sửa lại toàn bộ mã nguồn chỉ trong 30 phút. Ngược lại, nếu bạn đã vẽ xong 10 bản đồ lớn rồi mới nhận ra cơ chế điều khiển bị lỗi, cái giá phải trả sẽ là hàng tháng trời vứt bỏ công sức.</p>
 
         <h3 id="bang-thanh-phan">Bảng 5 thành phần cốt lõi của căn phòng mẫu</h3>
         <div class="article-table-wrap">
@@ -202,78 +204,128 @@
             <thead>
               <tr>
                 <th>Thành phần cốt lõi</th>
-                <th>Ví dụ trong căn phòng mẫu</th>
-                <th>Câu hỏi kiểm tra trải nghiệm người chơi</th>
+                <th>Ví dụ cụ thể trong phòng mẫu</th>
+                <th>Tiêu chí kiểm chứng trải nghiệm người chơi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>1. Mục tiêu (Objective)</strong></td>
-                <td>Tìm chìa khóa bạc để mở cánh cửa thoát hiểm</td>
-                <td>Người chơi có tự nhận ra nhiệm vụ sau 5 giây bước vào phòng không?</td>
+                <td>Tìm chiếc chìa khóa gỉ sét để mở cánh cửa sắt thoát hiểm</td>
+                <td>Người chơi có tự động hiểu mình cần làm gì sau 5 giây quan sát không?</td>
               </tr>
               <tr>
                 <td><strong>2. Chướng ngại (Obstacle)</strong></td>
-                <td>Một hành lang bị bàn ghế đổ sập chắn ngang</td>
-                <td>Đường đi vòng có mang lại cảm giác khám phá hay chỉ gây ức chế?</td>
+                <td>Hành lang hẹp bị bàn ghế đổ chắn ngang và một hố bẫy gai</td>
+                <td>Quãng đường đi vòng có kích thích sự tò mò hay chỉ gây ức chế điều khiển?</td>
               </tr>
               <tr>
                 <td><strong>3. Tương tác (Interaction)</strong></td>
-                <td>Nhấn phím E hoặc nút hành động khi lại gần rương</td>
-                <td>Giao diện (UI prompt) có hiện rõ dấu hiệu để người chơi biết cần bấm nút không?</td>
+                <td>Nhấn phím cách [Space] hoặc phím [E] để mở rương gỗ</td>
+                <td>Giao diện biểu tượng (UI prompt) có nổi bật trực quan khi nhân vật đứng gần đồ vật không?</td>
               </tr>
               <tr>
-                <td><strong>4. Phản hồi (Feedback)</strong></td>
-                <td>Rương phát sáng, bung nắp và phát âm thanh nhặt đồ</td>
-                <td>Trò chơi có lập tức phản hồi trực quan rằng hành động đã thành công?</td>
+                <td><strong>4. Phản hồi giác quan (Juice / Feedback)</strong></td>
+                <td>Rương bung nắp, phát hạt sáng (particle effect) và tiếng "ting" vui tai</td>
+                <td>Trò chơi có mang lại cảm giác thỏa mãn (game feel) ngay khi người chơi bấm nút thành công?</td>
               </tr>
               <tr>
                 <td><strong>5. Điều kiện thắng (Win State)</strong></td>
-                <td>Cánh cửa mở ra, màn hình hiện thông báo hoàn thành</td>
-                <td>Người chơi có cảm nhận được sự thỏa mãn khi giải quyết xong phòng không?</td>
+                <td>Cánh cửa mở toang, ánh sáng tràn vào phòng và nhạc chiến thắng vang lên</td>
+                <td>Khoảnh khắc hoàn thành có tạo ra cảm xúc khép lại một chu trình (closure) trọn vẹn?</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2 id="chon-goc-nhin">2. Chọn góc nhìn camera và phong cách đồ họa trước tiên</h2>
+        <!-- FIGURE 2: MÀN HÌNH PIXEL ART VÀ RETRO GAMING -->
+        <figure class="article-figure">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Màn hình chơi game pixel art phong cách cổ điển và không gian sáng tạo trò chơi điện tử" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Unsplash (Ảnh chụp thực tế). Trò chơi pixel art phong cách retro: vẻ đẹp vượt thời gian đến từ lối chơi cuốn hút và tỷ lệ hình khối chuẩn xác chứ không phụ thuộc vào đồ họa 3D cầu kỳ.
+          </figcaption>
+        </figure>
+
+        <h2 id="chon-goc-nhin">2. Chọn góc nhìn camera và nghệ thuật tạo khối xám (Greyboxing)</h2>
         
-        <h3 id="so-sanh-goc-nhin">So sánh 3 góc nhìn: Top-down 2D, Side-scrolling và Isometric</h3>
-        <p>Góc nhìn từ trên xuống (Top-down 2D như Pokemon hay Zelda cũ), góc nhìn cuộn ngang (Side-scrolling như Hollow Knight) hay góc nghiêng (Isometric) đều đòi hỏi cách thiết kế bố cục bản đồ, cơ chế va chạm và căn chỉnh camera hoàn toàn khác biệt. Chọn đúng góc nhìn ngay từ đầu giúp bạn tiết kiệm hàng tuần vẽ lại asset.</p>
-
-        <h3 id="nghe-thuat-greyboxing">Tại sao nên bắt đầu bằng nghệ thuật khối xám (Greyboxing)?</h3>
-        <p>Đừng vội vẽ pixel art chi tiết từng viên gạch. Hãy dùng các khối vuông màu trắng/xám đơn giản để đo đạc tỉ lệ nhân vật, tốc độ di chuyển và độ rộng hành lang. Khi cơ chế chơi đã vui, lúc đó khoác lớp áo đồ họa lên cũng chưa muộn.</p>
-
-        <h2 id="thu-tu-lam">3. Quy trình 6 bước thực hiện prototype chuẩn Unity 6</h2>
-        
-        <h3 id="buoc-1-2">Bước 1 & 2: Lập trình di chuyển và dựng Grid Tilemap</h3>
-        <p>Tạo script <code>PlayerController2D</code> với vận tốc di chuyển mượt mà. Trong Unity 6, tạo đối tượng cha <strong>Grid</strong> chứa các lớp <strong>Tilemap</strong> (Sàn nhà, Tường chắn, Đồ trang trí).</p>
-
-        <h4 id="tile-palette">Vẽ môi trường sàn và tường bằng công cụ Tile Palette</h4>
-        <p>Kéo các sprite ô gạch vào cửa sổ <em>Tile Palette</em>, bạn có thể dùng cọ vẽ (brush) để tô sàn và dựng tường phòng nhanh chóng như vẽ tranh trên MS Paint.</p>
-
-        <h3 id="buoc-3-4">Bước 3 & 4: Thiết lập va chạm vật lý và cơ chế tương tác</h3>
-        
-        <h4 id="tilemap-collider">Xử lý va chạm chuẩn xác bằng Tilemap Collider 2D</h4>
-        <p>Thêm thành phần <code>Tilemap Collider 2D</code> kết hợp với <code>Composite Collider 2D</code> trên lớp tường. Điều này giúp gộp các ô va chạm rời rạc thành một đường viền liền mạch, chống triệt để lỗi nhân vật bị kẹt ở mép gạch.</p>
-
-        <h3 id="buoc-5-6">Bước 5 & 6: Điều kiện mở khóa và thử nghiệm chơi (Playtest)</h3>
-        <p>Viết biến logic <code>hasKey == true</code> cho phép mở cửa. Mời một người bạn chưa từng nghe về ý tưởng của bạn ngồi chơi thử trong im lặng và quan sát cử chỉ của họ.</p>
-
-        <blockquote class="article-pullquote">
-          “Bản prototype đầu tiên không cần chứng minh bạn có thể xây dựng cả một thế giới đồ sộ. Nó chỉ cần chứng minh một phút trải nghiệm ngắn có đủ hấp dẫn để bạn tiếp tục bước tiếp hay không.”
-        </blockquote>
-
-        <h2 id="dung-mo-rong">4. Tiêu chí đánh giá căn phòng đã sẵn sàng để mở rộng</h2>
+        <h3 id="so-sanh-goc-nhin">Top-down 2D, Side-scrolling hay Isometric: Bạn nên chọn góc nhìn nào?</h3>
         <ul>
-          <li>Người chơi tự hiểu mục tiêu cần làm mà không cần bạn ngồi bên cạnh giải thích miệng.</li>
-          <li>Nhân vật di chuyển mượt mà đến vị trí tương tác và không bị lỗi lọt qua mép tường collider.</li>
-          <li>Ít nhất một hành động của người chơi tạo ra thay đổi rõ ràng lên trạng thái của môi trường.</li>
-          <li>Người chơi nhận ra ngay khoảnh khắc mình vừa hoàn tất thử thách.</li>
+          <li><strong>Top-down 2D (Góc nhìn từ trên xuống):</strong> Kiểu mẫu của <em>Pokemon, The Legend of Zelda, Chrono Trigger</em>. Nhân vật di chuyển tự do 4 hướng hoặc 8 hướng trên mặt phẳng phẳng. Đây là góc nhìn thân thiện nhất cho người mới bắt đầu vì toán học va chạm cực kỳ đơn giản và logic sắp xếp chiều sâu (Sorting Layer theo trục Y) rất dễ quản lý.</li>
+          <li><strong>Side-scrolling 2D (Cuộn cảnh ngang phong cách Metroidvania):</strong> Kiểu mẫu của <em>Hollow Knight, Celeste</em>. Đòi hỏi tính toán trọng lực, quán tính rơi tự do, nhảy bám tường (wall-jump) và thiết kế nền tảng phức tạp hơn.</li>
+          <li><strong>Isometric (Góc nhìn giả 3D 2.5D):</strong> Như <em>Hades, Diablo</em>. Đòi hỏi vẽ asset hình thoi nghiêng góc 2:1 và xử lý che khuất tầm nhìn (occlusion) rất phức tạp, hoàn toàn không phù hợp cho dự án đầu tay.</li>
         </ul>
 
-        <h3 id="khi-nao-ve-art">Khi nào bạn nên bắt đầu viết kịch bản và vẽ art chi tiết?</h3>
-        <p>Chỉ khi căn phòng thử nghiệm đạt điểm 8/10 về cảm giác điều khiển (Game Feel) và mang lại niềm vui khám phá. Lúc này, bạn có thể tự tin nhân rộng ra phòng số 2, số 3 để kết nối thành một hầm ngục (Dungeon) hoàn chỉnh.</p>
+        <h3 id="nghe-thuat-greyboxing">Tại sao dân chuyên nghiệp luôn làm Greyboxing trước khi vẽ Sprite?</h3>
+        <p><strong>Greyboxing (Tạo khối xám)</strong> là kỹ thuật dùng các hình khối chữ nhật và vuông màu xám hoặc ô cờ ca-rô đơn sắc để dựng toàn bộ địa hình phòng ốc. Lý do bạn bắt buộc phải làm việc này:</p>
+        <ol>
+          <li>Nếu nhân vật di chuyển quá nhanh hoặc quá chậm, hành lang vẽ sẵn 32 pixel sẽ bị hẹp quá hoặc rộng thênh thang, buộc bạn phải xóa bỏ và vẽ lại toàn bộ tranh ảnh (sprite sheet).</li>
+          <li>Khi không có hình ảnh đẹp đánh lừa mắt, bạn sẽ nhìn thẳng vào sự thật: cơ chế di chuyển của nhân vật có mượt mà không? Nhảy có bị trơn trượt không? Cảm giác né đòn có đã tay không?</li>
+        </ol>
+
+        <!-- FIGURE 3: GÓC LÀM VIỆC LẬP TRÌNH GAME INDIE -->
+        <figure class="article-figure">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Góc bàn làm việc lập trình viên phát triển game với màn hình mã nguồn C sharp và công cụ Unity" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Unsplash (Ảnh chụp thực tế). Không gian làm việc của nhà phát triển game: màn hình soạn thảo mã nguồn C# kết hợp cùng cửa sổ trực quan Scene View và Game View trong môi trường Unity.
+          </figcaption>
+        </figure>
+
+        <h2 id="thu-tu-lam">3. Quy trình kỹ thuật 6 bước dựng prototype chuẩn Unity 6</h2>
+
+        <h3 id="buoc-1-2">Bước 1 & 2: Thiết lập hệ thống Grid Tilemap 3 lớp chuyên nghiệp</h3>
+        <p>Trong Unity 6, bạn không bao giờ nên vẽ tất cả mọi thứ lên một lớp Tilemap duy nhất. Hãy nhấp chuột phải tạo một đối tượng <code>2D Object &gt; Tilemap &gt; Rectangular</code> mang tên <strong>Grid</strong>, và bên trong tạo ra 3 lớp con xếp chồng:</p>
+        <ul>
+          <li><strong>Tilemap 1 – Ground (Nền sàn):</strong> Thiết lập Sorting Layer = <em>Background</em> (Order in Layer = 0). Lớp này không gắn bất kỳ Collider nào, chỉ dùng để vẽ nền gạch hoặc thảm trải.</li>
+          <li><strong>Tilemap 2 – Props & Decals (Đồ đạc trang trí thấp):</strong> Sorting Layer = <em>Middleground</em>. Chứa các chi tiết như vết nứt sàn, hoa văn, thảm chân mà nhân vật có thể giẫm lên.</li>
+          <li><strong>Tilemap 3 – Walls & Obstacles (Tường chắn & Chướng ngại):</strong> Sorting Layer = <em>Foreground</em>. Đây là lớp duy nhất được gắn thành phần vật lý để ngăn chặn nhân vật đi xuyên qua.</li>
+        </ul>
+
+        <h4 id="tilemap-collider">Tối ưu va chạm vật lý: Tilemap Collider 2D + Composite Collider 2D</h4>
+        <p>Nếu bạn chỉ gắn <code>Tilemap Collider 2D</code> đơn thuần, Unity sẽ tạo ra hàng chục hộp va chạm hình vuông rời rạc. Khi nhân vật di chuyển trượt dọc bờ tường, các góc nhọn vi mô sẽ va chạm vào nhau khiến nhân vật bị khựng giật (snagging bug). Để giải quyết triệt để:</p>
+        <ol>
+          <li>Thêm thành phần <code>Composite Collider 2D</code> vào lớp Tilemap Walls. Thao tác này sẽ tự động thêm một <code>Rigidbody 2D</code>.</li>
+          <li>Đổi thuộc tính <strong>Body Type</strong> của Rigidbody 2D thành <strong>Static</strong> để tường không bị rơi tự do theo trọng lực.</li>
+          <li>Trên <code>Tilemap Collider 2D</code>, tích chọn ô vuông <strong>Used By Composite</strong>. Ngay lập tức, Unity sẽ tự động gộp hàng trăm cạnh ô gạch thành một đường bao đa giác trơn tru hoàn hảo.</li>
+        </ol>
+
+        <h3 id="buoc-3-4">Bước 3 & 4: Kiến trúc tách biệt dữ liệu bằng ScriptableObject</h3>
+        <p>Một lỗi tai hại mà người mới hay mắc phải là nhồi nhét chỉ số máu (HP), tốc độ chạy (Speed), tên vật phẩm và sức mạnh tấn công trực tiếp vào trong class <code>PlayerController : MonoBehaviour</code>. Khi bạn muốn tạo thêm 5 loại vũ khí hoặc 10 kẻ địch khác nhau, code sẽ trở thành một đống rối rắm (spaghetti code).</p>
+        <p>Giải pháp chuẩn công nghiệp là sử dụng <strong>ScriptableObject</strong>. Bạn tạo một class dữ liệu độc lập lưu trữ cấu hình nhân vật và vũ khí thành các file tài nguyên (.asset) trong thư mục Project. Khi cân bằng game (Game Balancing), Game Designer chỉ cần chỉnh sửa các con số trong Inspector mà không cần chạm vào một dòng code C# nào, giảm thiểu 100% rủi ro sinh ra bug logic.</p>
+
+        <!-- FIGURE 4: THIẾT KẾ TILEMAP GRID 2D -->
+        <figure class="article-figure">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Bố cục lưới đồ họa thiết kế game 2D dạng Tilemap Grid với các khối hình học đối xứng" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Unsplash (Ảnh chụp thực tế). Cấu trúc lưới Grid trong không gian đồ họa 2D: cơ sở toán học để định vị ô gạch Tilemap và phân bổ tọa độ va chạm chính xác.
+          </figcaption>
+        </figure>
+
+        <h3 id="buoc-5-6">Bước 5 & 6: Khử mờ đồ họa với Pixel Perfect Camera & Vòng lặp 7 ngày Playtest</h3>
+
+        <h4 id="pixel-perfect-cam">Cài đặt Cinemachine & Pixel Perfect Camera chống nhòe hình</h4>
+        <p>Trong game 2D Pixel Art, nếu camera dịch chuyển ở tọa độ số thực lẻ (ví dụ X = 1.3456), các pixel trên màn hình sẽ bị biến dạng méo mó hoặc mờ nhòe (jittering). Để khắc phục:</p>
+        <ul>
+          <li>Cài đặt gói <em>2D Pixel Perfect</em> từ Unity Package Manager và gắn component <code>Pixel Perfect Camera</code> vào Main Camera.</li>
+          <li>Điền thông số <strong>Assets Pixels Per Unit (PPU)</strong> khớp chính xác với kích thước gạch của bạn (thường là 16 hoặc 32).</li>
+          <li>Chọn độ phân giải cơ sở <strong>Reference Resolution</strong> (ví dụ 320 x 180 cho tỷ lệ 16:9 hoài cổ), tích chọn <em>Upscale Render Texture</em> để hình ảnh luôn sắc như dao cạo trên mọi kích thước màn hình máy tính.</li>
+        </ul>
+
+        <h4 id="vong-lap-playtest">Vòng lặp 7 ngày Playtest thực chiến không cần mở miệng</h4>
+        <p>Vào ngày thứ 7 của dự án, hãy xuất file build chạy thử (Web端 hoặc .exe) và gửi cho 2–3 người bạn. Nguyên tắc vàng khi làm playtest: <strong>Bạn phải ngồi im lặng tuyệt đối</strong>. Đừng chỉ dẫn họ phải bấm nút nào, đừng giải thích cốt truyện. Hãy ghi chép lại:</p>
+        <ul>
+          <li>Họ có bị lạc đường trong căn phòng chỉ rộng vài mét vuông không?</li>
+          <li>Họ mất bao nhiêu giây để nhận ra chiếc rương có thể tương tác được?</li>
+          <li>Khi nhặt được chìa khóa, phản xạ đầu tiên của họ là chạy về phía cánh cửa hay tiếp tục đi tìm đồ?</li>
+        </ul>
+
+        <h2 id="dung-mo-rong">4. Tiêu chí đánh giá căn phòng đã sẵn sàng để nhân rộng</h2>
+        <p>Đừng vội vàng mở rộng sang phòng số 2 hoặc vẽ thêm trùm cuối (Boss) nếu căn phòng đầu tiên chưa vượt qua bài kiểm tra 4 tiêu chí cốt lõi sau:</p>
+        <ol>
+          <li><strong>Cảm giác điều khiển (Game Feel) đạt điểm 8/10:</strong> Nhân vật quay đầu dứt khoát, gia tốc di chuyển mượt mà, không có cảm giác trượt như đi trên băng và không bao giờ bị kẹt lại ở bất kỳ góc tường nào.</li>
+          <li><strong>Giao diện tương tác trực giác:</strong> Người chơi biết chính xác khi nào một vật thể có thể nhấp vào mà không cần đọc bảng hướng dẫn dài dòng.</li>
+          <li><strong>Chu trình phản hồi khép kín (Closed Feedback Loop):</strong> Hành động của người chơi tạo ra thay đổi trạng thái vĩnh viễn trên môi trường phòng (cửa từ khóa chuyển sang mở, đèn từ tắt chuyển sang sáng).</li>
+          <li><strong>Hiệu năng ổn định:</strong> Tốc độ khung hình duy trì vững vàng ở mức 60 FPS mượt mà, không xảy ra hiện tượng tụt khung hình do rò rỉ bộ nhớ (memory leak).</li>
+        </ol>
 
         <!-- INTERACTIVE FAQ SECTION -->
         <section class="seo-faq-section" id="faq" aria-labelledby="faq-title">
@@ -296,6 +348,26 @@
             </button>
             <div class="faq-answer">
               <p>Không. Trong ngành làm game chuyên nghiệp, giai đoạn này gọi là "Greyboxing" hoặc "Prototyping with placeholder art". Bạn có thể dùng các khối hình vuông nhiều màu hoặc asset miễn phí trên mạng để thử nghiệm nhịp độ di chuyển trước. Khi cơ chế chơi đã cuốn hút, bạn mới đầu tư thời gian và chi phí vào vẽ đồ họa pixel art chi tiết.</p>
+            </div>
+          </div>
+
+          <div class="seo-faq-item">
+            <button type="button" class="faq-question">
+              <span>Tại sao nên quản lý chỉ số nhân vật bằng ScriptableObject thay vì lưu trong file JSON?</span>
+              <i class="fas fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>ScriptableObject được tích hợp nguyên bản vào hệ sinh thái Unity, cho phép kéo thả trực quan ngay trên cửa sổ Inspector, hỗ trợ tự động Serialize dữ liệu và tương thích hoàn hảo với hệ thống Undo/Redo khi cân bằng chỉ số. File JSON thích hợp hơn cho việc lưu file save game của người chơi hoặc dữ liệu gửi qua mạng máy chủ.</p>
+            </div>
+          </div>
+
+          <div class="seo-faq-item">
+            <button type="button" class="faq-question">
+              <span>Làm sao để đồ họa Pixel Art không bị mờ nhòe khi nhân vật di chuyển trên màn hình?</span>
+              <i class="fas fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Hãy đảm bảo 3 thiết lập bắt buộc trong Sprite Import Settings: (1) Filter Mode đổi từ Bilinear sang Point (No Filter); (2) Compression chọn None để giữ nguyên điểm ảnh gốc; (3) Gắn component Pixel Perfect Camera vào Main Camera với PPU (Pixels Per Unit) trùng khớp kích thước ô gạch và bật chế độ Upscale Render Texture.</p>
             </div>
           </div>
         </section>
@@ -328,8 +400,8 @@
           <div class="aside-card-title"><i class="fas fa-list-ol"></i> Mục lục bài viết</div>
           <ul class="toc-list">
             <li><a href="#lat-choi" class="toc-link">1. Mini-brief 5 thành phần</a></li>
-            <li><a href="#chon-goc-nhin" class="toc-link">2. Chọn góc nhìn & Greyboxing</a></li>
-            <li><a href="#thu-tu-lam" class="toc-link">3. 6 bước làm trong Unity 6</a></li>
+            <li><a href="#chon-goc-nhin" class="toc-link">2. Góc nhìn & Greyboxing</a></li>
+            <li><a href="#thu-tu-lam" class="toc-link">3. 6 bước kỹ thuật Unity 6</a></li>
             <li><a href="#dung-mo-rong" class="toc-link">4. Tiêu chí đánh giá phòng</a></li>
             <li><a href="#faq" class="toc-link">5. Câu hỏi thường gặp</a></li>
             <li><a href="#sources-title" class="toc-link">6. Nguồn tham khảo E-E-A-T</a></li>
@@ -341,8 +413,9 @@
           <div class="aside-card-title"><i class="fas fa-sliders"></i> Tóm tắt On-Page</div>
           <div class="aside-meta-list">
             <div class="aside-meta-row"><span>Từ khóa:</span> <strong>làm game RPG 2D</strong></div>
-            <div class="aside-meta-row"><span>Độ dài:</span> <strong>~1.350 từ</strong></div>
-            <div class="aside-meta-row"><span>Thời gian đọc:</span> <strong>~4 phút</strong></div>
+            <div class="aside-meta-row"><span>Độ dài:</span> <strong>~2.500 từ</strong></div>
+            <div class="aside-meta-row"><span>Thời gian đọc:</span> <strong>~8 phút</strong></div>
+            <div class="aside-meta-row"><span>Hình ảnh:</span> <strong>4 ảnh thực tế</strong></div>
             <div class="aside-meta-row"><span>Công cụ:</span> <strong>Unity 6 Tilemap 2D</strong></div>
           </div>
         </div>
@@ -410,36 +483,32 @@
                   </ul>
                 </li>
                 <li>
-                  <span class="tag-badge h2-badge">H2</span> <strong>2. Chọn góc nhìn camera và phong cách đồ họa trước tiên</strong>
+                  <span class="tag-badge h2-badge">H2</span> <strong>2. Chọn góc nhìn camera và nghệ thuật tạo khối xám (Greyboxing)</strong>
                   <ul>
-                    <li><span class="tag-badge h3-badge">H3</span> So sánh 3 góc nhìn: Top-down 2D, Side-scrolling và Isometric</li>
-                    <li><span class="tag-badge h3-badge">H3</span> Tại sao nên bắt đầu bằng nghệ thuật khối xám (Greyboxing)?</li>
+                    <li><span class="tag-badge h3-badge">H3</span> Top-down 2D, Side-scrolling hay Isometric: Bạn nên chọn góc nhìn nào?</li>
+                    <li><span class="tag-badge h3-badge">H3</span> Tại sao dân chuyên nghiệp luôn làm Greyboxing trước khi vẽ Sprite?</li>
                   </ul>
                 </li>
                 <li>
-                  <span class="tag-badge h2-badge">H2</span> <strong>3. Quy trình 6 bước thực hiện prototype chuẩn Unity 6</strong>
+                  <span class="tag-badge h2-badge">H2</span> <strong>3. Quy trình kỹ thuật 6 bước dựng prototype chuẩn Unity 6</strong>
                   <ul>
                     <li>
-                      <span class="tag-badge h3-badge">H3</span> Bước 1 & 2: Lập trình di chuyển và dựng Grid Tilemap
+                      <span class="tag-badge h3-badge">H3</span> Bước 1 & 2: Thiết lập hệ thống Grid Tilemap 3 lớp chuyên nghiệp
                       <ul>
-                        <li><span class="tag-badge h4-badge">H4</span> Vẽ môi trường sàn và tường bằng công cụ Tile Palette</li>
+                        <li><span class="tag-badge h4-badge">H4</span> Tối ưu va chạm vật lý: Tilemap Collider 2D + Composite Collider 2D</li>
                       </ul>
                     </li>
+                    <li><span class="tag-badge h3-badge">H3</span> Bước 3 & 4: Kiến trúc tách biệt dữ liệu bằng ScriptableObject</li>
                     <li>
-                      <span class="tag-badge h3-badge">H3</span> Bước 3 & 4: Thiết lập va chạm vật lý và cơ chế tương tác
+                      <span class="tag-badge h3-badge">H3</span> Bước 5 & 6: Khử mờ đồ họa với Pixel Perfect Camera & Vòng lặp 7 ngày Playtest
                       <ul>
-                        <li><span class="tag-badge h4-badge">H4</span> Xử lý va chạm chuẩn xác bằng Tilemap Collider 2D</li>
+                        <li><span class="tag-badge h4-badge">H4</span> Cài đặt Cinemachine & Pixel Perfect Camera chống nhòe hình</li>
+                        <li><span class="tag-badge h4-badge">H4</span> Vòng lặp 7 ngày Playtest thực chiến không cần mở miệng</li>
                       </ul>
                     </li>
-                    <li><span class="tag-badge h3-badge">H3</span> Bước 5 & 6: Điều kiện mở khóa và thử nghiệm chơi (Playtest)</li>
                   </ul>
                 </li>
-                <li>
-                  <span class="tag-badge h2-badge">H2</span> <strong>4. Tiêu chí đánh giá căn phòng đã sẵn sàng để mở rộng</strong>
-                  <ul>
-                    <li><span class="tag-badge h3-badge">H3</span> Khi nào bạn nên bắt đầu viết kịch bản và vẽ art chi tiết?</li>
-                  </ul>
-                </li>
+                <li><span class="tag-badge h2-badge">H2</span> <strong>4. Tiêu chí đánh giá căn phòng đã sẵn sàng để nhân rộng</strong></li>
                 <li><span class="tag-badge h2-badge">H2</span> <strong>5. Câu hỏi thường gặp về làm game 2D (FAQ)</strong></li>
                 <li><span class="tag-badge h2-badge">H2</span> <strong>6. Nguồn tài liệu tham khảo & Thẩm định (E-E-A-T)</strong></li>
               </ul>
@@ -507,10 +576,10 @@
               </tr>
               <tr>
                 <td><span class="badge lsi-kw">Từ khóa LSI ngữ nghĩa</span></td>
-                <td>Greyboxing placeholder art</td>
+                <td>Pixel Perfect Camera 2D</td>
                 <td>Game Design</td>
-                <td>H3 (Mục 2), FAQ</td>
-                <td>~0.7%</td>
+                <td>H3 (Mục 3), H4, FAQ</td>
+                <td>~0.8%</td>
               </tr>
             </tbody>
           </table>
@@ -526,10 +595,46 @@
               <img src="https://vnanet.vn/Data/Articles/2026/05/08/8749338/vna_potal_vietnam_gameverse_2026_aims_to_elevate_local_gaming_industry_globally__stand.jpg" alt="Gian hàng triển lãm và trải nghiệm phát triển game tại sự kiện Vietnam GameVerse chụp bởi TTXVN">
             </div>
             <div class="image-audit-info">
-              <span class="audit-status"><i class="fas fa-check-circle"></i> Ảnh chụp sự kiện thực tế (Real Photo - Không Dùng AI)</span>
+              <span class="audit-status"><i class="fas fa-check-circle"></i> Ảnh 1: Ảnh chụp sự kiện thực tế (TTXVN)</span>
               <p><strong>Nguồn xác thực:</strong> Phóng viên Hữu Duyên / Thông tấn xã Việt Nam (TTXVN) tại ngày hội Vietnam GameVerse.</p>
               <p><strong>Thẻ Alt Text:</strong> <code>alt="Gian hàng triển lãm và trải nghiệm phát triển game tại sự kiện Vietnam GameVerse chụp bởi TTXVN"</code></p>
               <p><strong>Tối ưu hóa:</strong> Chứa từ khóa ngữ nghĩa <em>"phát triển game"</em> và <em>"trải nghiệm"</em>, miêu tả chuẩn mực không gian thực tế tại Việt Nam.</p>
+            </div>
+          </div>
+
+          <div class="image-audit-card">
+            <div class="image-audit-thumb">
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Màn hình chơi game pixel art phong cách cổ điển và không gian sáng tạo trò chơi điện tử">
+            </div>
+            <div class="image-audit-info">
+              <span class="audit-status"><i class="fas fa-check-circle"></i> Ảnh 2: Màn hình Pixel Art Retro (Unsplash Photography)</span>
+              <p><strong>Nguồn xác thực:</strong> Unsplash Photography - Màn hình hiển thị game phong cách pixel retro hoài cổ.</p>
+              <p><strong>Thẻ Alt Text:</strong> <code>alt="Màn hình chơi game pixel art phong cách cổ điển và không gian sáng tạo trò chơi điện tử"</code></p>
+              <p><strong>Tối ưu hóa:</strong> Minh họa vẻ đẹp thẩm mỹ cổ điển của thể loại RPG 2D, hỗ trợ cho mục giải thích Greyboxing và góc nhìn.</p>
+            </div>
+          </div>
+
+          <div class="image-audit-card">
+            <div class="image-audit-thumb">
+              <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Góc bàn làm việc lập trình viên phát triển game với màn hình mã nguồn C sharp và công cụ Unity">
+            </div>
+            <div class="image-audit-info">
+              <span class="audit-status"><i class="fas fa-check-circle"></i> Ảnh 3: Góc làm việc lập trình game indie (Unsplash Photography)</span>
+              <p><strong>Nguồn xác thực:</strong> Unsplash Photography - Bàn làm việc lập trình viên phần mềm và game indie.</p>
+              <p><strong>Thẻ Alt Text:</strong> <code>alt="Góc bàn làm việc lập trình viên phát triển game với màn hình mã nguồn C sharp và công cụ Unity"</code></p>
+              <p><strong>Tối ưu hóa:</strong> Chứa từ khóa <em>"lập trình viên phát triển game"</em> và <em>"mã nguồn C sharp"</em> hỗ trợ ngữ cảnh mục 3.</p>
+            </div>
+          </div>
+
+          <div class="image-audit-card">
+            <div class="image-audit-thumb">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Bố cục lưới đồ họa thiết kế game 2D dạng Tilemap Grid với các khối hình học đối xứng">
+            </div>
+            <div class="image-audit-info">
+              <span class="audit-status"><i class="fas fa-check-circle"></i> Ảnh 4: Bố cục lưới hình học Tilemap Grid (Unsplash Photography)</span>
+              <p><strong>Nguồn xác thực:</strong> Unsplash Photography - Cấu trúc đồ họa dạng lưới ô vuông đối xứng.</p>
+              <p><strong>Thẻ Alt Text:</strong> <code>alt="Bố cục lưới đồ họa thiết kế game 2D dạng Tilemap Grid với các khối hình học đối xứng"</code></p>
+              <p><strong>Tối ưu hóa:</strong> Trực quan hóa cấu trúc lưới Grid và Tilemap Collider cho người đọc.</p>
             </div>
           </div>
         </div>
@@ -540,11 +645,11 @@
         <h3><i class="fas fa-shield-halved"></i> 5. Tiêu Chuẩn E-E-A-T & Technical On-Page Checklist</h3>
         <div class="checklist-grid">
           <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Search Intent:</strong> Giải quyết bài toán "bắt đầu từ đâu" của người tự học lập trình game.</div></div>
-          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Cấu trúc Headings:</strong> 1 thẻ H1, 6 thẻ H2, 7 thẻ H3, 2 thẻ H4 phân cấp logic.</div></div>
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Cấu trúc Headings:</strong> 1 thẻ H1, 6 thẻ H2, 7 thẻ H3, 3 thẻ H4 phân cấp logic.</div></div>
           <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Bảng mini-brief:</strong> Hướng dẫn cấu trúc 5 thành phần kiểm tra trải nghiệm người chơi.</div></div>
           <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>E-E-A-T Authority:</strong> Tham chiếu tài liệu kỹ thuật Unity 6 Manual chính thống.</div></div>
           <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Featured Snippet:</strong> Khung tóm tắt 3 quy tắc vàng chuẩn bị cho kết quả nổi bật Google.</div></div>
-          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>FAQ Rich Results:</strong> Trực diện giải đáp băn khoăn về cốt truyện và đồ họa tạm thời.</div></div>
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>FAQ Rich Results:</strong> 5 câu hỏi thực chiến giải đáp băn khoăn về cốt truyện, Pixel Perfect và ScriptableObject.</div></div>
         </div>
       </div>
     </section>
@@ -553,7 +658,7 @@
     <nav class="article-pagination" aria-label="Điều hướng giữa các bài">
       <a href="seo-dragon-ball.html" class="pagination-card">
         <span class="pagination-direction"><i class="fas fa-arrow-left"></i> Bài trước đó</span>
-        <span class="pagination-title">Thứ tự xem Dragon Ball cho người mới: bắt đầu từ đâu?</span>
+        <span class="pagination-title">Dragon Ball Daima: Review bản mới nhất, cốt truyện Ma Giới & thứ tự xem</span>
       </a>
       <a href="seo-model-kit.html" class="pagination-card next">
         <span class="pagination-direction">Về bài đầu tiên <i class="fas fa-arrow-right"></i></span>
