@@ -129,23 +129,6 @@
       <!-- GOOGLE DOC CALLOUT BANNER -->
       <div id="docCalloutBanner" style="display:none;"></div>
 
-      <!-- 7. PREV / NEXT PROJECT NAVIGATION -->
-      <div class="project-nav-bar" id="projectNavBar">
-        <a href="#" id="prevProjectBtn" class="project-nav-btn prev">
-          <i class="fas fa-chevron-left"></i>
-          <div>
-            <span class="nav-sub">Dự án trước</span>
-            <span class="nav-title" id="prevProjectTitle">Tên dự án</span>
-          </div>
-        </a>
-        <a href="#" id="nextProjectBtn" class="project-nav-btn next">
-          <div>
-            <span class="nav-sub">Dự án tiếp theo</span>
-            <span class="nav-title" id="nextProjectTitle">Tên dự án</span>
-          </div>
-          <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
 
       <!-- 8. NÚT ĐIỀU HƯỚNG VÀ XEM SẢN PHẨM / TÀI LIỆU -->
       <div class="detail-cta">
@@ -494,21 +477,6 @@
           return `<span class="tool-tag" style="--tag-color: ${color};"><i class="fas fa-check-circle" style="color: ${color};"></i> ${tool}</span>`;
         }).join('');
 
-        // 8. Prev / Next Navigation Logic
-        const allIds = Object.keys(projectsData).map(Number);
-        const currentIndex = allIds.indexOf(projectId);
-
-        const prevIndex = currentIndex > 0 ? currentIndex - 1 : allIds.length - 1;
-        const nextIndex = currentIndex < allIds.length - 1 ? currentIndex + 1 : 0;
-
-        const prevProj = projectsData[allIds[prevIndex]];
-        const nextProj = projectsData[allIds[nextIndex]];
-
-        document.getElementById('prevProjectBtn').href = `project-detail.html?id=${allIds[prevIndex]}`;
-        document.getElementById('prevProjectTitle').textContent = prevProj.title;
-
-        document.getElementById('nextProjectBtn').href = `project-detail.html?id=${allIds[nextIndex]}`;
-        document.getElementById('nextProjectTitle').textContent = nextProj.title;
 
         // 9. Gán link tài liệu / ấn phẩm vào nút ở cuối trang
         const docLink = document.getElementById('docLink');
