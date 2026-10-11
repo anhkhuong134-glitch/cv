@@ -35,6 +35,12 @@ const categoriesConfig = {
     icon: "fas fa-image",
     desc: "Thiết kế ấn phẩm quảng cáo và thích ứng key visual qua các kích thước banner trong đồ án."
   },
+  web: {
+    id: "web",
+    name: "Website & Landing Page",
+    icon: "fas fa-laptop-code",
+    desc: "Thiết kế giao diện website thương mại điện tử (potty.vn) và landing page chuyển đổi cao trên nền tảng LadiPage."
+  },
   seo: {
     id: "seo",
     name: "SEO Content",
@@ -54,7 +60,11 @@ const toolColors = {
   'AI Tools': '#8b5cf6',
   'GDN Standard': '#fbbc04',
   'Facebook Ads': '#1877f2',
-  'Web Banner': '#f97316'
+  'Web Banner': '#f97316',
+  'LadiPage': '#0052cc',
+  'Web Builder': '#06b6d4',
+  'UI/UX Design': '#8b5cf6',
+  'HTML & CSS': '#e34f26'
 };
 
 // ================== DỮ LIỆU CÁC DỰ ÁN ==================
@@ -403,6 +413,75 @@ const projectsData = {
       { icon: "📱", title: "Mỗi định dạng phục vụ một mục tiêu", desc: "Carousel để kích thích nút Lưu (Save), Story để kéo tương tác bình chọn, Video ngắn để kéo lượt xem mới." },
       { icon: "🎥", title: "Kịch bản tiền kỳ rõ ràng", desc: "Shot list phân định rõ thời lượng, góc máy và text on screen giúp khâu quay dựng thực hiện nhanh gấp đôi." }
     ]
+  },
+
+  7: {
+    id: 7,
+    title: "Thiết Kế Website & Landing Page (LadiPage)",
+    type: "Thực Hành & Triển Khai · Web & Landing Page",
+    category: "web",
+    categoryName: "Website & Landing Page",
+    categoryIcon: "fas fa-laptop-code",
+    categoryColor: "#0284c7",
+    description: "Bộ đôi sản phẩm thiết kế giao diện thực chiến: Website thương mại điện tử chuẩn SEO Potty.vn (Tinh dầu thiên nhiên & Máy khuếch tán) và Landing Page chuyển đổi cao trên nền tảng LadiPage cho Khóa học Digital Marketing VTC Academy.",
+    duration: "06/2026 – Hiện tại",
+    results: "01 Website E-commerce hoàn chỉnh • 01 Landing Page CRO • 100% Mobile-First Responsive",
+    tools: ["LadiPage", "Web Builder", "UI/UX Design", "Canva", "HTML & CSS"],
+    featured: true,
+    kpis: [
+      { number: "02", label: "Nền tảng hoàn thiện", icon: "💻" },
+      { number: "100%", label: "Tối ưu Mobile-First", icon: "📱" },
+      { number: "AIDA", label: "Cấu trúc chuyển đổi CRO", icon: "🎯" }
+    ],
+    links: [
+      {
+        title: "Website Thương Mại Điện Tử: potty.vn",
+        tag: "E-Commerce Website",
+        url: "https://potty.vn",
+        btnText: "Ghé Thăm Website potty.vn ↗",
+        icon: "fas fa-globe",
+        desc: "Thương hiệu Tinh Dầu Thiên Nhiên & Máy Khuếch Tán Cao Cấp. Giao diện trực quan, bảng màu tự nhiên, tối ưu danh mục sản phẩm, bộ lọc giá và trải nghiệm đặt hàng thuận tiện."
+      },
+      {
+        title: "Landing Page Tuyển Sinh: VTC Academy (LadiPage)",
+        tag: "CRO Landing Page",
+        url: "http://preview.ladipage.me/6a33f016a44bf10012276660",
+        btnText: "Xem Preview LadiPage ↗",
+        icon: "fas fa-rocket",
+        desc: "Landing Page tuyển sinh Khóa học Digital Marketing 15 tháng trên nền tảng LadiPage. Cấu trúc AIDA thuyết phục, form đăng ký nhận tư vấn nổi bật, bảng lộ trình học tập và section cam kết đầu ra việc làm."
+      }
+    ],
+    findingsTitle: "Phân Tích Bố Cục & Trải Nghiệm Người Dùng (UI/UX)",
+    findings: [
+      "<strong>Website Potty.vn (E-commerce):</strong> Tập trung xây dựng niềm tin thương hiệu thông qua phong cách tối giản, hình ảnh sản phẩm tinh dầu & máy xông sắc nét, thông tin xuất xứ minh bạch và các chính sách bảo hành, đổi trả được làm nổi bật trên thanh điều hướng.",
+      "<strong>Landing Page VTC Academy (LadiPage):</strong> Tối ưu từng điểm chạm chuyển đổi (CRO) với thông điệp mạnh mẽ ngay First Screen (Hero Section), tích hợp Form đăng ký nhận tư vấn nhanh, đếm ngược thời gian ưu đãi và các khối chứng chỉ / đối tác doanh nghiệp.",
+      "<strong>Trải Nghiệm Đa Màn Hình (Mobile-First):</strong> Cả hai sản phẩm đều được thiết kế thích ứng tuyệt đối trên điện thoại di động (Mobile Responsive), đảm bảo cỡ chữ dễ đọc, nút bấm lớn vừa vặn ngón tay cái và menu điều hướng vuốt chạm mượt mà."
+    ],
+    skills: [
+      { icon: "🎨", name: "UI/UX Layout & Wireframing", desc: "Phân bổ bố cục trực quan, điều hướng mắt người xem theo luồng thị giác từ trên xuống dưới." },
+      { icon: "⚡", name: "LadiPage & Web Builder Mastery", desc: "Thành thạo công cụ thiết kế kéo thả, cấu hình form dữ liệu, hiệu ứng tương tác và tối ưu tải trang." },
+      { icon: "🎯", name: "CRO & Conversion Architecture", desc: "Áp dụng mô hình AIDA để bố trí tiêu đề, minh chứng xã hội (Social Proof) và nút kêu gọi hành động (CTA)." }
+    ],
+    objectives: [
+      "Xây dựng giao diện website thương mại điện tử chuyên nghiệp, thể hiện đúng tinh thần thiên nhiên và thư giãn của thương hiệu Potty.vn",
+      "Thiết kế Landing Page chuẩn CRO trên LadiPage phục vụ chiến dịch tuyển sinh ngành Digital Marketing của VTC Academy",
+      "Bảo đảm tính tương thích hoàn hảo giữa màn hình máy tính để bàn (Desktop) và điện thoại di động (Mobile)",
+      "Tối ưu hóa các nút Call-To-Action (CTA) và luồng thao tác của người dùng để giảm thiểu tỷ lệ thoát trang (Bounce Rate)"
+    ],
+    process: [
+      { icon: "🔍", title: "Nghiên Cứu Sản Phẩm & Khách Hàng", desc: "Xác định chân dung khách hàng mua tinh dầu Potty.vn và học viên tiềm năng quan tâm khóa học Digital Marketing." },
+      { icon: "📐", title: "Xây Dựng Bố Cục Wireframe", desc: "Lên khung sườn các section: Hero banner, Giá trị cốt lõi, Danh mục sản phẩm/Lộ trình học, Bằng chứng xã hội và Form đăng ký." },
+      { icon: "💻", title: "Thiết Kế Thực Tế Trên Web & LadiPage", desc: "Phối màu, lựa chọn font chữ hiện đại, cắt ghép hình ảnh và cấu hình các nút bấm chuyển đổi." },
+      { icon: "📱", title: "Tối Ưu Giao Diện Di Động & Tốc Độ", desc: "Kiểm tra hiển thị đa kích thước màn hình, sửa lỗi tràn viền (overflow) và đo lường trải nghiệm thực tế." }
+    ],
+    frameworks: ["AIDA Funnel", "CRO Principles", "Mobile-First Design", "Visual Hierarchy", "Call-To-Action (CTA)"],
+    takeaways: [
+      { icon: "🎯", title: "Landing Page phục vụ chuyển đổi, không chỉ để ngắm", desc: "Mọi khối thông tin trên Landing Page phải dẫn dắt người dùng đến hành động cụ thể (Điền form / Đặt hàng) thay vì đưa thông tin lan man." },
+      { icon: "📱", title: "Ưu tiên tuyệt đối cho giao diện điện thoại", desc: "Hơn 80% lưu lượng truy cập từ mạng xã hội đến từ smartphone, vì vậy thiết kế mobile phải được chăm chút tỉ mỉ từng pixel." },
+      { icon: "🛡️", title: "Xây dựng niềm tin là chìa khóa bán hàng", desc: "Đối với website bán lẻ như Potty.vn, chính sách rõ ràng và hình ảnh chân thực là yếu tố quyết định người dùng có bấm Mua Ngay hay không." }
+    ],
+    googleDocUrl: "https://potty.vn",
+    buttonText: "Truy Cập Website Potty.vn (potty.vn)"
   }
 };
 

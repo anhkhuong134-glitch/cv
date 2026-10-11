@@ -96,6 +96,12 @@
         <div id="swotContent"></div>
       </section>
 
+      <!-- LIVE WEB & LANDING PAGE SHOWCASE (NẾU CÓ) -->
+      <section class="detail-section" id="webShowcaseSection" style="display:none;">
+        <h2><i class="fas fa-desktop" style="color:var(--accent);"></i> Sản Phẩm Thực Tế & Live Preview</h2>
+        <div id="webShowcaseContent" class="web-showcase-grid"></div>
+      </section>
+
       <!-- 3. KẾT QUẢ NGHIÊN CỨU THỰC TẾ / ĐIỂM NỔI BẬT -->
       <section class="detail-section" id="findingsSection" style="display:none;">
         <h2 id="findingsTitle"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Điểm Đáng Chú Ý</h2>
@@ -423,8 +429,49 @@
           `;
         }
 
+        // 2.5 Render Web & Landing Page Showcase (Nếu có)
+        if (project.links && project.links.length > 0) {
+          const webSection = document.getElementById('webShowcaseSection');
+          const webContent = document.getElementById('webShowcaseContent');
+          webSection.style.display = 'block';
+          webContent.innerHTML = project.links.map(l => `
+            <div class="web-showcase-card">
+              <div>
+                <div class="web-showcase-header">
+                  <span class="web-showcase-badge"><i class="${l.icon}"></i> ${l.tag}</span>
+                  <span class="web-showcase-domain">${l.url.replace('https://', '').replace('http://', '').split('/')[0]}</span>
+                </div>
+                <h3 class="web-showcase-title">${l.title}</h3>
+                <p class="web-showcase-desc">${l.desc}</p>
+              </div>
+              <div class="web-showcase-actions">
+                <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="web-showcase-btn">
+                  <span>${l.btnText}</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          `).join('');
+        }
+
         // 4.2 Render Google Docs Banner Callout
-        if (project.googleDocUrl) {
+        if (project.links && project.links.length > 0) {
+          const docBanner = document.getElementById('docCalloutBanner');
+          docBanner.style.display = 'flex';
+          docBanner.innerHTML = `
+            <div class="doc-callout-info">
+              <h3><i class="fas fa-laptop-code" style="color:var(--accent);"></i> Trải Nghiệm Sản Phẩm Thực Tế</h3>
+              <p>Khám phá trực tiếp website thương mại điện tử <strong>potty.vn</strong> và bản live preview Landing Page tuyển sinh thiết kế trên nền tảng <strong>LadiPage</strong>.</p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              ${project.links.map(l => `
+                <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="doc-callout-btn">
+                  <i class="${l.icon}"></i> ${l.btnText}
+                </a>
+              `).join('')}
+            </div>
+          `;
+        } else if (project.googleDocUrl) {
           const docBanner = document.getElementById('docCalloutBanner');
           docBanner.style.display = 'flex';
           docBanner.innerHTML = `
@@ -479,20 +526,32 @@
 
 
         // 9. Gán link tài liệu / ấn phẩm vào nút ở cuối trang
-        const docLink = document.getElementById('docLink');
-        if (project.googleDocUrl) {
-          docLink.style.display = 'inline-flex';
-          docLink.href = project.googleDocUrl.startsWith('http') ? project.googleDocUrl : encodeURI(project.googleDocUrl);
-          if (project.buttonText) {
-            docLink.innerHTML = `
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:currentColor;margin-right:8px;">
-                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-              </svg>
-              ${project.buttonText}
-            `;
-          }
+        const detailCta = document.querySelector('.detail-cta');
+        if (project.links && project.links.length > 0) {
+          detailCta.innerHTML = `
+            <a href="projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
+            ${project.links.map(l => `
+              <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="doc-btn" style="background:var(--accent); border-color:var(--accent); color:#fff;">
+                <i class="${l.icon}" style="margin-right:8px;"></i> ${l.btnText}
+              </a>
+            `).join('')}
+          `;
         } else {
-          docLink.style.display = 'none';
+          const docLink = document.getElementById('docLink');
+          if (project.googleDocUrl) {
+            docLink.style.display = 'inline-flex';
+            docLink.href = project.googleDocUrl.startsWith('http') ? project.googleDocUrl : encodeURI(project.googleDocUrl);
+            if (project.buttonText) {
+              docLink.innerHTML = `
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:currentColor;margin-right:8px;">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+                ${project.buttonText}
+              `;
+            }
+          } else {
+            if (docLink) docLink.style.display = 'none';
+          }
         }
       } else {
         document.body.innerHTML = '<div style="text-align:center; padding: 10rem 1rem; color: var(--text);"><h2>Dự án không tồn tại hoặc đã bị gỡ bỏ.</h2><br><a href="projects.html" class="btn-primary">Quay lại danh sách dự án</a></div>';

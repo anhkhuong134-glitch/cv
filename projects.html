@@ -33,7 +33,7 @@
     <!-- QUICK STATS BAR -->
     <div class="quick-stats-strip">
       <div class="stat-box">
-        <span class="stat-val" id="totalProjectsCount">5</span>
+        <span class="stat-val" id="totalProjectsCount">6</span>
         <span class="stat-lbl">Đồ án & concept cá nhân</span>
       </div>
       <div class="stat-divider"></div>
@@ -82,7 +82,7 @@
       <div class="cat-info-text">
         <div class="cat-info-top">
           <h2 id="catInfoTitle">Tất Cả Dự Án</h2>
-          <span class="cat-count-pill" id="catCountPill">5 dự án</span>
+          <span class="cat-count-pill" id="catCountPill">6 dự án</span>
         </div>
         <p id="catInfoDesc">Case học tập và concept cá nhân trong Content, Social, SEO và thiết kế truyền thông.</p>
       </div>
@@ -116,7 +116,7 @@
       // 1. Khởi tạo thanh bộ lọc danh mục với số lượng động
       function renderCategoryPills() {
         const counts = getCategoryCounts();
-        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 5;
+        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 6;
 
         filterPillsBar.innerHTML = Object.keys(categoriesConfig).map(catKey => {
           const cat = categoriesConfig[catKey];
@@ -199,6 +199,17 @@
               </div>
             ` : '';
 
+            // Render direct action links nếu có (như web potty.vn & ladipage)
+            const linksHtml = project.links ? `
+              <div class="card-direct-links-row" onclick="event.stopPropagation();">
+                ${project.links.map(l => `
+                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="card-direct-link-btn" title="${l.title}">
+                    <i class="${l.icon}"></i> ${l.btnText}
+                  </a>
+                `).join('')}
+              </div>
+            ` : '';
+
             card.innerHTML = `
               <div class="card-top-bar" style="background: linear-gradient(90deg, ${catColor}, transparent);"></div>
 
@@ -213,6 +224,7 @@
               <h3>${project.title}</h3>
               <p class="project-desc">${project.description || ''}</p>
 
+              ${linksHtml}
               ${kpiHtml}
               ${frameworksHtml}
 
