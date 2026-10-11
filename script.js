@@ -312,47 +312,47 @@ const projectsData = {
 
   6: {
     id: 6,
-    title: "Một Tuần Content Social: Đồ Mặc Nhà Theo Nhịp Sống",
-    type: "Concept Cá Nhân · Ngành Đồ Mặc Nhà",
+    title: "Tuyển Tập Concept Social: 'Ma Túy Nhựa' & Lifestyle",
+    type: "Concept Cá Nhân · Social Content & Moodboard",
     category: "content",
     categoryName: "Kế Hoạch Content",
     categoryIcon: "fas fa-pen-nib",
     categoryColor: "#87513c",
-    description: "Concept ứng tuyển tự xây dựng cho ngành đồ mặc nhà, lấy cảm hứng từ danh mục sản phẩm công khai của Vingoria. Không phải dự án được thương hiệu đặt hàng hay phê duyệt.",
+    description: "Bộ tuyển tập concept content social đa ngành nghề: từ văn hóa sở thích 'Ma túy nhựa' (Gunpla/Mô hình phái mạnh), góc máy Tech Desk Setup đến thời trang lifestyle. Đầy đủ Content Pillars, lịch 7 ngày, moodboard và kịch bản video.",
     duration: "Concept cá nhân · 10/2026",
-    results: "Lịch 7 ngày • 3 ảnh moodboard có nguồn • 1 kịch bản/shot list (chưa quay)",
-    tools: ["Facebook", "Instagram", "Content Calendar", "Visual Direction"],
+    results: "4 Case đa ngành • Lịch 28+ ngày • 12 Khung Moodboard • 4 Kịch bản video/shot list",
+    tools: ["Facebook", "Instagram", "TikTok", "Content Calendar", "Visual Direction"],
     googleDocUrl: "social-content-sample.html",
     buttonText: "Mở kế hoạch social & moodboard",
     featured: true,
     kpis: [
-      { number: "7", label: "Ngày nội dung đề xuất", icon: "📅" },
-      { number: "3", label: "Tuyến nội dung", icon: "🧵" },
-      { number: "01", label: "Script + shot list", icon: "🎬" }
+      { number: "04", label: "Concept ngành nghề", icon: "📑" },
+      { number: "28+", label: "Ngày lịch nội dung mẫu", icon: "📅" },
+      { number: "04", label: "Kịch bản video / shot list", icon: "🎬" }
     ],
-    findingsTitle: "Điểm Chính Của Concept",
+    findingsTitle: "Điểm Nhấn Của Các Concept",
     findings: [
-      "<strong>Góc kể:</strong> Đồ mặc nhà đi cùng những việc bình thường trong ngày, không chỉ xuất hiện như ảnh sản phẩm trên nền trơn.",
-      "<strong>Định dạng:</strong> Kết hợp bài tĩnh, carousel, story hỏi đáp và một video script 15 giây; mỗi định dạng có mục tiêu riêng.",
-      "<strong>Ranh giới sản xuất:</strong> Bộ này có ảnh moodboard, caption nháp và kịch bản/shot list. Chưa quay, dựng hay đăng nên chưa có số liệu."
+      "<strong>Case 'Ma túy nhựa' (Gunpla):</strong> Bắt đúng tâm lý đam mê cơ khí, nỗi lo 'giấu giá với nóc nhà' và niềm vui xả stress sau giờ làm việc của phái mạnh.",
+      "<strong>Case Tech Desk Setup:</strong> Kết hợp giữa hiệu năng phần cứng, âm thanh phím cơ gõ đầm tay (thocky sound) và ánh sáng ambient truyền cảm hứng.",
+      "<strong>Case Lifestyle & Anime:</strong> Từ nghiên cứu kỹ lưỡng bảng size thời trang đến kích hoạt thảo luận ký ức tuổi thơ trên mạng xã hội."
     ],
     objectives: [
-      "Thử chuyển một nhóm sản phẩm đồ mặc nhà thành các chủ đề gần với nhịp sinh hoạt hàng ngày",
-      "Xây lịch social mẫu 7 ngày, có mục tiêu và định dạng rõ cho từng bài",
-      "Chọn ảnh tư liệu làm moodboard, ghi nguồn và nêu rõ giới hạn sử dụng",
-      "Viết một script và shot list để thể hiện phần ý tưởng/tiền kỳ riêng với khâu quay dựng"
+      "Xây dựng kế hoạch social chạm đúng vào insight và tiếng lóng (slang) của từng cộng đồng đặc thù",
+      "Lập lịch nội dung mẫu 7 ngày cho từng case, phân bổ cân bằng giữa bài tương tác và chia sẻ giá trị",
+      "Dựng khung Moodboard trực quan với phong cách hình ảnh sắc nét, thẩm mỹ cao",
+      "Viết kịch bản ngắn (Reels/TikTok 15s) kèm shot list chi tiết và câu thoại bắt trend"
     ],
     process: [
-      { icon: "🔎", title: "Đọc Brief Công Khai", desc: "Chỉ dùng danh mục đồ mặc nhà đang được giới thiệu; không suy đoán về chất liệu, công năng hay giá của sản phẩm cụ thể." },
-      { icon: "🧭", title: "Chọn Góc Kể", desc: "Dùng các khoảnh khắc ở nhà làm bối cảnh; để thông tin chi tiết của sản phẩm chờ brief chính thức." },
-      { icon: "📅", title: "Lên Lịch Nội Dung", desc: "Phân bổ bài khám phá, hỏi đáp và hỗ trợ cân nhắc trong một tuần mẫu." },
-      { icon: "🎨", title: "Ảnh tham khảo & Script", desc: "Chọn ảnh moodboard có ghi nguồn; viết lời thoại và shot list riêng với khâu quay dựng." }
+      { icon: "🔎", title: "Nghiên Cứu Insight", desc: "Đào sâu vào thói quen, tiếng lóng và tâm lý thật của người chơi/người mua trong từng cộng đồng." },
+      { icon: "🧭", title: "3 Tuyến Content Pillars", desc: "Phân chia rõ ràng: Tuyến tạo đồng cảm/meme viral, Tuyến chia sẻ kỹ thuật/mẹo hay, và Tuyến showcase tự hào." },
+      { icon: "📅", title: "Lên Lịch & Định Dạng", desc: "Phân bổ Carousel giải thích, Story hỏi đáp nhanh và Video ngắn bùng nổ theo từng ngày trong tuần." },
+      { icon: "🎨", title: "Moodboard & Script", desc: "Chọn lọc hình ảnh tư liệu chuẩn thẩm mỹ; viết kịch bản phân cảnh chi tiết cho khâu quay dựng." }
     ],
-    frameworks: ["Social Content Calendar", "Content Pillars", "Visual Direction", "Short-Form Script"],
+    frameworks: ["Community Insight", "Content Pillars", "Social Calendar", "Visual Moodboard", "Short-Form Script"],
     takeaways: [
-      { icon: "🧵", title: "Từ sản phẩm ra tình huống", desc: "Một sản phẩm dễ kể hơn khi đặt cạnh nhu cầu cụ thể của người dùng, thay vì lặp lại lời giới thiệu chung." },
-      { icon: "📱", title: "Mỗi định dạng có việc riêng", desc: "Carousel để giải thích, story để hỏi nhanh, video script để gợi một cảnh; không cần ép mọi bài thành video." },
-      { icon: "🎥", title: "Bàn giao rõ phần việc", desc: "Concept có thể dừng ở script và shot list nếu phần quay dựng do người khác đảm nhận." }
+      { icon: "🤖", title: "Nói đúng ngôn ngữ của cộng đồng", desc: "Hiểu tiếng lóng 'ma túy nhựa' hay 'thocky switch' giúp bài viết tự nhiên như một người trong cuộc chia sẻ." },
+      { icon: "📱", title: "Mỗi định dạng phục vụ một mục tiêu", desc: "Carousel để kích thích nút Lưu (Save), Story để kéo tương tác bình chọn, Video ngắn để kéo lượt xem mới." },
+      { icon: "🎥", title: "Kịch bản tiền kỳ rõ ràng", desc: "Shot list phân định rõ thời lượng, góc máy và text on screen giúp khâu quay dựng thực hiện nhanh gấp đôi." }
     ]
   }
 };
