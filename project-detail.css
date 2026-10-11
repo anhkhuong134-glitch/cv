@@ -562,3 +562,369 @@
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   ADVANCED RESEARCH CASE STUDY STYLES (ACADEMIC & MARKET RESEARCH SHOWCASE)
+   ========================================================================== */
+
+/* Academic Info Card */
+.academic-meta-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  padding: 1.5rem 1.8rem;
+  background: var(--surface-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(12px);
+}
+
+.academic-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.academic-meta-item .label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.academic-meta-item .val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.academic-meta-item .val.highlight {
+  color: var(--accent);
+}
+
+/* Executive Summary Box */
+.executive-summary-box {
+  padding: 1.8rem 2rem;
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 2rem;
+}
+
+.executive-summary-box h3 {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: var(--text);
+  margin: 0 0 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.executive-summary-box p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 0.8rem;
+}
+
+.executive-summary-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Survey Data Grid */
+.survey-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.survey-stat-card {
+  padding: 1.4rem;
+  background: var(--surface-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: var(--transition);
+}
+
+.survey-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.survey-stat-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.survey-stat-num {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.survey-stat-badge {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-hover);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.survey-stat-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.survey-stat-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 7P Head-to-Head Comparison Table */
+.comparison-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  margin-top: 1.2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--card-border);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.comparison-table th {
+  background: var(--surface-glass);
+  font-weight: 750;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comparison-table th.brand-circlek {
+  color: #ef4444;
+  border-top: 3px solid #ef4444;
+}
+
+.comparison-table th.brand-gs25 {
+  color: #0284c7;
+  border-top: 3px solid #0284c7;
+}
+
+.comparison-table td.p-name {
+  font-weight: 750;
+  color: var(--accent);
+  white-space: nowrap;
+  width: 130px;
+}
+
+.comparison-table td.circlek-col {
+  border-right: 1px solid var(--card-border);
+  background: color-mix(in srgb, #ef4444 3%, transparent);
+}
+
+.comparison-table td.gs25-col {
+  background: color-mix(in srgb, #0284c7 3%, transparent);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* SWOT Comparison Grid */
+.swot-split-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.swot-brand-column {
+  padding: 1.6rem;
+  background: var(--surface-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.swot-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.swot-brand-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.swot-brand-header.circlek h3 { color: #ef4444; }
+.swot-brand-header.gs25 h3 { color: #0284c7; }
+
+.swot-quadrant {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.swot-quadrant-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.swot-quadrant-title.s { color: #10b981; }
+.swot-quadrant-title.w { color: #f59e0b; }
+.swot-quadrant-title.o { color: #3b82f6; }
+.swot-quadrant-title.t { color: #ef4444; }
+
+.swot-quadrant p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* Strategic Recommendations Cards */
+.rec-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.rec-card {
+  padding: 1.6rem;
+  background: var(--surface-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rec-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: var(--text);
+}
+
+.rec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.rec-item i {
+  color: var(--accent);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Direct Google Doc Banner */
+.doc-callout-banner {
+  margin-top: 2.5rem;
+  padding: 2rem 2.2rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 15%, var(--surface)) 0%, var(--surface) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+.doc-callout-info {
+  max-width: 580px;
+}
+
+.doc-callout-info h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.doc-callout-info p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.doc-callout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #0b0f19;
+  font-weight: 750;
+  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+[data-theme="light"] .doc-callout-btn {
+  color: #ffffff;
+}
+
+.doc-callout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-glow-strong);
+}
+

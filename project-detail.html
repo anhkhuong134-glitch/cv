@@ -55,6 +55,12 @@
         </div>
       </header>
 
+      <!-- ACADEMIC & RESEARCH METADATA CARD (NẾU CÓ) -->
+      <div id="academicCard" style="display:none;"></div>
+
+      <!-- EXECUTIVE SUMMARY BOX (NẾU CÓ) -->
+      <div id="executiveBox" style="display:none;"></div>
+
       <!-- KPI HERO STRIP -->
       <div class="kpi-hero-strip" id="kpiHeroStrip" style="display:none;">
         <!-- JavaScript sẽ render KPI cards vào đây -->
@@ -62,20 +68,44 @@
 
       <!-- 1. MỤC TIÊU DỰ ÁN -->
       <section class="detail-section">
-        <h2><i class="fas fa-bullseye" style="color:var(--accent);"></i> Mục Tiêu & Phạm Vi Dự Án</h2>
+        <h2><i class="fas fa-bullseye" style="color:var(--accent);"></i> Mục Tiêu & Phạm Vi Nghiên Cứu</h2>
         <ul class="objectives-list" id="objectivesList"></ul>
       </section>
 
       <!-- 2. QUY TRÌNH THỰC HIỆN (PHASE CARDS) -->
       <section class="detail-section">
-        <h2><i class="fas fa-stream" style="color:var(--accent);"></i> Cách Tiếp Cận & Các Bước Làm</h2>
+        <h2><i class="fas fa-stream" style="color:var(--accent);"></i> Phương Pháp & Quy Trình Nghiên Cứu</h2>
         <div class="process-cards-grid" id="processList"></div>
+      </section>
+
+      <!-- SURVEY DATA & CONSUMER INSIGHTS (NẾU CÓ) -->
+      <section class="detail-section" id="surveySection" style="display:none;">
+        <h2><i class="fas fa-chart-pie" style="color:var(--accent);"></i> Dữ Liệu Khảo Sát & Insight Người Tiêu Dùng</h2>
+        <div id="surveyContent"></div>
+      </section>
+
+      <!-- HEAD-TO-HEAD COMPARISON MATRIX 7P (NẾU CÓ) -->
+      <section class="detail-section" id="comparisonSection" style="display:none;">
+        <h2><i class="fas fa-scale-balanced" style="color:var(--accent);"></i> Ma Trận Đối Đầu Cạnh Tranh 7P Marketing Mix</h2>
+        <div id="comparisonContent"></div>
+      </section>
+
+      <!-- SWOT COMPARISON (NẾU CÓ) -->
+      <section class="detail-section" id="swotSection" style="display:none;">
+        <h2><i class="fas fa-shield-halved" style="color:var(--accent);"></i> Phân Tích Ma Trận SWOT Hai Thương Hiệu</h2>
+        <div id="swotContent"></div>
       </section>
 
       <!-- 3. KẾT QUẢ NGHIÊN CỨU THỰC TẾ / ĐIỂM NỔI BẬT -->
       <section class="detail-section" id="findingsSection" style="display:none;">
         <h2 id="findingsTitle"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Điểm Đáng Chú Ý</h2>
         <div class="findings-list" id="findingsList"></div>
+      </section>
+
+      <!-- STRATEGIC RECOMMENDATIONS 2025-2030 (NẾU CÓ) -->
+      <section class="detail-section" id="recommendationsSection" style="display:none;">
+        <h2><i class="fas fa-chess" style="color:var(--accent);"></i> Đề Xuất Chiến Lược Phát Triển (2025–2030)</h2>
+        <div id="recommendationsContent"></div>
       </section>
 
       <!-- 4. BÀI HỌC RÚT RA & KEY TAKEAWAYS -->
@@ -95,6 +125,9 @@
         <h2><i class="fas fa-tools" style="color:var(--accent);"></i> Công Cụ & Nền Tảng Áp Dụng</h2>
         <div class="tools-list" id="toolsList"></div>
       </section>
+
+      <!-- GOOGLE DOC CALLOUT BANNER -->
+      <div id="docCalloutBanner" style="display:none;"></div>
 
       <!-- 7. PREV / NEXT PROJECT NAVIGATION -->
       <div class="project-nav-bar" id="projectNavBar">
@@ -172,6 +205,44 @@
           `).join('');
         }
 
+        // 0.1 Render Academic Info Card (Nếu có)
+        if (project.academicInfo) {
+          const acEl = document.getElementById('academicCard');
+          acEl.style.display = 'block';
+          acEl.innerHTML = `
+            <div class="academic-meta-card">
+              <div class="academic-meta-item">
+                <span class="label"><i class="fas fa-university"></i> Cơ Sở Đào Tạo</span>
+                <span class="val highlight">${project.academicInfo.institution}</span>
+              </div>
+              <div class="academic-meta-item">
+                <span class="label"><i class="fas fa-chalkboard-user"></i> Giảng Viên Hướng Dẫn</span>
+                <span class="val">${project.academicInfo.instructor}</span>
+              </div>
+              <div class="academic-meta-item">
+                <span class="label"><i class="fas fa-users"></i> Nhóm Thực Hiện & Lớp</span>
+                <span class="val">${project.academicInfo.team} · ${project.academicInfo.class}</span>
+              </div>
+              <div class="academic-meta-item">
+                <span class="label"><i class="fas fa-file-contract"></i> Toàn Văn Nghiên Cứu</span>
+                <span class="val"><a href="${project.academicInfo.googleDocUrl}" target="_blank" rel="noopener noreferrer" style="color:var(--accent); text-decoration:underline; font-weight:700;"><i class="fas fa-arrow-up-right-from-square"></i> ${project.academicInfo.docPages}</a></span>
+              </div>
+            </div>
+          `;
+        }
+
+        // 0.2 Render Executive Summary Box (Nếu có)
+        if (project.executiveSummary) {
+          const exEl = document.getElementById('executiveBox');
+          exEl.style.display = 'block';
+          exEl.innerHTML = `
+            <div class="executive-summary-box">
+              <h3><i class="fas fa-briefcase"></i> Tóm Tắt Điều Hành & Bối Cảnh Thị Trường (Executive Summary)</h3>
+              ${project.executiveSummary.map(p => `<p>${p}</p>`).join('')}
+            </div>
+          `;
+        }
+
         // 1. Render Frameworks Badges
         if (project.frameworks && project.frameworks.length > 0) {
           const fwContainer = document.getElementById('frameworksContainer');
@@ -214,6 +285,112 @@
           }
         }).join('');
 
+        // 3.1 Render Survey Data & Consumer Insights (Nếu có)
+        if (project.surveyData) {
+          const surEl = document.getElementById('surveySection');
+          const surCont = document.getElementById('surveyContent');
+          surEl.style.display = 'block';
+          surCont.innerHTML = `
+            <div class="survey-grid-4">
+              ${project.surveyData.map(stat => `
+                <div class="survey-stat-card">
+                  <div class="survey-stat-top">
+                    <span class="survey-stat-num">${stat.number}</span>
+                    <span class="survey-stat-badge">${stat.tag}</span>
+                  </div>
+                  <h4 class="survey-stat-title">${stat.title}</h4>
+                  <p class="survey-stat-desc">${stat.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        // 3.2 Render Head-to-Head Comparison Matrix 7P (Nếu có)
+        if (project.comparisonMatrix) {
+          const compEl = document.getElementById('comparisonSection');
+          const compCont = document.getElementById('comparisonContent');
+          compEl.style.display = 'block';
+          compCont.innerHTML = `
+            <div class="comparison-table-wrap">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th style="width: 140px;">Tiêu Chí 7P</th>
+                    <th class="brand-circlek"><i class="fas fa-store"></i> CIRCLE K (500+ Cửa Hàng)</th>
+                    <th class="brand-gs25"><i class="fas fa-store"></i> GS25 (450+ Cửa Hàng)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${project.comparisonMatrix.map(row => `
+                    <tr>
+                      <td class="p-name">${row.p}</td>
+                      <td class="circlek-col">${row.circleK}</td>
+                      <td class="gs25-col">${row.gs25}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+
+        // 3.3 Render SWOT Comparison (Nếu có)
+        if (project.swotAnalysis) {
+          const swEl = document.getElementById('swotSection');
+          const swCont = document.getElementById('swotContent');
+          swEl.style.display = 'block';
+          swCont.innerHTML = `
+            <div class="swot-split-grid">
+              <div class="swot-brand-column">
+                <div class="swot-brand-header circlek">
+                  <i class="fas fa-shield-alt" style="color:#ef4444; font-size: 1.3rem;"></i>
+                  <h3>SWOT: Circle K</h3>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title s"><i class="fas fa-plus-circle"></i> Strengths (Điểm Mạnh)</span>
+                  <p>${project.swotAnalysis.circleK.s}</p>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title w"><i class="fas fa-minus-circle"></i> Weaknesses (Điểm Yếu)</span>
+                  <p>${project.swotAnalysis.circleK.w}</p>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title o"><i class="fas fa-lightbulb"></i> Opportunities (Cơ Hội)</span>
+                  <p>${project.swotAnalysis.circleK.o}</p>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title t"><i class="fas fa-triangle-exclamation"></i> Threats (Thách Thức)</span>
+                  <p>${project.swotAnalysis.circleK.t}</p>
+                </div>
+              </div>
+
+              <div class="swot-brand-column">
+                <div class="swot-brand-header gs25">
+                  <i class="fas fa-shield-alt" style="color:#0284c7; font-size: 1.3rem;"></i>
+                  <h3>SWOT: GS25</h3>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title s"><i class="fas fa-plus-circle"></i> Strengths (Điểm Mạnh)</span>
+                  <p>${project.swotAnalysis.gs25.s}</p>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title w"><i class="fas fa-minus-circle"></i> Weaknesses (Điểm Yếu)</span>
+                  <p>${project.swotAnalysis.gs25.w}</p>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title o"><i class="fas fa-lightbulb"></i> Opportunities (Cơ Hội)</span>
+                  <p>${project.swotAnalysis.gs25.o}</p>
+                </div>
+                <div class="swot-quadrant">
+                  <span class="swot-quadrant-title t"><i class="fas fa-triangle-exclamation"></i> Threats (Thách Thức)</span>
+                  <p>${project.swotAnalysis.gs25.t}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
         // 4. Render Kết Quả Nghiên Cứu / Điểm Nổi Bật
         if (project.findings && project.findings.length > 0) {
           const findingsSection = document.getElementById('findingsSection');
@@ -229,6 +406,53 @@
               <p class="finding-text">${finding}</p>
             </div>
           `).join('');
+        }
+
+        // 4.1 Render Strategic Recommendations (Nếu có)
+        if (project.recommendations) {
+          const recEl = document.getElementById('recommendationsSection');
+          const recCont = document.getElementById('recommendationsContent');
+          recEl.style.display = 'block';
+          recCont.innerHTML = `
+            <div class="rec-grid-2">
+              <div class="rec-card">
+                <div class="rec-card-header" style="color:#ef4444;">
+                  <i class="fas fa-bullhorn"></i> Khuyến Nghị Cho Circle K (2025–2030)
+                </div>
+                <ul class="rec-list">
+                  ${project.recommendations.circleK.map(r => `
+                    <li class="rec-item"><i class="fas fa-check-circle" style="color:#ef4444;"></i> <div><strong>${r.title}:</strong> ${r.desc}</div></li>
+                  `).join('')}
+                </ul>
+              </div>
+
+              <div class="rec-card">
+                <div class="rec-card-header" style="color:#0284c7;">
+                  <i class="fas fa-bullhorn"></i> Khuyến Nghị Cho GS25 (2025–2030)
+                </div>
+                <ul class="rec-list">
+                  ${project.recommendations.gs25.map(r => `
+                    <li class="rec-item"><i class="fas fa-check-circle" style="color:#0284c7;"></i> <div><strong>${r.title}:</strong> ${r.desc}</div></li>
+                  `).join('')}
+                </ul>
+              </div>
+            </div>
+          `;
+        }
+
+        // 4.2 Render Google Docs Banner Callout
+        if (project.googleDocUrl) {
+          const docBanner = document.getElementById('docCalloutBanner');
+          docBanner.style.display = 'flex';
+          docBanner.innerHTML = `
+            <div class="doc-callout-info">
+              <h3><i class="fas fa-file-lines" style="color:var(--accent);"></i> Toàn Văn Báo Cáo Nghiên Cứu 160+ Trang</h3>
+              <p>Báo cáo học thuật chính thức đầy đủ 6 chương, 15+ biểu đồ khảo sát SPSS/Forms, 6 tầng phỏng vấn chuyên sâu và phụ lục đề tài thực hiện bởi Nhóm Bee Chăm Chỉ (VTC Academy).</p>
+            </div>
+            <a href="${project.googleDocUrl}" target="_blank" rel="noopener noreferrer" class="doc-callout-btn">
+              Mở Báo Cáo Google Docs (160+ Trang) <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          `;
         }
 
         // 5. Render Bài Học Rút Ra (Takeaways)

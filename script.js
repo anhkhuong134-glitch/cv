@@ -68,51 +68,148 @@ const projectsData = {
     categoryIcon: "fas fa-chart-pie",
     categoryColor: "#38bdf8",
     duration: "Học kỳ 1 — 2026",
-    results: "Báo cáo 160+ trang • 100+ Khảo sát thực tế",
+    results: "Báo cáo 160+ trang • 93+ Khảo sát thực tế",
     tools: ["Google Forms", "Google Sheets", "Canva"],
     googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
-    description: "Nghiên cứu hành vi tiêu dùng và định vị cạnh tranh 7P Marketing Mix giữa hai chuỗi cửa hàng tiện lợi hàng đầu Việt Nam.",
+    buttonText: "Mở Toàn Văn Báo Cáo (160+ Trang)",
+    description: "Khảo sát định lượng & định tính hành vi tiêu dùng Gen Z, giải mã chiến lược 7P Marketing Mix và định vị thương hiệu giữa hai chuỗi CVS 500+ cửa hàng.",
     featured: true,
-    kpis: [
-      { number: "160+", label: "Trang báo cáo", icon: "📄" },
-      { number: "100+", label: "Mẫu khảo sát", icon: "📊" },
-      { number: "6",    label: "Bước quy trình", icon: "🔄" }
+
+    academicInfo: {
+      institution: "VTC Academy · Đào Tạo Lập Trình & Thiết Kế Quốc Tế",
+      instructor: "ThS. Bùi Nguyễn Ngọc Dường",
+      class: "K25DBMF02 (Chuyên ngành Digital Marketing)",
+      team: "Nhóm Bee Chăm Chỉ",
+      time: "Hà Nội, Tháng 04/2026",
+      docPages: "160+ Trang Báo Cáo Nghiên Cứu Học Thuật Toàn Văn",
+      googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0"
+    },
+
+    executiveSummary: [
+      "Thị trường chuỗi cửa hàng tiện lợi (CVS) Việt Nam đang chứng kiến tốc độ tăng trưởng kép 12–15%/năm, đạt quy mô ước tính 12.000 tỷ VNĐ vào năm 2025. Sự dịch chuyển từ mô hình tạp hóa truyền thống sang bán lẻ hiện đại 24/7 được dẫn dắt mạnh mẽ bởi thế hệ Gen Z và tầng lớp đô thị trẻ.",
+      "Trong cuộc đua này, <strong>Circle K</strong> (500+ cửa hàng, gia nhập 2008) và <strong>GS25</strong> (450+ cửa hàng, gia nhập 2018) đại diện cho hai triết lý kinh doanh đối lập: Circle K tối ưu hóa sự hiện diện vật lý với chiến lược phủ dày cụm mạng lưới và độc quyền khung giờ đêm muộn 22h–6h sáng; trong khi GS25 định vị là 'Lifestyle Platform' mang đậm bản sắc văn hóa Hàn Quốc với thế mạnh đồ ăn tươi chế biến tại chỗ (K-Food) và không gian check-in thời thượng.",
+      "Đồ án tốt nghiệp 160+ trang này được triển khai theo phương pháp nghiên cứu kết hợp (Mixed Methods): kết hợp Desk Research (NielsenIQ, Q&Me), quan sát thực địa, khảo sát định lượng 93+ người tiêu dùng thực tế và phỏng vấn chuyên sâu 6 tầng tâm lý để bóc tách toàn diện mô hình 7P Marketing Mix, ma trận SWOT, phân khúc STP và đề xuất lộ trình chiến lược 2025–2030."
     ],
 
-    findingsTitle: "Kết Quả Nghiên Cứu Nổi Bật",
+    kpis: [
+      { number: "160+", label: "Trang Báo Cáo", icon: "📄" },
+      { number: "93+",  label: "Mẫu Khảo Sát", icon: "📊" },
+      { number: "6",    label: "Tầng Phỏng Vấn", icon: "🎙️" },
+      { number: "7P",   label: "Marketing Mix", icon: "⚖️" }
+    ],
+
+    surveyData: [
+      { number: "67.7%", tag: "Nhân khẩu học", title: "Gen Z Áp Đảo (18–24 Tuổi)", desc: "Khách hàng nòng cốt là sinh viên và người trẻ mới đi làm, có tần suất mua sắm 3–5 lần/tuần." },
+      { number: "65.2%", tag: "Kênh ưu tiên", title: "CVS Là Lựa Chọn Số 1", desc: "Cửa hàng tiện lợi vượt qua cả TMĐT (58.7%) và Siêu thị (52.2%) trong các nhu cầu mua sắm thường nhật." },
+      { number: ">60%",  tag: "Insight hành vi", title: "Trải Nghiệm Hơn Giá Cả", desc: "Gen Z lựa chọn cửa hàng dựa trên sự quen thuộc và không gian trải nghiệm thay vì so kè giá rẻ." },
+      { number: ">50%",  tag: "Sức hút văn hóa", title: "Động Lực K-Food Tại GS25", desc: "Hơn một nửa khách hàng trẻ ghé GS25 vì bị lôi cuốn bởi ẩm thực Hàn Quốc và nhãn hàng riêng YouUs." }
+    ],
+
+    comparisonMatrix: [
+      {
+        p: "1. Product (Sản Phẩm)",
+        circleK: "Tập trung FMCG đại chúng từ các thương hiệu quen thuộc (Coca-Cola, Nestlé, Vinamilk); F&B ăn liền chế biến nhanh (trà chanh, xúc xích, mì trộn); triết lý 4F (Fresh, Friendly, Fast, Full) với 2.000–3.000 SKU.",
+        gs25: "Dẫn đầu đồ ăn tươi chế biến tại chỗ (Fresh Food chiếm 45–50% doanh thu); cơm hộp Dosirak, kimbap, tokbokki, quầy mì tự nấu chuẩn Hàn; 20% danh mục là nhãn hàng riêng YouUs độc quyền."
+      },
+      {
+        p: "2. Price (Giá Cả)",
+        circleK: "Định giá tiện lợi (cao hơn siêu thị 10–20%); dùng sản phẩm 'mồi' (cà phê, mì gói 15k–25k) để phá vỡ tâm lý ngại đắt; áp dụng định giá tâm lý (19.900đ) và các món ăn vặt dưới 20k tại quầy thu ngân.",
+        gs25: "Phân khúc trung-cao cấp (bento 35k–60k); chiến lược khuyến mãi 2+1, 1+1 độc quyền kích thích mua số lượng lớn; tích hợp ví điện tử hoàn tiền (Cashback) giảm áp lực tâm lý chi tiêu."
+      },
+      {
+        p: "3. Place (Phân Phối)",
+        circleK: "Chiến lược 'cụm mạng lưới' (Cluster Strategy) với 500+ cửa hàng; ưu tiên bán kính 100m quanh trường học, văn phòng; độc quyền khung giờ 22h–6h sáng; tích hợp CK Club & Grab giao hàng trong 20 phút.",
+        gs25: "450+ cửa hàng; tập trung chân tòa nhà văn phòng hạng A/B và chung cư cao cấp (Vinhomes, Masteri); chiến lược Bắc tiến mở 50 cửa hàng Hà Nội sau 9 tháng; O2O app giao hàng 30 phút."
+      },
+      {
+        p: "4. Promotion (Truyền Thông)",
+        circleK: "Gắn liền văn hóa đường phố của giới trẻ; xuất hiện tự nhiên trong các bài Rap (HIEUTHUHAI, Low G); hệ thống biển bảng ngoài trời và poster POS dày đặc kích thích mua bốc đồng.",
+        gs25: "Mô hình 'Shoppertainment Loop' qua app; tính năng tủ lạnh ảo Fridge 25 lưu trữ quà khuyến mãi; chiến dịch gắn với làn sóng Hallyu, check-in TikTok và minigame tương tác cao."
+      },
+      {
+        p: "5. People (Con Người)",
+        circleK: "Vận hành trực tiếp (Directly operated); đội ngũ nhân viên trẻ 18–25 tuổi năng động; chuẩn hóa quy trình qua nền tảng đào tạo gamification Attensi.",
+        gs25: "Đào tạo văn hóa dịch vụ chuẩn Hàn; nhân viên quầy đồ ăn nóng thành thạo kỹ năng tư vấn thêm topping (phô mai, trứng); thái độ ân cần, lịch sự."
+      },
+      {
+        p: "6. Process (Quy Trình)",
+        circleK: "Tốc độ giao dịch siêu tốc 1–3 phút; quy trình thanh toán không tiền mặt đồng bộ; quy trình nhận phản hồi khách hàng liên tục cải tiến.",
+        gs25: "Trải nghiệm số hóa O2O; quy trình vận hành trạm nấu mì tự động; thanh toán một chạm qua app tích điểm và đặt hàng online tiện lợi."
+      },
+      {
+        p: "7. Physical Evidence (Không Gian)",
+        circleK: "Tông màu Đỏ - Cam - Trắng nổi bật rực rỡ 24/7; bố cục kệ hàng san sát tối ưu diện tích; khu vực bàn ghế ngồi lại tiện dụng (20–30m²).",
+        gs25: "Tông màu Xanh Cyan - Trắng thanh lịch, hiện đại; mặt kính thoáng nhìn ra phố, ánh sáng trắng dịu mắt; không gian ngồi ăn rộng rãi chuẩn 'Instagrammable'."
+      }
+    ],
+
+    swotAnalysis: {
+      circleK: {
+        s: "Mạng lưới 500+ cửa hàng lớn nhất Việt Nam; độc quyền khung giờ vàng 22h–6h sáng; độ nhận diện Top-of-mind số 1 đối với Gen Z.",
+        w: "Chi phí thuê mặt bằng trung tâm và nhân sự 24/7 rất lớn; một số cửa hàng bị ám mùi dầu mỡ; thiếu thực phẩm tươi sống.",
+        o: "Tốc độ đô thị hóa nhanh; xu hướng thanh toán không tiền mặt và quick-commerce; mở rộng mô hình cửa hàng tiện lợi thông minh CK GO.",
+        t: "Áp lực tăng giá thuê mặt bằng; cạnh tranh gay gắt từ GS25 và 7-Eleven; yêu cầu vệ sinh an toàn thực phẩm ngày càng khắt khe."
+      },
+      gs25: {
+        s: "Định vị 'Lifestyle Platform' độc đáo; ẩm thực K-Food tươi ngon dẫn đầu thị trường; nhãn hàng riêng YouUs có biên lợi nhuận cao; app loyalty hiện đại.",
+        w: "Độ phủ cửa hàng ở ngoại thành còn mỏng; chi phí đầu tư không gian và vận hành app lớn; phụ thuộc vào độ nóng của làn sóng Hallyu.",
+        o: "Chiến lược Bắc tiến thần tốc mở rộng thị phần; tệp khách hàng văn phòng có thu nhập tốt; xu hướng tiêu dùng trải nghiệm.",
+        t: "Sự bám đuổi của Circle K và các chuỗi nội địa; biến động chi phí nhập khẩu nguyên liệu từ Hàn Quốc; cạnh tranh từ chuỗi cafe tiện ích."
+      }
+    },
+
+    findingsTitle: "Phát Hiện Cốt Lõi Từ Nghiên Cứu Định Lượng & Định Tính",
     findings: [
-      "<strong>Vị Thế Mạng Lưới:</strong> Circle K độc chiếm độ phủ với <strong>500+ cửa hàng</strong> (chiếm ~38% thị phần doanh thu CVS), tạo lợi thế cạnh tranh tuyệt đối ở khung giờ 22h–6h sáng.",
-      "<strong>Insight Khách Hàng Trẻ:</strong> >60% Gen Z lựa chọn cửa hàng dựa trên <strong>mức độ quen thuộc và trải nghiệm không gian</strong> — yếu tố cảm xúc quan trọng hơn cạnh tranh về giá.",
-      "<strong>Sức Hút Hàn Quốc (GS25):</strong> GS25 bứt phá nhờ định vị 'điểm đến trải nghiệm', hơn <strong>50% Gen Z</strong> thừa nhận chịu ảnh hưởng từ văn hóa K-Food trong quyết định ăn uống.",
-      "<strong>Mô Hình Cạnh Tranh Rõ Rệt:</strong> Circle K lấy <strong>'Sự tiện lợi & Phủ sóng'</strong> làm lõi, trong khi GS25 tập trung vào <strong>'Trải nghiệm ẩm thực & Không gian kết nối'</strong>.",
-      "<strong>Đề Xuất Chiến Lược 2025–2030:</strong> Xây dựng lộ trình phát triển bền vững cho 2 thương hiệu gồm Bản địa hóa sản phẩm, Tối ưu ứng dụng Loyalty và Tiêu chuẩn ESG."
+      "<strong>Vị Thế Mạng Lưới:</strong> Circle K độc chiếm độ phủ với <strong>500+ cửa hàng</strong> (chiếm ~38% thị phần doanh thu CVS ngoại), tạo lợi thế cạnh tranh tuyệt đối ở khung giờ 22h–6h sáng khi các kênh bán lẻ khác đều đóng cửa.",
+      "<strong>Insight Khách Hàng Trẻ:</strong> >60% Gen Z lựa chọn cửa hàng dựa trên <strong>mức độ quen thuộc và trải nghiệm không gian</strong> — yếu tố cảm xúc quan trọng hơn cạnh tranh về giá cả thuần túy.",
+      "<strong>Sức Hút Hàn Quốc (GS25):</strong> GS25 bứt phá nhờ định vị 'điểm đến trải nghiệm', hơn <strong>50% Gen Z</strong> thừa nhận chịu ảnh hưởng từ văn hóa K-Food (mì cay, tokbokki, cơm cuộn) trong quyết định ghé thăm.",
+      "<strong>Mô Hình Cạnh Tranh Rõ Rệt:</strong> Circle K lấy <strong>'Sự tiện lợi & Phủ sóng mua nhanh'</strong> làm lõi, trong khi GS25 tập trung vào <strong>'Trải nghiệm ẩm thực & Không gian kết nối'</strong>.",
+      "<strong>Hành Vi Mua Hàng Bốc Đồng (Impulse Buying):</strong> Các món đồ ăn vặt và F&B giá dưới 20.000đ đặt ngay quầy thu ngân đóng góp tới 25–30% tổng giá trị giỏ hàng của khách hàng trẻ."
     ],
+
+    recommendations: {
+      circleK: [
+        { title: "Tái cấu trúc không gian điểm bán (POS)", desc: "Nâng cấp hệ thống hút mùi và thông gió tại khu vực F&B; tách biệt rõ ràng khu ngồi ăn và lối đi mua sắm để nâng cao trải nghiệm khách hàng." },
+        { title: "Bản địa hóa danh mục thực phẩm (Localization)", desc: "Bổ sung các món ăn sáng truyền thống Việt Nam chất lượng cao (bánh mì que giòn, xôi nóng) bên cạnh các món fast food phương Tây." },
+        { title: "Cá nhân hóa ứng dụng CK Club", desc: "Ứng dụng dữ liệu lớn (Big Data) để gợi ý combo ưu đãi theo vị trí và khung giờ ghé thăm của từng khách hàng, biến app thành kênh giữ chân thân thiết." }
+      ],
+      gs25: [
+        { title: "Đồng bộ nhận diện thương hiệu đa kênh", desc: "Thống nhất thiết kế biển hiệu và bảng giá tại các chi nhánh mở rộng; đẩy mạnh truyền thông củng cố định vị 'Lifestyle Platform đến từ Hàn Quốc'." },
+        { title: "Phát triển món ăn biểu tượng (Signature Hero Product)", desc: "Tạo ra các sản phẩm F&B độc quyền có tính lan tỏa cao mà đối thủ không thể sao chép, củng cố vị thế Fresh Food Leader." },
+        { title: "Mở rộng độ phủ đa phân khúc", desc: "Từng bước đưa mô hình tiếp cận các khu dân cư đông đúc và cổng trường đại học thay vì chỉ tập trung tại các cao ốc văn phòng hạng A." }
+      ]
+    },
+
     skills: [
-      { icon: "📊", name: "Nghiên Cứu Thị Trường & Đào Sâu Data", desc: "Thiết kế bảng hỏi khảo sát định lượng, thực hiện phỏng vấn chuyên sâu 6 tầng nội dung, xử lý & tổng hợp dữ liệu chuẩn học thuật." },
-      { icon: "🧠", name: "Phân Tích Định Vị Thương Hiệu (Branding)", desc: "Vận dụng thành thạo mô hình 7P Marketing Mix, SWOT, STP và AIDA để bóc tách chiến lược cạnh tranh giữa hai gã khổng lồ bán lẻ." },
-      { icon: "📈", name: "Đọc Hiểu Hành Vi Tiêu Dùng (Consumer Insight)", desc: "Phân tích tâm lý mua hàng ngẫu hứng, các yếu tố giữ chân khách hàng (retention drivers) và xu hướng tiêu dùng Gen Z / Millennial." },
-      { icon: "💡", name: "Tư Duy Chiến Lược Bán Lẻ (CVS Strategy)", desc: "Đánh giá hiệu quả mô hình 24/7, chiến lược trưng bày sản phẩm (merchandising), tối ưu hóa trải nghiệm điểm bán (POS experience)." },
-      { icon: "✍️", name: "Kỹ Năng Quản Lý & Viết Báo Cáo Chuyên Sâu", desc: "Tổng hợp, cấu trúc hóa và trình bày báo cáo nghiên cứu 160+ trang với tư duy logic, lập luận chặt chẽ và bằng chứng khoa học." }
+      { icon: "📊", name: "Nghiên Cứu Thị Trường Định Lượng & Định Tính", desc: "Thiết kế bảng hỏi khảo sát 4 nhóm biến số, thực hiện phỏng vấn chuyên sâu 6 tầng tâm lý, xử lý & tổng hợp dữ liệu chuẩn học thuật." },
+      { icon: "🧠", name: "Phân Tích Định Vị Thương Hiệu (Branding Frameworks)", desc: "Vận dụng thành thạo mô hình 7P Marketing Mix, SWOT, STP và AIDA để bóc tách chiến lược cạnh tranh giữa hai chuỗi bán lẻ hàng đầu." },
+      { icon: "📈", name: "Đọc Hiểu Hành Vi Tiêu Dùng (Consumer Insights)", desc: "Phân tích tâm lý mua hàng bốc đồng (Impulse Buying), các yếu tố giữ chân khách hàng (retention drivers) và thị hiếu Gen Z / Millennials." },
+      { icon: "💡", name: "Tư Duy Chiến Lược Bán Lẻ (CVS & Retail Strategy)", desc: "Đánh giá hiệu quả mô hình 24/7, chiến lược trưng bày sản phẩm (merchandising), tối ưu hóa trải nghiệm điểm bán (POS experience)." },
+      { icon: "✍️", name: "Cấu Trúc Hóa & Viết Báo Cáo Chuyên Sâu 160+ Trang", desc: "Tổng hợp, cấu trúc hóa và trình bày báo cáo nghiên cứu 160+ trang với tư duy logic chặt chẽ, lập luận khoa học và trích dẫn chuẩn mực." }
     ],
+
     objectives: [
-      "Đánh giá và so sánh trải nghiệm sản phẩm & dịch vụ tại Circle K và GS25",
-      "Phân tích chiến lược Marketing & xây dựng thương hiệu của hai chuỗi",
-      "Đo lường giá trị cạnh tranh trong nhận thức của người tiêu dùng Việt Nam",
-      "Đề xuất giải pháp chiến lược để nâng cao nhận thức thương hiệu và hiệu quả kinh doanh"
+      "Đánh giá và so sánh mức độ hài lòng về sản phẩm & dịch vụ giữa Circle K và GS25",
+      "Phân tích chiến lược Marketing Mix 7P & định vị thương hiệu của hai chuỗi bán lẻ",
+      "Đo lường giá trị cạnh tranh và nhận thức thương hiệu trong tâm trí người tiêu dùng Việt Nam",
+      "Đề xuất giải pháp chiến lược khả thi giai đoạn 2025–2030 nâng cao hiệu quả kinh doanh và phát triển bền vững (ESG)"
     ],
+
     process: [
-      { icon: "🔍", title: "Tổng Quan Thị Trường", desc: "Phân tích bối cảnh ngành CVS Việt Nam, xu hướng tăng trưởng 12–15%/năm và vị thế Circle K vs GS25" },
-      { icon: "📚", title: "Nghiên Cứu Lý Thuyết", desc: "Phân tích 7P Marketing Mix, SWOT, STP, AIDA — làm rõ sự khác biệt định vị giữa hai thương hiệu" },
-      { icon: "📋", title: "Thu Thập Dữ Liệu Sơ Cấp", desc: "Thiết kế bảng khảo sát 4 nhóm biến, gửi đến 100+ khách hàng có trải nghiệm thực tế" },
-      { icon: "👁️", title: "Quan Sát Thực Địa", desc: "Trực tiếp khảo sát các chi nhánh Circle K & GS25 ở nhiều khung giờ, ghi nhận hành vi khách hàng" },
-      { icon: "🎙️", title: "Phỏng Vấn Chuyên Sâu", desc: "Phỏng vấn In-depth Interview 6 nhóm nội dung phân tầng từ cảm nhận giác quan → động lực sâu xa" },
-      { icon: "💡", title: "Phân Tích & Đề Xuất", desc: "Xử lý dữ liệu, so sánh đa chiều 6 tiêu chí cốt lõi, đề xuất chiến lược bền vững 2025–2030" }
+      { icon: "🔍", title: "Tổng Quan Thị Trường & Desk Research", desc: "Phân tích bối cảnh ngành CVS Việt Nam quy mô 12.000 tỷ, khảo cứu 15+ báo cáo từ NielsenIQ, Q&Me, Vietdata và DPS Media." },
+      { icon: "📚", title: "Khung Lý Thuyết & Mô Hình Đánh Giá", desc: "Xây dựng hệ quy chiếu dựa trên 7P Marketing Mix, SWOT, STP, AIDA và tâm lý học hành vi tiêu dùng hiện đại." },
+      { icon: "📋", title: "Thu Thập Dữ Liệu Sơ Cấp (Survey)", desc: "Thiết kế bảng khảo sát 4 nhóm biến số, thu thập 93+ mẫu phản hồi hợp lệ từ người tiêu dùng có trải nghiệm thực tế cả 2 chuỗi." },
+      { icon: "👁️", title: "Quan Sát Thực Địa (Field Observation)", desc: "Trực tiếp khảo sát các chi nhánh Circle K & GS25 ở nhiều khung giờ (đặc biệt khung giờ đêm 22h–6h), ghi nhận dòng di chuyển và hành vi khách hàng." },
+      { icon: "🎙️", title: "Phỏng Vấn Chuyên Sâu 6 Tầng Tâm Lý", desc: "Thực hiện In-depth Interview phân tầng từ ấn tượng giác quan bề mặt → mua sắm ngẫu hứng → động lực sâu xa → kỳ vọng số hóa." },
+      { icon: "💡", title: "Phân Tích Đối Đầu & Đề Xuất Chiến Lược", desc: "Xử lý dữ liệu định lượng, so sánh đối đầu 7 tiêu chí 7P cốt lõi, ma trận SWOT và đề xuất lộ trình hành động 2025–2030." }
     ],
+
     frameworks: ["7P Marketing Mix", "SWOT Analysis", "STP Model", "AIDA Framework", "Consumer Insight"],
+
     takeaways: [
-      { icon: "🧠", title: "Tư duy phân tích dữ liệu", desc: "Học cách đọc và tổng hợp dữ liệu khảo sát định lượng thành insight hành vi tiêu dùng có giá trị thực tiễn." },
-      { icon: "📊", title: "Áp dụng framework vào thực tế", desc: "Không chỉ học lý thuyết — tự tay phân tích 7P, SWOT, STP cho hai thương hiệu thật, thấy rõ sự khác biệt rất lớn giữa lý thuyết và thực tế." },
-      { icon: "✍️", title: "Kỹ năng viết báo cáo chuyên sâu", desc: "160+ trang báo cáo cấu trúc hóa rõ ràng giúp tôi hiểu tầm quan trọng của logic trình bày trong Marketing Research." }
+      { icon: "🧠", title: "Tư duy phân tích dữ liệu thực chiến", desc: "Học cách đọc và chuyển hóa dữ liệu khảo sát thô thành insight hành vi tiêu dùng sắc bén, có giá trị ứng dụng cho doanh nghiệp." },
+      { icon: "📊", title: "Thu hẹp khoảng cách giữa lý thuyết & thực tế", desc: "Tự tay bóc tách 7P và SWOT cho hai thương hiệu thật giúp nhận ra sự linh hoạt và biến hóa khôn lường của các chiến lược tiếp thị trên thương trường." },
+      { icon: "✍️", title: "Kỹ năng quản lý đề tài học thuật quy mô lớn", desc: "Hoàn thiện báo cáo 160+ trang đòi hỏi tính kỷ luật cao, tư duy logic mạch lạc và sự phối hợp nhịp nhàng giữa các thành viên trong nhóm." }
     ]
   },
 
