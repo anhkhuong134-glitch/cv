@@ -397,6 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initTypewriter();
   initSmoothScroll();
+  initSeoPageFeatures();
 });
 
 // 1. CHỨC NĂNG THEME TOGGLE (DARK / LIGHT MODE)
@@ -527,3 +528,197 @@ function initSmoothScroll() {
     });
   });
 }
+
+// 6. TÍNH NĂNG TƯƠNG TÁC CHO CỤM TRANG SEO (EDITORIAL & SERP LAB)
+function initSeoPageFeatures() {
+  initReadingProgressBar();
+  initSerpDeviceToggle();
+  initSerpFilterAndSearch();
+  initTableOfContentsScrollSpy();
+  initFaqAccordion();
+  initArticleQuickSelect();
+  initCopySnippetButtons();
+}
+
+// 6.1. Thanh tiến trình đọc (Reading Progress Bar)
+function initReadingProgressBar() {
+  const bar = document.querySelector('.reading-progress-bar');
+  if (!bar) return;
+
+  function updateProgress() {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight <= 0) return;
+    const progress = (window.scrollY / totalHeight) * 100;
+    bar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+}
+
+// 6.2. Chuyển đổi hiển thị SERP (Desktop vs Mobile)
+function initSerpDeviceToggle() {
+  const deviceBtns = document.querySelectorAll('.device-btn');
+  const mockup = document.querySelector('.seo-preview-mockup-wrap');
+  if (deviceBtns.length === 0 || !mockup) return;
+
+  deviceBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.getAttribute('data-device');
+      deviceBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (mode === 'mobile') {
+        mockup.classList.add('mobile-view');
+      } else {
+        mockup.classList.remove('mobile-view');
+      }
+    });
+  });
+}
+
+// 6.3. Bộ lọc danh mục & Tìm kiếm trực tiếp trên trang SEO Samples
+function initSerpFilterAndSearch() {
+  const searchInput = document.getElementById('serpSearchInput');
+  const clearBtn = document.getElementById('searchClearBtn');
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const resultsList = document.querySelector('.search-results-list');
+  const articles = document.querySelectorAll('.google-search-result');
+  const countIndicator = document.getElementById('serpCountText');
+  const viewBtns = document.querySelectorAll('.view-btn');
+
+  if (!resultsList || articles.length === 0) return;
+
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  function filterResults() {
+    let visibleCount = 0;
+    articles.forEach(art => {
+      const category = art.getAttribute('data-category') || '';
+      const title = art.querySelector('.google-result-title')?.textContent.toLowerCase() || '';
+      const desc = art.querySelector('.google-result-description')?.textContent.toLowerCase() || '';
+      const keyword = (art.getAttribute('data-keyword') || '').toLowerCase();
+
+      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      const matchesSearch = !searchQuery || title.includes(searchQuery) || desc.includes(searchQuery) || keyword.includes(searchQuery);
+
+      if (matchesCategory && matchesSearch) {
+        art.style.display = 'flex';
+        visibleCount++;
+      } else {
+        art.style.display = 'none';
+      }
+    });
+
+    if (countIndicator) {
+      countIndicator.textContent = `Hiển thị ${visibleCount}/${articles.length} bài viết SEO`;
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (clearBtn) clearBtn.style.display = searchQuery ? 'inline-block' : 'none';
+      filterResults();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.style.display = 'none';
+        searchInput.focus();
+        filterResults();
+      }
+    });
+  }
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeCategory = pill.getAttribute('data-category') || 'all';
+      filterResults();
+    });
+  });
+
+  // Chuyển đổi giao diện danh sách SERP / Grid Cards
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      viewBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const mode = btn.getAttribute('data-view');
+      if (mode === 'grid') {
+        resultsList.classList.add('grid-view');
+      } else {
+        resultsList.classList.remove('grid-view');
+      }
+    });
+  });
+}
+
+// 6.4. Mục lục thông minh Scroll Spy
+function initTableOfContentsScrollSpy() {
+  const tocLinks = document.querySelectorAll('.toc-link');
+  const headings = document.querySelectorAll('.article-body h2[id]');
+  if (tocLinks.length === 0 || headings.length === 0) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        tocLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '0px 0px -65% 0px' });
+
+  headings.forEach(h => observer.observe(h));
+}
+
+// 6.5. FAQ Accordion đóng/mở mượt mà
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.seo-faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const wasActive = item.classList.contains('active');
+        item.classList.toggle('active', !wasActive);
+      });
+    }
+  });
+}
+
+// 6.6. Quick Select chuyển nhanh bài viết
+function initArticleQuickSelect() {
+  const select = document.querySelector('.article-quick-select');
+  if (select) {
+    select.addEventListener('change', (e) => {
+      if (e.target.value) {
+        window.location.href = e.target.value;
+      }
+    });
+  }
+}
+
+// 6.7. Nút sao chép từ khóa / snippet nhanh
+function initCopySnippetButtons() {
+  const copyBtns = document.querySelectorAll('[data-copy-text]');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.getAttribute('data-copy-text');
+      const label = btn.getAttribute('data-copy-label') || 'Đã sao chép vào bộ nhớ tạm!';
+      copyToClipboard(text, label);
+    });
+  });
+}
+
