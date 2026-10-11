@@ -1582,3 +1582,343 @@ body.editorial-page {
     align-items: flex-start;
   }
 }
+
+/* ===================================================
+   SEO BLUEPRINT & TECHNICAL ON-PAGE AUDIT BOX
+   (Ô PHÂN TÍCH CẤU TRÚC BÀI VIẾT CHUẨN AHREFS & BACKLINKO)
+   =================================================== */
+.seo-blueprint-box {
+  margin: 4rem 0 2rem;
+  padding: 2.2rem clamp(1.2rem, 3.5vw, 2.5rem);
+  border: 2px solid var(--editorial-clay);
+  border-radius: var(--radius-lg);
+  background: var(--editorial-paper);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-blueprint-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--editorial-clay), var(--editorial-sage), #8b5cf6);
+}
+
+.blueprint-header {
+  margin-bottom: 2.2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--editorial-line);
+}
+
+.blueprint-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--editorial-clay) 15%, transparent);
+  color: var(--editorial-clay);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.blueprint-header h2 {
+  font-family: var(--editorial-serif);
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  font-weight: 750;
+  color: var(--editorial-ink);
+  line-height: 1.25;
+  margin: 0 0 0.6rem;
+}
+
+.blueprint-header p {
+  color: var(--editorial-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 820px;
+}
+
+.blueprint-section {
+  margin: 2.2rem 0;
+}
+
+.blueprint-section h3 {
+  font-family: var(--editorial-sans);
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: var(--editorial-ink);
+  margin: 0 0 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.blueprint-section h3 i {
+  color: var(--editorial-clay);
+}
+
+/* Blueprint Grid 2 & 4 */
+.blueprint-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.blueprint-card {
+  padding: 1.2rem 1.35rem;
+  border: 1px solid var(--editorial-line);
+  border-radius: var(--radius-md);
+  background: var(--editorial-paper-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: var(--transition);
+}
+
+.blueprint-card:hover {
+  border-color: var(--editorial-clay);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--editorial-muted);
+}
+
+.card-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--editorial-ink);
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.card-value.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  color: var(--editorial-clay);
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--editorial-muted);
+  margin-top: 0.2rem;
+  line-height: 1.45;
+}
+
+/* Heading Hierarchy Tree */
+.heading-tree-box {
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--editorial-line);
+  border-radius: var(--radius-md);
+  background: var(--editorial-paper-subtle);
+}
+
+.tree-root, .tree-root ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tree-root ul {
+  padding-left: 1.75rem;
+  margin-top: 0.5rem;
+  border-left: 2px dashed color-mix(in srgb, var(--editorial-clay) 30%, var(--editorial-line));
+}
+
+.tree-root li {
+  margin: 0.55rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  color: var(--editorial-ink);
+}
+
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-family: ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.tag-badge.h1-badge { background: #c25e00; color: #ffffff; }
+.tag-badge.h2-badge { background: #0284c7; color: #ffffff; }
+.tag-badge.h3-badge { background: #8b5cf6; color: #ffffff; }
+.tag-badge.h4-badge { background: #10b981; color: #ffffff; }
+
+/* Keyword Table */
+.blueprint-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--editorial-line);
+  border-radius: var(--radius-md);
+  background: var(--editorial-paper);
+}
+
+.blueprint-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.blueprint-table th,
+.blueprint-table td {
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid var(--editorial-line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.blueprint-table th {
+  background: var(--editorial-paper-subtle);
+  color: var(--editorial-clay);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.blueprint-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge.primary-kw {
+  background: color-mix(in srgb, var(--editorial-clay) 15%, transparent);
+  color: var(--editorial-clay);
+  border: 1px solid color-mix(in srgb, var(--editorial-clay) 30%, transparent);
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+}
+
+.badge.secondary-kw {
+  background: color-mix(in srgb, var(--editorial-sage) 15%, transparent);
+  color: var(--editorial-sage);
+  border: 1px solid color-mix(in srgb, var(--editorial-sage) 30%, transparent);
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+}
+
+.badge.lsi-kw {
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+}
+
+/* Image Audit Card */
+.image-audit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+
+.image-audit-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--editorial-line);
+  border-radius: var(--radius-md);
+  background: var(--editorial-paper-subtle);
+  align-items: center;
+}
+
+.image-audit-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--editorial-line);
+  display: block;
+}
+
+.image-audit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--editorial-ink);
+}
+
+.image-audit-info .audit-status {
+  font-weight: 750;
+  color: #10b981;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+}
+
+.image-audit-info code {
+  background: var(--editorial-paper);
+  border: 1px solid var(--editorial-line);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.84rem;
+  color: var(--editorial-clay);
+  word-break: break-word;
+}
+
+/* Checklist Grid */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.checklist-item {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--editorial-line);
+  border-radius: var(--radius-sm);
+  background: var(--editorial-paper-subtle);
+  font-size: 0.86rem;
+  color: var(--editorial-ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.55;
+}
+
+.checklist-item i {
+  color: #10b981;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .blueprint-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .image-audit-card {
+    grid-template-columns: 1fr;
+  }
+}
+
