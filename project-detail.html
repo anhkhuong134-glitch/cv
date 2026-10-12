@@ -102,6 +102,12 @@
         <div id="webShowcaseContent" class="web-showcase-grid"></div>
       </section>
 
+      <!-- BRAND IDENTITY & PRODUCT DELIVERABLES SHOWCASE (NẾU CÓ) -->
+      <section class="detail-section" id="brandShowcaseSection" style="display:none;">
+        <h2><i class="fas fa-palette" style="color:var(--accent);"></i> Hệ Thống Sản Phẩm & Ấn Phẩm Nhận Diện Thương Hiệu</h2>
+        <div id="brandShowcaseContent"></div>
+      </section>
+
       <!-- 3. KẾT QUẢ NGHIÊN CỨU THỰC TẾ / ĐIỂM NỔI BẬT -->
       <section class="detail-section" id="findingsSection" style="display:none;">
         <h2 id="findingsTitle"><i class="fas fa-lightbulb" style="color:var(--accent);"></i> Điểm Đáng Chú Ý</h2>
@@ -452,6 +458,125 @@
               </div>
             </div>
           `).join('');
+        }
+
+        // 2.6 Render Brand Identity & Products Showcase (Nếu có)
+        if (project.brandProducts && project.brandProducts.length > 0) {
+          const brandSection = document.getElementById('brandShowcaseSection');
+          const brandContent = document.getElementById('brandShowcaseContent');
+          brandSection.style.display = 'block';
+
+          let brandHtml = '';
+
+          // 1. Triết lý thiết kế (Brand DNA & Visual Philosophy)
+          if (project.brandPhilosophy) {
+            brandHtml += `
+              <div class="brand-philosophy-card">
+                <div class="brand-philosophy-header">
+                  <span class="brand-badge"><i class="fas fa-sparkles"></i> TRIẾT LÝ THIẾT KẾ & ĐỊNH VỊ</span>
+                  <h3 class="brand-concept-title">${project.brandPhilosophy.concept}</h3>
+                  <p class="brand-tagline">“${project.brandPhilosophy.tagline}”</p>
+                </div>
+                <div class="brand-persona-box">
+                  <strong><i class="fas fa-user-check"></i> Chân dung khách hàng mục tiêu:</strong>
+                  <p>${project.brandPhilosophy.persona}</p>
+                </div>
+              </div>
+            `;
+          }
+
+          // 2. Bảng màu nhận diện (Brand Color Palette)
+          if (project.brandPalette && project.brandPalette.length > 0) {
+            brandHtml += `
+              <div class="brand-subblock">
+                <h3 class="brand-subblock-title"><i class="fas fa-swatchbook" style="color:var(--accent);"></i> Bảng Màu Nhận Diện & Tâm Lý Học Thị Giác (Brand Color System)</h3>
+                <p class="brand-subblock-desc">Hệ màu được tuyển chọn theo tinh thần thực vật học và gốm sứ mộc mạc, tạo cảm giác an tĩnh, ấm áp và gần gũi với thiên nhiên:</p>
+                <div class="brand-palette-grid">
+                  ${project.brandPalette.map(c => `
+                    <div class="brand-swatch-card">
+                      <div class="brand-swatch-color" style="background-color: ${c.hex};">
+                        <span class="brand-swatch-hex">${c.hex}</span>
+                      </div>
+                      <div class="brand-swatch-body">
+                        <strong>${c.name}</strong>
+                        <span class="brand-swatch-rgb">RGB: ${c.rgb}</span>
+                        <p>${c.meaning}</p>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          }
+
+          // 3. Hệ thống Typography (Font Pairings)
+          if (project.brandTypography) {
+            brandHtml += `
+              <div class="brand-subblock">
+                <h3 class="brand-subblock-title"><i class="fas fa-font" style="color:var(--accent);"></i> Quy Chuẩn Kiểu Chữ (Typography Hierarchy)</h3>
+                <div class="brand-typography-grid">
+                  <div class="brand-type-card display">
+                    <div class="brand-type-header">
+                      <span class="brand-type-role">DISPLAY & BRAND HEADER</span>
+                      <h4>${project.brandTypography.display.name}</h4>
+                      <span class="brand-type-tag">${project.brandTypography.display.type}</span>
+                    </div>
+                    <div class="brand-type-sample serif-sample">${project.brandTypography.display.sample}</div>
+                    <p class="brand-type-usage"><strong>Ứng dụng:</strong> ${project.brandTypography.display.usage}</p>
+                  </div>
+
+                  <div class="brand-type-card body">
+                    <div class="brand-type-header">
+                      <span class="brand-type-role">BODY TEXT & PACKAGING LABELS</span>
+                      <h4>${project.brandTypography.body.name}</h4>
+                      <span class="brand-type-tag">${project.brandTypography.body.type}</span>
+                    </div>
+                    <div class="brand-type-sample sans-sample">${project.brandTypography.body.sample}</div>
+                    <p class="brand-type-usage"><strong>Ứng dụng:</strong> ${project.brandTypography.body.usage}</p>
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+
+          // 4. Danh mục 6 Sản phẩm & Ấn phẩm bao bì thực tế (Product & Packaging Deliverables)
+          brandHtml += `
+            <div class="brand-subblock">
+              <h3 class="brand-subblock-title"><i class="fas fa-box-open" style="color:var(--accent);"></i> Bộ Sưu Tập Sản Phẩm & Bao Bì Nhận Diện Thực Tế (${project.brandProducts.length} Hạng Mục)</h3>
+              <p class="brand-subblock-desc">Hệ thống mockups bao bì hoàn chỉnh từ chai lọ cốt lõi, nến thơm, thiết bị khuếch tán đến trải nghiệm unboxing hộp quà cao cấp:</p>
+              <div class="brand-products-grid">
+                ${project.brandProducts.map((p, idx) => `
+                  <article class="brand-product-card">
+                    <div class="brand-product-img-wrap">
+                      <img src="${p.img}" alt="${p.title}" class="brand-product-img" loading="lazy">
+                      <span class="brand-product-num">0${idx + 1}</span>
+                    </div>
+                    <div class="brand-product-body">
+                      <span class="brand-product-cat">${p.category}</span>
+                      <h4 class="brand-product-title">${p.title}</h4>
+                      <div class="brand-product-specs">
+                        <div class="spec-row">
+                          <span class="spec-label"><i class="fas fa-ruler-combined"></i> Quy cách:</span>
+                          <span class="spec-val">${p.capacity}</span>
+                        </div>
+                        <div class="spec-row">
+                          <span class="spec-label"><i class="fas fa-layer-group"></i> Chất liệu:</span>
+                          <span class="spec-val">${p.material}</span>
+                        </div>
+                        <div class="spec-row">
+                          <span class="spec-label"><i class="fas fa-print"></i> Kỹ thuật in:</span>
+                          <span class="spec-val">${p.printSpecs}</span>
+                        </div>
+                      </div>
+                      <p class="brand-product-desc">${p.desc}</p>
+                    </div>
+                  </article>
+                `).join('')}
+              </div>
+            </div>
+          `;
+
+          brandContent.innerHTML = brandHtml;
         }
 
         // 4.2 Render Callout Banner (Nếu có sản phẩm thực tế hoặc tài liệu chính)

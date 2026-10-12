@@ -226,20 +226,113 @@ const projectsData = {
 
   3: {
     id: 3,
-    title: "Xây Dựng Bộ Nhận Diện Thương Hiệu Cơ Bản",
-    type: "Đồ Án Học Tập · Branding",
+    title: "Xây Dựng Bộ Nhận Diện Thương Hiệu: AURA Botanica & Potty Living",
+    type: "Đồ Án Học Tập · Brand Identity & Packaging Design",
     category: "branding",
     categoryName: "Nhận Diện Thương Hiệu",
     categoryIcon: "fas fa-palette",
     categoryColor: "#a78bfa",
-    description: "Nghiên cứu định vị & khách hàng mục tiêu; xây dựng moodboard, bảng màu, kiểu chữ, key visual và ứng dụng nhận diện truyền thông.",
+    description: "Nghiên cứu định vị thương hiệu hương liệu & phong cách sống xanh; phát triển trọn bộ Brand Identity System bao gồm: Logo Guidelines, Bảng màu cảm xúc, Hệ thống bao bì chai lọ tinh dầu, nến thơm thủ công, máy khuếch tán gốm sứ và bộ ấn phẩm văn phòng cao cấp.",
     duration: "Tháng 04/2026",
-    results: "Brand Guidelines • Moodboard • Key Visual • Khung bài đăng Social",
-    tools: ["Canva", "Google Sheets", "AI Tools"],
+    results: "Brand Guidelines • 06 Hạng mục sản phẩm & bao bì • Bảng màu chuẩn Pantone • Bộ ấn phẩm văn phòng",
+    tools: ["Canva Pro", "Brand Guidelines", "Packaging Mockups", "Google Sheets", "Typography System"],
     kpis: [
-      { number: "1",    label: "Brand Guidelines hoàn chỉnh", icon: "📐" },
-      { number: "5",    label: "Tính cách thương hiệu", icon: "💡" },
-      { number: "4+",   label: "Nền tảng ứng dụng", icon: "📱" }
+      { number: "01", label: "Brand Guidelines Hoàn Chỉnh", icon: "📐" },
+      { number: "06", label: "Hạng Mục Sản Phẩm & Bao Bì", icon: "🧴" },
+      { number: "05", label: "Màu Nhận Diện Chuẩn Cảm Xúc", icon: "🎨" },
+      { number: "100%", label: "Quy Chuẩn Gia Công & In Ấn", icon: "🏷️" }
+    ],
+
+    brandPhilosophy: {
+      concept: "Quiet Luxury & Botanical Harmony",
+      tagline: "Khơi nguồn năng lượng an lành từ thiên nhiên thuần khiết",
+      persona: "Người tiêu dùng hiện đại yêu thích không gian sống thư giãn, đề cao tính thẩm mỹ tối giản (Scandinavian/Zen) và nguyên liệu hữu cơ bền vững."
+    },
+
+    brandPalette: [
+      { name: "Forest Pine", hex: "#1B3B2B", rgb: "27, 59, 43", meaning: "Xanh rừng sâu đại diện cho thảo mộc nguyên bản, sự tĩnh tại và phát triển bền vững." },
+      { name: "Warm Terracotta", hex: "#C86D51", rgb: "200, 109, 81", meaning: "Sắc đất nung ấm áp mang lại cảm xúc thủ công mộc mạc và năng lượng tích cực." },
+      { name: "Oat Linen", hex: "#F4EFE6", rgb: "244, 239, 230", meaning: "Màu kem vải lanh thanh khiết, làm nền hoàn hảo giúp tôn vinh chi tiết sản phẩm." },
+      { name: "Sage Whisper", hex: "#7C9082", rgb: "124, 144, 130", meaning: "Xanh xô thơm nhẹ nhàng, xoa dịu hệ thần kinh và tạo cảm giác thư giãn tức thì." },
+      { name: "Obsidian Charcoal", hex: "#22252A", rgb: "34, 37, 42", meaning: "Đen than sắc nét tạo độ tương phản vững chãi, nâng tầm đẳng cấp sang trọng." }
+    ],
+
+    brandTypography: {
+      display: {
+        name: "Playfair Display / Cormorant Garamond",
+        type: "Serif Cổ Điển Sang Trọng",
+        usage: "Tiêu đề ấn phẩm, logo phụ, thẻ chứng nhận chất lượng",
+        sample: "AURA BOTANICA — ESSENTIAL LIVING"
+      },
+      body: {
+        name: "Inter / Montserrat",
+        type: "Geometric Sans-Serif Hiện Đại",
+        usage: "Nội dung bao bì, thành phần chi tiết, cẩm nang mùi hương",
+        sample: "100% Pure Organic Essential Oil · Cold Pressed · 30ml / 1.01 fl.oz"
+      }
+    },
+
+    brandProducts: [
+      {
+        id: "prod-1",
+        title: "Chai Tinh Dầu Hổ Phách Thủy Tinh (Amber Dropper Bottle)",
+        category: "BAO BÌ SẢN PHẨM CỐT LÕI · CORE PACKAGING",
+        capacity: "30ml & 50ml",
+        material: "Thủy tinh màu hổ phách chống 99% tia UV; nắp bóp gỗ sồi tự nhiên dập laser chìm logo; ống hút thủy tinh chia vạch chuẩn y tế.",
+        printSpecs: "Giấy mỹ thuật bóc mờ kháng dầu (Oil-resistant Matte Label); mực in gốc đậu nành thân thiện môi trường; ép kim vàng chìm viền logo.",
+        desc: "Thiết kế nhãn theo trường phái tối giản Scandinavian với bố cục phân cấp thị giác rõ nét: tên mùi hương nổi bật, biểu tượng mầm lá tối giản và chỉ dẫn công dụng trị liệu bằng hương thơm.",
+        img: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "prod-2",
+        title: "Hũ Nến Thơm Gốm Mộc Sáp Đậu Nành (Ceramic Soy Candle)",
+        category: "TRẢI NGHIỆM KHÔNG GIAN · HOME FRAGRANCE",
+        capacity: "220g · 50 Giờ Cháy",
+        material: "Hũ gốm nung men cát mờ thủ công chịu nhiệt; sáp đậu nành tự nhiên 100% không khói độc; bấc gỗ kép tạo tiếng nổ lách tách như củi sưởi.",
+        printSpecs: "Tem niêm phong giấy kraft có số serial thủ công; đóng dấu sáp ong nóng (Wax Stamp Seal) mang đậm dấu ấn nghệ nhân.",
+        desc: "Sau khi sử dụng hết nến, hũ gốm được thiết kế để tái sử dụng làm chậu cây mọng nước hoặc ly đựng cọ trang điểm, thể hiện tinh thần bền vững Zero-Waste của thương hiệu.",
+        img: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "prod-3",
+        title: "Máy Khuếch Tán Gốm Sứ Siêu Âm (Ceramic Aroma Diffuser)",
+        category: "THIẾT BỊ NỘI THẤT CAO CẤP · SMART LIFESTYLE",
+        capacity: "Dung tích 180ml · Phun sương Nano",
+        material: "Vỏ ngoài chế tác bằng gốm sứ mộc vân chìm; chân đế gỗ sồi tự nhiên; dải đèn ambient ấm áp 2700K tạo hiệu ứng ánh hoàng hôn.",
+        printSpecs: "Logo thương hiệu in lụa vi mô sắc nét dưới chân đế; nút cảm ứng ẩn tinh tế không phá vỡ vẻ đẹp điêu khắc nguyên khối.",
+        desc: "Được định vị như một tác phẩm điêu khắc nghệ thuật trên bàn làm việc hoặc kệ sách, vừa thanh lọc không khí vừa nâng tầm thẩm mỹ không gian sống.",
+        img: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "prod-4",
+        title: "Hộp Quà Tặng Nắp Nam Châm & Khay Định Hình (Rigid Gift Box)",
+        category: "TRẢI NGHIỆM UNBOXING · PREMIUM GIFTING",
+        capacity: "Kích thước 24 x 18 x 8 cm",
+        material: "Hộp cứng carton 1200gsm bồi giấy mỹ thuật màu Oat Linen; khay lót bọc vải nhung êm ái cố định 3 chai tinh dầu và nến thơm.",
+        printSpecs: "Logo ép kim dập nổi Gold Foil 3D trên nắp; đai giấy Sleeve hoạ tiết vân lá dập chìm; ruy băng vải thô dệt thủ công.",
+        desc: "Tạo cảm xúc háo hức và đẳng cấp ngay từ giây phút mở hộp. Hộp quà thích hợp cho các dịp tri ân khách hàng VIP, quà tặng doanh nghiệp hoặc quà sinh nhật cao cấp.",
+        img: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "prod-5",
+        title: "Bộ Ấn Phẩm Danh Thiếp & Thẻ Hướng Dẫn (Stationery & Scent Guide)",
+        category: "ĐIỂM CHẠM THƯƠNG HIỆU · BRAND COLLATERALS",
+        capacity: "Card 90x54mm & Scent Guide 100x150mm",
+        material: "Giấy mỹ thuật Cotton 450gsm bề mặt có hạt lanh thô mộc; viền cạnh thiếp được sơn màu Forest Pine thủ công (Edge Painted).",
+        printSpecs: "Kỹ thuật in dập chìm Letterpress truyền thống không dùng mực trên nền giấy dày; tích hợp mã QR dẫn đến cẩm nang phối hương online.",
+        desc: "Thẻ hướng dẫn sử dụng kèm bánh xe hương thơm (Fragrance Wheel) giúp người dùng học cách mix tinh dầu theo từng cung bậc cảm xúc (Tập trung, Ngủ ngon, Giảm căng thẳng).",
+        img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "prod-6",
+        title: "Túi Giấy Mua Sắm & Túi Vải Canvas Eco (Eco Shopping Bag & Tote)",
+        category: "BAO BÌ BÁN LẺ & POSM · SUSTAINABLE PACKAGING",
+        capacity: "Túi đứng 22 x 28 x 10 cm & Túi Tote 36 x 40 cm",
+        material: "Giấy Kraft nâu không tẩy trắng 250gsm dẻo dai; quai xách sợi cotton đan mộc; túi tote làm từ vải mộc chưa qua xử lý hóa chất nhuộm.",
+        printSpecs: "Mực in hữu cơ đơn sắc bảo vệ môi trường; tag giấy treo đục lỗ xỏ dây gai có thể gieo mầm nở hoa (Seed Paper Hangtag).",
+        desc: "Điểm chạm cuối cùng khi khách hàng rời cửa hàng hoặc nhận đơn hàng ship. Lan tỏa thông điệp sống xanh tích cực và khuyến khích tái sử dụng nhiều lần.",
+        img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+      }
     ],
 
     findingsTitle: "Điểm Nhấn Nhận Diện Thương Hiệu",
