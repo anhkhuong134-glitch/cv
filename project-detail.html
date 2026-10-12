@@ -609,6 +609,18 @@
               Mở Báo Cáo Google Docs (160+ Trang) <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           `;
+        } else if (project.id === 4 && project.googleDocUrl) {
+          docBanner.style.display = 'flex';
+          docBanner.className = 'doc-callout-banner';
+          docBanner.innerHTML = `
+            <div class="doc-callout-info">
+              <h3><i class="fab fa-google-drive" style="color:var(--accent);"></i> Thư Viện Ấn Phẩm Thiết Kế 19+ Kích Thước Banner Ads</h3>
+              <p>Truy cập thư mục Google Drive chứa trọn bộ file thiết kế gốc độ nét cao, hệ thống banner chuẩn GDN, Facebook Ads và poster chiến dịch Tinh Dầu Thiên Nhiên.</p>
+            </div>
+            <a href="${project.googleDocUrl}" target="_blank" rel="noopener noreferrer" class="doc-callout-btn">
+              Xem Trọn Bộ Ấn Phẩm Thiết Kế (Google Drive) <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          `;
         } else if (project.id === 5) {
           docBanner.style.display = 'flex';
           docBanner.className = 'doc-callout-banner';
