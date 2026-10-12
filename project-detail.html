@@ -454,10 +454,11 @@
           `).join('');
         }
 
-        // 4.2 Render Google Docs Banner Callout
+        // 4.2 Render Callout Banner (Nếu có sản phẩm thực tế hoặc tài liệu chính)
+        const docBanner = document.getElementById('docCalloutBanner');
         if (project.links && project.links.length > 0) {
-          const docBanner = document.getElementById('docCalloutBanner');
           docBanner.style.display = 'flex';
+          docBanner.className = 'doc-callout-banner';
           docBanner.innerHTML = `
             <div class="doc-callout-info">
               <h3><i class="fas fa-laptop-code" style="color:var(--accent);"></i> Trải Nghiệm Sản Phẩm Thực Tế</h3>
@@ -471,9 +472,9 @@
               `).join('')}
             </div>
           `;
-        } else if (project.googleDocUrl) {
-          const docBanner = document.getElementById('docCalloutBanner');
+        } else if (project.id === 1 && project.googleDocUrl) {
           docBanner.style.display = 'flex';
+          docBanner.className = 'doc-callout-banner';
           docBanner.innerHTML = `
             <div class="doc-callout-info">
               <h3><i class="fas fa-file-lines" style="color:var(--accent);"></i> Toàn Văn Báo Cáo Nghiên Cứu 160+ Trang</h3>
@@ -483,6 +484,32 @@
               Mở Báo Cáo Google Docs (160+ Trang) <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           `;
+        } else if (project.id === 5) {
+          docBanner.style.display = 'flex';
+          docBanner.className = 'doc-callout-banner';
+          docBanner.innerHTML = `
+            <div class="doc-callout-info">
+              <h3><i class="fas fa-file-lines" style="color:var(--accent);"></i> Bộ Sưu Tập Bài Viết Mẫu Chuẩn SEO</h3>
+              <p>Khám phá 4 bài viết mẫu hoàn chỉnh về Mô hình lắp ráp, Build PC, Dragon Ball và Game RPG với đầy đủ cấu trúc On-Page, metadata và nguồn ảnh minh bạch.</p>
+            </div>
+            <a href="seo-samples.html" class="doc-callout-btn">
+              Mở Bộ Sưu Tập Bài SEO Mẫu <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          `;
+        } else if (project.id === 6) {
+          docBanner.style.display = 'flex';
+          docBanner.className = 'doc-callout-banner';
+          docBanner.innerHTML = `
+            <div class="doc-callout-info">
+              <h3><i class="fas fa-pen-nib" style="color:var(--accent);"></i> Tuyển Tập Kế Hoạch Social & Moodboard Thực Chiến</h3>
+              <p>Xem chi tiết 4 bộ kế hoạch content đa ngành nghề: Gunpla, Tech Desk Setup, Lifestyle & Dragon Ball với lịch 28+ ngày, kịch bản video và bài mẫu Facebook.</p>
+            </div>
+            <a href="social-content-sample.html" class="doc-callout-btn">
+              Mở Kế Hoạch Social & Moodboard <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          `;
+        } else {
+          docBanner.style.display = 'none';
         }
 
         // 5. Render Bài Học Rút Ra (Takeaways)
@@ -525,20 +552,19 @@
         }).join('');
 
 
-        // 9. Gán link tài liệu / ấn phẩm vào nút ở cuối trang
+        // 8. Nút điều hướng ở cuối trang
         const detailCta = document.querySelector('.detail-cta');
-        if (project.links && project.links.length > 0) {
+        const docLink = document.getElementById('docLink');
+        const hasCallout = docBanner && docBanner.style.display === 'flex';
+
+        // Khi banner callout đã hiển thị bên trên, tất cả các nút hành động (link sản phẩm/tài liệu) đã có trong banner.
+        // Thanh footer chỉ cần duy nhất nút "Quay Lại Danh Sách" để tránh lặp lại nút.
+        if (hasCallout) {
           detailCta.innerHTML = `
             <a href="projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
-            ${project.links.map(l => `
-              <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="doc-btn" style="background:var(--accent); border-color:var(--accent); color:#fff;">
-                <i class="${l.icon}" style="margin-right:8px;"></i> ${l.btnText}
-              </a>
-            `).join('')}
           `;
-        } else {
-          const docLink = document.getElementById('docLink');
-          if (project.googleDocUrl) {
+        } else if (project.googleDocUrl) {
+          if (docLink) {
             docLink.style.display = 'inline-flex';
             docLink.href = project.googleDocUrl.startsWith('http') ? project.googleDocUrl : encodeURI(project.googleDocUrl);
             if (project.buttonText) {
@@ -549,9 +575,9 @@
                 ${project.buttonText}
               `;
             }
-          } else {
-            if (docLink) docLink.style.display = 'none';
           }
+        } else {
+          if (docLink) docLink.style.display = 'none';
         }
       } else {
         document.body.innerHTML = '<div style="text-align:center; padding: 10rem 1rem; color: var(--text);"><h2>Dự án không tồn tại hoặc đã bị gỡ bỏ.</h2><br><a href="projects.html" class="btn-primary">Quay lại danh sách dự án</a></div>';
