@@ -226,157 +226,157 @@ const projectsData = {
 
   3: {
     id: 3,
-    title: "Xây Dựng Bộ Nhận Diện Thương Hiệu: AURA Botanica & Potty Living",
+    title: "Xây Dựng Bộ Nhận Diện Thương Hiệu: NEXUS LABS — High-End Gaming Gear & Desk Setup Ecosystem",
     type: "Đồ Án Học Tập · Brand Identity & Packaging Design",
     category: "branding",
     categoryName: "Nhận Diện Thương Hiệu",
     categoryIcon: "fas fa-palette",
-    categoryColor: "#a78bfa",
-    description: "Nghiên cứu định vị thương hiệu hương liệu & phong cách sống xanh; phát triển trọn bộ Brand Identity System bao gồm: Logo Guidelines, Bảng màu cảm xúc, Hệ thống bao bì chai lọ tinh dầu, nến thơm thủ công, máy khuếch tán gốm sứ và bộ ấn phẩm văn phòng cao cấp.",
+    categoryColor: "#8b5cf6",
+    description: "Nghiên cứu định vị thương hiệu Gaming Gear & hệ sinh thái Custom Mechanical Keyboard cao cấp; phát triển trọn bộ Brand Identity System bao gồm: Logo Guidelines, Bảng màu Cyberpunk & Dark-Mode, Hệ thống bao bì hộp bàn phím nhôm CNC, hộp Keycap PBT, hũ switch cơ học, ống deskmat và bộ thẻ bảo hành kim loại Authenticity Pass.",
     duration: "Tháng 04/2026",
-    results: "Brand Guidelines • 06 Hạng mục sản phẩm & bao bì • Bảng màu chuẩn Pantone • Bộ ấn phẩm văn phòng",
+    results: "Brand Guidelines • 06 Hạng mục bao bì & Gaming Gear • Bảng màu Pantone công nghệ • Bộ ấn phẩm thẻ kim loại bảo hành",
     tools: ["Canva Pro", "Brand Guidelines", "Packaging Mockups", "Google Sheets", "Typography System"],
     kpis: [
       { number: "01", label: "Brand Guidelines Hoàn Chỉnh", icon: "📐" },
-      { number: "06", label: "Hạng Mục Sản Phẩm & Bao Bì", icon: "🧴" },
-      { number: "05", label: "Màu Nhận Diện Chuẩn Cảm Xúc", icon: "🎨" },
-      { number: "100%", label: "Quy Chuẩn Gia Công & In Ấn", icon: "🏷️" }
+      { number: "06", label: "Hạng Mục Bao Bì & Gear Cao Cấp", icon: "⌨️" },
+      { number: "05", label: "Màu Nhận Diện Cyberpunk Chuẩn", icon: "🎨" },
+      { number: "100%", label: "Quy Chuẩn In Ép Kim Hologram", icon: "🏷️" }
     ],
 
     brandPhilosophy: {
-      concept: "Quiet Luxury & Botanical Harmony",
-      tagline: "Khơi nguồn năng lượng an lành từ thiên nhiên thuần khiết",
-      persona: "Người tiêu dùng hiện đại yêu thích không gian sống thư giãn, đề cao tính thẩm mỹ tối giản (Scandinavian/Zen) và nguyên liệu hữu cơ bền vững."
+      concept: "Cyberpunk Precision & Minimalist Ergonomics",
+      tagline: "Định hình trải nghiệm gõ phím & không gian làm việc đỉnh cao",
+      persona: "Lập trình viên, Content Creator, Designer và Game thủ đam mê văn hóa Custom Mechanical Keyboard, đề cao tính công thái học, âm thanh gõ \"Thocky\" đầm chắc và góc setup bàn làm việc tối giản (Clean Desk Setup)."
     },
 
     brandPalette: [
-      { name: "Forest Pine", hex: "#1B3B2B", rgb: "27, 59, 43", meaning: "Xanh rừng sâu đại diện cho thảo mộc nguyên bản, sự tĩnh tại và phát triển bền vững." },
-      { name: "Warm Terracotta", hex: "#C86D51", rgb: "200, 109, 81", meaning: "Sắc đất nung ấm áp mang lại cảm xúc thủ công mộc mạc và năng lượng tích cực." },
-      { name: "Oat Linen", hex: "#F4EFE6", rgb: "244, 239, 230", meaning: "Màu kem vải lanh thanh khiết, làm nền hoàn hảo giúp tôn vinh chi tiết sản phẩm." },
-      { name: "Sage Whisper", hex: "#7C9082", rgb: "124, 144, 130", meaning: "Xanh xô thơm nhẹ nhàng, xoa dịu hệ thần kinh và tạo cảm giác thư giãn tức thì." },
-      { name: "Obsidian Charcoal", hex: "#22252A", rgb: "34, 37, 42", meaning: "Đen than sắc nét tạo độ tương phản vững chãi, nâng tầm đẳng cấp sang trọng." }
+      { name: "Cyber Cyan", hex: "#06B6D4", rgb: "6, 182, 212", meaning: "Đại diện cho xung nhịp RGB, công nghệ vi xử lý tương lai và độ phản hồi tức thời cực nhanh của switch cơ học." },
+      { name: "Deep Obsidian Black", hex: "#0F172A", rgb: "15, 23, 42", meaning: "Sắc đen bóng đêm của khung nhôm nguyên khối anodized, tạo chiều sâu thị giác và cảm giác vững chãi, cao cấp." },
+      { name: "Neon Ultraviolet", hex: "#8B5CF6", rgb: "139, 92, 246", meaning: "Sắc tím điện tử khơi gợi cảm hứng sáng tạo vô tận và chất thẩm mỹ gaming công nghệ cao." },
+      { name: "Titanium Gunmetal", hex: "#475569", rgb: "71, 85, 105", meaning: "Màu kim loại lạnh lùng của plate đồng và tạ tản lực CNC, biểu trưng cho độ bền cơ học vượt thời gian." },
+      { name: "Ghost White Accent", hex: "#F8FAFC", rgb: "248, 250, 252", meaning: "Điểm nhấn tương phản cực đại trên ký tự keycap và các đường viền kỹ thuật sắc nét." }
     ],
 
     brandTypography: {
       display: {
-        name: "Playfair Display / Cormorant Garamond",
-        type: "Serif Cổ Điển Sang Trọng",
-        usage: "Tiêu đề ấn phẩm, logo phụ, thẻ chứng nhận chất lượng",
-        sample: "AURA BOTANICA — ESSENTIAL LIVING"
+        name: "Space Grotesk / Syne",
+        type: "Geometric Tech Sans-Serif Góc Cạnh",
+        usage: "Tiêu đề chiến dịch, logo thương hiệu, số hiệu phiên bản giới hạn Limited Edition",
+        sample: "NEXUS LABS — TACTILE EXCELLENCE 75%"
       },
       body: {
-        name: "Inter / Montserrat",
-        type: "Geometric Sans-Serif Hiện Đại",
-        usage: "Nội dung bao bì, thành phần chi tiết, cẩm nang mùi hương",
-        sample: "100% Pure Organic Essential Oil · Cold Pressed · 30ml / 1.01 fl.oz"
+        name: "JetBrains Mono / Plus Jakarta Sans",
+        type: "Monospace Kỹ Thuật & Clean Sans",
+        usage: "Thông số lực nhấn (Actuation Force), hành trình switch (Pre-Travel) và hướng dẫn mod phím",
+        sample: "Actuation: 45g · Travel: 2.0mm · Hot-swap PCB · VIA/QMK Supported"
       }
     },
 
     brandProducts: [
       {
         id: "prod-1",
-        title: "Chai Tinh Dầu Hổ Phách Thủy Tinh (Amber Dropper Bottle)",
+        title: "Hộp Cứng Đựng Bàn Phím Cơ Custom Nhôm CNC 75% (Custom 75% Keyboard Rigid Gift Box)",
         category: "BAO BÌ SẢN PHẨM CỐT LÕI · CORE PACKAGING",
-        capacity: "30ml & 50ml",
-        material: "Thủy tinh màu hổ phách chống 99% tia UV; nắp bóp gỗ sồi tự nhiên dập laser chìm logo; ống hút thủy tinh chia vạch chuẩn y tế.",
-        printSpecs: "Giấy mỹ thuật bóc mờ kháng dầu (Oil-resistant Matte Label); mực in gốc đậu nành thân thiện môi trường; ép kim vàng chìm viền logo.",
-        desc: "Thiết kế nhãn theo trường phái tối giản Scandinavian với bố cục phân cấp thị giác rõ nét: tên mùi hương nổi bật, biểu tượng mầm lá tối giản và chỉ dẫn công dụng trị liệu bằng hương thơm.",
-        img: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80"
+        capacity: "Layout 75% · Khung Nhôm Anodized 1.8kg",
+        material: "Hộp cứng carton 1600gsm bồi giấy mỹ thuật đen mờ chống xước; khay mút EVA mật độ cao cắt CNC định hình 360 độ; nắp gập nam châm hít ẩn.",
+        printSpecs: "Ép kim Hologram phản quang 7 màu logo vi mạch; phủ bóng UV định hình mạch PCB trên nền đen mờ; dán tem niêm phong Void chống hàng giả.",
+        desc: "Thiết kế bao bì dạng Unboxing Experience cao cấp như một kiện hàng công nghệ tương lai. Bên trong chia ngăn khoa học cho bàn phím, cáp kết nối, switch puller và thẻ chứng nhận phiên bản giới hạn đánh số thủ công.",
+        img: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "prod-2",
-        title: "Hũ Nến Thơm Gốm Mộc Sáp Đậu Nành (Ceramic Soy Candle)",
-        category: "TRẢI NGHIỆM KHÔNG GIAN · HOME FRAGRANCE",
-        capacity: "220g · 50 Giờ Cháy",
-        material: "Hũ gốm nung men cát mờ thủ công chịu nhiệt; sáp đậu nành tự nhiên 100% không khói độc; bấc gỗ kép tạo tiếng nổ lách tách như củi sưởi.",
-        printSpecs: "Tem niêm phong giấy kraft có số serial thủ công; đóng dấu sáp ong nóng (Wax Stamp Seal) mang đậm dấu ấn nghệ nhân.",
-        desc: "Sau khi sử dụng hết nến, hũ gốm được thiết kế để tái sử dụng làm chậu cây mọng nước hoặc ly đựng cọ trang điểm, thể hiện tinh thần bền vững Zero-Waste của thương hiệu.",
-        img: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80"
+        title: "Hộp Trưng Bày Bộ Keycap PBT Dyesub 142 Phím (Keycap Set Display Box)",
+        category: "PHỤ KIỆN TÙY BIẾN · CUSTOMIZATION ACCESSORY",
+        capacity: "Set 142 Phím · Profile Cherry/OEM",
+        material: "Hộp trượt dạng bao diêm (Drawer Box); khay nhựa PET trong suốt 2 tầng chống trầy xước phím; vỏ hộp carton cứng 450gsm phủ màng mờ Soft-Touch.",
+        printSpecs: "In offset 5 màu sắc nét chuẩn hệ màu Pantone; dập nổi Typography tên bộ keycap; cửa sổ mica lộ diện các nút Novelties độc bản.",
+        desc: "Bao bì giải quyết trọn vẹn bài toán vừa bảo vệ bề mặt nhựa PBT cao cấp vừa trưng bày được toàn bộ ký tự Novelties độc quyền của set keycap.",
+        img: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "prod-3",
-        title: "Máy Khuếch Tán Gốm Sứ Siêu Âm (Ceramic Aroma Diffuser)",
-        category: "THIẾT BỊ NỘI THẤT CAO CẤP · SMART LIFESTYLE",
-        capacity: "Dung tích 180ml · Phun sương Nano",
-        material: "Vỏ ngoài chế tác bằng gốm sứ mộc vân chìm; chân đế gỗ sồi tự nhiên; dải đèn ambient ấm áp 2700K tạo hiệu ứng ánh hoàng hôn.",
-        printSpecs: "Logo thương hiệu in lụa vi mô sắc nét dưới chân đế; nút cảm ứng ẩn tinh tế không phá vỡ vẻ đẹp điêu khắc nguyên khối.",
-        desc: "Được định vị như một tác phẩm điêu khắc nghệ thuật trên bàn làm việc hoặc kệ sách, vừa thanh lọc không khí vừa nâng tầm thẩm mỹ không gian sống.",
-        img: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=800&q=80"
+        title: "Hũ Thủy Tinh Kháng Tĩnh Điện Đựng Switch Cơ Pre-Lubed (Pre-Lubed Linear Switches Storage Tube)",
+        category: "LINH KIỆN CƠ HỌC · MECHANICAL COMPONENTS",
+        capacity: "Set 35 Switches · Hũ Ø75 x 95mm",
+        material: "Hũ thủy tinh Borosilicate tối màu kháng tĩnh điện; nắp nhôm ren vặn Anodized đen mờ dập nổi biểu tượng Switch stem; gioăng cao su kín khí.",
+        printSpecs: "Nhãn decal trong suốt in mực trắng tương phản cao; tem phụ thể hiện thông số lực nhấn 45g, điểm nhận phím 2.0mm và stem POM mạ bạc.",
+        desc: "Thiết kế hũ lưu trữ switch sang trọng như các linh kiện âm thanh High-End, có thể tái sử dụng để decor góc setup hoặc bảo quản switch cơ học dự phòng.",
+        img: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "prod-4",
-        title: "Hộp Quà Tặng Nắp Nam Châm & Khay Định Hình (Rigid Gift Box)",
-        category: "TRẢI NGHIỆM UNBOXING · PREMIUM GIFTING",
-        capacity: "Kích thước 24 x 18 x 8 cm",
-        material: "Hộp cứng carton 1200gsm bồi giấy mỹ thuật màu Oat Linen; khay lót bọc vải nhung êm ái cố định 3 chai tinh dầu và nến thơm.",
-        printSpecs: "Logo ép kim dập nổi Gold Foil 3D trên nắp; đai giấy Sleeve hoạ tiết vân lá dập chìm; ruy băng vải thô dệt thủ công.",
-        desc: "Tạo cảm xúc háo hức và đẳng cấp ngay từ giây phút mở hộp. Hộp quà thích hợp cho các dịp tri ân khách hàng VIP, quà tặng doanh nghiệp hoặc quà sinh nhật cao cấp.",
-        img: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80"
+        title: "Ống Tròn Cuộn Deskmat Da PU & Vải Cordura 900x400mm (Extended Deskmat Tube Packaging)",
+        category: "THẨM MỸ BÀN LÀM VIỆC · DESK SETUP AESTHETICS",
+        capacity: "Khổ lớn 900 x 400 x 4mm · Ống Ø85 x 430mm",
+        material: "Ống carton xoắn ép cứng chịu lực 2.5mm; hai đầu nắp thiếc dập nổi logo; quai xách sợi dù dệt phản quang chịu lực.",
+        printSpecs: "In màng chuyển nhiệt Full Artwork họa tiết Topology/Cyber Grid quanh thân ống, cán màng mờ Soft-Touch chống bám vân tay và chống thấm nước.",
+        desc: "Ống bảo quản chống gãy gập deskmat, kèm ô tròn trải nghiệm sờ chất liệu vải dệt (Touch & Feel Swatch) trên thân ống trước khi mở hộp.",
+        img: "https://images.unsplash.com/photo-1585792180666-f7547c6a28c5?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "prod-5",
-        title: "Bộ Ấn Phẩm Danh Thiếp & Thẻ Hướng Dẫn (Stationery & Scent Guide)",
-        category: "ĐIỂM CHẠM THƯƠNG HIỆU · BRAND COLLATERALS",
-        capacity: "Card 90x54mm & Scent Guide 100x150mm",
-        material: "Giấy mỹ thuật Cotton 450gsm bề mặt có hạt lanh thô mộc; viền cạnh thiếp được sơn màu Forest Pine thủ công (Edge Painted).",
-        printSpecs: "Kỹ thuật in dập chìm Letterpress truyền thống không dùng mực trên nền giấy dày; tích hợp mã QR dẫn đến cẩm nang phối hương online.",
-        desc: "Thẻ hướng dẫn sử dụng kèm bánh xe hương thơm (Fragrance Wheel) giúp người dùng học cách mix tinh dầu theo từng cung bậc cảm xúc (Tập trung, Ngủ ngon, Giảm căng thẳng).",
-        img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
+        title: "Hộp Đựng Cáp Bàn Phím Xoắn Rời Khớp Nối Aviator GX16 (Custom Coiled Aviator Cable Box)",
+        category: "PHỤ KIỆN KẾT NỐI · CONNECTIVITY HARDWARE",
+        capacity: "Dài 1.8m · Cáp bọc dù Paracord + Techflex",
+        material: "Hộp nắp âm dương giấy mỹ thuật cán vân kim loại Titanium; khay lót bọc vải nhung đen định hình vòng xoắn cáp và đầu cắm GX16 5-pin.",
+        printSpecs: "Ép kim vàng hồng (Rose Gold Foil) trên đầu nối kim loại GX16 minh họa; in thông số chuẩn truyền dữ liệu USB 2.0 Type-C mạ vàng 24K.",
+        desc: "Sợi cáp xoắn được cố định tỉ mỉ trong khay nhung đen, tôn vinh độ hoàn thiện của từng mắt đan dù Paracord + Techflex và khớp nối phi công hầm hố.",
+        img: "https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "prod-6",
-        title: "Túi Giấy Mua Sắm & Túi Vải Canvas Eco (Eco Shopping Bag & Tote)",
-        category: "BAO BÌ BÁN LẺ & POSM · SUSTAINABLE PACKAGING",
-        capacity: "Túi đứng 22 x 28 x 10 cm & Túi Tote 36 x 40 cm",
-        material: "Giấy Kraft nâu không tẩy trắng 250gsm dẻo dai; quai xách sợi cotton đan mộc; túi tote làm từ vải mộc chưa qua xử lý hóa chất nhuộm.",
-        printSpecs: "Mực in hữu cơ đơn sắc bảo vệ môi trường; tag giấy treo đục lỗ xỏ dây gai có thể gieo mầm nở hoa (Seed Paper Hangtag).",
-        desc: "Điểm chạm cuối cùng khi khách hàng rời cửa hàng hoặc nhận đơn hàng ship. Lan tỏa thông điệp sống xanh tích cực và khuyến khích tái sử dụng nhiều lần.",
-        img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+        title: "Bộ Thẻ Thép Khắc Laser Authenticity Pass & Tool Kit (Maintenance Kit & Warranty Pass)",
+        category: "BỘ ẤN PHẨM BẢO HÀNH & HỖ TRỢ · POST-PURCHASE COLLATERAL",
+        capacity: "Thẻ thép 85.6 x 54mm + Sổ hướng dẫn Z-fold 6 trang",
+        material: "Thẻ thép không gỉ nguyên khối phay xước mờ mạ PVD đen bóng; sổ tay hướng dẫn mod phím bằng giấy Kraft Nhật cao cấp.",
+        printSpecs: "Khắc Laser Fiber số Serial Number độc bản và mã QR Code động dẫn về trang cấu hình phím qua web; in mực dầu bóng trên giấy Kraft.",
+        desc: "Gia tăng tối đa giá trị thương hiệu và tính độc quyền của sản phẩm cao cấp, biến mỗi khách hàng sở hữu trở thành một thành viên trong cộng đồng đam mê Gear.",
+        img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       }
     ],
 
-    findingsTitle: "Điểm Nhấn Nhận Diện Thương Hiệu",
+    findingsTitle: "Điểm Nhấn Nhận Diện Thương Hiệu NEXUS LABS",
     findings: [
-      "<strong>Chuẩn Hóa Nhận Diện:</strong> Xây dựng bảng màu chủ đạo/màu phụ cùng <strong>bộ font chữ tiêu chuẩn</strong> đại diện cho tính cách thương hiệu chuyên nghiệp.",
-      "<strong>Moodboard & Key Visual Độc Đáo:</strong> Phát triển định hướng hình ảnh nhất quán giúp thương hiệu <strong>nổi bật & ghi dấu ấn</strong> trên mọi ấn phẩm truyền thông.",
-      "<strong>Quy Chuẩn Ứng Dụng Đa Kênh:</strong> Đồng bộ thiết kế logo, khung bài đăng social post, banner quảng cáo & poster sự kiện."
+      "<strong>Chuẩn Hóa Nhận Diện Cyberpunk:</strong> Xây dựng bảng màu tương phản cao (Cyan / Neon Purple / Obsidian) cùng <strong>bộ font chữ kỹ thuật cơ khí</strong> đại diện cho tính cách công nghệ chính xác và hiện đại.",
+      "<strong>Moodboard & Key Visual Đậm Chất Gear:</strong> Phát triển định hướng hình ảnh kim loại xước Anodized và ánh sáng RGB tinh tế giúp thương hiệu <strong>nổi bật & ghi dấu ấn mạnh mẽ</strong> trong mắt cộng đồng công nghệ.",
+      "<strong>Quy Chuẩn Ứng Dụng Đa Nền Tảng:</strong> Đồng bộ thiết kế logo vi mạch, khung bài đăng unboxing gear, banner quảng cáo ra mắt & ấn phẩm bao bì sản phẩm thực tế."
     ],
     skills: [
-      { icon: "🎨", name: "Visual Identity Design", desc: "Tư duy màu sắc, font chữ và thiết kế Key Visual tạo diện mạo đồng nhất cho thương hiệu." },
-      { icon: "📐", name: "Brand Guidelines Standard", desc: "Xây dựng tài liệu quy chuẩn sử dụng thương hiệu trên các kênh số và ấn phẩm in ấn." },
-      { icon: "💡", name: "Creative Moodboard & Storytelling", desc: "Chuyển hóa giá trị cốt lõi và tính cách thương hiệu thành hình ảnh trực quan sinh động." }
+      { icon: "🎨", name: "Visual Identity & Tech Branding", desc: "Tư duy màu sắc công nghệ, typography góc cạnh và thiết kế Key Visual tạo diện mạo đồng nhất cho thương hiệu Gear." },
+      { icon: "📐", name: "Packaging & Unboxing Experience", desc: "Xây dựng quy chuẩn bao bì hộp cứng, khay EVA chống sốc và ấn phẩm bảo hành cao cấp." },
+      { icon: "💡", name: "Creative Moodboard & Cyber Aesthetics", desc: "Chuyển hóa văn hóa bàn phím cơ và thẩm mỹ Clean Desk Setup thành ngôn ngữ thị giác sinh động." }
     ],
     objectives: [
-      "Phân tích tính cách thương hiệu và định vị giá trị cốt lõi trong tâm trí khách hàng",
-      "Lựa chọn bảng màu chủ đạo, phông chữ và phong cách hình ảnh đại diện",
-      "Xây dựng Moodboard & phát triển Key Visual chính cho các chiến dịch truyền thông",
-      "Thiết kế ứng dụng nhận diện lên banner, poster, bài đăng mạng xã hội bảo đảm tính nhất quán"
+      "Phân tích thị trường Custom Mechanical Keyboard và định vị thương hiệu NEXUS LABS trong phân khúc Gaming Gear cao cấp",
+      "Lựa chọn bảng màu Cyberpunk tương phản cao, phông chữ kỹ thuật và phong cách hình ảnh kim loại nguyên khối",
+      "Xây dựng Moodboard & phát triển Key Visual chính cho chiến dịch ra mắt sản phẩm",
+      "Thiết kế trọn bộ 06 hạng mục bao bì sản phẩm và ấn phẩm bảo hành thẻ kim loại độc quyền"
     ],
     process: [
-      { icon: "🔍", title: "Nghiên Cứu Brand DNA", desc: "Xác định 3–5 tính cách cốt lõi thương hiệu cần thể hiện qua hình ảnh" },
-      { icon: "🎨", title: "Xây Dựng Moodboard & Palette", desc: "Chọn bảng màu chủ đạo, phối màu & phông chữ tiêu chuẩn phù hợp tính cách thương hiệu" },
-      { icon: "🖼️", title: "Thiết Kế Key Visual", desc: "Sáng tạo hình ảnh chủ đạo làm chuẩn mực thị giác cho toàn bộ chiến dịch" },
-      { icon: "📱", title: "Ứng Dụng Đa Nền Tảng", desc: "Xuất bộ khung thiết kế chuẩn kích thước cho Facebook, Instagram và Website" }
+      { icon: "🔍", title: "Nghiên Cứu Brand DNA", desc: "Xác định 3–5 giá trị cốt lõi: Độ đầm chắc, Tính công thái học, Thẩm mỹ tối giản và Khả năng tùy biến sâu" },
+      { icon: "🎨", title: "Xây Dựng Moodboard & Palette", desc: "Chọn bảng màu Cyber Cyan & Obsidian Black cùng cặp phông chữ Space Grotesk & JetBrains Mono" },
+      { icon: "🖼️", title: "Thiết Kế Key Visual & Bao Bì", desc: "Phát triển bao bì hộp phím CNC 75%, hộp keycap PBT và các phụ kiện gear đồng bộ" },
+      { icon: "📱", title: "Ứng Dụng Đa Nền Tảng", desc: "Hoàn thiện Brand Guidelines, khung truyền thông mạng xã hội và banner chiến dịch Pre-Order" }
     ],
-    frameworks: ["Brand Identity System", "Moodboard Methodology", "Visual Hierarchy", "Brand Archetype"],
+    frameworks: ["Brand Identity System", "Packaging Design Standards", "Visual Hierarchy", "Unboxing Experience Design"],
     takeaways: [
-      { icon: "🎨", title: "Màu sắc không phải ngẫu nhiên", desc: "Mỗi màu trong bảng màu thương hiệu đều phải có lý do — phản ánh tính cách, cảm xúc và định vị thương hiệu." },
-      { icon: "🔗", title: "Nhất quán là chìa khóa", desc: "Khi áp dụng brand identity lên nhiều nền tảng, tôi nhận ra sự nhất quán về font chữ và màu sắc quan trọng hơn bất kỳ yếu tố thiết kế nào." },
-      { icon: "💡", title: "Tư duy từ insight ra hình ảnh", desc: "Học cách chuyển hóa insight khách hàng trừu tượng thành ngôn ngữ hình ảnh cụ thể, có thể nhìn thấy và cảm nhận được." }
+      { icon: "🎨", title: "Ngôn ngữ thiết kế định hình giá trị", desc: "Trong ngành Gaming Gear, từng đường nét góc cạnh, chất liệu bao bì và độ đầm của hộp quyết định trực tiếp cảm nhận cao cấp của khách hàng." },
+      { icon: "🔗", title: "Nhất quán trên từng chi tiết nhỏ", desc: "Từ màu sắc LED, vi mạch in UV đến từng mắt đan của cáp xoắn đều phải tuân thủ nghiêm ngặt theo Brand Guidelines." },
+      { icon: "💡", title: "Bao bì là một phần của trải nghiệm sản phẩm", desc: "Với người chơi phím cơ, trải nghiệm mở hộp (Unboxing) đem lại cảm xúc phấn khích tương đương chính sản phẩm bên trong." }
     ]
   },
 
   4: {
     id: 4,
-    title: "Thiết Kế Banner Ads — Tinh Dầu Thiên Nhiên",
+    title: "Thiết Kế Banner Ads — Gaming Gear & Mechanical Keyboard Campaign",
     type: "Media & Ad Design",
     category: "design",
     categoryName: "Media & Banner Ads",
     categoryIcon: "fas fa-image",
     categoryColor: "#fb923c",
-    description: "Bộ thiết kế banner quảng cáo trực tuyến đa kích thước (GDN / Web Ads) cho thương hiệu Tinh Dầu Thiên Nhiên bao gồm 19 kích thước chuẩn (KV, 300x250, 728x90, 300x600...).",
+    description: "Bộ thiết kế banner quảng cáo trực tuyến đa kích thước (GDN / Web Ads / Social Ads) cho chiến dịch ra mắt dòng bàn phím cơ & hệ sinh thái Gaming Gear NEXUS LABS bao gồm 19 kích thước chuẩn (Key Visual, 300x250, 728x90, 300x600, 160x600...).",
     duration: "Tháng 03/2026",
-    results: "19+ Kích thước Banner Standard • Key Visual • Campaign Banner Ads",
+    results: "19+ Kích thước Banner Standard • Key Visual Chiến Dịch • Dynamic Display Ads",
     tools: ["Canva", "GDN Standard", "Facebook Ads", "Web Banner"],
     googleDocUrl: "https://drive.google.com/drive/folders/1FIMbxTAAZG_FNkwCagiJpDGlaQPSqqpy?usp=drive_link",
     buttonText: "Xem Trọn Bộ Ấn Phẩm Thiết Kế (Google Drive) →",
@@ -388,9 +388,9 @@ const projectsData = {
 
     findingsTitle: "Điểm Nổi Bật Trong Thiết Kế & Quảng Cáo",
     findings: [
-      "<strong>Đa Dạng Kích Thước Standard:</strong> Thiết kế trọn bộ <strong>19+ kích thước banner chuẩn</strong> (GDN, Facebook Ads, Web Banner) đáp ứng tối đa mọi vị trí hiển thị trên website và mạng xã hội.",
-      "<strong>Phân Cấp Thị Giác Rõ Ràng:</strong> Tối ưu vị trí Key Visual, thông điệp cốt lõi, logo thương hiệu và nút <strong>Call-To-Action (CTA)</strong> giúp gia tăng <strong>tỷ lệ nhấp (CTR)</strong> của khách hàng.",
-      "<strong>Đồng Bộ Nhận Diện Thương Hiệu:</strong> Chuẩn hóa màu sắc chủ đạo, font chữ và hình ảnh sản phẩm Tinh Dầu Thiên Nhiên mang lại cảm giác <strong>thư giãn, thiên nhiên và vô cùng cao cấp</strong>."
+      "<strong>Đa Dạng Kích Thước Chuẩn GDN:</strong> Thiết kế trọn bộ <strong>19+ kích thước banner chuẩn</strong> (Google Display Network, Facebook Ads, Web Banners) phủ kín mọi vị trí hiển thị trên các trang tin công nghệ và diễn đàn game thủ lớn.",
+      "<strong>Phân Cấp Thị Giác Công Nghệ Cao:</strong> Tối ưu góc phối cảnh 3D của bàn phím cơ, ánh sáng LED RGB tinh tế, thông điệp ra mắt và nút <strong>Call-To-Action (Pre-Order / Mua Ngay)</strong> sắc nét giúp kích thích <strong>tỷ lệ nhấp (CTR)</strong> vượt trội.",
+      "<strong>Đồng Bộ Nhận Diện Thương Hiệu NEXUS LABS:</strong> Chuẩn hóa bảng màu Cyberpunk tương phản cao (Cyan / Neon Purple / Obsidian Black) mang lại cảm giác <strong>mạnh mẽ, cao cấp và đậm chất công nghệ</strong>."
     ],
     skills: [
       { icon: "🎨", name: "Canva Media & Graphic Design", desc: "Tạo hình ảnh truyền thông chất lượng cao, bài đăng mạng xã hội, poster & banner quảng cáo." },
@@ -398,15 +398,15 @@ const projectsData = {
       { icon: "📱", name: "Multi-Platform Format Adapting", desc: "Tối ưu dung lượng và kích thước ấn phẩm chuẩn nét cho từng kênh mạng xã hội." }
     ],
     objectives: [
-      "Thiết kế hệ thống ấn phẩm truyền thông cho sự kiện, chương trình khuyến mãi và quảng cáo trực tuyến",
-      "Sản xuất bài đăng dạng Instagram Carousel và ảnh bìa Fanpage thu hút thị giác",
-      "Bảo đảm bố cục rõ ràng, phân cấp thông tin hợp lý và nhất quán với nhận diện thương hiệu"
+      "Thiết kế hệ thống ấn phẩm banner truyền thông cho chiến dịch Pre-Order bàn phím cơ và phụ kiện setup góc máy công nghệ",
+      "Sản xuất bài đăng dạng Instagram/Facebook Carousel và ảnh bìa Fanpage thu hút thị giác",
+      "Bảo đảm bố cục rõ ràng, phân cấp thông tin hợp lý và nhất quán với nhận diện thương hiệu NEXUS LABS"
     ],
     process: [
-      { icon: "📋", title: "Tiếp Nhận Brief", desc: "Xác định mục tiêu hình ảnh: Giới thiệu sản phẩm, Đẩy bán hay Branding?" },
-      { icon: "🖊️", title: "Phác Thảo Layout", desc: "Sắp xếp vị trí tiêu đề, hình ảnh sản phẩm và nút Call-To-Action theo phân cấp thị giác" },
-      { icon: "🎨", title: "Thiết Kế Ấn Phẩm", desc: "Hoàn thiện ấn phẩm tĩnh và carousel đa trang trên Canva theo chuẩn nhận diện thương hiệu" },
-      { icon: "✅", title: "Xuất Bản & Tối Ưu", desc: "Kiểm tra hiển thị thực tế trên di động, xuất file chuẩn độ phân giải cho từng nền tảng" }
+      { icon: "📋", title: "Tiếp Nhận Brief Chiến Dịch", desc: "Xác định mục tiêu hình ảnh: Đẩy mạnh Pre-Order đợt 1 dòng bàn phím cơ custom nhôm nguyên khối" },
+      { icon: "🖊️", title: "Phác Thảo Layout Đa Kích Thước", desc: "Sắp xếp vị trí góc chụp phím cơ 3D, thông điệp ưu đãi và nút Call-To-Action theo chuẩn mắt nhìn người dùng" },
+      { icon: "🎨", title: "Thiết Kế Ấn Phẩm Hoàn Thiện", desc: "Hoàn thiện 19+ kích thước banner tĩnh và carousel đa trang trên Canva theo chuẩn nhận diện thương hiệu" },
+      { icon: "✅", title: "Xuất Bản & Kiểm Thử Hiển Thị", desc: "Kiểm tra hiển thị thực tế trên di động và PC, xuất file chuẩn độ phân giải tối ưu dung lượng cho từng nền tảng" }
     ],
     frameworks: ["Visual Hierarchy", "Ad Creative Framework", "GDN Banner Standards", "CTR Optimization"],
     takeaways: [
