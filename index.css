@@ -77,7 +77,14 @@ html {
   padding: 1.7rem 2.1rem 1.5rem;
   background: var(--surface);
   border-right: 1px solid var(--card-border);
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .sidebar-main {
@@ -908,5 +915,61 @@ a:focus-visible {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Responsive scaling for shorter viewports to fit sidebar naturally without overflow */
+@media (max-height: 850px) and (min-width: 992px) {
+  .sidebar {
+    padding: 1.2rem 1.6rem 1rem;
+  }
+  .sidebar-header {
+    margin-bottom: 0.7rem;
+    min-height: auto;
+  }
+  .avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 0.9rem;
+  }
+  .profile h1 {
+    font-size: 1.55rem;
+    margin-bottom: 0.35rem;
+  }
+  .typewriter-container {
+    min-height: 22px;
+    margin-bottom: 0.45rem;
+  }
+  .tagline {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+  .personal-info {
+    margin: 0.6rem 0;
+    gap: 0.35rem;
+  }
+  .personal-info p {
+    font-size: 0.82rem;
+  }
+  .contact-info {
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+  .contact-btn {
+    padding: 0.48rem 0.8rem;
+    font-size: 0.82rem;
+  }
+  .sidebar-projects-btn {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.82rem;
+  }
+  .social-links {
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+  }
+  .social-link {
+    width: 36px;
+    height: 36px;
   }
 }
