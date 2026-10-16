@@ -9,19 +9,13 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Tuyển tập 10 đồ án và case study chuyên sâu: Nghiên cứu thị trường (3), Nhận diện thương hiệu (3), Tuyển tập Content Lab (C01–C04), Banner Ads, Website Concept và Tuyển tập 15 Bài viết SEO On-Page."
+    desc: "Tuyển tập 7 đồ án và case study chuyên sâu: Nghiên cứu thị trường (Circle K vs GS25, MUJI vs KOKUYO, Highlands), Tuyển tập Content Lab (C01–C04), Bộ Banner Ads MÈ NHỎ GDN, Website Concept NẾP GẤP và Tuyển tập 15 Bài viết SEO On-Page."
   },
   research: {
     id: "research",
     name: "Nghiên Cứu Thị Trường",
     icon: "fas fa-chart-pie",
     desc: "Đồ án nhóm nghiên cứu Circle K & GS25 (sản phẩm thật), đối sánh MUJI & KOKUYO Campus và Content Audit thực đơn Highlands Coffee."
-  },
-  branding: {
-    id: "branding",
-    name: "Nhận Diện Thương Hiệu",
-    icon: "fas fa-palette",
-    desc: "Bộ 3 nhận diện concept nguyên bản: NẾP GẤP (Văn phòng phẩm), MẺ NHỎ (Cà phê pha tại nhà) và QUAI VẢI (Túi dùng hằng ngày) với logo vector và 6 ấn phẩm/case."
   },
   content: {
     id: "content",
@@ -244,7 +238,7 @@ const projectsData = {
     featured: false,
     links: [
       { url: "/nghien-cuu/muji-kokuyo/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Nghiên Cứu", title: "Mở chi tiết desk research" },
-      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Xem Ứng Dụng NẾP GẤP", title: "Xem concept văn phòng phẩm NẾP GẤP" }
+      { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Xem Cửa Hàng NẾP GẤP", title: "Mở website concept NẾP GẤP" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -299,7 +293,7 @@ const projectsData = {
     featured: false,
     links: [
       { url: "/nghien-cuu/highlands-menu/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Audit", title: "Mở chi tiết audit thực đơn Highlands" },
-      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Xem Ứng Dụng MẺ NHỎ", title: "Xem concept cà phê MẺ NHỎ" }
+      { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Banner Ads MẺ NHỎ", title: "Xem 8 banner quảng cáo MẺ NHỎ" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -333,160 +327,7 @@ const projectsData = {
     }
   },
 
-  // ==================== DỰ ÁN 10: NẾP GẤP (NHẬN DIỆN THƯƠNG HIỆU) ====================
-  10: {
-    id: 10,
-    title: "Bộ Nhận Diện NẾP GẤP — Văn Phòng Phẩm & Công Cụ Ghi Chép",
-    type: "Concept Cá Nhân · Brand Identity & Packaging",
-    category: "branding",
-    categoryName: "Nhận Diện Thương Hiệu",
-    categoryIcon: "fas fa-palette",
-    categoryColor: "#df7900",
-    duration: "10/2026",
-    results: "Logo Vector 24 đơn vị • 6 Ứng dụng NG01–NG06 • Bảng màu Xanh Mực & Vàng Giấy",
-    tools: ["SVG Vector", "Brand Guidelines", "Packaging Design", "Typography"],
-    description: "NẾP GẤP bắt đầu từ chi tiết góc giấy được gấp lại để đánh dấu điều muốn quay về. Nhận diện sử dụng góc gấp làm nguyên tắc đồ họa nhất quán từ dấu logo, đai giấy, bìa sổ A5 đến ruột lịch tuần 2 trang.",
-    featured: true,
-    links: [
-      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Khám Phá Brand Case", title: "Mở trang showcase nhận diện NẾP GẤP" },
-      { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Xem Website Concept", title: "Mở cửa hàng concept NẾP GẤP" },
-      { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Lịch Tuần A5", title: "Tải biểu mẫu lịch tuần" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Thiết Kế Nhận Diện",
-      class: "Brand Identity Design 2026",
-      team: "Khương Tuấn Anh (Định hướng & Thiết kế)",
-      time: "Tháng 10/2026",
-      docPages: "Brand Guidelines & 6 Ấn phẩm SVG"
-    },
-    executiveSummary: "NẾP GẤP được xây dựng cho người học và người làm sáng tạo nội dung cần một công cụ ghi chép có cấu trúc vừa đủ để bắt đầu nhưng có khoảng trống để linh hoạt điều chỉnh. Tagline: 'Ghi một ý, mở một hướng'. Bảng màu lấy cảm hứng từ chất liệu thực tế: Xanh mực (#273B4A), Vàng giấy (#F2D97C) và Giấy trắng (#FAFBF8).",
-    kpis: [
-      { number: "24", label: "Đơn vị lưới căn chỉnh Logo", icon: "fas fa-th" },
-      { number: "6", label: "Ấn phẩm ứng dụng hoàn chỉnh", icon: "fas fa-layer-group" },
-      { number: "4", label: "Mã màu nhận diện chuẩn", icon: "fas fa-swatchbook" },
-      { number: "100%", label: "Artwork Vector SVG nguyên bản", icon: "fas fa-bezier-curve" }
-    ],
-    surveyData: [
-      { number: "NG01", tag: "Bìa Sổ A5", title: "Artwork Bìa Sổ 148×210mm Mặt Trước & Sau", desc: "Mặt trước nền giấy thoáng với logo góc trái và góc gấp vàng đặc trưng. Mặt sau in thông điệp: 'Ý tưởng chưa cần hoàn chỉnh để được ghi lại'." },
-      { number: "NG02", tag: "Ruột Lịch Tuần", title: "Bố cục lịch tuần 2 trang mở phẳng", desc: "Trang trái ưu tiên lịch Thứ hai - Thứ tư và ô việc gấp. Trang phải dành cho Thứ năm - Chủ nhật và vùng 'Ý tưởng đang mở'." },
-      { number: "NG03", tag: "Bộ 3 Thẻ Note", title: "Thẻ ghi chú 90×120mm phân loại tác vụ", desc: "3 màu thẻ riêng biệt: 'Việc cần làm' (Xanh mực), 'Điều cần hỏi' (Vàng giấy), và 'Ý tưởng mới' (Xanh nhạt)." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Đai giấy sổ NG04", desc: "Mặt chính in tagline 'Ghi một ý, mở một hướng', mặt phụ ghi rõ nhãn 'Thiết kế concept / Chưa xác nhận vật liệu sản xuất'." },
-        { title: "Header cửa hàng NG06", desc: "Thiết kế banner web concept 1440×640 và 390×560 nhấn mạnh thông điệp: 'Thử bố cục trước, chọn sổ sau'." }
-      ],
-      gs25: [
-        { title: "Quy chuẩn khoảng trống tối thiểu", desc: "Clearspace quanh logo luôn bằng 2 lần cạnh góc gấp (4 đơn vị lưới) để đảm bảo độ nhận diện." },
-        { title: "Tone of Voice điềm tĩnh", desc: "Giọng văn chia sẻ nhẹ nhàng, tôn trọng thói quen của người dùng, không phán xét người quên ghi chép." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 11: MẺ NHỎ (NHẬN DIỆN THƯƠNG HIỆU) ====================
-  11: {
-    id: 11,
-    title: "Bộ Nhận Diện MẺ NHỎ — Cà Phê Cho Việc Pha Tại Nhà",
-    type: "Concept Cá Nhân · Brand Identity & Packaging",
-    category: "branding",
-    categoryName: "Nhận Diện Thương Hiệu",
-    categoryIcon: "fas fa-palette",
-    categoryColor: "#df7900",
-    duration: "10/2026",
-    results: "Logo phin 32 đơn vị • 6 Ứng dụng MN01–MN06 • Bảng màu Nâu Rang & Xanh Lá Trầm",
-    tools: ["Packaging Concept", "Brand Voice", "SVG Vector", "Information Hierarchy"],
-    description: "MẺ NHỎ là concept cà phê pha tại nhà với định hướng giúp người mới diễn đạt gu uống và chọn cách pha phù hợp. Logo 2 vòng cung hở gợi nhịp phin nhỏ giọt, đi kèm hệ bao bì và phiếu hỏi gu thực tế.",
-    featured: false,
-    links: [
-      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Khám Phá Brand Case", title: "Mở trang showcase nhận diện MẺ NHỎ" },
-      { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Bộ Banner Ads", title: "Xem 8 banner quảng cáo MẺ NHỎ" },
-      { url: "/tai-nguyen/#phieu-thu-gu", icon: "fas fa-download", btnText: "Tải Phiếu Thử Gu", title: "Tải biểu mẫu thử gu cà phê" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Thiết Kế Nhận Diện",
-      class: "Brand Identity Design 2026",
-      team: "Khương Tuấn Anh (Định hướng & Thiết kế)",
-      time: "Tháng 10/2026",
-      docPages: "Brand Guidelines & 6 Ấn phẩm SVG"
-    },
-    executiveSummary: "MẺ NHỎ ưu tiên những thứ người mua cần đọc: tên sản phẩm, cách dùng dự kiến và chỗ ghi chú sau khi thử. Tagline: 'Pha theo gu của bạn'. Bảng màu: Nâu rang (#593B2F), Xanh lá trầm (#2F6257), Nền sữa (#F6F1E8) và Cam nhạt (#E7B080).",
-    kpis: [
-      { number: "32", label: "Đơn vị lưới căn chỉnh Logo", icon: "fas fa-th" },
-      { number: "6", label: "Ấn phẩm ứng dụng bao bì", icon: "fas fa-box" },
-      { number: "4", label: "Tông màu tự nhiên mộc mạc", icon: "fas fa-swatchbook" },
-      { number: "8", label: "Kích thước Banner quảng cáo", icon: "fas fa-images" }
-    ],
-    surveyData: [
-      { number: "MN01", tag: "Bao Bì Túi Cà Phê", title: "Artwork túi cà phê 160×240mm trước & sau", desc: "Mặt trước in tên MẺ NHỎ và tagline. Mặt sau in thông điệp nhắc nhở hỏi về cỡ xay và hạn sử dụng trước khi bóc gói." },
-      { number: "MN02", tag: "Thẻ Hỏi Gu", title: "Thẻ trắc nghiệm chọn gu 100×150mm", desc: "Hỗ trợ người mua chọn nhanh: Đen đậm / Thêm sữa / Chưa rõ, ghi nhận dụng cụ phin đang có ở nhà." },
-      { number: "MN03", tag: "Phiếu Thử Ly Pha", title: "Bảng ghi nhận trải nghiệm A5", desc: "Các ô ghi lại lượng bột, lượng nước, nhiệt độ và cảm nhận thực tế sau lần pha đầu tiên." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Ly giấy dựng concept MN04", desc: "Ly giấy mang sleeve cách nhiệt in logo và thông điệp 'Một khoảng nghỉ, một ly theo gu'." },
-        { title: "Nguyên tắc trung thực dữ liệu", desc: "Không bịa đặt chứng nhận Organic hay nguồn gốc hạt khi chưa có kiểm nghiệm thực tế." }
-      ],
-      gs25: [
-        { title: "Bố cục bao bì phân cấp rõ", desc: "Đặt tên món và cách pha ở vị trí mắt dễ quét nhất, không nhồi nhét chữ nhỏ lấp chỗ." },
-        { title: "Giọng văn cởi mở", desc: "Hỏi về thói quen uống hàng ngày thay vì dùng các từ sáo rỗng như 'đánh thức mọi giác quan'." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 12: QUAI VẢI (NHẬN DIỆN THƯƠNG HIỆU) ====================
-  12: {
-    id: 12,
-    title: "Bộ Nhận Diện QUAI VẢI — Túi Vải Dùng Hằng Ngày",
-    type: "Concept Cá Nhân · Brand Identity & Packaging",
-    category: "branding",
-    categoryName: "Nhận Diện Thương Hiệu",
-    categoryIcon: "fas fa-palette",
-    categoryColor: "#df7900",
-    duration: "10/2026",
-    results: "Logo thân túi lưới 28 đơn vị • 6 Ứng dụng QV01–QV06 • Bộ 6 icon đồ dùng nguyên bản",
-    tools: ["Iconography", "Packaging", "Brand Identity", "SVG"],
-    description: "QUAI VẢI lấy đường quai làm hình ảnh chính. Một nét cong chữ U nối vào thân vuông tạo dấu nhận diện, đi kèm thông điệp 'Mang vừa một ngày' giúp người dùng chọn túi từ những thứ mình thực sự mang theo.",
-    featured: false,
-    links: [
-      { url: "/nhan-dien/quai-vai/", icon: "fas fa-palette", btnText: "Khám Phá Brand Case", title: "Mở trang showcase nhận diện QUAI VẢI" },
-      { url: "/content/quai-vai/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch Content", title: "Xem bài viết content QUAI VẢI" },
-      { url: "/tai-nguyen/#phieu-do-tui", icon: "fas fa-download", btnText: "Tải Phiếu Đo Túi", title: "Tải biểu mẫu đo kích thước đồ dùng" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Thiết Kế Nhận Diện",
-      class: "Brand Identity Design 2026",
-      team: "Khương Tuấn Anh (Định hướng & Thiết kế)",
-      time: "Tháng 10/2026",
-      docPages: "Brand Guidelines & 6 Ấn phẩm SVG"
-    },
-    executiveSummary: "Một thương hiệu phụ kiện giả định hướng đến sự thực tế: túi có vừa với vật dụng hàng ngày và cách lấy đồ hay không. Tagline: 'Mang vừa một ngày'. Bảng màu: Xanh chàm (#2F435C), Hồng đất (#C47E71), Vải sáng (#EEE8DF) và Chữ than (#233142).",
-    kpis: [
-      { number: "28", label: "Đơn vị lưới căn chỉnh Logo", icon: "fas fa-th" },
-      { number: "6", label: "Icon đồ dùng nguyên bản", icon: "fas fa-icons" },
-      { number: "6", label: "Ấn phẩm ứng dụng đồng bộ", icon: "fas fa-shopping-bag" },
-      { number: "1", label: "Phiếu đo kích thước thực tế", icon: "fas fa-ruler-combined" }
-    ],
-    surveyData: [
-      { number: "QV01", tag: "Artwork In Túi", title: "Mặt trước in logo quai vải, mặt sau sơ đồ đồ dùng", desc: "Họa tiết đường chỉ may ngắt quãng đặc trưng gợi nhắc sự tỉ mỉ của kỹ thuật may thủ công." },
-      { number: "QV02", tag: "Hangtag Hai Mặt", title: "Thẻ treo sản phẩm 60×100mm", desc: "Mặt trước logo và tagline 'Chọn từ đồ bạn mang'. Mặt sau nhắc kiểm tra lớp chống sốc của laptop." },
-      { number: "QV04", tag: "Bộ 6 Icon", title: "Sổ, bình nước, hộp bút, laptop, điện thoại, ví", desc: "Được vẽ cùng nét 2px quy chuẩn, không mang logo thương hiệu thiết bị của bên thứ ba." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Phiếu đo túi QV03", desc: "Biểu mẫu hướng dẫn đo kích thước món lớn nhất và độ mở miệng túi trước khi đặt mua." },
-        { title: "Card hướng dẫn mua QV06", desc: "Quy trình 4 bước: Liệt kê → Đo → Thử → Kiểm tra hướng dẫn chăm sóc vải canvas." }
-      ],
-      gs25: [
-        { title: "Không tuyên bố tải trọng quá đà", desc: "Tránh các lời hứa phóng đại như 'chiếc túi cân mọi hành trình' khi chưa thử nghiệm cơ học." },
-        { title: "Rõ ràng về cách giặt và bảo quản", desc: "Cung cấp lưu ý giặt tay và phơi bóng râm để tránh làm co rút sợi vải canvas tự nhiên." }
-      ]
-    }
-  },
-
-    // ==================== DỰ ÁN 30: TUYỂN TẬP CONTENT LAB (C01 - C04 & 13 BÀI VIRAL) ====================
+  // ==================== DỰ ÁN 30: TUYỂN TẬP CONTENT LAB (C01 - C04 & 13 BÀI VIRAL) ====================
   30: {
     id: 30,
     title: "Tuyển Tập Content Lab: 4 Kế Hoạch Tuần C01–C04 & 13 Bài Viết Viral Thực Chiến",
@@ -556,7 +397,7 @@ const projectsData = {
     featured: false,
     links: [
       { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Bộ 8 Banner & Thử Nghiệm", title: "Mở trang showcase banner MẺ NHỎ" },
-      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện MẺ NHỎ" }
+      { url: "/content/me-nho/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch Content MẺ NHỎ", title: "Mở kế hoạch content MẺ NHỎ" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -606,7 +447,7 @@ const projectsData = {
     featured: false,
     links: [
       { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Trải Nghiệm Cửa Hàng Concept", title: "Mở website concept NẾP GẤP" },
-      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện NẾP GẤP" },
+      { url: "/content/nep-gap/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch Content NẾP GẤP", title: "Mở kế hoạch content NẾP GẤP" },
       { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Bản Lịch Tuần", title: "Tải mẫu lịch tuần A5" }
     ],
     academicInfo: {
@@ -700,10 +541,7 @@ const projectPrimaryUrls = {
   1: "/nghien-cuu/circle-k-gs25/",
   20: "/nghien-cuu/muji-kokuyo/",
   21: "/nghien-cuu/highlands-menu/",
-  10: "/nhan-dien/nep-gap/",
-  11: "/nhan-dien/me-nho/",
-  12: "/nhan-dien/quai-vai/",
-  30: "/content/",
+        30: "/content/",
   31: "/content/me-nho/",
   32: "/content/quai-vai/",
   33: "/content/nhip-viec/",
