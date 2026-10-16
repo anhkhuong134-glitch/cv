@@ -1,0 +1,5 @@
+Mã tình huống,Mục tiêu người chơi,Hành động người chơi,Kết quả mong đợi,Kết quả thực tế ghi nhận,Mức độ ảnh hưởng (Bug/UX),Cách tái hiện lỗi,Bản build,Trạng thái
+TC-01,Mở cửa phòng chính,Tương tác với rương để lấy chìa khóa,Rương mở ra và item chìa khóa rơi vào túi đồ,Chìa khóa rơi vào túi đồ thành công,Bình thường,Tương tác phím E,Build 0.1.2,Hoàn thành
+TC-02,Mở cửa phòng chính,Đến trước cánh cửa khóa bấm phím E,Cửa phát âm thanh mở và chuyển màn chơi,Cửa mở nhưng nhân vật bị kẹt hitbox góc phải,Trung bình (Hitbox lệch),Đi sát vào bản lề trước khi bấm E,Build 0.1.2,Cần sửa collider
+TC-03,Nhảy qua hố chông,Bấm nút Space khi đang chạy đà,Nhân vật nhảy qua gờ tường an toàn,Nhảy qua được khi căn đúng thời điểm,Tốt,Chạy đà 2 bước rồi nhảy,Build 0.1.2,Đã chốt
+TC-04,Đọc biển chỉ dẫn bí mật,Bấm E vào tấm bia đá,Hộp thoại thoại hiện chữ hướng dẫn thoát hiểm,Chữ hiển thị đúng font tiếng Việt,Tốt,Đứng trước bia đá,Build 0.1.2,Đã chốt

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 850" width="100%" height="100%">
+  <rect width="700" height="850" fill="#E8E2D8"/>
+  <rect x="50" y="40" width="600" height="770" rx="16" fill="#FAFBF8" stroke="#D1CDC2" stroke-width="2"/>
+
+  <text x="350" y="85" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="24" fill="#2F435C" text-anchor="middle">4 BƯỚC CHỌN TÚI ĐI HỌC VỪA ĐỒ</text>
+  <text x="350" y="115" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#C47E71" text-anchor="middle">QUAI VẢI · Cẩm nang kiểm tra thực tế</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(90, 150)">
+    <rect x="0" y="0" width="520" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <circle cx="35" cy="35" r="18" fill="#2F435C"/>
+    <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="70" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#2F435C">LIỆT KÊ ĐỒ CẦN MANG MỖI NGÀY</text>
+    <text x="70" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Xác định đâu là vật dụng bắt buộc (laptop, tài liệu) và đồ phụ trợ.</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(90, 280)">
+    <rect x="0" y="0" width="520" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <circle cx="35" cy="35" r="18" fill="#2F435C"/>
+    <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="70" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#2F435C">ĐO KÍCH THƯỚC MÓN ĐỒ LỚN NHẤT</text>
+    <text x="70" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Đo chiều dài, rộng và bề dày khi đã bọc bao chống sốc hoặc túi bảo vệ.</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(90, 410)">
+    <rect x="0" y="0" width="520" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <circle cx="35" cy="35" r="18" fill="#2F435C"/>
+    <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="70" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#2F435C">THỬ ĐỘ MỞ MIỆNG TÚI &amp; CHIỀU DÀI QUAI</text>
+    <text x="70" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Đảm bảo quai đeo không bị cấn nách khi khoác thêm áo chống nắng/khoác.</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(90, 540)">
+    <rect x="0" y="0" width="520" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <circle cx="35" cy="35" r="18" fill="#2F435C"/>
+    <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="70" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#2F435C">KIỂM TRA HƯỚNG DẪN CHĂM SÓC</text>
+    <text x="70" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Đọc tag bảo quản: có giặt máy được không, cách phơi để không mất form.</text>
+  </g>
+
+  <text x="350" y="730" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#718096" text-anchor="middle">Thiết kế card infographic cho Social · QUAI VẢI</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+      <rect width="1200" height="680" fill="#FFFFFF" rx="16" stroke="#D6DFE8" stroke-width="2"/>
+      <rect x="40" y="30" width="1120" height="64" rx="10" fill="#285B58"/>
+      <text x="70" y="70" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">KẾT QUẢ KHẢO SÁT THỰC TẾ: ĐỒ ÁN NHÓM BEE CHĂM CHỈ (N=93 MẪU HỢP LỆ)</text>
+      
+      <!-- 3 Key Metric Blocks from Section 8.1 -->
+      <g transform="translate(60, 120)">
+        <!-- Metric 1: Age 18-24 -->
+        <rect x="0" y="0" width="330" height="200" rx="12" fill="#F5F7FB" stroke="#D6DFE8" stroke-width="1.5"/>
+        <text x="24" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="14" fill="#53647A">CƠ CẤU ĐỘ TUỔI MẪU KHẢO SÁT</text>
+        <text x="24" y="96" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="44" fill="#285B58">67.7%</text>
+        <text x="24" y="130" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="16" fill="#243247">63 / 93 người thuộc độ tuổi 18–24</text>
+        <text x="24" y="165" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Phản ánh góc nhìn mẫu người tham gia;</text>
+        <text x="24" y="185" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">không quy kết toàn bộ thị trường.</text>
+      </g>
+
+      <g transform="translate(435, 120)">
+        <!-- Metric 2: Awareness via Physical Store -->
+        <rect x="0" y="0" width="330" height="200" rx="12" fill="#F5F7FB" stroke="#D6DFE8" stroke-width="1.5"/>
+        <text x="24" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="14" fill="#53647A">KÊNH NHẬN BIẾT CIRCLE K</text>
+        <text x="24" y="96" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="44" fill="#D97757">65.6%</text>
+        <text x="24" y="130" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="16" fill="#243247">61 / 93 thấy cửa hàng trực tiếp</text>
+        <text x="24" y="165" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Kênh điểm bán trực quan áp đảo;</text>
+        <text x="24" y="185" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">câu hỏi dạng đa lựa chọn.</text>
+      </g>
+
+      <g transform="translate(810, 120)">
+        <!-- Metric 3: Logo recognition -->
+        <rect x="0" y="0" width="330" height="200" rx="12" fill="#F5F7FB" stroke="#D6DFE8" stroke-width="1.5"/>
+        <text x="24" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="14" fill="#53647A">NHẬN DIỆN LOGO CIRCLE K</text>
+        <text x="24" y="96" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="44" fill="#285B58">96.8%</text>
+        <text x="24" y="130" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="16" fill="#243247">90 / 93 chọn đúng hình logo</text>
+        <text x="24" y="165" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Có gợi ý hình ảnh trong câu hỏi;</text>
+        <text x="24" y="185" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">không xem là nhận nhớ tự phát.</text>
+      </g>
+
+      <!-- Bar comparison chart below -->
+      <g transform="translate(60, 350)">
+        <rect x="0" y="0" width="1080" height="290" rx="12" fill="#F5F7FB" stroke="#D6DFE8" stroke-width="1.5"/>
+        <text x="30" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">SO SÁNH CÁC YẾU TỐ NHẬN BIẾT VÀ TRẢI NGHIỆM GIỮA CIRCLE K &amp; GS25</text>
+        
+        <!-- Row 1: Nhận diện điểm bán -->
+        <text x="30" y="90" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247" font-weight="600">Thấy cửa hàng trên phố:</text>
+        <rect x="260" y="74" width="480" height="22" rx="4" fill="#D97757"/>
+        <text x="750" y="90" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247" font-weight="600">Circle K: 65.6% (61/93)</text>
+        <rect x="260" y="102" width="280" height="22" rx="4" fill="#285B58"/>
+        <text x="550" y="118" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247" font-weight="600">GS25: 38.7% (36/93)</text>
+
+        <!-- Row 2: Độ phủ nhận diện logo -->
+        <text x="30" y="165" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247" font-weight="600">Nhận diện logo chuẩn xác:</text>
+        <rect x="260" y="149" width="700" height="22" rx="4" fill="#D97757"/>
+        <text x="970" y="165" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247" font-weight="600">Circle K: 96.8% (90/93)</text>
+        <rect x="260" y="177" width="610" height="22" rx="4" fill="#285B58"/>
+        <text x="880" y="193" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247" font-weight="600">GS25: 84.9% (79/93)</text>
+
+        <!-- Source note -->
+        <line x1="30" y1="225" x2="1050" y2="225" stroke="#D6DFE8"/>
+        <text x="30" y="255" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#53647A">Nguồn: Báo cáo đồ án nhóm Bee Chăm Chỉ · Lớp K25DBMF02 VTC Academy Hà Nội (04/2026) · Báo cáo gốc Google Docs [t.0]</text>
+        <text x="30" y="275" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#53647A">Ghi chú phương pháp: Dữ liệu mẫu trực tuyến 93 người phản hồi hợp lệ, không suy diễn vượt quá phạm vi đồ án.</text>
+      </g>
+    </svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="100%" height="100%">
+  <rect width="1100" height="600" fill="#FAFBF8"/>
+  <text x="550" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="20" fill="#2F435C" text-anchor="middle">QV05 · Poster Nhận Thức “Đo Trước Khi Chọn Túi” &amp; Carousel</text>
+
+  <!-- Poster -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="340" height="460" rx="12" fill="#EEE8DF" stroke="#2F435C" stroke-width="2"/>
+    <text x="35" y="70" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="24" fill="#2F435C">Ảnh đẹp</text>
+    <text x="35" y="105" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="24" fill="#C47E71">chưa chắc vừa đồ.</text>
+    <text x="35" y="150" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#53647A">Đừng để một chiếc túi đẹp khiến bạn chật vật mỗi khi kéo khóa.</text>
+    <line x1="35" y1="180" x2="305" y2="180" stroke="#2F435C" stroke-width="1.5"/>
+
+    <text x="35" y="230" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#2F435C">Đo trước khi chọn.</text>
+    <text x="35" y="260" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">Tải phiếu đo lòng túi A5 miễn phí.</text>
+    
+    <rect x="35" y="320" width="160" height="42" rx="6" fill="#2F435C"/>
+    <text x="115" y="346" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#FFFFFF" text-anchor="middle">Xem phiếu đo túi →</text>
+  </g>
+
+  <!-- Carousel Overview -->
+  <g transform="translate(470, 80)">
+    <rect x="0" y="0" width="550" height="460" rx="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="30" y="45" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#2F435C">BỘ CAROUSEL 6 SLIDE SOCIAL MEDIA:</text>
+    
+    <text x="30" y="90" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247">Slide 1: Túi đẹp nhưng đồ không vừa — Nỗi niềm người mua online</text>
+    <text x="30" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247">Slide 2: Đo cả lớp bao chống sốc chứ đừng chỉ đo thân máy laptop</text>
+    <text x="30" y="170" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247">Slide 3: Miệng túi: Khóa kéo an toàn hay miệng mở nhanh lấy đồ?</text>
+    <text x="30" y="210" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247">Slide 4: Quai đeo: Chiều dài quai khi mặc áo thun vs áo khoác dày</text>
+    <text x="30" y="250" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247">Slide 5: Đáy túi có lót đệm hay vải mộc một lớp?</text>
+    <text x="30" y="290" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#243247">Slide 6: Tải checklist đo đồ đạc trước khi bấm đặt hàng</text>
+
+    <line x1="30" y1="330" x2="520" y2="330" stroke="#CBD5E1"/>
+    <text x="30" y="370" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="13" fill="#C47E71">QUAI VẢI · Mang vừa một ngày</text>
+    <text x="30" y="395" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#718096">Định vị bằng trải nghiệm sử dụng thực tế thay vì quảng cáo hoa mỹ</text>
+  </g>
+</svg>

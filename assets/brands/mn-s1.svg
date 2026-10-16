@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%">
+  <rect width="900" height="500" fill="#EAE3D8"/>
+  <text x="450" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#593B2F" text-anchor="middle">MN-S1 · Bộ Story 3 Khung Tương Tác (Khảo Sát Thói Quen Uống)</text>
+
+  <!-- Frame 1 -->
+  <g transform="translate(60, 70)">
+    <rect x="0" y="0" width="230" height="370" rx="10" fill="#F6F1E8" stroke="#D1CDC2" stroke-width="1.5"/>
+    <text x="20" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#718096">KHUNG 1 · CÂU HỎI</text>
+    <text x="20" y="120" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#593B2F">Bạn thường uống</text>
+    <text x="20" y="145" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#593B2F">cà phê theo</text>
+    <text x="20" y="170" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#593B2F">cách nào?</text>
+    <text x="20" y="220" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#53647A">Đơn giản là thói quen mỗi sáng của bạn.</text>
+    <text x="115" y="340" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#A0AEC0" text-anchor="middle">Vuốt sang khung 2 →</text>
+  </g>
+
+  <!-- Frame 2 -->
+  <g transform="translate(335, 70)">
+    <rect x="0" y="0" width="230" height="370" rx="10" fill="#F6F1E8" stroke="#D1CDC2" stroke-width="1.5"/>
+    <text x="20" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#718096">KHUNG 2 · BÌNH CHỌN (POLL)</text>
+    <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#593B2F">Chọn 1 thói quen:</text>
+    
+    <rect x="20" y="130" width="190" height="48" rx="8" fill="#593B2F"/>
+    <text x="115" y="160" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#FFFFFF" text-anchor="middle">ĐEN</text>
+
+    <rect x="20" y="195" width="190" height="48" rx="8" fill="#E7B080"/>
+    <text x="115" y="225" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#593B2F" text-anchor="middle">THÊM SỮA</text>
+
+    <text x="115" y="280" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#718096" text-anchor="middle">Nhấn để xem tỉ lệ bình chọn</text>
+  </g>
+
+  <!-- Frame 3 -->
+  <g transform="translate(610, 70)">
+    <rect x="0" y="0" width="230" height="370" rx="10" fill="#F6F1E8" stroke="#D1CDC2" stroke-width="1.5"/>
+    <text x="20" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#718096">KHUNG 3 · LỜI KHUYÊN &amp; CTA</text>
+    <text x="20" y="110" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#2F6257">Nếu chưa rõ gu:</text>
+    <text x="20" y="145" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#593B2F">Ghi lại một ly bạn từng thấy thích để bắt đầu hỏi người bán.</text>
+    <rect x="20" y="230" width="190" height="42" rx="6" fill="#2F6257"/>
+    <text x="115" y="256" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#FFFFFF" text-anchor="middle">Tải thẻ hỏi gu (PDF) ↑</text>
+    <text x="115" y="340" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#A0AEC0" text-anchor="middle">mẻ nhỏ · case C02</text>
+  </g>
+
+  <text x="450" y="475" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#718096" text-anchor="middle">Quy trình Story: Gợi tò mò → Kích hoạt tương tác 2 lựa chọn → Điều hướng tải công cụ hỗ trợ</text>
+</svg>

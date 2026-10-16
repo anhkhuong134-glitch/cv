@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#243247" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <ellipse cx="100" cy="226" rx="46" ry="7" fill="#D6DFE8" opacity="0.7"/>
+
+    <!-- Legs and Shoes -->
+    <path d="M86 168 L84 212 L96 212 L96 168 Z" fill="#E2E8F0"/>
+    <path d="M80 212 C80 208 96 208 98 212 L98 220 C98 223 80 223 80 220 Z" fill="#243247"/>
+    <path d="M104 168 L104 212 L116 212 L114 168 Z" fill="#E2E8F0"/>
+    <path d="M102 212 C102 208 118 208 120 212 L120 220 C120 223 102 223 102 220 Z" fill="#243247"/>
+
+    <!-- Torso -->
+    <path d="M74 116 C78 112 122 112 126 116 L124 172 C124 174 76 174 76 172 Z" fill="#285B58"/>
+    <path d="M92 116 C92 122 108 122 108 116" stroke="#1F4543" stroke-width="3" fill="none"/>
+
+    <!-- Document in both hands -->
+    <!-- Document Sheet -->
+    <g transform="translate(72, 128) rotate(-4)">
+      <rect x="0" y="0" width="56" height="42" rx="3" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <!-- Text lines -->
+      <line x1="8" y1="10" x2="48" y2="10" stroke="#285B58" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="8" y1="18" x2="40" y2="18" stroke="#53647A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="8" y1="26" x2="44" y2="26" stroke="#53647A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="8" y1="34" x2="28" y2="34" stroke="#F2B39C" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Arms holding document -->
+    <path d="M75 120 Q65 142 80 152" stroke="#285B58" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <circle cx="80" cy="152" r="6" fill="#FDE8D7"/>
+
+    <path d="M125 120 Q135 142 120 152" stroke="#285B58" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <circle cx="120" cy="152" r="6" fill="#FDE8D7"/>
+
+    <!-- Magnifying Glass hovering -->
+    <g transform="translate(136, 120) rotate(20)">
+      <circle cx="0" cy="0" r="14" fill="#F5F7FB" stroke="#243247" stroke-width="3" opacity="0.9"/>
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#285B58" stroke-width="1.5" opacity="0.4"/>
+      <path d="M10 10 L22 22" stroke="#243247" stroke-width="4.5" stroke-linecap="round"/>
+    </g>
+
+    
+    <!-- Neck -->
+    <path d="M92 105 L108 105 L106 118 L94 118 Z" fill="#F2CBB2"/>
+    <!-- Head Base -->
+    <path d="M60 70 C60 40 80 32 100 32 C120 32 140 40 140 70 C140 98 124 112 100 112 C76 112 60 98 60 70 Z" fill="#FDE8D7"/>
+    <!-- Ears -->
+    <circle cx="58" cy="74" r="9" fill="#FDE8D7"/>
+    <circle cx="58" cy="74" r="5" fill="#F2CBB2"/>
+    <circle cx="142" cy="74" r="9" fill="#FDE8D7"/>
+    <circle cx="142" cy="74" r="5" fill="#F2CBB2"/>
+    <!-- Hair Back/Base -->
+    <path d="M56 64 C52 35 72 18 100 18 C128 18 148 35 144 64 C136 45 125 36 100 36 C75 36 64 45 56 64 Z" fill="#24292F"/>
+    <!-- Hair Front Bangs -->
+    <path d="M55 58 C62 42 75 38 88 44 C95 40 108 38 120 44 C128 40 138 46 144 56 C138 48 128 46 122 50 C114 44 102 46 96 52 C88 46 76 46 68 54 C62 56 58 58 55 58 Z" fill="#24292F"/>
+    <path d="M57 60 C55 70 57 78 59 82 C61 74 61 68 62 60 Z" fill="#24292F"/>
+    <path d="M143 60 C145 70 143 78 141 82 C139 74 139 68 138 60 Z" fill="#24292F"/>
+    <!-- Cheeks (Blush) -->
+    <ellipse cx="72" cy="85" rx="7" ry="4" fill="#F2B39C" opacity="0.6"/>
+    <ellipse cx="128" cy="85" rx="7" ry="4" fill="#F2B39C" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M72 65 Q80 62 88 66" stroke="#24292F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M112 66 Q120 62 128 65" stroke="#24292F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  
+
+    <!-- Eyes (focused slightly downwards) -->
+    <ellipse cx="78" cy="78" rx="4.5" ry="5" fill="#243247"/>
+    <circle cx="80" cy="77" r="1.5" fill="#FFFFFF"/>
+    <ellipse cx="122" cy="78" rx="4.5" ry="5" fill="#243247"/>
+    <circle cx="124" cy="77" r="1.5" fill="#FFFFFF"/>
+    <!-- Curious concentrated mouth -->
+    <ellipse cx="100" cy="89" rx="3.5" ry="3.5" fill="#243247"/>
+  </g>
+</svg>

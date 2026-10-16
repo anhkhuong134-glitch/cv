@@ -1,0 +1,63 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/seo-samples.html",
+      "destination": "/seo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-aiktp.html",
+      "destination": "/seo/ai-ho-tro-viet-bai-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-model-kit.html",
+      "destination": "/seo/gunpla-cho-nguoi-moi/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-pc-build.html",
+      "destination": "/seo/build-pc-theo-nhu-cau/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-dragon-ball.html",
+      "destination": "/seo/dragon-ball-daima-cho-nguoi-moi/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-rpg.html",
+      "destination": "/seo/prototype-rpg-2d/",
+      "permanent": true
+    },
+    {
+      "source": "/social-content-sample.html",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
+      "source": "/project-detail.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "1"
+        }
+      ],
+      "destination": "/nghien-cuu/circle-k-gs25/",
+      "permanent": true
+    },
+    {
+      "source": "/project-detail.html",
+      "destination": "/du-an/",
+      "permanent": true
+    }
+  ]
+}

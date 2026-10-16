@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <rect width="600" height="800" fill="#EAE3D8"/>
+  <rect x="50" y="40" width="500" height="720" rx="16" fill="#F6F1E8" stroke="#D1CDC2" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(90, 80)">
+    <text x="0" y="32" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="28" fill="#593B2F">Thẻ Hỏi Gu Cà Phê</text>
+    <text x="0" y="60" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#2F6257" font-weight="600">Ghi lại để chọn rõ hơn trước khi mua</text>
+    <line x1="0" y1="80" x2="420" y2="80" stroke="#E7B080" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Question 1 -->
+  <g transform="translate(90, 200)">
+    <rect x="0" y="0" width="420" height="130" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="34" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#593B2F">1. BẠN THƯỜNG UỐNG THEO CÁCH NÀO?</text>
+    
+    <rect x="25" y="55" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="55" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">Cà phê đen (Đậm / Thanh)</text>
+
+    <rect x="25" y="90" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="55" y="105" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">Thêm sữa đặc / Sữa tươi</text>
+
+    <rect x="240" y="90" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="270" y="105" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">Chưa rõ gu, muốn thử</text>
+  </g>
+
+  <!-- Question 2 -->
+  <g transform="translate(90, 355)">
+    <rect x="0" y="0" width="420" height="130" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="34" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#593B2F">2. DỤNG CỤ PHA BẠN ĐANG CÓ Ở NHÀ?</text>
+    
+    <rect x="25" y="55" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="55" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">Phin truyền thống (Nhôm/Inox)</text>
+
+    <rect x="25" y="90" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="55" y="105" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">Phin giấy (Drip bag)</text>
+
+    <rect x="240" y="55" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="270" y="70" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">French Press</text>
+
+    <rect x="240" y="90" width="20" height="20" rx="4" fill="#FAFBF8" stroke="#593B2F" stroke-width="1.5"/>
+    <text x="270" y="105" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#243247">Chưa có, muốn tư vấn</text>
+  </g>
+
+  <!-- Question 3 -->
+  <g transform="translate(90, 510)">
+    <rect x="0" y="0" width="420" height="150" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="34" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#593B2F">3. CÂU HỎI BẠN MUỐN DÀNH CHO NGƯỜI BÁN?</text>
+    
+    <line x1="20" y1="65" x2="400" y2="65" stroke="#CBD5E1"/>
+    <line x1="20" y1="95" x2="400" y2="95" stroke="#CBD5E1"/>
+    <line x1="20" y1="125" x2="400" y2="125" stroke="#CBD5E1"/>
+  </g>
+
+  <g transform="translate(90, 680)">
+    <text x="210" y="20" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#593B2F" text-anchor="middle">mẻ nhỏ · Pha theo gu của bạn</text>
+    <text x="210" y="38" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#A0AEC0" text-anchor="middle">Thiết kế concept cá nhân · Tải template in tại cv-two-pi-94.vercel.app</text>
+  </g>
+</svg>

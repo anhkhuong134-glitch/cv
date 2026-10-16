@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHECKLIST DU LỊCH CUỐI TUẦN (2 NGÀY 1 ĐÊM) · Tài nguyên Portfolio Tuấn Anh</title>
+  <link rel="stylesheet" href="../../assets/portfolio/editorial-system.css">
+  <style>
+    body { background: #FFFFFF; padding: 40px 20px; font-size: 15px; }
+    .print-sheet { max-width: 800px; margin: 0 auto; border: 2px solid #D6DFE8; border-radius: 12px; padding: 40px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .print-header { border-bottom: 2px solid #285B58; padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .print-title { font-size: 24px; font-weight: 700; color: #285B58; }
+    .print-subtitle { color: #53647A; font-size: 14px; margin-top: 4px; }
+    .print-badge { font-size: 11px; font-weight: 600; background: #F5F7FB; border: 1px solid #D6DFE8; padding: 4px 10px; border-radius: 6px; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .field-box { border: 1px solid #D6DFE8; border-radius: 8px; padding: 12px 14px; background: #FAFBFD; }
+    .field-label { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #53647A; margin-bottom: 6px; }
+    .field-value { font-size: 14px; color: #243247; min-height: 24px; }
+    .field-full { grid-column: span 2; }
+    .print-actions { margin-top: 30px; text-align: center; }
+    @media print {
+      body { padding: 0; }
+      .print-sheet { border: none; box-shadow: none; padding: 0; }
+      .print-actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-sheet">
+    <div class="print-header">
+      <div>
+        <div class="print-title">CHECKLIST DU LỊCH CUỐI TUẦN (2 NGÀY 1 ĐÊM)</div>
+        <div class="print-subtitle">Soạn đồ theo hoạt động, phương tiện di chuyển và kiểm tra an toàn trước khi rời nhà</div>
+      </div>
+      <div class="print-badge">BẢN MẪU BIÊN TẬP · TA STUDIO</div>
+    </div>
+    
+  <div class="field-grid">
+    <div class="field-box"><div class="field-label">Điểm đến &amp; Phương tiện</div><div class="field-value">Vũng Tàu / Xe khách giường nằm</div></div>
+    <div class="field-box"><div class="field-label">Thời tiết &amp; Nơi lưu trú</div><div class="field-value">Nắng nhẹ 28-32°C / Homestay bãi Sau</div></div>
+    <div class="field-box field-full"><div class="field-label">Nhóm 1: Giấy tờ &amp; Vật dụng không thể thiếu</div><div class="field-value">[X] CCCD gắn chip &nbsp; [X] Thẻ ngân hàng &amp; 300k tiền mặt &nbsp; [X] Điện thoại &amp; Sạc dự phòng 10.000mAh</div></div>
+    <div class="field-box field-full"><div class="field-label">Nhóm 2: Trang phục theo bộ hoạt động</div><div class="field-value">• Bộ di chuyển: Quần jogger + Áo thun thoáng khí.<br>• Bộ dạo biển chiều: Áo sơ mi cộc tay linen + Quần short.<br>• Bộ ngủ &amp; đồ lót dự phòng: 2 bộ gọn nhẹ xếp cuộn tròn.</div></div>
+    <div class="field-box field-full"><div class="field-label">Nhóm 3: Thuốc &amp; Đồ vệ sinh cá nhân</div><div class="field-value">• Kem chống nắng SPF 50+ &nbsp; • Bàn chải/kem đánh răng cá nhân &nbsp; • Thuốc hạ sốt &amp; urgo cá nhân</div></div>
+    <div class="field-box field-full" style="background:#F5F7FB;"><div class="field-label">Kiểm tra 5 phút trước khi khóa cửa</div><div class="field-value">[X] Rút toàn bộ phích cắm điện &nbsp; [X] Khóa van bình gas &nbsp; [X] Đóng cửa sổ &nbsp; [X] Đổ rác sinh hoạt</div></div>
+  </div>
+  
+    <div class="print-actions">
+      <button class="btn btn-primary" onclick="window.print()">In hoặc Lưu dạng PDF</button>
+      <a class="btn btn-secondary" href="../index.html">Về trang Tài nguyên</a>
+    </div>
+  </div>
+</body>
+</html>

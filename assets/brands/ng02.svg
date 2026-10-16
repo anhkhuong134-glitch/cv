@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <rect width="1000" height="650" fill="#F4F2EC"/>
+  <text x="500" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="20" fill="#273B4A" text-anchor="middle">NG02 · Ruột Lịch Tuần A5 Hai Trang Mở</text>
+
+  <!-- Trang Trái: Thứ 2 - Thứ 4 &amp; Ưu tiên -->
+  <g transform="translate(80, 70)">
+    <rect x="0" y="0" width="400" height="520" rx="8" fill="#FFFFFF" stroke="#D1CDC2" stroke-width="1.5"/>
+    <rect x="25" y="25" width="350" height="40" rx="6" fill="#FAFBF8" stroke="#E2E8F0"/>
+    <text x="40" y="50" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#273B4A">Tuần của mình:</text>
+    <line x1="160" y1="52" x2="360" y2="52" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4 4"/>
+    
+    <rect x="25" y="80" width="350" height="75" rx="6" fill="#FFFDF5" stroke="#F2D97C" stroke-width="1.5"/>
+    <text x="40" y="102" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="13" fill="#B7791F">★ 3 ĐIỀU CẦN ƯU TIÊN</text>
+    <line x1="40" y1="120" x2="350" y2="120" stroke="#E2E8F0"/>
+    <line x1="40" y1="140" x2="350" y2="140" stroke="#E2E8F0"/>
+
+    <g transform="translate(25, 175)">
+      <!-- Thứ 2 -->
+      <rect x="0" y="0" width="350" height="95" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="0" y="0" width="85" height="24" rx="6" fill="#273B4A"/>
+      <text x="42" y="16" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF" text-anchor="middle">THỨ HAI</text>
+      <line x1="15" y1="42" x2="335" y2="42" stroke="#F1F5F9"/>
+      <line x1="15" y1="64" x2="335" y2="64" stroke="#F1F5F9"/>
+      <line x1="15" y1="86" x2="335" y2="86" stroke="#F1F5F9"/>
+      
+      <!-- Thứ 3 -->
+      <g transform="translate(0, 110)">
+        <rect x="0" y="0" width="350" height="95" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <rect x="0" y="0" width="85" height="24" rx="6" fill="#273B4A"/>
+        <text x="42" y="16" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF" text-anchor="middle">THỨ BA</text>
+        <line x1="15" y1="42" x2="335" y2="42" stroke="#F1F5F9"/>
+        <line x1="15" y1="64" x2="335" y2="64" stroke="#F1F5F9"/>
+        <line x1="15" y1="86" x2="335" y2="86" stroke="#F1F5F9"/>
+      </g>
+
+      <!-- Thứ 4 -->
+      <g transform="translate(0, 220)">
+        <rect x="0" y="0" width="350" height="95" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <rect x="0" y="0" width="85" height="24" rx="6" fill="#273B4A"/>
+        <text x="42" y="16" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF" text-anchor="middle">THỨ TƯ</text>
+        <line x1="15" y1="42" x2="335" y2="42" stroke="#F1F5F9"/>
+        <line x1="15" y1="64" x2="335" y2="64" stroke="#F1F5F9"/>
+        <line x1="15" y1="86" x2="335" y2="86" stroke="#F1F5F9"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Gáy sổ -->
+  <line x1="500" y1="65" x2="500" y2="595" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Trang Phải: Thứ 5 - CN, Ý tưởng &amp; Tuần sau -->
+  <g transform="translate(520, 70)">
+    <rect x="0" y="0" width="400" height="520" rx="8" fill="#FFFFFF" stroke="#D1CDC2" stroke-width="1.5"/>
+    
+    <g transform="translate(25, 25)">
+      <!-- Thứ 5 -->
+      <rect x="0" y="0" width="350" height="75" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="0" y="0" width="85" height="22" rx="6" fill="#273B4A"/>
+      <text x="42" y="15" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF" text-anchor="middle">THỨ NĂM</text>
+      <line x1="15" y1="38" x2="335" y2="38" stroke="#F1F5F9"/>
+      <line x1="15" y1="60" x2="335" y2="60" stroke="#F1F5F9"/>
+
+      <!-- Thứ 6 -->
+      <g transform="translate(0, 85)">
+        <rect x="0" y="0" width="350" height="75" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <rect x="0" y="0" width="85" height="22" rx="6" fill="#273B4A"/>
+        <text x="42" y="15" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF" text-anchor="middle">THỨ SÁU</text>
+        <line x1="15" y1="38" x2="335" y2="38" stroke="#F1F5F9"/>
+        <line x1="15" y1="60" x2="335" y2="60" stroke="#F1F5F9"/>
+      </g>
+
+      <!-- Thứ 7 &amp; CN -->
+      <g transform="translate(0, 170)">
+        <rect x="0" y="0" width="170" height="85" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <rect x="0" y="0" width="80" height="20" rx="4" fill="#53647A"/>
+        <text x="40" y="14" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="10" fill="#FFFFFF" text-anchor="middle">THỨ BẢY</text>
+        
+        <rect x="180" y="0" width="170" height="85" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <rect x="180" y="0" width="80" height="20" rx="4" fill="#D97757"/>
+        <text x="220" y="14" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="10" fill="#FFFFFF" text-anchor="middle">CHỦ NHẬT</text>
+      </g>
+
+      <!-- Vùng: Ý tưởng đang mở -->
+      <g transform="translate(0, 270)">
+        <rect x="0" y="0" width="350" height="95" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+        <text x="15" y="24" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="12" fill="#273B4A">💡 Ý TƯỞNG ĐANG MỞ (Ghi nhanh chưa cần chốt)</text>
+        <line x1="15" y1="45" x2="335" y2="45" stroke="#E2E8F0"/>
+        <line x1="15" y1="68" x2="335" y2="68" stroke="#E2E8F0"/>
+      </g>
+
+      <!-- Vùng: Chuyển sang tuần sau -->
+      <g transform="translate(0, 380)">
+        <rect x="0" y="0" width="350" height="85" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
+        <text x="15" y="24" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="12" fill="#53647A">➔ CHUYỂN SANG TUẦN SAU</text>
+        <line x1="15" y1="45" x2="335" y2="45" stroke="#E2E8F0"/>
+        <line x1="15" y1="65" x2="335" y2="65" stroke="#E2E8F0"/>
+      </g>
+    </g>
+  </g>
+
+  <text x="500" y="620" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A" text-anchor="middle">Layout 2 trang mở: Thứ 2 đến Thứ 4 ở trang trái, Thứ 5 đến CN &amp; các ô ghi chú linh hoạt ở trang phải</text>
+</svg>

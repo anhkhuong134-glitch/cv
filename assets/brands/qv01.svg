@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <rect width="1000" height="650" fill="#E8E2D8"/>
+  <text x="500" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="20" fill="#2F435C" text-anchor="middle">QV01 · Artwork In Túi Vải Tote (Mặt Trước &amp; Mặt Sau)</text>
+
+  <!-- Mặt Trước -->
+  <g transform="translate(120, 70)">
+    <path d="M120 120 L120 20 Q170 10 220 20 L220 120" fill="none" stroke="#2F435C" stroke-width="16" stroke-linecap="round"/>
+    <rect x="50" y="110" width="240" height="380" rx="14" fill="#EEE8DF" stroke="#2F435C" stroke-width="3"/>
+    <rect x="58" y="118" width="224" height="364" rx="10" fill="none" stroke="#C47E71" stroke-width="1.5" stroke-dasharray="6 4"/>
+    
+    <g transform="translate(135, 200)">
+      <path d="M25 50 L25 20 Q35 10 45 20 L45 50" fill="none" stroke="#2F435C" stroke-width="5" stroke-linecap="round"/>
+      <rect x="10" y="45" width="50" height="50" rx="6" fill="none" stroke="#2F435C" stroke-width="4"/>
+    </g>
+
+    <text x="170" y="330" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="22" fill="#2F435C" text-anchor="middle">QUAI VẢI</text>
+    <text x="170" y="360" font-family="'Be Vietnam Pro', sans-serif" font-weight="500" font-size="13" fill="#C47E71" text-anchor="middle">Mang vừa một ngày.</text>
+    <text x="170" y="440" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#718096" text-anchor="middle">38 × 42 CM · CANVAS MỘC</text>
+  </g>
+
+  <!-- Mặt Sau -->
+  <g transform="translate(540, 70)">
+    <path d="M120 120 L120 20 Q170 10 220 20 L220 120" fill="none" stroke="#2F435C" stroke-width="16" stroke-linecap="round"/>
+    <rect x="50" y="110" width="240" height="380" rx="14" fill="#EEE8DF" stroke="#2F435C" stroke-width="3"/>
+    <rect x="58" y="118" width="224" height="364" rx="10" fill="none" stroke="#C47E71" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+    <g transform="translate(80, 160)">
+      <rect x="0" y="0" width="180" height="160" rx="6" fill="#FAFBF8" stroke="#2F435C" stroke-width="2" stroke-dasharray="4 4"/>
+      <text x="90" y="30" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="11" fill="#2F435C" text-anchor="middle">SƠ ĐỒ LÒNG TÚI</text>
+      
+      <rect x="15" y="45" width="150" height="45" rx="4" fill="#E2E8F0"/>
+      <text x="90" y="72" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#243247" text-anchor="middle">Ngăn laptop 13-14 inch</text>
+
+      <rect x="15" y="100" width="45" height="45" rx="4" fill="#E2E8F0"/>
+      <text x="37" y="127" font-family="'Be Vietnam Pro', sans-serif" font-size="9" fill="#243247" text-anchor="middle">Bình</text>
+
+      <rect x="70" y="100" width="95" height="45" rx="4" fill="#E2E8F0"/>
+      <text x="117" y="127" font-family="'Be Vietnam Pro', sans-serif" font-size="9" fill="#243247" text-anchor="middle">Sổ A5 &amp; Ví</text>
+    </g>
+
+    <text x="170" y="360" font-family="'Be Vietnam Pro', sans-serif" font-weight="500" font-size="12" fill="#2F435C" text-anchor="middle" font-style="italic">
+      “Chọn túi từ những thứ bạn mang.”
+    </text>
+    <text x="170" y="440" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#718096" text-anchor="middle">Thiết kế concept · Chưa thử nghiệm tải trọng</text>
+  </g>
+
+  <text x="500" y="615" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#2F435C" text-anchor="middle">Túi vải canvas: Mặt trước tối giản nhận diện, mặt sau in trực tiếp sơ đồ công năng hỗ trợ sắp xếp đồ đạc</text>
+</svg>

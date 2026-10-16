@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="100%" height="100%">
+  <rect width="900" height="650" fill="#E8E2D8"/>
+  <rect x="50" y="40" width="800" height="570" rx="16" fill="#FAFBF8" stroke="#D1CDC2" stroke-width="2"/>
+
+  <text x="450" y="80" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="24" fill="#2F435C" text-anchor="middle">PHIẾU ĐO VÀ THỬ TÚI VẢI (A5)</text>
+  <text x="450" y="105" font-family="'Be Vietnam Pro', sans-serif" font-size="14" fill="#C47E71" text-anchor="middle">Kiểm tra kích thước đồ đạc trước khi quyết định mua túi</text>
+
+  <g transform="translate(90, 130)">
+    <rect x="0" y="0" width="720" height="420" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    
+    <text x="30" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="15" fill="#2F435C">6 BƯỚC ĐỐI CHIẾU KÍCH THƯỚC:</text>
+    
+    <text x="30" y="80" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="13" fill="#243247">1. Món đồ lớn nhất bạn mang hàng ngày:</text>
+    <text x="30" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="#53647A">(Ví dụ: Laptop 14 inch, hồ sơ A4, bảng vẽ...)</text>
+    <line x1="30" y1="120" x2="690" y2="120" stroke="#CBD5E1"/>
+
+    <text x="30" y="160" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="13" fill="#243247">2. Kích thước món đồ + Bao chống sốc (Dài × Rộng × Dày):</text>
+    <line x1="30" y1="185" x2="690" y2="185" stroke="#CBD5E1"/>
+
+    <text x="30" y="225" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="13" fill="#243247">3. Độ sâu lòng túi cần thiết:</text>
+    <line x1="30" y1="250" x2="690" y2="250" stroke="#CBD5E1"/>
+
+    <text x="30" y="290" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="13" fill="#243247">4. Miệng túi có khóa kéo hay khuy bấm:</text>
+    <line x1="30" y1="315" x2="690" y2="315" stroke="#CBD5E1"/>
+
+    <text x="30" y="355" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="13" fill="#243247">5. Độ dài quai đeo vai (Thử khi mặc áo khoác dày):</text>
+    <line x1="30" y1="380" x2="690" y2="380" stroke="#CBD5E1"/>
+  </g>
+</svg>

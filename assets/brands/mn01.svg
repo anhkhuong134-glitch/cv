@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <rect width="1000" height="650" fill="#EAE3D8"/>
+  <text x="500" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="20" fill="#593B2F" text-anchor="middle">MN01 · Bao Bì Túi Cà Phê Concept 160 × 240mm (Mặt Trước &amp; Mặt Sau)</text>
+
+  <!-- Mặt Trước -->
+  <g transform="translate(120, 70)">
+    <rect x="0" y="0" width="340" height="500" rx="16" fill="#F6F1E8" stroke="#D1CDC2" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="36" rx="16" fill="#E7B080" opacity="0.4"/>
+    <line x1="0" y1="36" x2="340" y2="36" stroke="#D1CDC2" stroke-width="1.5" stroke-dasharray="4 4"/>
+    
+    <!-- Logo MẺ NHỎ -->
+    <g transform="translate(120, 65)">
+      <ellipse cx="50" cy="40" rx="36" ry="16" fill="#F6F1E8" stroke="#593B2F" stroke-width="3"/>
+      <path d="M20 40 Q25 75 50 85 Q75 75 80 40 Z" fill="#F6F1E8" stroke="#593B2F" stroke-width="3"/>
+      <circle cx="50" cy="115" r="7" fill="#E7B080"/>
+      <path d="M50 102 L56 115 L44 115 Z" fill="#E7B080"/>
+    </g>
+
+    <text x="170" y="215" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="26" fill="#593B2F" text-anchor="middle">mẻ nhỏ</text>
+    <text x="170" y="240" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="14" fill="#2F6257" text-anchor="middle">Pha theo gu của bạn</text>
+    <line x1="120" y1="255" x2="220" y2="255" stroke="#E7B080" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Coffee Details Box -->
+    <rect x="30" y="280" width="280" height="135" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="45" y="308" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="12" fill="#593B2F">CÀ PHÊ PHA TẠI NHÀ</text>
+    <text x="45" y="332" font-family="'Be Vietnam Pro', sans-serif" font-size="11.5" fill="#53647A">Thích hợp: Phin truyền thống &amp; Phin giấy</text>
+    <text x="45" y="354" font-family="'Be Vietnam Pro', sans-serif" font-size="11.5" fill="#53647A">Độ rang đề xuất: Rang vừa (Medium roast)</text>
+    <text x="45" y="376" font-family="'Be Vietnam Pro', sans-serif" font-size="11.5" fill="#53647A">Hương vị gợi ý: Thơm hạt, hậu ngọt dịu</text>
+    <text x="45" y="398" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#A0AEC0">* Hãy nói với người bán về cách bạn uống</text>
+
+    <rect x="30" y="445" width="130" height="24" rx="4" fill="#F1EADF"/>
+    <text x="95" y="461" font-family="'Be Vietnam Pro', sans-serif" font-size="10.5" fill="#593B2F" font-weight="600" text-anchor="middle">CONCEPT BAO BÌ</text>
+  </g>
+
+  <!-- Mặt Sau -->
+  <g transform="translate(540, 70)">
+    <rect x="0" y="0" width="340" height="500" rx="16" fill="#F6F1E8" stroke="#D1CDC2" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="36" rx="16" fill="#E7B080" opacity="0.4"/>
+
+    <circle cx="170" cy="70" r="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <circle cx="170" cy="70" r="4" fill="#CBD5E1"/>
+
+    <rect x="30" y="110" width="280" height="85" rx="8" fill="#FFFDF5" stroke="#E7B080" stroke-width="1.5"/>
+    <text x="45" y="135" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="12" fill="#593B2F">HƯỚNG DẪN CHỌN HẠT TRƯỚC KHI MUA</text>
+    <text x="45" y="158" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Hỏi về cách pha, cỡ xay và hướng dẫn</text>
+    <text x="45" y="178" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">bảo quản của đúng sản phẩm trước khi chọn.</text>
+
+    <!-- 4 Brew Steps -->
+    <g transform="translate(30, 215)">
+      <rect x="0" y="0" width="280" height="195" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="15" y="26" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="12" fill="#2F6257">4 BƯỚC PHA THỬ ĐỀ XUẤT</text>
+      
+      <text x="15" y="55" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="11" fill="#593B2F">1. Cân lượng cà phê:</text>
+      <text x="15" y="72" font-family="'Be Vietnam Pro', sans-serif" font-size="10.5" fill="#718096">20g cà phê cho 1 phin tiêu chuẩn</text>
+
+      <text x="15" y="96" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="11" fill="#593B2F">2. Rót ủ (Pre-infusion):</text>
+      <text x="15" y="113" font-family="'Be Vietnam Pro', sans-serif" font-size="10.5" fill="#718096">30ml nước sôi (92-94°C) trong 1 phút</text>
+
+      <text x="15" y="137" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="11" fill="#593B2F">3. Rót chính:</text>
+      <text x="15" y="154" font-family="'Be Vietnam Pro', sans-serif" font-size="10.5" fill="#718096">50ml nước sôi và đậy nắp chờ giọt</text>
+
+      <text x="15" y="178" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="11" fill="#593B2F">4. Ghi cảm nhận:</text>
+      <text x="15" y="193" font-family="'Be Vietnam Pro', sans-serif" font-size="10.5" fill="#718096">Điền phiếu thử ly để chỉnh lần sau</text>
+    </g>
+
+    <text x="170" y="445" font-family="'Be Vietnam Pro', sans-serif" font-size="9.5" fill="#A0AEC0" text-anchor="middle">Thiết kế concept cá nhân · Chưa triển khai thương mại</text>
+    <text x="170" y="460" font-family="'Be Vietnam Pro', sans-serif" font-size="9" fill="#CBD5E1" text-anchor="middle">Không tự bịa xuất xứ, trọng lượng hay chứng nhận giả</text>
+  </g>
+
+  <text x="290" y="615" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#593B2F" text-anchor="middle">Mặt trước: Logo phin tối giản, tagline &amp; định vị pha tại nhà</text>
+  <text x="710" y="615" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#593B2F" text-anchor="middle">Mặt sau: Van thoát khí, câu hỏi với người bán &amp; 4 bước pha cơ bản</text>
+</svg>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHIẾU THỬ GU CÀ PHÊ PHA TẠI NHÀ · Tài nguyên Portfolio Tuấn Anh</title>
+  <link rel="stylesheet" href="../../assets/portfolio/editorial-system.css">
+  <style>
+    body { background: #FFFFFF; padding: 40px 20px; font-size: 15px; }
+    .print-sheet { max-width: 800px; margin: 0 auto; border: 2px solid #D6DFE8; border-radius: 12px; padding: 40px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .print-header { border-bottom: 2px solid #285B58; padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .print-title { font-size: 24px; font-weight: 700; color: #285B58; }
+    .print-subtitle { color: #53647A; font-size: 14px; margin-top: 4px; }
+    .print-badge { font-size: 11px; font-weight: 600; background: #F5F7FB; border: 1px solid #D6DFE8; padding: 4px 10px; border-radius: 6px; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .field-box { border: 1px solid #D6DFE8; border-radius: 8px; padding: 12px 14px; background: #FAFBFD; }
+    .field-label { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #53647A; margin-bottom: 6px; }
+    .field-value { font-size: 14px; color: #243247; min-height: 24px; }
+    .field-full { grid-column: span 2; }
+    .print-actions { margin-top: 30px; text-align: center; }
+    @media print {
+      body { padding: 0; }
+      .print-sheet { border: none; box-shadow: none; padding: 0; }
+      .print-actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-sheet">
+    <div class="print-header">
+      <div>
+        <div class="print-title">PHIẾU THỬ GU CÀ PHÊ PHA TẠI NHÀ</div>
+        <div class="print-subtitle">Ghi lại cảm nhận và điều chỉnh từng biến số cho concept MẺ NHỎ</div>
+      </div>
+      <div class="print-badge">BẢN MẪU BIÊN TẬP · TA STUDIO</div>
+    </div>
+    
+  <div class="field-grid">
+    <div class="field-box"><div class="field-label">Tên sản phẩm / Gói cà phê</div><div class="field-value">Mẻ Nhỏ — Mộc Blend (Concept)</div></div>
+    <div class="field-box"><div class="field-label">Dụng cụ pha đang có</div><div class="field-value">[X] Phin nhôm &nbsp; [ ] Phin inox &nbsp; [ ] Khác: _____</div></div>
+    <div class="field-box field-full"><div class="field-label">Cách bạn thường uống</div><div class="field-value">[ ] Cà phê đen nóng &nbsp; [X] Cà phê đen đá &nbsp; [X] Thêm sữa đặc &nbsp; [ ] Thêm sữa tươi</div></div>
+    <div class="field-box"><div class="field-label">Lượng cà phê bột (gram)</div><div class="field-value">20g (khoảng 3 thìa gạt tiêu chuẩn)</div></div>
+    <div class="field-box"><div class="field-label">Lượng nước sôi rót vào (ml)</div><div class="field-value">Ủ 30ml (90s) → Rót thêm 50ml</div></div>
+    <div class="field-box field-full"><div class="field-label">Cảm nhận sau khi nếm lần đầu</div><div class="field-value">Vị đắng êm, thơm mùi ngũ cốc rang, hậu vị ngọt nhẹ khi thêm 15ml sữa đặc. Giọt chảy hơi nhanh ở giai đoạn cuối.</div></div>
+    <div class="field-box field-full"><div class="field-label">MỘT điều bạn muốn thay đổi trong lần pha tới</div><div class="field-value">Vặn nắp gài chặt hơn nửa vòng hoặc nhờ nơi bán xay mịn hơn 1 nấc để kéo dài thời gian chiết xuất thêm 30 giây.</div></div>
+  </div>
+  
+    <div class="print-actions">
+      <button class="btn btn-primary" onclick="window.print()">In hoặc Lưu dạng PDF</button>
+      <a class="btn btn-secondary" href="../index.html">Về trang Tài nguyên</a>
+    </div>
+  </div>
+</body>
+</html>

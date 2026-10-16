@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <rect width="1000" height="650" fill="#EAE7DF"/>
+  <text x="500" y="40" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="20" fill="#273B4A" text-anchor="middle">NG01 · Artwork Bìa Sổ A5 (Mặt Trước &amp; Mặt Sau)</text>
+  
+  <!-- Mặt Trước (Front Cover) -->
+  <g transform="translate(100, 70)">
+    <rect x="0" y="0" width="360" height="510" rx="12" fill="#FFFFFF" stroke="#D1CDC2" stroke-width="2"/>
+    <rect x="20" y="20" width="320" height="470" fill="#FAFBF8"/>
+    
+    <!-- Top Left Logo -->
+    <g transform="translate(40, 45)">
+      <rect x="0" y="0" width="44" height="44" rx="4" fill="#FAFBF8" stroke="#273B4A" stroke-width="2.5"/>
+      <path d="M26 0 L44 18 L26 18 Z" fill="#F2D97C" stroke="#273B4A" stroke-width="1"/>
+      <line x1="8" y1="26" x2="22" y2="26" stroke="#273B4A" stroke-width="2" stroke-linecap="round"/>
+      <text x="56" y="24" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#273B4A">nếp gấp</text>
+      <text x="56" y="38" font-family="'Be Vietnam Pro', sans-serif" font-weight="500" font-size="10" fill="#53647A">sổ tay có cấu trúc</text>
+    </g>
+
+    <!-- Title &amp; Minimal Typography -->
+    <text x="40" y="240" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="24" fill="#273B4A">Một trang để bắt đầu</text>
+    <text x="40" y="270" font-family="'Be Vietnam Pro', sans-serif" font-weight="400" font-size="14" fill="#53647A">Ghi chép theo cách của bạn.</text>
+    <line x1="40" y1="295" x2="160" y2="295" stroke="#F2D97C" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Bottom label -->
+    <rect x="40" y="440" width="140" height="26" rx="4" fill="#F5F7FB" stroke="#D6DFE8"/>
+    <text x="110" y="457" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#273B4A" font-weight="600" text-anchor="middle">A5 · 148 × 210 MM</text>
+  </g>
+
+  <!-- Mặt Sau (Back Cover) -->
+  <g transform="translate(540, 70)">
+    <rect x="0" y="0" width="360" height="510" rx="12" fill="#FAFBF8" stroke="#D1CDC2" stroke-width="2"/>
+    
+    <!-- Centered minimal icon &amp; quote -->
+    <g transform="translate(158, 200)">
+      <rect x="0" y="0" width="44" height="44" rx="4" fill="#FAFBF8" stroke="#273B4A" stroke-width="2.5"/>
+      <path d="M26 0 L44 18 L26 18 Z" fill="#F2D97C" stroke="#273B4A" stroke-width="1"/>
+      <line x1="8" y1="26" x2="22" y2="26" stroke="#273B4A" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <text x="180" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="500" font-size="14" fill="#273B4A" text-anchor="middle" font-style="italic">
+      “Ý tưởng chưa cần hoàn chỉnh
+    </text>
+    <text x="180" y="302" font-family="'Be Vietnam Pro', sans-serif" font-weight="500" font-size="14" fill="#273B4A" text-anchor="middle" font-style="italic">
+      để được ghi lại.”
+    </text>
+
+    <!-- Bottom footer -->
+    <text x="180" y="440" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#718096" text-anchor="middle">
+      Thiết kế concept · Khương Tuấn Anh 2026
+    </text>
+    <text x="180" y="458" font-family="'Be Vietnam Pro', sans-serif" font-size="10" fill="#A0AEC0" text-anchor="middle">
+      Không tạo chứng nhận xuất xưởng thương mại giả định
+    </text>
+  </g>
+  
+  <text x="280" y="615" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A" text-anchor="middle">Mặt trước: Nền giấy, logo góc trái, slogan &amp; vạch phân cấp</text>
+  <text x="720" y="615" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A" text-anchor="middle">Mặt sau: Tinh giản, thông điệp triết lý ghi chép &amp; nhãn concept</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
+    <rect width="1200" height="540" fill="#F8FAFC" rx="16" stroke="#D6DFE8" stroke-width="2"/>
+    <rect x="40" y="30" width="1120" height="60" rx="10" fill="#2F6257"/>
+    <text x="60" y="68" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">A02 — GUNPLA CHO NGƯỜI MỚI</text>
+    <g transform="translate(60, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#2F6257"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Chọn mã kit</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Bắt đầu từ HG 1/144</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Tìm manual chính hãng</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Xem trước độ phức tạp</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#2F6257">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Đọc manual Bandai chính hãng của đúng mã kit.</text>
+    </g><g transform="translate(330, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#2F6257"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">2</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Chuẩn bị dụng cụ</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Kìm cắt chuyên dụng</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Dao gọt bavia (hobby knife)</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Giấy nhám mịn 800-1000</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#2F6257">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Không mua thừa đồ nghề trước lần lắp đầu.</text>
+    </g><g transform="translate(600, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#2F6257"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Không gian lắp ráp</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Bàn sáng và phẳng</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Khay chia vỉ runner</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Đĩa nhỏ đựng chi tiết nhỏ</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#2F6257">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Tránh làm mất các mảnh nhựa nhỏ.</text>
+    </g><g transform="translate(870, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#2F6257"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">4</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Chia buổi lắp</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Lắp từng bộ phận (chân/tay)</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Cắt dư cổng 1-2mm</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Dán decal cẩn thận</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#2F6257">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Kiểm tra kỹ trước khi bấm khít khớp nối.</text>
+    </g>
+  </svg>

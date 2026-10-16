@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#243247" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <ellipse cx="100" cy="226" rx="46" ry="7" fill="#D6DFE8" opacity="0.7"/>
+
+    <!-- Legs and Shoes -->
+    <path d="M86 168 L84 212 L96 212 L96 168 Z" fill="#E2E8F0"/>
+    <path d="M80 212 C80 208 96 208 98 212 L98 220 C98 223 80 223 80 220 Z" fill="#243247"/>
+    <path d="M104 168 L104 212 L116 212 L114 168 Z" fill="#E2E8F0"/>
+    <path d="M102 212 C102 208 118 208 120 212 L120 220 C120 223 102 223 102 220 Z" fill="#243247"/>
+
+    <!-- Torso -->
+    <path d="M74 116 C78 112 122 112 126 116 L124 172 C124 174 76 174 76 172 Z" fill="#285B58"/>
+    <path d="M92 116 C92 122 108 122 108 116" stroke="#1F4543" stroke-width="3" fill="none"/>
+
+    <!-- Left hand resting on hip -->
+    <path d="M75 122 Q60 134 68 152 Q72 154 78 146" stroke="#285B58" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="68" cy="152" r="5" fill="#FDE8D7"/>
+
+    <!-- Right Arm presenting gracefully outwards -->
+    <path d="M125 122 Q148 118 168 106" stroke="#285B58" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <!-- Open palm hand -->
+    <g transform="translate(170, 104) rotate(-20)">
+      <ellipse cx="0" cy="0" rx="7" ry="5" fill="#FDE8D7"/>
+      <path d="M3 -3 L9 -4" stroke="#FDE8D7" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M4 -1 L10 -1" stroke="#FDE8D7" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Sparkle -->
+      <path d="M16 -12 L18 -8 L22 -6 L18 -4 L16 0 L14 -4 L10 -6 L14 -8 Z" fill="#E7B080"/>
+    </g>
+
+    
+    <!-- Neck -->
+    <path d="M92 105 L108 105 L106 118 L94 118 Z" fill="#F2CBB2"/>
+    <!-- Head Base -->
+    <path d="M60 70 C60 40 80 32 100 32 C120 32 140 40 140 70 C140 98 124 112 100 112 C76 112 60 98 60 70 Z" fill="#FDE8D7"/>
+    <!-- Ears -->
+    <circle cx="58" cy="74" r="9" fill="#FDE8D7"/>
+    <circle cx="58" cy="74" r="5" fill="#F2CBB2"/>
+    <circle cx="142" cy="74" r="9" fill="#FDE8D7"/>
+    <circle cx="142" cy="74" r="5" fill="#F2CBB2"/>
+    <!-- Hair Back/Base -->
+    <path d="M56 64 C52 35 72 18 100 18 C128 18 148 35 144 64 C136 45 125 36 100 36 C75 36 64 45 56 64 Z" fill="#24292F"/>
+    <!-- Hair Front Bangs -->
+    <path d="M55 58 C62 42 75 38 88 44 C95 40 108 38 120 44 C128 40 138 46 144 56 C138 48 128 46 122 50 C114 44 102 46 96 52 C88 46 76 46 68 54 C62 56 58 58 55 58 Z" fill="#24292F"/>
+    <path d="M57 60 C55 70 57 78 59 82 C61 74 61 68 62 60 Z" fill="#24292F"/>
+    <path d="M143 60 C145 70 143 78 141 82 C139 74 139 68 138 60 Z" fill="#24292F"/>
+    <!-- Cheeks (Blush) -->
+    <ellipse cx="72" cy="85" rx="7" ry="4" fill="#F2B39C" opacity="0.6"/>
+    <ellipse cx="128" cy="85" rx="7" ry="4" fill="#F2B39C" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M72 65 Q80 62 88 66" stroke="#24292F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M112 66 Q120 62 128 65" stroke="#24292F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  
+
+    <!-- Eyes (Looking towards presentation side) -->
+    <circle cx="80" cy="76" r="4.5" fill="#243247"/>
+    <circle cx="82" cy="74" r="1.5" fill="#FFFFFF"/>
+    <circle cx="124" cy="76" r="4.5" fill="#243247"/>
+    <circle cx="126" cy="74" r="1.5" fill="#FFFFFF"/>
+    <!-- Welcoming Smile -->
+    <path d="M92 86 Q100 96 108 86" stroke="#243247" stroke-width="2.5" fill="#F2B39C" stroke-linecap="round"/>
+  </g>
+</svg>

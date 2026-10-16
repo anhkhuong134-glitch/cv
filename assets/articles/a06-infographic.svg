@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
+    <rect width="1200" height="540" fill="#F8FAFC" rx="16" stroke="#D6DFE8" stroke-width="2"/>
+    <rect x="40" y="30" width="1120" height="60" rx="10" fill="#593B2F"/>
+    <text x="60" y="68" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">A06 — CHỌN CÀ PHÊ PHA PHIN</text>
+    <g transform="translate(60, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#593B2F"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Mô tả gu uống</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Đen nóng hay đen đá</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Có thêm sữa đặc/đường</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Đậm vị hay thanh nhẹ</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#593B2F">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Nói từ cảm nhận thực tế, không cần thuật ngữ nếm.</text>
+    </g><g transform="translate(330, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#593B2F"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">2</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Đọc thông tin gói</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Giống hạt Robusta / Arabica</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Mức độ rang (Đậm/Vừa)</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Ngày rang &amp; hạn dùng</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#593B2F">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Đọc hướng dẫn nhà sản xuất của đúng sản phẩm.</text>
+    </g><g transform="translate(600, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#593B2F"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Cỡ xay cho phin</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Hạt to như muối biển</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Không xay quá mịn (nghẹt)</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Không xay quá thô (nhạt)</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#593B2F">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Hỏi người bán xay đúng cỡ cho phin nhôm/inox.</text>
+    </g><g transform="translate(870, 120)">
+      <rect x="0" y="0" width="250" height="360" rx="12" fill="#FFFFFF" stroke="#D6DFE8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="18" fill="#593B2F"/>
+      <text x="35" y="41" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">4</text>
+      <text x="65" y="42" font-family="'Be Vietnam Pro', sans-serif" font-weight="700" font-size="16" fill="#243247">Ghi chép lần pha</text>
+      <line x1="20" y1="70" x2="230" y2="70" stroke="#D6DFE8" stroke-width="1"/>
+      <text x="20" y="100" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Tỷ lệ bột và nước</text>
+      <text x="20" y="130" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Thời gian ủ bột cà phê</text>
+      <text x="20" y="160" font-family="'Be Vietnam Pro', sans-serif" font-size="13" fill="#53647A">• Đổi 1 yếu tố mỗi lần</text>
+      <rect x="15" y="250" width="220" height="90" rx="8" fill="#F5F7FB" stroke="#D6DFE8"/>
+      <text x="25" y="280" font-family="'Be Vietnam Pro', sans-serif" font-weight="600" font-size="12" fill="#593B2F">LƯU Ý CỐT LÕI:</text>
+      <text x="25" y="305" font-family="'Be Vietnam Pro', sans-serif" font-size="11" fill="#53647A">Dùng Phiếu thử gu cà phê để điều chỉnh dần.</text>
+    </g>
+  </svg>

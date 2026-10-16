@@ -1,0 +1,6 @@
+Hạng mục,Linh kiện dự kiến,Mã linh kiện chi tiết,Tài liệu đối chiếu manual,Điều kiện hỗ trợ kỹ thuật,Xác nhận tương thích,Ghi chú kiểm tra
+CPU & Bo mạch chủ,Intel Core i5-13400F,Socket LGA1700,Manual bo mạch chủ B760,Cần kiểm tra phiên bản BIOS hỗ trợ thế hệ 13,Đã xác nhận,Bo mạch chủ xuất xưởng cần có BIOS cập nhật
+Tản nhiệt & Vỏ case,Thermalright Assassin X 120,Cao 148mm,Thông số vỏ case (Clearance max),Vỏ case hỗ trợ tản tháp tối đa 160mm,Đã xác nhận,Khoảng cách an toàn còn 12mm
+Bộ nhớ RAM & Khe cắm,Kingston Fury Beast 16GB (2x8GB),DDR4 3200MHz CL16,QVL bo mạch chủ B760,Gắn đúng khe A2-B2 để kích hoạt Dual Channel,Đã xác nhận,Bật XMP trong BIOS sau khi lắp
+Card đồ họa (GPU) & Nguồn,RTX 4060 8GB,Dài 242mm / TDP 115W,Khuyến nghị nguồn 550W Bronze,Nguồn dự kiến 650W 80 Plus Bronze có đầu 8-pin PCIe,Đã xác nhận,Đủ công suất và dư tải an toàn
+Ổ cứng SSD M.2,Samsung 980 1TB NVMe,PCIe Gen 3.0 x4 M.2 2280,Khe M.2_1 CPU hỗ trợ PCIe 4.0/3.0,Khe M.2 có tản nhiệt heatsink đi kèm bo mạch chủ,Đã xác nhận,Tháo seal tản nhiệt trước khi vặn ốc
