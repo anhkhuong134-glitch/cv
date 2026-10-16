@@ -13,12 +13,22 @@
       "permanent": true
     },
     {
+      "source": "/projects/",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
       "source": "/seo-samples.html",
       "destination": "/seo/",
       "permanent": true
     },
     {
       "source": "/seo-samples",
+      "destination": "/seo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-samples/",
       "destination": "/seo/",
       "permanent": true
     },
@@ -33,12 +43,22 @@
       "permanent": true
     },
     {
+      "source": "/social-content-sample/",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
       "source": "/seo-aiktp.html",
       "destination": "/seo/ai-ho-tro-viet-bai-seo/",
       "permanent": true
     },
     {
       "source": "/seo-aiktp",
+      "destination": "/seo/ai-ho-tro-viet-bai-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-aiktp/",
       "destination": "/seo/ai-ho-tro-viet-bai-seo/",
       "permanent": true
     },
@@ -53,12 +73,22 @@
       "permanent": true
     },
     {
+      "source": "/seo-model-kit/",
+      "destination": "/seo/gunpla-cho-nguoi-moi/",
+      "permanent": true
+    },
+    {
       "source": "/seo-pc-build.html",
       "destination": "/seo/build-pc-theo-nhu-cau/",
       "permanent": true
     },
     {
       "source": "/seo-pc-build",
+      "destination": "/seo/build-pc-theo-nhu-cau/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-pc-build/",
       "destination": "/seo/build-pc-theo-nhu-cau/",
       "permanent": true
     },
@@ -73,12 +103,22 @@
       "permanent": true
     },
     {
+      "source": "/seo-dragon-ball/",
+      "destination": "/seo/dragon-ball-daima-cho-nguoi-moi/",
+      "permanent": true
+    },
+    {
       "source": "/seo-rpg.html",
       "destination": "/seo/prototype-rpg-2d/",
       "permanent": true
     },
     {
       "source": "/seo-rpg",
+      "destination": "/seo/prototype-rpg-2d/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-rpg/",
       "destination": "/seo/prototype-rpg-2d/",
       "permanent": true
     },
@@ -93,12 +133,22 @@
       "permanent": true
     },
     {
+      "source": "/seo-ca-phe/",
+      "destination": "/seo/chon-ca-phe-pha-phin/",
+      "permanent": true
+    },
+    {
       "source": "/seo-tui-canvas.html",
       "destination": "/seo/chon-tui-canvas-di-hoc/",
       "permanent": true
     },
     {
       "source": "/seo-tui-canvas",
+      "destination": "/seo/chon-tui-canvas-di-hoc/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-tui-canvas/",
       "destination": "/seo/chon-tui-canvas-di-hoc/",
       "permanent": true
     },
@@ -113,12 +163,22 @@
       "permanent": true
     },
     {
+      "source": "/seo-so-planner/",
+      "destination": "/seo/chon-so-planner/",
+      "permanent": true
+    },
+    {
       "source": "/seo-cay-trong-nha.html",
       "destination": "/seo/chon-cay-trong-nha-it-sang/",
       "permanent": true
     },
     {
       "source": "/seo-cay-trong-nha",
+      "destination": "/seo/chon-cay-trong-nha-it-sang/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-cay-trong-nha/",
       "destination": "/seo/chon-cay-trong-nha-it-sang/",
       "permanent": true
     },
@@ -133,12 +193,22 @@
       "permanent": true
     },
     {
+      "source": "/seo-du-lich-cuoi-tuan/",
+      "destination": "/seo/checklist-du-lich-cuoi-tuan/",
+      "permanent": true
+    },
+    {
       "source": "/seo-brief-content.html",
       "destination": "/seo/brief-content-cho-nhom-nho/",
       "permanent": true
     },
     {
       "source": "/seo-brief-content",
+      "destination": "/seo/brief-content-cho-nhom-nho/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-brief-content/",
       "destination": "/seo/brief-content-cho-nhom-nho/",
       "permanent": true
     }
