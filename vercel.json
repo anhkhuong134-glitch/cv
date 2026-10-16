@@ -3,6 +3,126 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/seo-ca-phe",
+      "destination": "/seo-ca-phe.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-ca-phe/",
+      "destination": "/seo-ca-phe.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-ca-phe-pha-phin/:path*",
+      "destination": "/seo-ca-phe.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-ca-phe-pha-phin",
+      "destination": "/seo-ca-phe.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-tui-canvas",
+      "destination": "/seo-tui-canvas.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-tui-canvas/",
+      "destination": "/seo-tui-canvas.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-tui-canvas-di-hoc/:path*",
+      "destination": "/seo-tui-canvas.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-tui-canvas-di-hoc",
+      "destination": "/seo-tui-canvas.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-so-planner",
+      "destination": "/seo-so-planner.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-so-planner/",
+      "destination": "/seo-so-planner.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-so-planner/:path*",
+      "destination": "/seo-so-planner.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-so-planner",
+      "destination": "/seo-so-planner.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-cay-trong-nha",
+      "destination": "/seo-cay-trong-nha.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-cay-trong-nha/",
+      "destination": "/seo-cay-trong-nha.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-cay-trong-nha-it-sang/:path*",
+      "destination": "/seo-cay-trong-nha.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/chon-cay-trong-nha-it-sang",
+      "destination": "/seo-cay-trong-nha.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-du-lich-cuoi-tuan",
+      "destination": "/seo-du-lich-cuoi-tuan.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-du-lich-cuoi-tuan/",
+      "destination": "/seo-du-lich-cuoi-tuan.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/checklist-du-lich-cuoi-tuan/:path*",
+      "destination": "/seo-du-lich-cuoi-tuan.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/checklist-du-lich-cuoi-tuan",
+      "destination": "/seo-du-lich-cuoi-tuan.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-brief-content",
+      "destination": "/seo-brief-content.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-brief-content/",
+      "destination": "/seo-brief-content.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/brief-content-cho-nhom-nho/:path*",
+      "destination": "/seo-brief-content.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/brief-content-cho-nhom-nho",
+      "destination": "/seo-brief-content.html",
+      "permanent": false
+    },
+    {
       "source": "/seo-model-kit",
       "destination": "/seo-model-kit.html",
       "permanent": false
