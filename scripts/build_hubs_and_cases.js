@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 
 const baseDir = 'C:\\Users\\anhkh\\OneDrive\\Desktop\\CV';
@@ -101,7 +101,7 @@ function buildHomepage() {
 
   <!-- HERO SECTION -->
   <section style="padding: 72px 0 64px 0; border-bottom: 1px solid var(--border);">
-    <div class="container" class="hero-grid">
+    <div class="container hero-grid">
       <div>
         <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 20px;">
           <span>🌱</span> Góc làm nội dung của Tuấn Anh
@@ -2486,7 +2486,7 @@ function buildOtherPagesAndRedirects() {
   console.log('Generated Banner Suite, Web Concept, Tai-Nguyen, Lien-He, 404.html, and vercel.json');
 }
 
-buildHomepage();
+// buildHomepage(); // DISABLED: Keep original index.html intact per user instruction
 buildProjectsHub();
 buildCircleKCase();
 buildResearchHubAndCases();
