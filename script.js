@@ -9,7 +9,7 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Tuyển tập 7 đồ án và case study chuyên sâu: Nghiên cứu thị trường (Circle K vs GS25, MUJI vs KOKUYO, Highlands), Tuyển tập Content Lab (C01–C04), Bộ Banner Ads MÈ NHỎ GDN, Website Concept NẾP GẤP và Tuyển tập 15 Bài viết SEO On-Page."
+    desc: "Tuyển tập 4 đồ án và case study chuyên sâu: Nghiên cứu thị trường (Circle K vs GS25, MUJI vs KOKUYO, Highlands), Tuyển tập Content Lab (12 bài viết viral social) và Tuyển tập Bài viết SEO On-Page."
   },
   research: {
     id: "research",
@@ -21,20 +21,9 @@ const categoriesConfig = {
     id: "content",
     name: "Kế Hoạch Content",
     icon: "fas fa-pen-nib",
-    desc: "Content Lab với 4 case study thực chiến (NẾP GẤP, MẺ NHỎ, QUAI VẢI, NHỊP VIỆC): kế hoạch 7 ngày, caption hoàn chỉnh, carousel và kịch bản video."
+    desc: "Content Lab tuyển tập 12 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop, Điện thoại, Trend TikTok) kèm ảnh tư liệu thực tế và phân tích hook-body-cta chuẩn format Facebook."
   },
-  design: {
-    id: "design",
-    name: "Media & Banner Ads",
-    icon: "fas fa-image",
-    desc: "Thiết kế bộ Banner Ads MẺ NHỎ 'Pha theo gu của bạn' thích ứng 8 kích thước chuẩn đa nền tảng và thử nghiệm thông điệp A/B."
-  },
-  web: {
-    id: "web",
-    name: "Website & Landing Page",
-    icon: "fas fa-laptop-code",
-    desc: "Website Concept NẾP GẤP: Cửa hàng văn phòng phẩm trực tuyến hỗ trợ người dùng chọn bố cục sổ theo nhu cầu thực tế."
-  },
+  
   seo: {
     id: "seo",
     name: "SEO Content",
@@ -76,8 +65,7 @@ const projectsData = {
     results: "Báo cáo 160+ trang • 93+ Khảo sát thực tế",
     tools: ["Google Forms", "Google Sheets", "Canva"],
     links: [
-      { url: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0", icon: "fas fa-file-word", btnText: "Báo Cáo Gốc (160+ Trang)", title: "Mở toàn văn báo cáo Google Docs" },
-      { url: "/nghien-cuu/circle-k-gs25/", icon: "fas fa-chart-pie", btnText: "Xem Case Tóm Tắt", title: "Mở trang tóm tắt nghiên cứu" }
+      { url: "/content/", icon: "fas fa-layer-group", btnText: "Khám Phá Tuyển Tập (Hub)", title: "Mở trung tâm Content Lab" }
     ],
     googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
     buttonText: "Mở Toàn Văn Báo Cáo (160+ Trang)",
@@ -234,12 +222,11 @@ const projectsData = {
     duration: "10/2026",
     results: "3 Nguồn đối chiếu sơ cấp • Bảng so sánh 3 khía cạnh",
     tools: ["Desk Research", "Content Audit", "Comparative Matrix"],
-    description: "Tìm hiểu cách hai thương hiệu văn phòng phẩm hàng đầu Nhật Bản diễn giải giá trị sản phẩm: MUJI ở nguyên tắc phát triển tinh giản, KOKUYO Campus ở tình huống sử dụng thực tế khi viết và mở sổ. Rút ra bài học ứng dụng cho concept NẾP GẤP.",
+    description: "Tìm hiểu cách hai thương hiệu văn phòng phẩm hàng đầu Nhật Bản diễn giải giá trị sản phẩm: MUJI ở nguyên tắc phát triển tinh giản, KOKUYO Campus ở tình huống sử dụng thực tế khi viết và mở sổ. Rút ra bài học ứng dụng cho thiết kế sản phẩm văn phòng phẩm học đường.",
     featured: false,
     links: [
       { url: "/nghien-cuu/muji-kokuyo/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Nghiên Cứu", title: "Mở chi tiết desk research" },
-      { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Xem Cửa Hàng NẾP GẤP", title: "Mở website concept NẾP GẤP" }
-    ],
+      ],
     academicInfo: {
       institution: "VTC Academy",
       instructor: "Desk Research Tự Do",
@@ -253,12 +240,12 @@ const projectsData = {
       { number: "3", label: "Nguồn tài liệu sơ cấp", icon: "fas fa-book" },
       { number: "3", label: "Khía cạnh so sánh", icon: "fas fa-columns" },
       { number: "100%", label: "Dữ kiện có trích dẫn", icon: "fas fa-check-double" },
-      { number: "1", label: "Khung ứng dụng NẾP GẤP", icon: "fas fa-lightbulb" }
+      { number: "1", label: "Khung ứng dụng văn phòng phẩm", icon: "fas fa-lightbulb" }
     ],
     surveyData: [
       { number: "MUJI", tag: "Triết lý vật liệu", title: "Giải thích qua nguyên tắc tinh giản", desc: "Tài liệu What is MUJI nhấn mạnh việc lựa chọn chất liệu và bao gói tối giản để giữ mức giá hợp lý và tính trung thực." },
       { number: "KOKUYO", tag: "Trải nghiệm viết", title: "Tập trung giải quyết vướng mắc khi mở sổ", desc: "Campus Binder và Campus Notebook mô tả chi tiết giải pháp tránh vòng gáy chạm tay và thiết kế góc mở phẳng 180 độ." },
-      { number: "Áp dụng", tag: "Đề xuất cho NẾP GẤP", title: "Trưng bày trang ruột thay vì chỉ chụp bìa", desc: "Không hứa hẹn tăng năng suất sáo rỗng; cho người dùng xem trước cữ dòng kẻ và bố cục phân chia tuần/ngày." }
+      { number: "Áp dụng", tag: "Đề xuất thiết kế ruột sổ", title: "Trưng bày trang ruột thay vì chỉ chụp bìa", desc: "Không hứa hẹn tăng năng suất sáo rỗng; cho người dùng xem trước cữ dòng kẻ và bố cục phân chia tuần/ngày." }
     ],
     comparisonMatrix: [
       { p: "Định vị cốt lõi", circleK: "Tối giản, không nhãn mác, giá trị từ bản chất vật liệu", gs25: "Công năng học đường, tối ưu thao tác ghi chép và độ bền gáy" },
@@ -289,11 +276,10 @@ const projectsData = {
     duration: "10/2026",
     results: "Audit 4 nhóm đồ uống • Đề xuất Wireframe 4 bước chọn gu",
     tools: ["Content Audit", "Information Architecture", "Wireframing"],
-    description: "Phân tích cách cấu trúc thực đơn trực tuyến của chuỗi cà phê lớn nhất Việt Nam. Đề xuất quy trình 4 bước hỏi gu uống (đen/sữa, dụng cụ, cỡ xay) để ứng dụng vào concept cà phê pha tại nhà MẺ NHỎ.",
+    description: "Phân tích cách cấu trúc thực đơn trực tuyến của chuỗi cà phê lớn nhất Việt Nam. Đề xuất quy trình 4 bước hỏi gu uống (đen/sữa, dụng cụ, cỡ xay) để nâng cao trải nghiệm chọn món F&B trực tuyến.",
     featured: false,
     links: [
-      { url: "/nghien-cuu/highlands-menu/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Audit", title: "Mở chi tiết audit thực đơn Highlands" },
-      { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Banner Ads MẺ NHỎ", title: "Xem 8 banner quảng cáo MẺ NHỎ" }
+      { url: "/nghien-cuu/highlands-menu/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Audit", title: "Mở chi tiết audit thực đơn Highlands" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -303,7 +289,7 @@ const projectsData = {
       time: "Tháng 10/2026",
       docPages: "Trang thực đơn chính thức Highlands"
     },
-    executiveSummary: "Phân tích trải nghiệm đọc thực đơn trực tuyến tại website Highlands Coffee. Nhận thấy người dùng mới thường gặp khó khăn khi hình dung độ đậm nhạt và hương vị thực tế. Đề xuất một wireframe chọn gu 4 bước cho concept MẺ NHỎ để giúp người mua tại nhà dễ dàng gọi tên món mình thích.",
+    executiveSummary: "Phân tích trải nghiệm đọc thực đơn trực tuyến tại website Highlands Coffee. Nhận thấy người dùng mới thường gặp khó khăn khi hình dung độ đậm nhạt và hương vị thực tế. Đề xuất một wireframe chọn gu 4 bước trực quan để giúp người mua tại nhà dễ dàng gọi tên món mình thích.",
     kpis: [
       { number: "4", label: "Nhóm thức uống phân tích", icon: "fas fa-mug-hot" },
       { number: "1", label: "Wireframe đề xuất mới", icon: "fas fa-sitemap" },
@@ -313,7 +299,7 @@ const projectsData = {
     surveyData: [
       { number: "Nhóm món", tag: "Phân loại hiện tại", title: "Cà phê, Trà, Freeze, Thức uống khác", desc: "Thực đơn hiện phân nhóm theo dòng sản phẩm truyền thống nhưng chưa có bộ lọc theo mức độ đậm vị hoặc hàm lượng caffeine." },
       { number: "Vấn đề", tag: "Góc nhìn người mới", title: "Khó hình dung gu uống phù hợp", desc: "Khách hàng mua cà phê pha tại nhà thường không biết ly cà phê pha ra sẽ ngọt béo hay đắng đậm nếu chỉ đọc tên mỹ miều." },
-      { number: "Đề xuất", tag: "Giải pháp cho MẺ NHỎ", title: "Quy trình hỏi gu trước khi gợi ý gói hạt", desc: "Bắt đầu từ câu hỏi: 'Bạn muốn uống đen hay thêm sữa?' và 'Dụng cụ bạn đang có ở nhà là gì?'." }
+      { number: "Đề xuất", tag: "Giải pháp trải nghiệm", title: "Quy trình hỏi gu trước khi gợi ý thức uống", desc: "Bắt đầu từ câu hỏi: 'Bạn muốn uống đen hay thêm sữa?' và 'Dụng cụ bạn đang có ở nhà là gì?'." }
     ],
     recommendations: {
       circleK: [
@@ -330,23 +316,19 @@ const projectsData = {
   // ==================== DỰ ÁN 30: TUYỂN TẬP CONTENT LAB (C01 - C04 & 13 BÀI VIRAL) ====================
   30: {
     id: 30,
-    title: "Tuyển Tập Content Lab: 4 Kế Hoạch Tuần C01–C04 & 13 Bài Viết Viral Thực Chiến",
+    title: "Tuyển Tập Content Lab: 12 Bài Viết Social Viral Thực Chiến",
     type: "Social Content Strategy & Copywriting Lab",
     category: "content",
     categoryName: "Kế Hoạch Content",
     categoryIcon: "fas fa-pen-nib",
     categoryColor: "#df7900",
     duration: "10/2026",
-    results: "4 Kế hoạch tuần mẫu • 13 Bài viết viral thực chiến • 24 Slide Carousel • 4 Storyboard video",
+    results: "12 Bài viết viral thực chiến đa ngành • Ảnh tư liệu thực tế • Hook & Caption chuẩn Facebook",
     tools: ["Content Strategy", "Social Copywriting", "Editorial Planning", "Carousel Design", "Storyboarding"],
-    description: "Hệ thống kế hoạch nội dung mạng xã hội và copywriting thực chiến bao gồm 4 case study tuần hoàn chỉnh (NẾP GẤP, MÈ NHỎ, QUAI VẢI, NHỊP VIỆC B2B) cùng tuyển tập 13 bài viết social viral đa ngành kèm hình ảnh chụp thực tế và phân tích cấu trúc hook-body-cta chuẩn chỉnh.",
+    description: "Tuyển tập 12 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop sinh viên, Smartphone quay chụp, Trend TikTok) có hook giữ chân người xem, caption chuẩn format Facebook và ảnh chụp thực tế dưới bài (không dùng ảnh AI).",
     featured: true,
     links: [
-      { url: "/content/", icon: "fas fa-layer-group", btnText: "Khám Phá Tuyển Tập (Hub)", title: "Mở trung tâm Content Lab" },
-      { url: "/content/nep-gap/", icon: "fas fa-pen-nib", btnText: "Case C01: NẾP GẤP", title: "Mở kế hoạch tuần NẾP GẤP" },
-      { url: "/content/me-nho/", icon: "fas fa-coffee", btnText: "Case C02: MÈ NHỎ", title: "Mở kế hoạch tuần MÈ NHỎ" },
-      { url: "/content/quai-vai/", icon: "fas fa-shopping-bag", btnText: "Case C03: QUAI VẢI", title: "Mở kế hoạch tuần QUAI VẢI" },
-      { url: "/content/nhip-viec/", icon: "fas fa-briefcase", btnText: "Case C04: NHỊP VIỆC", title: "Mở kế hoạch tuần NHỊP VIỆC" }
+      { url: "/content/", icon: "fas fa-layer-group", btnText: "Khám Phá Tuyển Tập (Hub)", title: "Mở trung tâm Content Lab (12 Bài Viral)" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -354,7 +336,7 @@ const projectsData = {
       class: "Social Content Strategy & Copywriting 2026",
       team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
       time: "Tháng 10/2026",
-      docPages: "4 Kế hoạch tuần & 13 Bài viết viral"
+      docPages: "12 Bài viết viral đa ngành"
     },
     executiveSummary: "Hệ thống nội dung đa kênh tập trung giải quyết bài toán giao tiếp thực tế: chuyển đổi insight người dùng thành kế hoạch tuần có định hướng rõ ràng, loại bỏ ngôn từ sáo rỗng, và thử nghiệm các định dạng bài đăng tương tác cao (Carousel chia sẻ kinh nghiệm, Story thăm dò ý kiến, Video ngắn phân cảnh).",
     kpis: [
@@ -364,10 +346,10 @@ const projectsData = {
       { number: "100%", label: "Ảnh chụp tư liệu thực tế", icon: "fas fa-camera" }
     ],
     surveyData: [
-      { number: "C01", tag: "NẾP GẤP", title: "Một tuần để tìm cách ghi phù hợp", desc: "Giải quyết bẫy mua sổ vì ảnh bìa nhưng khó dùng; hướng dẫn thử 1 trang ruột trước khi mua." },
-      { number: "C02", tag: "MÈ NHỎ", title: "Giúp người mới hỏi đúng khi mua cà phê", desc: "Xây dựng các câu hỏi gợi ý khi trao đổi với barista; tránh sáo rỗng, tập trung vào trải nghiệm vị giác." },
-      { number: "C03", tag: "QUAI VẢI", title: "Chọn túi từ những món sẽ mang", desc: "Biểu mẫu 4 bước kiểm tra kích thước vật dụng và lớp chống sốc trước khi chọn túi canvas." },
-      { number: "C04", tag: "NHỊP VIỆC", title: "Dịch vụ số & B2B cho nhóm nhỏ", desc: "Quy trình phân luồng công việc, chuẩn hóa brief 1 trang và nghiệm thu chất lượng bài viết." }
+      { number: "Nhóm 1", tag: "Esports & Game", title: "Liên Quân Mobile ĐTDV 2026 & Tướng Mới", desc: "4 bài viết phân tích đại chiến Chung kết ĐTDV Mùa Đông 2026, tướng mới Heino, highlight lật kèo 1HP và chiến thuật meta." },
+      { number: "Nhóm 2", tag: "Marketing 2026", title: "Xu Hướng De-influencing & AI Customer Insight", desc: "2 bài viết giải mã xu hướng KOC chân thực trên TikTok Shop và quy trình ứng dụng GenAI đào sâu insight khách hàng." },
+      { number: "Nhóm 3", tag: "Thiết Bị", title: "Laptop Sinh Viên & Điện Thoại Quay Chụp", desc: "3 bài viết tư vấn chọn laptop học tập 15-20 triệu, cảnh báo bẫy thermal throttling và so sánh smartphone làm content." },
+      { number: "Nhóm 4", tag: "Trend TikTok", title: "CapCut Template, Lối Sống Low-Buy & Deep Work", desc: "3 bài viết bóc tách công thức Hook 3 giây beat drop, trào lưu tiêu dùng bền vững và phương pháp chống burnout." }
     ],
     recommendations: {
       circleK: [
@@ -377,107 +359,6 @@ const projectsData = {
       gs25: [
         { title: "Trung thực về kết quả", desc: "Ghi nhận minh bạch trạng thái dự án thực hành học tập và portfolio cá nhân, không khai khống số liệu ảo." },
         { title: "Chuẩn hóa giọng điệu thương hiệu", desc: "Mỗi thương hiệu giả định có một Tone of Voice nhất quán, tránh lẫn lộn phong cách viết." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 4: BANNER ADS MẺ NHỎ (DESIGN) ====================
-  4: {
-    id: 4,
-    title: "Thiết Kế Bộ Banner Ads MẺ NHỎ: 'Pha Theo Gu Của Bạn'",
-    type: "Media & Ad Design · Concept Campaign",
-    category: "design",
-    categoryName: "Media & Banner Ads",
-    categoryIcon: "fas fa-image",
-    categoryColor: "#eab308",
-    duration: "10/2026",
-    results: "8 Kích thước hiển thị chuẩn • 2 Giả thuyết Headline A/B • Key Visual Vector",
-    tools: ["Photoshop", "Illustrator", "SVG Vector", "Media Planning"],
-    description: "Hệ thống banner quảng cáo đa kích thước từ 1600x900 (Wide), 1080x1350 (Portrait), 1080x1080 (Square), 1080x1920 (Story) đến các kích thước Google Display Ads (300x250, 728x90, 300x600, 780x600). So sánh giả thuyết thông điệp A/B dựa trên tâm lý người mới bắt đầu.",
-    featured: false,
-    links: [
-      { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Bộ 8 Banner & Thử Nghiệm", title: "Mở trang showcase banner MẺ NHỎ" },
-      { url: "/content/me-nho/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch Content MẺ NHỎ", title: "Mở kế hoạch content MẺ NHỎ" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Thiết Kế Truyền Thông",
-      class: "Digital Advertising Design 2026",
-      team: "Khương Tuấn Anh (Thiết kế đồ họa)",
-      time: "Tháng 10/2026",
-      docPages: "Bộ 8 Banner chuẩn Vector & Thử nghiệm A/B"
-    },
-    executiveSummary: "Thay thế bộ banner gaming gear cũ bằng một Key Visual thích nghi linh hoạt trên 8 khung hình quảng cáo đa kênh. Key Visual trung tâm là biểu tượng phin cà phê góc nghiêng nhẹ và giọt nối xuống thẻ hỏi gu. Thử nghiệm hai hướng thông điệp A/B: 'Pha theo gu của bạn' vs 'Bạn uống đen hay thêm sữa?'.",
-    kpis: [
-      { number: "8", label: "Kích thước thích ứng đa nền tảng", icon: "fas fa-expand-arrows-alt" },
-      { number: "2", label: "Giả thuyết thông điệp A/B", icon: "fas fa-vial" },
-      { number: "100%", label: "Key Visual Vector nguyên bản", icon: "fas fa-vector-square" },
-      { number: "3", label: "Màu sắc tương phản chuẩn", icon: "fas fa-adjust" }
-    ],
-    surveyData: [
-      { number: "mn-kv-wide", tag: "1600×900", title: "Banner ngang lớn cho Website & YouTube", desc: "Bố cục cân đối: Phin vector bên trái, Headline 'Pha theo gu của bạn' và nút CTA 'Mở phiếu hỏi gu' bên phải." },
-      { number: "mn-social-portrait", tag: "1080×1350", title: "Banner dọc cho Facebook & Instagram Feed", desc: "Tối ưu diện tích hiển thị trên điện thoại: Đặt câu hỏi trực tiếp 'Bạn uống đen hay thêm sữa?'." },
-      { number: "mn-story", tag: "1080×1920", title: "Định dạng Story & TikTok dọc toàn màn hình", desc: "Chừa khoảng an toàn (Safe Zone) 250px ở mép trên và dưới để tránh bị che bởi thanh điều hướng ứng dụng." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "mn-display-rect (300×250)", desc: "Kích thước hình chữ nhật trong bài viết: Lược bỏ văn bản phụ quá nhỏ, tập trung logo và nút hành động." },
-        { title: "mn-display-wide (728×90)", desc: "Banner Leaderboard ngang: Phân bố Logo góc trái, thông điệp ở giữa và CTA góc phải." }
-      ],
-      gs25: [
-        { title: "Giả thuyết thử nghiệm A/B", desc: "Ghi nhận rõ ràng: Câu hỏi cụ thể có thể giúp người mới dễ nhận ra nhu cầu của mình hơn câu khẳng định chung." },
-        { title: "Không bịa đặt số liệu chuyển đổi", desc: "Minh bạch nhãn 'Bộ thiết kế concept, chưa chạy quảng cáo thực tế' để đảm bảo tính liêm chính." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 7: WEBSITE CONCEPT NẾP GẤP (WEB) ====================
-  7: {
-    id: 7,
-    title: "Cửa Hàng Concept NẾP GẤP: Trải Nghiệm Lựa Chọn Văn Phòng Phẩm",
-    type: "Website Concept · UX / UI Design",
-    category: "web",
-    categoryName: "Website & Landing Page",
-    categoryIcon: "fas fa-laptop-code",
-    categoryColor: "#10b981",
-    duration: "10/2026",
-    results: "Giao diện Concept có thể tương tác • Bộ lọc nhu cầu động • Bảng so sánh 3 dòng sổ",
-    tools: ["HTML5", "CSS3", "JavaScript", "UX Research", "Interactive Prototype"],
-    description: "Website concept cho thương hiệu văn phòng phẩm NẾP GẤP. Tích hợp bộ lọc chọn sổ theo nhu cầu ghi chép (nhìn cả tuần, ghi từng ngày, ghi ý rời), bảng so sánh cấu trúc ruột sổ và nút tải mẫu lịch tuần thực tế.",
-    featured: false,
-    links: [
-      { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Trải Nghiệm Cửa Hàng Concept", title: "Mở website concept NẾP GẤP" },
-      { url: "/content/nep-gap/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch Content NẾP GẤP", title: "Mở kế hoạch content NẾP GẤP" },
-      { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Bản Lịch Tuần", title: "Tải mẫu lịch tuần A5" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Thiết Kế Website",
-      class: "UI/UX & Web Development 2026",
-      team: "Khương Tuấn Anh (UI/UX & Front-End)",
-      time: "Tháng 10/2026",
-      docPages: "Giao diện Web Concept tương tác"
-    },
-    executiveSummary: "Cửa hàng concept NẾP GẤP giúp người dùng giải quyết vướng mắc chọn sổ: xem kỹ bố cục trang ruột trước khi quan tâm đến ảnh bìa. Giao diện tích hợp bộ lọc nhu cầu ghi chép thông minh, bảng so sánh đa dòng sổ và cho phép tải mẫu in thử một trang tại chỗ.",
-    kpis: [
-      { number: "3", label: "Dòng sản phẩm concept chính", icon: "fas fa-book-open" },
-      { number: "3", label: "Lựa chọn nhu cầu tương tác", icon: "fas fa-sliders-h" },
-      { number: "100%", label: "Responsive chuẩn thiết bị di động", icon: "fas fa-mobile-alt" },
-      { number: "0", label: "Chức năng thanh toán giả", icon: "fas fa-shield-alt" }
-    ],
-    surveyData: [
-      { number: "Sản phẩm 1", tag: "Sổ Tuần Mở", title: "Bố cục lịch tuần và vùng ý tưởng đang mở", desc: "Thích hợp cho người cần bao quát công việc trong 7 ngày và có chỗ ghi các việc phát sinh linh hoạt." },
-      { number: "Sản phẩm 2", tag: "Thẻ Một Ý", title: "Thẻ ghi chú một việc, một câu hỏi hoặc ý mới", desc: "Dành cho người thường xuyên di chuyển hoặc muốn phân loại việc cần làm theo mức độ ưu tiên." },
-      { number: "Sản phẩm 3", tag: "Trang Ngày Rộng", title: "Một trang dành riêng cho ngày cần ghi chú nhiều", desc: "Dành cho các buổi học, cuộc họp kéo dài hoặc phiên lên kế hoạch chi tiết từng bước." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Bảng so sánh trực quan", desc: "So sánh 3 dòng sổ theo phạm vi nhìn, cách bắt đầu và trường hợp nên thử thay vì thông số kỹ thuật khô khan." },
-        { title: "Trải nghiệm chọn theo nhu cầu", desc: "Bấm chọn 'Mình muốn thấy cả tuần' hoặc 'Mình cần ghi từng ngày' sẽ tự động làm nổi bật dòng sản phẩm tương ứng." }
-      ],
-      gs25: [
-        { title: "Minh bạch nhãn Concept", desc: "Gắn nhãn lớn 'Cửa hàng concept · Không nhận thanh toán/đơn hàng' để tránh người xem hiểu nhầm là sàn thương mại điện tử thật." },
-        { title: "Dẫn link tải tài nguyên thật", desc: "Nút 'Tải bản lịch tuần' liên kết trực tiếp tới file in thử A5 tại trang tài nguyên." }
       ]
     }
   },
@@ -542,11 +423,6 @@ const projectPrimaryUrls = {
   20: "/nghien-cuu/muji-kokuyo/",
   21: "/nghien-cuu/highlands-menu/",
         30: "/content/",
-  31: "/content/me-nho/",
-  32: "/content/quai-vai/",
-  33: "/content/nhip-viec/",
-  4: "/thiet-ke/banner-me-nho/",
-  7: "/web/nep-gap/",
   5: "/seo/"
 };
 

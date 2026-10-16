@@ -3,6 +3,71 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/nhan-dien",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
+      "source": "/nhan-dien/",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
+      "source": "/nhan-dien/:path*",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
+      "source": "/content/nep-gap",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/nep-gap/",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/me-nho",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/me-nho/",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/quai-vai",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/quai-vai/",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/nhip-viec",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/content/nhip-viec/",
+      "destination": "/content/",
+      "permanent": true
+    },
+    {
+      "source": "/thiet-ke/:path*",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
+      "source": "/web/:path*",
+      "destination": "/du-an/",
+      "permanent": true
+    },
+    {
       "source": "/projects.html",
       "destination": "/du-an/",
       "permanent": true
