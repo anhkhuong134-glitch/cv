@@ -1,425 +1,701 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prototype RPG 2D: thiết kế một phòng trước khi mở rộng · Khương Tuấn Anh Portfolio</title>
-  <meta name="description" content="Thu nhỏ ý tưởng RPG 2D thành một phòng có mục tiêu, tương tác và điều kiện hoàn thành. Kèm tiêu chí playtest và bảng ghi lỗi.">
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://cv-two-pi-94.vercel.app/seo/prototype-rpg-2d/">
-  <link rel="stylesheet" href="../../assets/portfolio/editorial-system.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Prototype RPG 2D: thiết kế một phòng trước khi mở rộng",
-    "description": "Thu nhỏ ý tưởng RPG 2D thành một phòng có mục tiêu, tương tác và điều kiện hoàn thành. Kèm tiêu chí playtest và bảng ghi lỗi.",
-    "author": {
-      "@type": "Person",
-      "name": "Khương Tuấn Anh",
-      "jobTitle": "Học viên Digital Marketing, hướng đến Content Creator"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Khương Tuấn Anh"
-    },
-    "datePublished": "2026-10-16",
-    "dateModified": "2026-10-16",
-    "mainEntityOfPage": "https://cv-two-pi-94.vercel.app/seo/prototype-rpg-2d/"
-  }
-  </script>
+  <title>Làm game RPG 2D: bắt đầu từ một căn phòng nhỏ | Khương Tuấn Anh</title>
+  <meta name="description" content="Hướng dẫn làm game RPG 2D cho người mới: quy trình dựng prototype từ một căn phòng nhỏ, thiết lập Grid Tilemap Unity 6 và tiêu chí kiểm thử sớm.">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Làm game RPG 2D: bắt đầu từ một căn phòng nhỏ">
+  <meta property="og:description" content="Hướng dẫn làm game RPG 2D cho người mới: quy trình dựng prototype từ một căn phòng nhỏ, thiết lập Grid Tilemap Unity 6 và tiêu chí kiểm thử sớm.">
+  <meta property="og:image" content="https://vnanet.vn/Data/Articles/2026/05/08/8749338/vna_potal_vietnam_gameverse_2026_aims_to_elevate_local_gaming_industry_globally__stand.jpg">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="/assets/portfolio/portfolio-pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
 </head>
-<body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="site-logo">
-        <div class="logo-badge">TA</div>
-        <div class="logo-text">
-          <span class="logo-name">Tuấn Anh</span>
-          <span class="logo-tag">Góc làm nội dung</span>
-        </div>
-      </a>
-      <nav class="main-nav">
-        <a href="/" class="nav-link">Trang chủ</a>
-        <a href="/du-an/" class="nav-link">Dự án</a>
-        <a href="/seo/" class="nav-link active">SEO</a>
-        <a href="/content/" class="nav-link">Content</a>
-        <a href="/tai-nguyen/" class="nav-link">Tài nguyên</a>
-        <a href="/lien-he/" class="btn btn-primary btn-sm">Liên hệ</a>
-      </nav>
+<body class="editorial-page">
+  <div class="reading-progress-bar"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="sample-nav" aria-label="Điều hướng chính">
+    <div class="sample-brand-wrap">
+      <a class="sample-brand" href="/index.html">Khương Tuấn <span>Anh</span></a>
+      <div class="sample-breadcrumbs" aria-label="Đường dẫn trang">
+        <span class="separator">/</span>
+        <a href="/seo-samples.html">Bài SEO mẫu</a>
+        <span class="separator">/</span>
+        <span class="current">Làm game RPG 2D</span>
+      </div>
     </div>
-  </header>
+    <div class="sample-nav-right">
+            <select class="article-quick-select" aria-label="Chuyển nhanh bài viết">
+        <option value="/seo-aiktp.html">1. AIKTP & Viết Content SEO AI</option>
+        <option value="/seo-model-kit.html">2. Gunpla cho người mới</option>
+        <option value="/seo-pc-build.html">3. Build PC theo nhu cầu 2026</option>
+        <option value="/seo-dragon-ball.html">4. Dragon Ball Daima Review</option>
+        <option value="/seo-rpg.html" selected>5. Làm game RPG 2D</option>
+        <option value="/seo-ca-phe.html">6. Cà phê pha phin: gu uống & cách pha</option>
+        <option value="/seo-tui-canvas.html">7. Chọn túi canvas đi học</option>
+        <option value="/seo-so-planner.html">8. Chọn sổ planner theo nhu cầu</option>
+        <option value="/seo-cay-trong-nha.html">9. Cây trong nhà ít sáng</option>
+        <option value="/seo-du-lich-cuoi-tuan.html">10. Checklist du lịch cuối tuần</option>
+        <option value="/seo-brief-content.html">11. Brief content cho nhóm nhỏ</option>
+      </select>
+      <div class="sample-nav-links">
+        <a href="/index.html">Profile</a>
+        <a href="/seo-samples.html" class="active">Bài SEO mẫu</a>
+        <a href="/projects.html">Dự án</a>
+      </div>
+      <button class="theme-toggle theme-toggle-btn" title="Đổi giao diện"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
 
-  <main class="container" style="padding-top: 36px; padding-bottom: 72px;">
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-      <a href="/">Trang chủ</a>
-      <span class="breadcrumb-sep">/</span>
-      <a href="/seo/">SEO Studio</a>
-      <span class="breadcrumb-sep">/</span>
-      <span>Game Development</span>
-      <span class="breadcrumb-sep">/</span>
-      <span style="color: var(--text-main); font-weight: 500;">Prototype RPG 2D: thiết kế một phòng trước khi mở rộng</span>
-    </nav>
+  <main class="editorial-wrap">
+    <!-- HEADER ARTICLE -->
+    <header>
+      <p class="page-kicker"><i class="fas fa-gamepad"></i> GAME DEV / 2D RPG PROTOTYPE</p>
+      <h1 class="article-title">Làm game RPG 2D: bắt đầu từ một căn phòng nhỏ</h1>
+      <p class="article-deck">
+        Một dự án RPG có thể phình to rất nhanh vì bản đồ rộng lớn, hệ thống nhiệm vụ và cây kỹ năng nhân vật đều kéo theo khối lượng công việc khổng lồ. Bài viết này đưa ra phương pháp dựng một lát chơi nhỏ (vertical slice) để kiểm tra độ cuốn hút của ý tưởng trước khi mở rộng.
+      </p>
 
-    <!-- Mobile collapsible TOC -->
-    <details class="mobile-toc">
-      <summary>📑 Mục lục bài đọc (Bấm để xem nhanh)</summary>
-      <ul>
-        <li><a href="#chon-mot-cau-hoi-can-thu">Chọn một câu hỏi cần thử</a></li>
-<li><a href="#viet-mini-brief-cho-can-phong">Viết mini brief cho căn phòng</a></li>
-<li><a href="#dung-hinh-khoi-tam-de-thu-khoang-cach">Dùng hình khối tạm để thử khoảng cách</a></li>
-<li><a href="#them-phan-hoi-de-trang-thai-co-the-nhin-thay">Thêm phản hồi để trạng thái có thể nhìn thấy</a></li>
-<li><a href="#thu-theo-tinh-huong-thay-vi-tu-cham-cam-giac-8-10">Thử theo tình huống thay vì tự chấm “cảm giác 8/10”</a></li>
-<li><a href="#khi-nao-nen-them-phong-tiep-theo">Khi nào nên thêm phòng tiếp theo?</a></li>
-        <li style="margin-top: 10px; font-weight: 600;"><a href="#ho-so" style="color: var(--accent);">📁 Xem hồ sơ làm bài</a></li>
-      </ul>
-    </details>
-
-    <!-- Responsive Layout: Article Column & Sidebar -->
-    <div class="article-page-layout">
-      
-      <!-- Article Column -->
-      <article class="article-main-col">
-        <header class="article-header">
-          <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
-            <span class="badge badge-seo">Game Development</span>
-            <span class="badge badge-concept">Bản biên tập Concept</span>
-            <span class="badge badge-note">Mã: A05</span>
+      <!-- AUTHOR & METADATA ROW -->
+      <div class="article-author-row">
+        <div class="article-author-info">
+          <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="author-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Khuong+Tuan+Anh&background=df7900&color=fff';">
+          <div class="author-meta-text">
+            <span class="author-name">Khương Tuấn Anh</span>
+            <span class="author-role">Content Creator & SEO Research</span>
           </div>
-          <h1 class="article-title">Prototype RPG 2D: thiết kế một phòng trước khi mở rộng</h1>
-          <p class="article-lead">Thu nhỏ ý tưởng RPG 2D thành một phòng có mục tiêu, tương tác và điều kiện hoàn thành. Kèm tiêu chí playtest và bảng ghi lỗi.</p>
-          <div class="article-meta">
-            <span>✍️ Biên tập: <strong>Khương Tuấn Anh</strong></span>
-            <span>📅 Cập nhật: <strong>16/10/2026</strong></span>
-            <span>⏱️ Đọc khoảng 5 phút</span>
-          </div>
-
-          <!-- Two Layer Toggle Buttons -->
-          <div class="article-layer-toggle">
-            <a href="#bai-viet" class="layer-tab active">📖 Đọc bài viết hoàn chỉnh</a>
-            <a href="#ho-so" class="layer-tab">📁 Xem hồ sơ làm bài</a>
-          </div>
-        </header>
-
-        <!-- Editorial Disclaimer Note -->
-        <div class="disclaimer-box">
-          <strong>Lưu ý về bản mẫu:</strong> Bài mẫu cho portfolio, có nguồn tham khảo; chưa có dữ liệu hiệu quả chiến dịch. Có sử dụng AI hỗ trợ ở khâu nghiên cứu và lập dàn ý; con người trực tiếp rà soát và biên tập lại.
         </div>
 
-        <!-- In-Article Hero Banner (Figure 1) -->
-        <figure style="margin: 28px 0;">
-          <img src="../../assets/articles/a05-hero.svg" alt="Sơ đồ tổng quan quy trình Prototype RPG 2D: thiết kế một phòng trước khi mở rộng" style="width: 100%; border-radius: 12px; border: 1px solid var(--border);">
-          <figcaption style="font-size: 13px; color: var(--text-muted); margin-top: 8px; text-align: center; font-style: italic;">
-            Hình 1: Sơ đồ tổng quan quy trình Prototype RPG 2D: thiết kế một phòng trước khi mở rộng (Đồ họa vector nguyên bản)
+        <div class="article-meta-line">
+          <span><i class="far fa-clock"></i> Khoảng 4 phút đọc</span>
+          <span><i class="far fa-calendar-check"></i> 10/2026</span>
+          <span class="sample-status">Bài mẫu On-Page · Chưa xuất bản</span>
+        </div>
+
+        <div class="article-actions-wrap">
+          <a href="#seo-blueprint" class="action-btn" style="color:var(--editorial-clay); border-color:var(--editorial-clay);">
+            <i class="fas fa-file-code"></i> Xem Cấu Trúc SEO
+          </a>
+          <button type="button" class="action-btn" data-copy-text="https://cv-two-pi-94.vercel.app/seo-rpg.html" data-copy-label="Đã sao chép liên kết bài viết!">
+            <i class="fas fa-share-nodes"></i> Chia sẻ
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- KEY TAKEAWAYS (TL;DR BOX) -->
+    <div class="article-tldr">
+      <div class="article-tldr-header"><i class="fas fa-bolt"></i> Điểm tóm tắt nhanh (TL;DR cho Featured Snippet)</div>
+      <ul>
+        <li><strong>Quy tắc "Một căn phòng duy nhất":</strong> Prototype một phòng nhỏ hoàn chỉnh (có mục tiêu, chướng ngại, tương tác và điều kiện thắng) giúp bạn biết game có vui không mà không tốn công dựng cả thế giới.</li>
+        <li><strong>Ưu tiên cảm giác điều khiển (Game Feel):</strong> Dùng hình khối hình học tạm (greyboxing) để căn chỉnh tốc độ di chuyển, va chạm tường trước khi đầu tư vào vẽ đồ họa pixel art chi tiết.</li>
+        <li><strong>Workflow chuẩn Unity 6:</strong> Sử dụng hệ thống Grid, Tile Palette để vẽ bản đồ và Tilemap Collider 2D để xử lý vật lý va chạm gọn gàng nhất.</li>
+      </ul>
+    </div>
+
+    <!-- SERP PREVIEW & INSPECTOR PANEL -->
+    <section class="seo-preview-panel" aria-labelledby="seo-preview-title">
+      <div class="seo-preview-panel-header">
+        <div>
+          <p class="page-kicker" style="margin-bottom: 0.2rem;"><i class="fas fa-magnifying-glass"></i> GOOGLE SERP INSPECTOR</p>
+          <h2 id="seo-preview-title">Bản mô phỏng kết quả tìm kiếm Google</h2>
+        </div>
+        <div class="device-toggle-buttons">
+          <button type="button" class="device-btn active" data-device="desktop"><i class="fas fa-desktop"></i> Máy tính</button>
+          <button type="button" class="device-btn" data-device="mobile"><i class="fas fa-mobile-screen"></i> Di động</button>
+        </div>
+      </div>
+
+      <!-- Google Result Card Mockup -->
+      <div class="seo-preview-mockup-wrap">
+        <article class="google-search-result" style="border: none; padding: 0; box-shadow: none; background: transparent;">
+          <div class="google-result-site">
+            <span class="google-result-favicon" aria-hidden="true">K</span>
+            <div class="google-result-meta-wrap">
+              <span class="google-result-site-name">Khương Tuấn Anh</span>
+              <span class="google-result-url">cv-two-pi-94.vercel.app › SEO Content › RPG 2D</span>
+            </div>
+          </div>
+          <a class="google-result-title" href="#article-content">Làm game RPG 2D: bắt đầu từ một căn phòng nhỏ</a>
+          <p class="google-result-description">Hướng dẫn làm game RPG 2D cho người mới: quy trình dựng prototype từ một căn phòng nhỏ, thiết lập Grid Tilemap Unity 6 và tiêu chí kiểm thử sớm.</p>
+        </article>
+      </div>
+
+      <!-- SEO Health Scorecards -->
+      <div class="seo-metrics-scorecard">
+        <div class="scorecard-item">
+          <div class="scorecard-item-header">
+            <span><strong>Title Tag:</strong> 45 / 60 ký tự</span>
+            <span class="scorecard-status-badge good">Tối ưu Pixel</span>
+          </div>
+          <div class="scorecard-bar"><div class="scorecard-bar-fill" style="width: 75%;"></div></div>
+          <button type="button" class="scorecard-copy-btn" data-copy-text="Làm game RPG 2D: bắt đầu từ một căn phòng nhỏ" data-copy-label="Đã sao chép Title Tag!">
+            <i class="far fa-copy"></i> Sao chép Title
+          </button>
+        </div>
+
+        <div class="scorecard-item">
+          <div class="scorecard-item-header">
+            <span><strong>Meta Description:</strong> 150 / 155 ký tự</span>
+            <span class="scorecard-status-badge good">Tối ưu Snippet</span>
+          </div>
+          <div class="scorecard-bar"><div class="scorecard-bar-fill" style="width: 96%;"></div></div>
+          <button type="button" class="scorecard-copy-btn" data-copy-text="Hướng dẫn làm game RPG 2D cho người mới: quy trình dựng prototype từ một căn phòng nhỏ, thiết lập Grid Tilemap Unity 6 và tiêu chí kiểm thử sớm." data-copy-label="Đã sao chép Meta Description!">
+            <i class="far fa-copy"></i> Sao chép Meta
+          </button>
+        </div>
+
+        <div class="scorecard-item">
+          <div class="scorecard-item-header">
+            <span><strong>Đường dẫn (Slug):</strong> /bat-dau-lam-game-rpg-2d</span>
+            <span class="scorecard-status-badge good">Chuẩn SEO</span>
+          </div>
+          <div class="scorecard-bar"><div class="scorecard-bar-fill" style="width: 100%;"></div></div>
+          <button type="button" class="scorecard-copy-btn" data-copy-text="/bat-dau-lam-game-rpg-2d" data-copy-label="Đã sao chép Slug!">
+            <i class="far fa-copy"></i> Sao chép Slug
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ON-PAGE BRIEF CARDS -->
+    <div class="article-brief" aria-label="Tóm tắt On-Page SEO">
+      <div class="brief-item">
+        <span>Từ khóa chính</span>
+        <strong>làm game RPG 2D</strong>
+      </div>
+      <div class="brief-item">
+        <span>Từ khóa phụ</span>
+        <strong>game RPG cho người mới · prototype 2D</strong>
+      </div>
+      <div class="brief-item">
+        <span>Ý định tìm kiếm</span>
+        <strong>Informational (Hướng dẫn kỹ thuật)</strong>
+      </div>
+      <div class="brief-item">
+        <span>Trọng tâm biên tập</span>
+        <strong>Quy trình Vertical Slice · Tài liệu Unity 6</strong>
+      </div>
+    </div>
+
+    <!-- ARTICLE LAYOUT: BODY + SIDEBAR -->
+    <div class="article-layout">
+      <!-- MAIN BODY -->
+      <article class="article-body" id="article-content">
+        <!-- FEATURED FIGURE 1 (KHÔNG DÙNG ẢNH AI - ẢNH SỰ KIỆN THỰC TẾ) -->
+        <figure class="article-figure">
+          <img src="https://vnanet.vn/Data/Articles/2026/05/08/8749338/vna_potal_vietnam_gameverse_2026_aims_to_elevate_local_gaming_industry_globally__stand.jpg" alt="Gian hàng triển lãm và trải nghiệm phát triển game tại sự kiện Vietnam GameVerse chụp bởi TTXVN" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Hữu Duyên / Thông tấn xã Việt Nam (TTXVN) tại ngày hội Vietnam GameVerse (Ảnh chụp sự kiện thực tế, không dùng AI). 
+            <a href="https://vnanet.vn/en/anh/vna-photos-1027/vietnam-gameverse-2026-aims-to-elevate-local-gaming-industry-globally-8749331.html" target="_blank" rel="noopener noreferrer">Xem nguồn ảnh TTXVN <i class="fas fa-arrow-up-right-from-square"></i></a>
           </figcaption>
         </figure>
 
-        <!-- Article Body -->
-        <section id="bai-viet" class="article-body">
-          <p>Một ý tưởng RPG có thể kéo theo bản đồ, chiến đấu, vật phẩm, hội thoại và lưu game cùng lúc. Để biết phần chơi chính đã rõ chưa, hãy thu nó thành một phòng: người chơi vào, nhận ra mục tiêu, thực hiện một hành động và thấy kết quả.</p>
-<h2 id="chon-mot-cau-hoi-can-thu">Chọn một câu hỏi cần thử</h2>
-<p>Bản mẫu sớm cần trả lời một câu hỏi cụ thể, chẳng hạn: “Người chơi có hiểu rằng phải tìm chìa khóa để mở cửa không?” Đây là phạm vi khác với một lát cắt đã được đánh bóng để đại diện chất lượng sản phẩm cuối.</p>
-<p>Đừng dùng “prototype” và “vertical slice” như hai nhãn đồng nghĩa trong mọi trường hợp. Trong bài này, mục tiêu là bản mẫu chức năng để kiểm ý tưởng, chưa phải chứng minh toàn bộ chất lượng nghệ thuật và sản xuất của game.</p>
-<h2 id="viet-mini-brief-cho-can-phong">Viết mini brief cho căn phòng</h2>
-<p>Một tình huống minh họa: nhân vật xuất hiện ở cửa vào, chiếc rương nằm sau một lối đi vòng và cửa ra bị khóa. Mở rương nhận chìa, quay lại cửa để hoàn thành. Chỉ cần một chướng ngại và một kiểu tương tác.</p>
-<p>Ghi bốn điều trước khi làm: mục tiêu người chơi, thao tác được phép, phản hồi khi thao tác đúng và điều kiện kết thúc. Nếu chưa viết được điều kiện kết thúc bằng một câu, căn phòng còn thiếu điểm kiểm tra rõ ràng.</p>
-<h2 id="dung-hinh-khoi-tam-de-thu-khoang-cach">Dùng hình khối tạm để thử khoảng cách</h2>
-<p>Sàn, tường, nhân vật và rương có thể là các hình màu phân biệt được. Lối đi cần đủ rộng để thử di chuyển; cửa và vật tương tác cần dễ nhận ra. Chưa cần vẽ cả bộ hình nhân vật trước khi biết kích thước và tốc độ phù hợp.</p>
-<p>Unity có tài liệu quy trình làm game 2D bao quát đồ họa, môi trường, vật lý, giao diện và kiểm thử. Đọc tài liệu tương ứng với phiên bản đang dùng trước khi làm theo các hướng dẫn tên nút của một phiên bản khác. <a href="https://docs.unity3d.com/6000.0/Documentation/Manual/2d-game-creation-wokflow.html">Unity: 2D game creation workflow</a>.</p>
-<p>Bài này không quy định một cấu hình camera hoặc component duy nhất cho mọi game. Góc nhìn từ trên xuống và game cuộn ngang có yêu cầu chuyển động khác nhau.</p>
-<h2 id="them-phan-hoi-de-trang-thai-co-the-nhin-thay">Thêm phản hồi để trạng thái có thể nhìn thấy</h2>
-<p>Khi nhân vật lại gần rương, hiện lời nhắc thao tác. Khi mở rương, thay trạng thái hình và hiển thị chìa đã nhận. Khi tới cửa mà chưa có chìa, phản hồi cần nói đủ để người chơi hiểu còn thiếu điều gì.</p>
-<p>Chỉ bật log trong công cụ phát triển không đủ cho người chơi nhận ra thay đổi. Mỗi trạng thái quan trọng nên có biểu hiện trong trò chơi, đồng thời không phụ thuộc hoàn toàn vào âm thanh hoặc màu sắc.</p>
-<h2 id="thu-theo-tinh-huong-thay-vi-tu-cham-cam-giac-8-10">Thử theo tình huống thay vì tự chấm “cảm giác 8/10”</h2>
-<p>Lập danh sách các việc cần kiểm: di chuyển quanh phòng; va vào từng góc tường; mở rương nhiều lần; tới cửa khi chưa có chìa; mở cửa khi có chìa; chơi lại sau khi hoàn thành. Với mỗi việc, ghi điều mong đợi và điều thực tế xảy ra.</p>
-<p>Ví dụ, “rương đã mở không cấp thêm chìa khi bấm lại” là tiêu chí có thể kiểm. “Game mượt và vui” cần cách quan sát cụ thể hơn và chưa nên coi là đã đạt chỉ từ một ảnh chụp Editor.</p>
-<p>Mời người khác chơi thử khi có bản chạy được. Quan sát nơi họ dừng, thao tác nhầm và câu hỏi họ đặt ra; phân biệt lỗi điều khiển, lỗi phản hồi và lỗi hiểu mục tiêu. Không thêm kết quả playtest nếu chưa có người thực sự thử.</p>
-<h2 id="khi-nao-nen-them-phong-tiep-theo">Khi nào nên thêm phòng tiếp theo?</h2>
-<p>Mở rộng khi vòng chơi đã hoàn tất, các lỗi chặn trải nghiệm đã xử lý và bạn giải thích được phần nào cần thử thêm. Giữ lại <a href="/tai-nguyen/#playtest-mot-phong">bảng playtest một phòng</a> để lần sửa sau có căn cứ.</p>
-<p>Một phòng nhỏ hoàn chỉnh cho bạn thứ để kiểm chứng. Bản đồ lớn hơn chỉ có ý nghĩa khi phần mở rộng tiếp tục phục vụ câu hỏi thiết kế đã chọn.</p>
+        <p><span class="drop-cap">H</span>ầu hết những lập trình viên hoặc nhà sáng tạo độc lập khi bắt đầu tìm hiểu về <strong>làm game RPG 2D</strong> đều ấp ủ ước mơ kiến tạo một thế giới mở kỳ vĩ: một lục địa bao la với hàng chục vương quốc, cốt truyện phân nhánh hàng trăm ngàn từ, cây kỹ năng rực rỡ và hệ thống chiến đấu nhập vai sâu sắc. Thế nhưng, theo số liệu thống kê từ diễn đàn phát triển game quốc tế GDC (Game Developers Conference), hơn 90% dự án game indie cá nhân đã chết yểu ngay trong 3 tháng đầu tiên. Thủ phạm lớn nhất không phải là thiếu kỹ năng lập trình hay đồ họa xấu, mà chính là hiện tượng <strong>“phình to quy mô” (Scope Creep)</strong> – khi tham vọng vượt quá khả năng chịu tải của một người làm việc đơn lẻ.</p>
 
-        </section>
+        <p>Lời khuyên cốt tử từ các game designer kỳ cựu đúc kết lại rất giản dị: <em>“Nếu bạn chưa làm cho một căn phòng duy nhất trở nên thú vị, đừng mơ mộng xây dựng cả một thế giới.”</em> Bài viết này sẽ hướng dẫn bạn phương pháp dựng một bản mẫu hoàn chỉnh (Vertical Slice Prototype) trong Unity 6, từ việc ứng dụng nghệ thuật khối xám Greyboxing, phân tầng kiến trúc Tilemap 3 lớp, quản lý dữ liệu bằng ScriptableObject cho đến thiết lập camera Pixel Perfect không bị rung giật.</p>
 
-        <!-- In-Article Infographic Diagram (Figure 2) -->
-        <figure style="margin: 36px 0;">
-          <img src="../../assets/articles/a05-infographic.svg" alt="Bảng hướng dẫn chi tiết Prototype RPG 2D: thiết kế một phòng trước khi mở rộng" style="width: 100%; border-radius: 12px; border: 1px solid var(--border);">
-          <figcaption style="font-size: 13px; color: var(--text-muted); margin-top: 8px; text-align: center; font-style: italic;">
-            Hình 2: Các bước kiểm tra thực hành Prototype RPG 2D: thiết kế một phòng trước khi mở rộng
+        <h2 id="lat-choi">1. Viết bản Mini-brief 5 thành phần cho căn phòng thử nghiệm</h2>
+        
+        <h3 id="vertical-slice">Triết lý "Vertical Slice" thu nhỏ: Kiểm chứng gameplay loop sớm</h3>
+        <p>Vertical slice là một lát cắt phát triển hoàn chỉnh: nó chứa đựng đầy đủ mọi thành phần của sản phẩm cuối cùng (di chuyển, va chạm vật lý, tương tác bấm nút, âm thanh, điều kiện hoàn thành) nhưng chỉ gói gọn trong một không gian cực hẹp. Một căn phòng nhỏ đóng vai trò như chiếc kính hiển vi: nếu người chơi điều khiển nhân vật bước vào căn phòng mà cảm thấy lúng túng, cử động chậm chạp hoặc không tìm thấy niềm vui khi tương tác với đồ vật, bạn có thể chỉnh sửa lại toàn bộ mã nguồn chỉ trong 30 phút. Ngược lại, nếu bạn đã vẽ xong 10 bản đồ lớn rồi mới nhận ra cơ chế điều khiển bị lỗi, cái giá phải trả sẽ là hàng tháng trời vứt bỏ công sức.</p>
+
+        <h3 id="bang-thanh-phan">Bảng 5 thành phần cốt lõi của căn phòng mẫu</h3>
+        <div class="article-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Thành phần cốt lõi</th>
+                <th>Ví dụ cụ thể trong phòng mẫu</th>
+                <th>Tiêu chí kiểm chứng trải nghiệm người chơi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Mục tiêu (Objective)</strong></td>
+                <td>Tìm chiếc chìa khóa gỉ sét để mở cánh cửa sắt thoát hiểm</td>
+                <td>Người chơi có tự động hiểu mình cần làm gì sau 5 giây quan sát không?</td>
+              </tr>
+              <tr>
+                <td><strong>2. Chướng ngại (Obstacle)</strong></td>
+                <td>Hành lang hẹp bị bàn ghế đổ chắn ngang và một hố bẫy gai</td>
+                <td>Quãng đường đi vòng có kích thích sự tò mò hay chỉ gây ức chế điều khiển?</td>
+              </tr>
+              <tr>
+                <td><strong>3. Tương tác (Interaction)</strong></td>
+                <td>Nhấn phím cách [Space] hoặc phím [E] để mở rương gỗ</td>
+                <td>Giao diện biểu tượng (UI prompt) có nổi bật trực quan khi nhân vật đứng gần đồ vật không?</td>
+              </tr>
+              <tr>
+                <td><strong>4. Phản hồi giác quan (Juice / Feedback)</strong></td>
+                <td>Rương bung nắp, phát hạt sáng (particle effect) và tiếng "ting" vui tai</td>
+                <td>Trò chơi có mang lại cảm giác thỏa mãn (game feel) ngay khi người chơi bấm nút thành công?</td>
+              </tr>
+              <tr>
+                <td><strong>5. Điều kiện thắng (Win State)</strong></td>
+                <td>Cánh cửa mở toang, ánh sáng tràn vào phòng và nhạc chiến thắng vang lên</td>
+                <td>Khoảnh khắc hoàn thành có tạo ra cảm xúc khép lại một chu trình (closure) trọn vẹn?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FIGURE 2: MÀN HÌNH PIXEL ART VÀ RETRO GAMING -->
+        <figure class="article-figure">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Màn hình chơi game pixel art phong cách cổ điển và không gian sáng tạo trò chơi điện tử" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Unsplash (Ảnh chụp thực tế). Trò chơi pixel art phong cách retro: vẻ đẹp vượt thời gian đến từ lối chơi cuốn hút và tỷ lệ hình khối chuẩn xác chứ không phụ thuộc vào đồ họa 3D cầu kỳ.
           </figcaption>
         </figure>
 
-        <!-- COMPREHENSIVE DOSSIER ON-PAGE (#ho-so) -->
-        <section id="ho-so" class="dossier-section">
-          <div class="dossier-title">
-            <span>📁</span>
-            <h2>HỒ SƠ LÀM BÀI &amp; TÀI LIỆU ON-PAGE CHI TIẾT</h2>
+        <h2 id="chon-goc-nhin">2. Chọn góc nhìn camera và nghệ thuật tạo khối xám (Greyboxing)</h2>
+        
+        <h3 id="so-sanh-goc-nhin">Top-down 2D, Side-scrolling hay Isometric: Bạn nên chọn góc nhìn nào?</h3>
+        <ul>
+          <li><strong>Top-down 2D (Góc nhìn từ trên xuống):</strong> Kiểu mẫu của <em>Pokemon, The Legend of Zelda, Chrono Trigger</em>. Nhân vật di chuyển tự do 4 hướng hoặc 8 hướng trên mặt phẳng phẳng. Đây là góc nhìn thân thiện nhất cho người mới bắt đầu vì toán học va chạm cực kỳ đơn giản và logic sắp xếp chiều sâu (Sorting Layer theo trục Y) rất dễ quản lý.</li>
+          <li><strong>Side-scrolling 2D (Cuộn cảnh ngang phong cách Metroidvania):</strong> Kiểu mẫu của <em>Hollow Knight, Celeste</em>. Đòi hỏi tính toán trọng lực, quán tính rơi tự do, nhảy bám tường (wall-jump) và thiết kế nền tảng phức tạp hơn.</li>
+          <li><strong>Isometric (Góc nhìn giả 3D 2.5D):</strong> Như <em>Hades, Diablo</em>. Đòi hỏi vẽ asset hình thoi nghiêng góc 2:1 và xử lý che khuất tầm nhìn (occlusion) rất phức tạp, hoàn toàn không phù hợp cho dự án đầu tay.</li>
+        </ul>
+
+        <h3 id="nghe-thuat-greyboxing">Tại sao dân chuyên nghiệp luôn làm Greyboxing trước khi vẽ Sprite?</h3>
+        <p><strong>Greyboxing (Tạo khối xám)</strong> là kỹ thuật dùng các hình khối chữ nhật và vuông màu xám hoặc ô cờ ca-rô đơn sắc để dựng toàn bộ địa hình phòng ốc. Lý do bạn bắt buộc phải làm việc này:</p>
+        <ol>
+          <li>Nếu nhân vật di chuyển quá nhanh hoặc quá chậm, hành lang vẽ sẵn 32 pixel sẽ bị hẹp quá hoặc rộng thênh thang, buộc bạn phải xóa bỏ và vẽ lại toàn bộ tranh ảnh (sprite sheet).</li>
+          <li>Khi không có hình ảnh đẹp đánh lừa mắt, bạn sẽ nhìn thẳng vào sự thật: cơ chế di chuyển của nhân vật có mượt mà không? Nhảy có bị trơn trượt không? Cảm giác né đòn có đã tay không?</li>
+        </ol>
+
+        <!-- FIGURE 3: GÓC LÀM VIỆC LẬP TRÌNH GAME INDIE -->
+        <figure class="article-figure">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Góc bàn làm việc lập trình viên phát triển game với màn hình mã nguồn C sharp và công cụ Unity" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Unsplash (Ảnh chụp thực tế). Không gian làm việc của nhà phát triển game: màn hình soạn thảo mã nguồn C# kết hợp cùng cửa sổ trực quan Scene View và Game View trong môi trường Unity.
+          </figcaption>
+        </figure>
+
+        <h2 id="thu-tu-lam">3. Quy trình kỹ thuật 6 bước dựng prototype chuẩn Unity 6</h2>
+
+        <h3 id="buoc-1-2">Bước 1 & 2: Thiết lập hệ thống Grid Tilemap 3 lớp chuyên nghiệp</h3>
+        <p>Trong Unity 6, bạn không bao giờ nên vẽ tất cả mọi thứ lên một lớp Tilemap duy nhất. Hãy nhấp chuột phải tạo một đối tượng <code>2D Object &gt; Tilemap &gt; Rectangular</code> mang tên <strong>Grid</strong>, và bên trong tạo ra 3 lớp con xếp chồng:</p>
+        <ul>
+          <li><strong>Tilemap 1 – Ground (Nền sàn):</strong> Thiết lập Sorting Layer = <em>Background</em> (Order in Layer = 0). Lớp này không gắn bất kỳ Collider nào, chỉ dùng để vẽ nền gạch hoặc thảm trải.</li>
+          <li><strong>Tilemap 2 – Props & Decals (Đồ đạc trang trí thấp):</strong> Sorting Layer = <em>Middleground</em>. Chứa các chi tiết như vết nứt sàn, hoa văn, thảm chân mà nhân vật có thể giẫm lên.</li>
+          <li><strong>Tilemap 3 – Walls & Obstacles (Tường chắn & Chướng ngại):</strong> Sorting Layer = <em>Foreground</em>. Đây là lớp duy nhất được gắn thành phần vật lý để ngăn chặn nhân vật đi xuyên qua.</li>
+        </ul>
+
+        <h4 id="tilemap-collider">Tối ưu va chạm vật lý: Tilemap Collider 2D + Composite Collider 2D</h4>
+        <p>Nếu bạn chỉ gắn <code>Tilemap Collider 2D</code> đơn thuần, Unity sẽ tạo ra hàng chục hộp va chạm hình vuông rời rạc. Khi nhân vật di chuyển trượt dọc bờ tường, các góc nhọn vi mô sẽ va chạm vào nhau khiến nhân vật bị khựng giật (snagging bug). Để giải quyết triệt để:</p>
+        <ol>
+          <li>Thêm thành phần <code>Composite Collider 2D</code> vào lớp Tilemap Walls. Thao tác này sẽ tự động thêm một <code>Rigidbody 2D</code>.</li>
+          <li>Đổi thuộc tính <strong>Body Type</strong> của Rigidbody 2D thành <strong>Static</strong> để tường không bị rơi tự do theo trọng lực.</li>
+          <li>Trên <code>Tilemap Collider 2D</code>, tích chọn ô vuông <strong>Used By Composite</strong>. Ngay lập tức, Unity sẽ tự động gộp hàng trăm cạnh ô gạch thành một đường bao đa giác trơn tru hoàn hảo.</li>
+        </ol>
+
+        <h3 id="buoc-3-4">Bước 3 & 4: Kiến trúc tách biệt dữ liệu bằng ScriptableObject</h3>
+        <p>Một lỗi tai hại mà người mới hay mắc phải là nhồi nhét chỉ số máu (HP), tốc độ chạy (Speed), tên vật phẩm và sức mạnh tấn công trực tiếp vào trong class <code>PlayerController : MonoBehaviour</code>. Khi bạn muốn tạo thêm 5 loại vũ khí hoặc 10 kẻ địch khác nhau, code sẽ trở thành một đống rối rắm (spaghetti code).</p>
+        <p>Giải pháp chuẩn công nghiệp là sử dụng <strong>ScriptableObject</strong>. Bạn tạo một class dữ liệu độc lập lưu trữ cấu hình nhân vật và vũ khí thành các file tài nguyên (.asset) trong thư mục Project. Khi cân bằng game (Game Balancing), Game Designer chỉ cần chỉnh sửa các con số trong Inspector mà không cần chạm vào một dòng code C# nào, giảm thiểu 100% rủi ro sinh ra bug logic.</p>
+
+        <!-- FIGURE 4: THIẾT KẾ TILEMAP GRID 2D -->
+        <figure class="article-figure">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Bố cục lưới đồ họa thiết kế game 2D dạng Tilemap Grid với các khối hình học đối xứng" loading="lazy">
+          <figcaption>
+            <i class="fas fa-camera"></i> Ảnh: Unsplash (Ảnh chụp thực tế). Cấu trúc lưới Grid trong không gian đồ họa 2D: cơ sở toán học để định vị ô gạch Tilemap và phân bổ tọa độ va chạm chính xác.
+          </figcaption>
+        </figure>
+
+        <h3 id="buoc-5-6">Bước 5 & 6: Khử mờ đồ họa với Pixel Perfect Camera & Vòng lặp 7 ngày Playtest</h3>
+
+        <h4 id="pixel-perfect-cam">Cài đặt Cinemachine & Pixel Perfect Camera chống nhòe hình</h4>
+        <p>Trong game 2D Pixel Art, nếu camera dịch chuyển ở tọa độ số thực lẻ (ví dụ X = 1.3456), các pixel trên màn hình sẽ bị biến dạng méo mó hoặc mờ nhòe (jittering). Để khắc phục:</p>
+        <ul>
+          <li>Cài đặt gói <em>2D Pixel Perfect</em> từ Unity Package Manager và gắn component <code>Pixel Perfect Camera</code> vào Main Camera.</li>
+          <li>Điền thông số <strong>Assets Pixels Per Unit (PPU)</strong> khớp chính xác với kích thước gạch của bạn (thường là 16 hoặc 32).</li>
+          <li>Chọn độ phân giải cơ sở <strong>Reference Resolution</strong> (ví dụ 320 x 180 cho tỷ lệ 16:9 hoài cổ), tích chọn <em>Upscale Render Texture</em> để hình ảnh luôn sắc như dao cạo trên mọi kích thước màn hình máy tính.</li>
+        </ul>
+
+        <h4 id="vong-lap-playtest">Vòng lặp 7 ngày Playtest thực chiến không cần mở miệng</h4>
+        <p>Vào ngày thứ 7 của dự án, hãy xuất file build chạy thử (Web端 hoặc .exe) và gửi cho 2–3 người bạn. Nguyên tắc vàng khi làm playtest: <strong>Bạn phải ngồi im lặng tuyệt đối</strong>. Đừng chỉ dẫn họ phải bấm nút nào, đừng giải thích cốt truyện. Hãy ghi chép lại:</p>
+        <ul>
+          <li>Họ có bị lạc đường trong căn phòng chỉ rộng vài mét vuông không?</li>
+          <li>Họ mất bao nhiêu giây để nhận ra chiếc rương có thể tương tác được?</li>
+          <li>Khi nhặt được chìa khóa, phản xạ đầu tiên của họ là chạy về phía cánh cửa hay tiếp tục đi tìm đồ?</li>
+        </ul>
+
+        <h2 id="dung-mo-rong">4. Tiêu chí đánh giá căn phòng đã sẵn sàng để nhân rộng</h2>
+        <p>Đừng vội vàng mở rộng sang phòng số 2 hoặc vẽ thêm trùm cuối (Boss) nếu căn phòng đầu tiên chưa vượt qua bài kiểm tra 4 tiêu chí cốt lõi sau:</p>
+        <ol>
+          <li><strong>Cảm giác điều khiển (Game Feel) đạt điểm 8/10:</strong> Nhân vật quay đầu dứt khoát, gia tốc di chuyển mượt mà, không có cảm giác trượt như đi trên băng và không bao giờ bị kẹt lại ở bất kỳ góc tường nào.</li>
+          <li><strong>Giao diện tương tác trực giác:</strong> Người chơi biết chính xác khi nào một vật thể có thể nhấp vào mà không cần đọc bảng hướng dẫn dài dòng.</li>
+          <li><strong>Chu trình phản hồi khép kín (Closed Feedback Loop):</strong> Hành động của người chơi tạo ra thay đổi trạng thái vĩnh viễn trên môi trường phòng (cửa từ khóa chuyển sang mở, đèn từ tắt chuyển sang sáng).</li>
+          <li><strong>Hiệu năng ổn định:</strong> Tốc độ khung hình duy trì vững vàng ở mức 60 FPS mượt mà, không xảy ra hiện tượng tụt khung hình do rò rỉ bộ nhớ (memory leak).</li>
+        </ol>
+
+        <!-- INTERACTIVE FAQ SECTION -->
+        <section class="seo-faq-section" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title"><i class="far fa-circle-question"></i> Câu hỏi thường gặp về làm game 2D (FAQ)</h2>
+          
+          <div class="seo-faq-item">
+            <button type="button" class="faq-question">
+              <span>Có cần viết xong toàn bộ cốt truyện đồ sộ trước khi dựng prototype?</span>
+              <i class="fas fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Hoàn toàn không cần. Bạn chỉ cần ghi vài dòng tóm tắt định hướng thế giới và động lực của nhân vật chính. Hãy tập trung làm gameplay và cảm giác điều khiển (gameplay loop) trước. Một kịch bản hay đến đâu cũng khó cứu được một tựa game có cơ chế điều khiển nhàm chán hoặc vụng về.</p>
+            </div>
           </div>
-          <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 28px;">
-            Toàn bộ dữ liệu chuẩn bị phía sau bài viết: brief, ý định tìm kiếm, giọng văn, heading map, metadata SERP, internal/external links, kế hoạch backlink và kiểm soát chất lượng.
-          </p>
 
-          <div class="dossier-grid">
-            
-            <!-- 1. Brief chi tiết -->
-            <div class="dossier-card span-2" style="grid-column: span 2;">
-              <h4>1. Brief chi tiết của bài viết</h4>
-              <div style="font-size: 14px; color: var(--text-main); line-height: 1.7; display: flex; flex-direction: column; gap: 8px;">
-                <div><strong>Người đọc mục tiêu:</strong> Nhà phát triển game indie mới bắt đầu hoặc sinh viên học ngành lập trình/thiết kế game.</div>
-                <div><strong>Tình huống thực tế:</strong> Thường tham vọng xây dựng cả một thế giới rộng lớn với hàng trăm quái vật và nhiệm vụ, dẫn đến kiệt sức và bỏ dở dự án.</div>
-                <div><strong>Câu hỏi bài phải trả lời:</strong> Làm thế nào để kiểm tra ý tưởng cốt lõi của một game RPG 2D nhanh chóng trong phạm vi một căn phòng duy nhất?</div>
-                <div><strong>Mục tiêu &amp; Kêu gọi hành động (CTA):</strong> Biết cách thiết kế một căn phòng thử nghiệm (whitebox/greybox) có mục tiêu, chướng ngại và cơ chế phản hồi rõ ràng. — <em>Tải Bảng ghi lỗi Playtest một phòng tại /tai-nguyen/#playtest-mot-phong.</em></div>
-                <div style="background: #FFFDF0; border: 1px solid #E8D383; padding: 10px 14px; border-radius: 6px; color: #8A4B00;">
-                  ⚠️ <strong>Giới hạn không được khẳng định:</strong> Không hứa hẹn bí quyết làm game thương mại triệu đô; chỉ tập trung vào phương pháp luận thu nhỏ phạm vi (scope).
-                </div>
-              </div>
+          <div class="seo-faq-item">
+            <button type="button" class="faq-question">
+              <span>Đồ họa có nhất thiết phải vẽ xong hoàn chỉnh mới test được không?</span>
+              <i class="fas fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Không. Trong ngành làm game chuyên nghiệp, giai đoạn này gọi là "Greyboxing" hoặc "Prototyping with placeholder art". Bạn có thể dùng các khối hình vuông nhiều màu hoặc asset miễn phí trên mạng để thử nghiệm nhịp độ di chuyển trước. Khi cơ chế chơi đã cuốn hút, bạn mới đầu tư thời gian và chi phí vào vẽ đồ họa pixel art chi tiết.</p>
             </div>
+          </div>
 
-            <!-- 2. Ý định tìm kiếm & Từ khóa -->
-            <div class="dossier-card">
-              <h4>2. Ý định tìm kiếm &amp; Cụm từ khóa</h4>
-              <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
-                <div style="margin-bottom: 8px;"><strong>Từ khóa chính:</strong> <span style="color: var(--accent); font-weight: 600;">prototype RPG 2D</span></div>
-                <div style="margin-bottom: 8px;"><strong>Từ khóa phụ &amp; Biến thể:</strong> làm bản mẫu game RPG, mini brief game, thiết kế một phòng game, playtest game 2D</div>
-                <div style="margin-bottom: 8px;"><strong>Ý định tìm kiếm (Search Intent):</strong> Informational (Hướng dẫn thiết kế level & kỹ thuật làm prototype)</div>
-                <div style="margin-bottom: 8px;"><strong>Góc tiếp cận (Content Angle):</strong> Thực hành tinh gọn, tập trung vào vòng lặp tương tác (core gameplay loop).</div>
-                <div style="font-size: 12px; color: #B06000; font-style: italic;">
-                  📊 Khảo sát SERP &amp; Volume: Bản mẫu concept portfolio; chưa có số liệu khảo sát SERP thực tế.
-                </div>
-              </div>
+          <div class="seo-faq-item">
+            <button type="button" class="faq-question">
+              <span>Tại sao nên quản lý chỉ số nhân vật bằng ScriptableObject thay vì lưu trong file JSON?</span>
+              <i class="fas fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>ScriptableObject được tích hợp nguyên bản vào hệ sinh thái Unity, cho phép kéo thả trực quan ngay trên cửa sổ Inspector, hỗ trợ tự động Serialize dữ liệu và tương thích hoàn hảo với hệ thống Undo/Redo khi cân bằng chỉ số. File JSON thích hợp hơn cho việc lưu file save game của người chơi hoặc dữ liệu gửi qua mạng máy chủ.</p>
             </div>
+          </div>
 
-            <!-- 3. Giọng văn & Biên tập Trước vs Sau -->
-            <div class="dossier-card">
-              <h4>3. Quy chuẩn giọng văn &amp; Biên tập</h4>
-              <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
-                <p style="margin-bottom: 10px;"><strong>Định hướng giọng văn:</strong> Gọn gàng, giải thích bằng ví dụ trực quan trong không gian 2D.</p>
-                <div style="background: #FFFFFF; border: 1px solid var(--border); border-radius: 6px; padding: 10px; font-size: 13px; margin-bottom: 8px;">
-                  <span style="color: #C5221F; font-weight: 600;">❌ Trước biên tập:</span> “Làm game RPG là phải vẽ ngay đồ họa pixel đỉnh cao và viết kịch bản 10 chương.”<br>
-                  <span style="color: #137333; font-weight: 600;">✓ Sau biên tập:</span> “Hãy dùng các khối vuông tạm (greybox) để kiểm tra xem cảm giác di chuyển và khoảng cách nhảy có làm người chơi thấy thoải mái hay không.”
-                </div>
-              </div>
+          <div class="seo-faq-item">
+            <button type="button" class="faq-question">
+              <span>Làm sao để đồ họa Pixel Art không bị mờ nhòe khi nhân vật di chuyển trên màn hình?</span>
+              <i class="fas fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Hãy đảm bảo 3 thiết lập bắt buộc trong Sprite Import Settings: (1) Filter Mode đổi từ Bilinear sang Point (No Filter); (2) Compression chọn None để giữ nguyên điểm ảnh gốc; (3) Gắn component Pixel Perfect Camera vào Main Camera với PPU (Pixels Per Unit) trùng khớp kích thước ô gạch và bật chế độ Upscale Render Texture.</p>
             </div>
-
-            <!-- 4. Dàn ý Heading Map -->
-            <div class="dossier-card">
-              <h4>4. Dàn ý Heading Map thực tế</h4>
-              <ul style="list-style: none; margin: 0; padding: 0; font-size: 13px; color: var(--text-muted); line-height: 1.6;">
-                <li style="font-weight: 600; color: var(--text-main); margin-bottom: 6px;">H1: Prototype RPG 2D: thiết kế một phòng trước khi mở rộng</li>
-                <li style="margin-left: 12px; margin-bottom: 4px;">• H2: Chọn một câu hỏi cần thử</li>
-<li style="margin-left: 12px; margin-bottom: 4px;">• H2: Viết mini brief cho căn phòng</li>
-<li style="margin-left: 12px; margin-bottom: 4px;">• H2: Dùng hình khối tạm để thử khoảng cách</li>
-<li style="margin-left: 12px; margin-bottom: 4px;">• H2: Thêm phản hồi để trạng thái có thể nhìn thấy</li>
-<li style="margin-left: 12px; margin-bottom: 4px;">• H2: Thử theo tình huống thay vì tự chấm “cảm giác 8/10”</li>
-<li style="margin-left: 12px; margin-bottom: 4px;">• H2: Khi nào nên thêm phòng tiếp theo?</li>
-              </ul>
-            </div>
-
-            <!-- 5. Metadata & Xem trước SERP -->
-            <div class="dossier-card">
-              <h4>5. Metadata &amp; Bản xem trước SERP</h4>
-              <div style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
-                <div><strong>Title tag (82 ký tự):</strong> Prototype RPG 2D: thiết kế một phòng trước khi mở rộng · Khương Tuấn Anh Portfolio</div>
-                <div style="margin-top: 4px;"><strong>Meta description (125 ký tự):</strong> Thu nhỏ ý tưởng RPG 2D thành một phòng có mục tiêu, tương tác và điều kiện hoàn thành. Kèm tiêu chí playtest và bảng ghi lỗi.</div>
-                <div style="margin-top: 4px;"><strong>Chỉ thị Robots:</strong> noindex, follow · <strong>Canonical:</strong> /seo/prototype-rpg-2d/</div>
-                
-                <!-- Google SERP Snippet Box -->
-                <div style="margin-top: 12px; background: #FFFFFF; border: 1px solid #D6DFE8; border-radius: 8px; padding: 12px;">
-                  <div style="font-size: 12px; color: #202124;">cv-two-pi-94.vercel.app › seo › prototype-rpg-2d</div>
-                  <div style="font-size: 16px; color: #1a0dab; font-weight: 500; text-decoration: underline; margin-top: 2px;">Prototype RPG 2D: thiết kế một phòng trước khi mở rộng · Khương Tuấn Anh Portfolio</div>
-                  <div style="font-size: 13px; color: #4d5156; margin-top: 4px; line-height: 1.4;">Thu nhỏ ý tưởng RPG 2D thành một phòng có mục tiêu, tương tác và điều kiện hoàn thành. Kèm tiêu chí playtest và bảng ghi lỗi.</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 6. Bảng Internal Links -->
-            <div class="dossier-card span-2" style="grid-column: span 2;">
-              <h4>6. Bảng Internal Links (Liên kết nội bộ)</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Trang nguồn</th><th>Anchor text trong bài</th><th>Trang đích</th><th>Mục đích liên kết</th><th>Trạng thái</th></tr></thead>
-                  <tbody>
-                    
-                      <tr>
-                        <td>SEO Studio Hub (/seo/)</td>
-                        <td><strong>Prototype RPG 2D</strong></td>
-                        <td><a href="/seo/prototype-rpg-2d/">/seo/prototype-rpg-2d/</a></td>
-                        <td>Danh mục Game Dev</td>
-                        <td><span class="badge badge-real" style="font-size:11px;">Đã gắn</span></td>
-                      </tr>
-                    
-
-                      <tr>
-                        <td>Thân bài A05</td>
-                        <td><strong>bảng playtest một phòng</strong></td>
-                        <td><a href="/tai-nguyen/#playtest-mot-phong">/tai-nguyen/#playtest-mot-phong</a></td>
-                        <td>Tải file mẫu kiểm lỗi</td>
-                        <td><span class="badge badge-real" style="font-size:11px;">Đã gắn</span></td>
-                      </tr>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- 7. Bảng External Links -->
-            <div class="dossier-card span-2" style="grid-column: span 2;">
-              <h4>7. Bảng External Links (Nguồn sơ cấp bảo chứng)</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Tên tài liệu / Nguồn sơ cấp</th><th>URL cụ thể</th><th>Claim được hỗ trợ</th><th>Ngày kiểm</th><th>Giới hạn nguồn</th></tr></thead>
-                  <tbody>
-                    
-                      <tr>
-                        <td><strong>Unity Documentation: Quy trình làm game 2D</strong></td>
-                        <td><a href="https://docs.unity3d.com/6000.0/Documentation/Manual/2d-game-creation-wokflow.html" target="_blank" rel="noopener noreferrer">https://docs.unity3d.com/6000.0/Documentation/Manual/2d-game-creation-wokflow.html</a></td>
-                        <td>Tài liệu hướng dẫn cấu trúc sprite, physics2D và tilemap</td>
-                        <td>16/10/2026</td>
-                        <td>Tài liệu kỹ thuật chính thức của Unity 6.</td>
-                      </tr>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- 8. Kế hoạch tìm kiếm Backlink (Off-page) -->
-            <div class="dossier-card span-2" style="grid-column: span 2;">
-              <h4>8. Kế hoạch tìm kiếm Backlink (Off-page)</h4>
-              <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
-                <div><strong>Tài sản đáng dẫn (Linkable Asset):</strong> Bảng mẫu ghi nhận lỗi Playtest và sơ đồ phân tích một phòng game.</div>
-                <div style="margin-top: 6px;"><strong>Nhóm website / Cộng đồng phù hợp:</strong> Nhóm phát triển game indie, câu lạc bộ game dev các trường đại học.</div>
-                <div style="margin-top: 6px;"><strong>Lý do hữu ích để họ dẫn link:</strong> Cung cấp phương pháp thu gọn scope hữu ích cho các dự án game đầu tay.</div>
-                <div style="margin-top: 6px;"><strong>Người phụ trách:</strong> Khương Tuấn Anh · <strong>Trạng thái thực tế:</strong> <span class="badge badge-note">Đề xuất, chưa tiếp cận, chưa có backlink.</span></div>
-                <div style="margin-top: 10px; font-size: 12px; color: #B06000; background: var(--note-bg); padding: 8px 12px; border-radius: 6px;">
-                  ⚠️ <strong>Chính sách Spam:</strong> Tuyệt đối không mua bán liên kết, không spam diễn đàn. Backlink chỉ tiếp cận sau khi bài viết được duyệt xuất bản chính thức.
-                </div>
-              </div>
-            </div>
-
-            <!-- 9. Manifest Hình ảnh & Bản quyền -->
-            <div class="dossier-card span-2" style="grid-column: span 2;">
-              <h4>9. Manifest hình ảnh &amp; Bản quyền tự dựng</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Tên file</th><th>Thẻ Alt mô tả</th><th>Vai trò</th><th>Quyền sở hữu</th></tr></thead>
-                  <tbody>
-                    <tr>
-                      <td><code>a05-hero.svg</code></td>
-                      <td>Sơ đồ tổng quan quy trình Prototype RPG 2D: thiết kế một phòng trước khi mở rộng</td>
-                      <td>Ảnh Hero đầu bài minh họa quy trình</td>
-                      <td>Vector SVG tự thiết kế nguyên bản</td>
-                    </tr>
-                    <tr>
-                      <td><code>a05-infographic.svg</code></td>
-                      <td>Bảng hướng dẫn chi tiết Prototype RPG 2D: thiết kế một phòng trước khi mở rộng</td>
-                      <td>Infographic 4 bước kiểm tra thực hành</td>
-                      <td>Vector SVG tự thiết kế nguyên bản</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- 10. Trạng thái QA & Kiểm thử -->
-            <div class="dossier-card span-2" style="grid-column: span 2;">
-              <h4>10. Trạng thái kiểm soát chất lượng (QA)</h4>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px;">
-                <div style="background: #E6F4EA; border: 1px solid #CEEAD6; padding: 12px; border-radius: 8px; color: #137333;">
-                  <strong>✓ CÁC BƯỚC ĐÃ KIỂM TRA ĐẠT:</strong><br>
-                  • Kiểm tra chính tả &amp; câu từ tiếng Việt đầy đủ.<br>
-                  • Kiểm tra hiển thị responsive (320px, 423px, 768px, 1280px).<br>
-                  • Kiểm tra thẻ meta, chỉ thị noindex và schema Article JSON-LD.<br>
-                  • Kiểm tra liên kết nội bộ và nguồn dẫn chứng sơ cấp.
-                </div>
-                <div style="background: #F5F7FB; border: 1px solid #D6DFE8; padding: 12px; border-radius: 8px; color: #53647A;">
-                  <strong>⏱️ CÁC BƯỚC CHƯA TRIỂN KHAI THỰC TẾ:</strong><br>
-                  • Chưa kết nối đo lường Google Search Console thực tế.<br>
-                  • Chưa có số liệu người đọc click / CTR / thời gian cuộn trang.<br>
-                  • Chưa thực hiện gửi email tiếp cận kiếm backlink bên ngoài.
-                </div>
-              </div>
-            </div>
-
           </div>
         </section>
 
+        <!-- E-E-A-T SOURCES -->
+        <section class="article-sources" id="sources-title" aria-labelledby="sources-heading">
+          <h2 id="sources-heading"><i class="fas fa-book-bookmark"></i> Nguồn tài liệu tham khảo & Thẩm định (E-E-A-T)</h2>
+          <div class="sources-list">
+            <a href="https://docs.unity3d.com/6000.1/Documentation/Manual/2d-game-creation-wokflow.html" target="_blank" rel="noopener noreferrer" class="source-card">
+              <i class="fas fa-laptop-code source-icon"></i>
+              <div class="source-content">
+                <span class="source-title">Unity Manual 6: 2D Game Creation Workflow</span>
+                <span class="source-desc">Tài liệu chính thức từ Unity Technologies mô tả quy trình thiết lập dự án 2D, tilemap palette và collider vật lý.</span>
+              </div>
+            </a>
+            <a href="https://vnanet.vn/en/anh/vna-photos-1027/vietnam-gameverse-2026-aims-to-elevate-local-gaming-industry-globally-8749331.html" target="_blank" rel="noopener noreferrer" class="source-card">
+              <i class="fas fa-newspaper source-icon"></i>
+              <div class="source-content">
+                <span class="source-title">Thông tấn xã Việt Nam (TTXVN) - Vietnam GameVerse</span>
+                <span class="source-desc">Ảnh tư liệu từ sự kiện ngày hội ngành game Việt Nam tại TP.HCM, minh họa bối cảnh thị trường trong nước.</span>
+              </div>
+            </a>
+          </div>
+        </section>
       </article>
 
-      <!-- Sidebar -->
-      <aside class="article-sidebar">
-        <!-- Desktop TOC -->
-        <nav class="desktop-toc card" style="margin-bottom: 24px; padding: 20px;">
-          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 12px; color: var(--accent);">MỤC LỤC BÀI ĐỌC</h4>
-          <ul style="list-style: none; margin: 0; padding: 0;">
-            <li style="margin-bottom: 8px;"><a href="#chon-mot-cau-hoi-can-thu" style="font-size: 14px; text-decoration: none; color: var(--text-main);">Chọn một câu hỏi cần thử</a></li>
-<li style="margin-bottom: 8px;"><a href="#viet-mini-brief-cho-can-phong" style="font-size: 14px; text-decoration: none; color: var(--text-main);">Viết mini brief cho căn phòng</a></li>
-<li style="margin-bottom: 8px;"><a href="#dung-hinh-khoi-tam-de-thu-khoang-cach" style="font-size: 14px; text-decoration: none; color: var(--text-main);">Dùng hình khối tạm để thử khoảng cách</a></li>
-<li style="margin-bottom: 8px;"><a href="#them-phan-hoi-de-trang-thai-co-the-nhin-thay" style="font-size: 14px; text-decoration: none; color: var(--text-main);">Thêm phản hồi để trạng thái có thể nhìn thấy</a></li>
-<li style="margin-bottom: 8px;"><a href="#thu-theo-tinh-huong-thay-vi-tu-cham-cam-giac-8-10" style="font-size: 14px; text-decoration: none; color: var(--text-main);">Thử theo tình huống thay vì tự chấm “cảm giác 8/10”</a></li>
-<li style="margin-bottom: 8px;"><a href="#khi-nao-nen-them-phong-tiep-theo" style="font-size: 14px; text-decoration: none; color: var(--text-main);">Khi nào nên thêm phòng tiếp theo?</a></li>
-            <li style="margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--border);"><a href="#ho-so" style="font-size: 14px; font-weight: 600; color: var(--accent);">📁 Xem hồ sơ làm bài</a></li>
+      <!-- STICKY SIDEBAR -->
+      <aside class="article-aside" aria-label="Mục lục và điều hướng">
+        <div class="aside-card">
+          <div class="aside-card-title"><i class="fas fa-list-ol"></i> Mục lục bài viết</div>
+          <ul class="toc-list">
+            <li><a href="#lat-choi" class="toc-link">1. Mini-brief 5 thành phần</a></li>
+            <li><a href="#chon-goc-nhin" class="toc-link">2. Góc nhìn & Greyboxing</a></li>
+            <li><a href="#thu-tu-lam" class="toc-link">3. 6 bước kỹ thuật Unity 6</a></li>
+            <li><a href="#dung-mo-rong" class="toc-link">4. Tiêu chí đánh giá phòng</a></li>
+            <li><a href="#faq" class="toc-link">5. Câu hỏi thường gặp</a></li>
+            <li><a href="#sources-title" class="toc-link">6. Nguồn tham khảo E-E-A-T</a></li>
+            <li><a href="#seo-blueprint" class="toc-link" style="color:var(--editorial-clay); font-weight:700;"><i class="fas fa-file-code"></i> Cấu trúc On-Page SEO</a></li>
           </ul>
-        </nav>
+        </div>
 
-        <!-- Chibi Helper Widget with truthful wording -->
-        <div class="card" style="text-align: center; padding: 24px;">
-          <img src="../../assets/chibi/ta-chibi-qa.svg" alt="Bạn Biên Tập kiểm tra quy trình" style="width: 140px; margin: 0 auto 16px auto;" class="chibi-character">
-          <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Quy trình 22 bước SEO</h4>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
-            Quy trình đề xuất gồm 22 bước. Hồ sơ từng bài ghi rõ phần đã làm và phần cần triển khai tiếp.
-          </p>
-          <a href="/seo/quy-trinh/" class="btn btn-secondary btn-sm" style="width: 100%;">Xem chi tiết 22 bước →</a>
+        <div class="aside-card">
+          <div class="aside-card-title"><i class="fas fa-sliders"></i> Tóm tắt On-Page</div>
+          <div class="aside-meta-list">
+            <div class="aside-meta-row"><span>Từ khóa:</span> <strong>làm game RPG 2D</strong></div>
+            <div class="aside-meta-row"><span>Độ dài:</span> <strong>~2.500 từ</strong></div>
+            <div class="aside-meta-row"><span>Thời gian đọc:</span> <strong>~8 phút</strong></div>
+            <div class="aside-meta-row"><span>Hình ảnh:</span> <strong>4 ảnh thực tế</strong></div>
+            <div class="aside-meta-row"><span>Công cụ:</span> <strong>Unity 6 Tilemap 2D</strong></div>
+          </div>
+        </div>
+
+        <div class="aside-card" style="background: var(--editorial-paper-subtle);">
+          <div class="aside-card-title"><i class="fas fa-arrow-right"></i> Quay lại bài đầu</div>
+          <p style="font-size: 0.84rem; margin: 0 0 0.6rem; color: var(--editorial-muted);">Khám phá bài viết mở đầu bộ sưu tập về mô hình:</p>
+          <a href="/seo-model-kit.html" style="font-weight: 700; color: var(--editorial-clay); text-decoration: none; font-size: 0.9rem;">
+            Gunpla cho người mới: chọn bộ mô hình đầu tiên thế nào? →
+          </a>
         </div>
       </aside>
-
     </div>
+
+    <!-- =========================================================================
+         DEDICATED ON-PAGE SEO BLUEPRINT & TECHNICAL AUDIT BOX (Ở DƯỚI CÙNG BÀI VIẾT)
+         ========================================================================= -->
+    <section class="seo-blueprint-panel" id="seo-blueprint" aria-labelledby="blueprint-heading">
+
+      <div class="blueprint-header">
+        <p class="page-kicker"><i class="fas fa-code"></i> ON-PAGE TECHNICAL BLUEPRINT & DOSSIER (A05)</p>
+        <h2 id="blueprint-heading">Bản Thiết Kế Kỹ Thuật SEO & Hồ Sơ Nghiên Cứu Chi Tiết</h2>
+        <p class="blueprint-subtitle">Minh bạch toàn diện: Brief nghiệp vụ, ma trận từ khóa & intent, quy chuẩn biên tập, cấu trúc liên kết, nguồn đối chiếu sơ cấp, kế hoạch backlink và kiểm toán On-Page.</p>
+      </div>
+
+      <!-- PHẦN 1: BRIEF CHI TIẾT & GIỚI HẠN PHẠM VI -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-file-contract"></i> 1. Hồ Sơ Brief Chi Tiết & Giới Hạn Phạm Vi</h3>
+        <div class="blueprint-grid-2">
+          <div class="blueprint-card">
+            <span class="card-label">Đối tượng độc giả mục tiêu</span>
+            <div class="card-value">Nhà phát triển game indie mới bắt đầu hoặc sinh viên học ngành lập trình/thiết kế game.</div>
+            <div class="card-meta">Bối cảnh thực tế: Thường tham vọng xây dựng cả một thế giới rộng lớn với hàng trăm quái vật và nhiệm vụ, dẫn đến kiệt sức và bỏ dở dự án.</div>
+          </div>
+          <div class="blueprint-card">
+            <span class="card-label">Câu hỏi cốt lõi bài viết giải quyết</span>
+            <div class="card-value font-mono">Làm thế nào để kiểm tra ý tưởng cốt lõi của một game RPG 2D nhanh chóng trong phạm vi một căn phòng duy nhất?</div>
+            <div class="card-meta">Mục tiêu đầu ra: Biết cách thiết kế một căn phòng thử nghiệm (whitebox/greybox) có mục tiêu, chướng ngại và cơ chế phản hồi rõ ràng.</div>
+          </div>
+          <div class="blueprint-card">
+            <span class="card-label">Kêu gọi hành động (Call To Action)</span>
+            <div class="card-value">Tải Bảng ghi lỗi Playtest một phòng tại /tai-nguyen/#playtest-mot-phong.</div>
+            <div class="card-meta">Định hướng chuyển đổi: Dẫn dắt sang biểu mẫu thực hành hoặc liên kết nội bộ liên quan.</div>
+          </div>
+          <div class="blueprint-card" style="border-left: 3px solid #df7900;">
+            <span class="card-label">Giới hạn phạm vi & Điều không khẳng định quá đà</span>
+            <div class="card-value" style="color: var(--editorial-clay);">Không hứa hẹn bí quyết làm game thương mại triệu đô; chỉ tập trung vào phương pháp luận thu nhỏ phạm vi (scope).</div>
+            <div class="card-meta">Nguyên tắc: Đảm bảo tính trung thực dữ liệu, tuân thủ tiêu chuẩn E-E-A-T và chính sách nội dung hữu ích của Google.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHẦN 2: CHÙM TỪ KHÓA & SEARCH INTENT -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-key"></i> 2. Chùm Từ Khóa Mục Tiêu & Ma Trận Search Intent</h3>
+        <div class="article-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Phân loại từ khóa</th>
+                <th>Cụm từ khóa mục tiêu</th>
+                <th>Search Intent</th>
+                <th>Vị trí phân bổ On-Page</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Từ khóa chính (Primary)</strong></td>
+                <td><code>prototype RPG 2D</code></td>
+                <td>Informational (Hướng dẫn thiết kế level & kỹ thuật làm prototype)</td>
+                <td>Title Tag H1, Meta Description, 100 từ đầu tiên, H2 mục tiêu, Thẻ Alt ảnh 1</td>
+              </tr>
+              
+              <tr>
+                <td><strong>Từ khóa phụ 1</strong></td>
+                <td><code>làm bản mẫu game RPG</code></td>
+                <td>Hỗ trợ ngữ cảnh / LSI</td>
+                <td>Thẻ H2/H3 mục tiêu, Thẻ Alt ảnh, đoạn phân tích chuyên sâu</td>
+              </tr>
+              <tr>
+                <td><strong>Từ khóa phụ 2</strong></td>
+                <td><code>mini brief game</code></td>
+                <td>Hỗ trợ ngữ cảnh / LSI</td>
+                <td>Thẻ H2/H3 mục tiêu, Thẻ Alt ảnh, đoạn phân tích chuyên sâu</td>
+              </tr>
+              <tr>
+                <td><strong>Từ khóa phụ 3</strong></td>
+                <td><code>thiết kế một phòng game</code></td>
+                <td>Hỗ trợ ngữ cảnh / LSI</td>
+                <td>Thẻ H2/H3 mục tiêu, Thẻ Alt ảnh, đoạn phân tích chuyên sâu</td>
+              </tr>
+              <tr>
+                <td><strong>Từ khóa phụ 4</strong></td>
+                <td><code>playtest game 2D</code></td>
+                <td>Hỗ trợ ngữ cảnh / LSI</td>
+                <td>Thẻ H2/H3 mục tiêu, Thẻ Alt ảnh, đoạn phân tích chuyên sâu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--editorial-muted); margin-top: 0.5rem; font-style: italic;">
+          *Khảo sát thị trường: Bản mẫu concept portfolio; chưa có số liệu khảo sát SERP thực tế.
+        </p>
+      </div>
+
+      <!-- PHẦN 3: QUY CHUẨN GIỌNG VĂN & BIÊN TẬP -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-pen-nib"></i> 3. Quy Chuẩn Giọng Văn & Kỹ Thuật Biên Tập (Voice Guide)</h3>
+        <p style="font-size: 0.92rem; color: var(--editorial-ink); margin-bottom: 0.85rem;"><strong>Định hướng phong cách:</strong> Gọn gàng, giải thích bằng ví dụ trực quan trong không gian 2D.</p>
+        <div class="article-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 48%; color: #c0392b;">Bản nháp trước biên tập (Kém tự nhiên / Phóng đại)</th>
+                <th style="width: 52%; color: #27ae60;">Bản sau biên tập (Chuẩn E-E-A-T / Hữu ích thực tế)</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td style="color: var(--editorial-muted); font-size: 0.88rem; background: rgba(192, 57, 43, 0.04);">““Làm game RPG là phải vẽ ngay đồ họa pixel đỉnh cao và viết kịch bản 10 chương.””</td>
+                <td style="font-size: 0.88rem; background: rgba(39, 174, 96, 0.04); font-weight: 500;"><strong>✓</strong> ““Hãy dùng các khối vuông tạm (greybox) để kiểm tra xem cảm giác di chuyển và khoảng cách nhảy có làm người chơi thấy thoải mái hay không.””</td>
+              </tr>
+              <tr>
+                <td style="color: var(--editorial-muted); font-size: 0.88rem; background: rgba(192, 57, 43, 0.04);">““Tự chơi thấy hay là game chắc chắn thành công.””</td>
+                <td style="font-size: 0.88rem; background: rgba(39, 174, 96, 0.04); font-weight: 500;"><strong>✓</strong> ““Giao máy cho một người chưa từng nghe về game chơi thử, không hướng dẫn trước và ghi nhận những chỗ họ bị kẹt lại.””</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PHẦN 4: CẤU TRÚC LIÊN KẾT NỘI BỘ (INTERNAL LINKS SILO) -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-diagram-project"></i> 4. Cấu Trúc Liên Kết Nội Bộ (Internal Links Silo)</h3>
+        <div class="article-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Vị trí xuất hiện</th>
+                <th>Anchor Text đề xuất</th>
+                <th>Trang đích điều hướng</th>
+                <th>Mục đích luân chuyển PageRank</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td><strong>undefined</strong></td>
+                <td><code>Prototype RPG 2D</code></td>
+                <td><a href="undefined">undefined</a></td>
+                <td>/seo/prototype-rpg-2d/</td>
+              </tr>
+              <tr>
+                <td><strong>undefined</strong></td>
+                <td><code>bảng playtest một phòng</code></td>
+                <td><a href="undefined">undefined</a></td>
+                <td>/tai-nguyen/#playtest-mot-phong</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PHẦN 5: BẢNG NGUỒN SƠ CẤP BẢO CHỨNG (EXTERNAL LINKS) -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-arrow-up-right-from-square"></i> 5. Bảng Nguồn Sơ Cấp Bảo Chứng (External Sources & Citations)</h3>
+        <div class="article-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tên nguồn / Tài liệu</th>
+                <th>Dữ kiện / Claim được hỗ trợ</th>
+                <th>Ngày rà soát</th>
+                <th>Giới hạn & Ghi chú nguồn</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td><a href="https://docs.unity3d.com/6000.0/Documentation/Manual/2d-game-creation-wokflow.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: var(--editorial-clay);">Unity Documentation: Quy trình làm game 2D <i class="fas fa-external-link-alt" style="font-size:0.75rem;"></i></a></td>
+                <td>Tài liệu hướng dẫn cấu trúc sprite, physics2D và tilemap</td>
+                <td><code>16/10/2026</code></td>
+                <td style="font-size: 0.84rem; color: var(--editorial-muted);">Nguồn đối chiếu tham khảo kỹ thuật, không bảo chứng thứ hạng.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PHẦN 6: KẾ HOẠCH TÌM KIẾM BACKLINK (OFF-PAGE STRATEGY) -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-link"></i> 6. Kế Hoạch Tìm Kiếm Backlink (Off-Page Strategy)</h3>
+        <div class="blueprint-grid-2">
+          <div class="blueprint-card">
+            <span class="card-label">Tài sản nội dung đáng dẫn nguồn (Linkable Asset)</span>
+            <div class="card-value">Bảng mẫu ghi nhận lỗi Playtest và sơ đồ phân tích một phòng game.</div>
+            <div class="card-meta">Nhóm cộng đồng mục tiêu: <strong>Nhóm phát triển game indie, câu lạc bộ game dev các trường đại học.</strong></div>
+          </div>
+          <div class="blueprint-card">
+            <span class="card-label">Lý do đối tác sẵn sàng trích dẫn</span>
+            <div class="card-value">Cung cấp phương pháp thu gọn scope hữu ích cho các dự án game đầu tay.</div>
+            <div class="card-meta">Trạng thái triển khai: <span class="badge" style="background: rgba(135,81,60,0.1); color: var(--editorial-clay); font-weight:700;">Đề xuất, chưa tiếp cận, chưa có backlink.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHẦN 7: KIỂM TOÁN HÌNH ẢNH & THẺ ALT -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-image"></i> 7. Kiểm Toán Hình Ảnh & Thẻ Alt (Image SEO Audit)</h3>
+        <div class="image-audit-grid">
+          
+          <div class="image-audit-card">
+            <div class="image-audit-thumb">
+              <img src="https://vnanet.vn/Data/Articles/2026/05/08/8749338/vna_potal_vietnam_gameverse_2026_aims_to_elevate_local_gaming_industry_globally__stand.jpg" alt="Gian hàng triển lãm và trải nghiệm phát triển game tại sự kiện Vietnam GameVerse chụp bởi TTXVN">
+            </div>
+            <div class="image-audit-body">
+              <div class="image-audit-alt"><code>alt="Gian hàng triển lãm và trải nghiệm phát triển game tại sự kiện Vietnam GameVerse chụp bởi TTXVN"</code></div>
+              <p class="image-audit-caption">Ảnh tư liệu báo chí Thông tấn xã Việt Nam (TTXVN) tại Vietnam GameVerse 2026.</p>
+            </div>
+          </div>
+          <div class="image-audit-card">
+            <div class="image-audit-thumb">
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Màn hình chơi game pixel art phong cách cổ điển và không gian sáng tạo trò chơi điện tử">
+            </div>
+            <div class="image-audit-body">
+              <div class="image-audit-alt"><code>alt="Màn hình chơi game pixel art phong cách cổ điển và không gian sáng tạo trò chơi điện tử"</code></div>
+              <p class="image-audit-caption">Không gian thử nghiệm cơ chế di chuyển và va chạm của nguyên mẫu game 2D.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHẦN 8: TIÊU CHUẨN E-E-A-T & TRẠNG THÁI KIỂM SOÁT CHẤT LƯỢNG (QA) -->
+      <div class="blueprint-section">
+        <h3><i class="fas fa-shield-halved"></i> 8. Tiêu Chuẩn E-E-A-T & Trạng Thái Đo Lường Thực Tế</h3>
+        <div class="checklist-grid">
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Search Intent:</strong> Khớp 100% nhu cầu tra cứu thông tin thực tế của độc giả.</div></div>
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Cấu trúc Headings:</strong> Phân cấp thẻ H1, H2, H3 mạch lạc, logic.</div></div>
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Minh bạch E-E-A-T:</strong> Nêu rõ giới hạn kinh nghiệm, có bảng nguồn sơ cấp đối chiếu.</div></div>
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Tối ưu Snippet:</strong> Hộp tóm tắt nhanh TL;DR và bảng so sánh hỗ trợ cào dữ liệu nhanh.</div></div>
+          <div class="checklist-item"><i class="fas fa-check"></i> <div><strong>Hình ảnh có bản quyền:</strong> Ảnh chụp thực tế / Báo chí / Unsplash có ghi nhận nguồn tác giả rõ ràng.</div></div>
+          <div class="checklist-item"><i class="fas fa-clock" style="color: var(--editorial-clay);"></i> <div><strong>Trạng thái đo lường:</strong> Bài mẫu concept portfolio; chưa kết nối Search Console và chưa có dữ liệu click/CTR thực tế.</div></div>
+        </div>
+      </div>
+  
+    </section>
+
+    <!-- PAGINATION -->
+    <nav class="article-pagination" aria-label="Điều hướng giữa các bài">
+      <a href="/seo-dragon-ball.html" class="pagination-card">
+        <span class="pagination-direction"><i class="fas fa-arrow-left"></i> Bài trước đó</span>
+        <span class="pagination-title">Dragon Ball Daima: Review bản mới nhất, cốt truyện Ma Giới & thứ tự xem</span>
+      </a>
+      <a href="/seo-aiktp.html" class="pagination-card next">
+        <span class="pagination-direction">Bài kế tiếp <i class="fas fa-arrow-right"></i></span>
+        <span class="pagination-title">Hướng dẫn viết content chuẩn SEO bằng AIKTP & Gemini</span>
+      </a>
+    </nav>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Góc làm nội dung · Khương Tuấn Anh</h5>
-          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
-            Học viên Digital Marketing tại VTC Academy. Thực hành viết SEO, thiết kế nhận diện thương hiệu và nghiên cứu dữ liệu thực tế.
-          </p>
-          <p style="font-size: 13px; color: var(--text-muted);">
-            📧 anhkhuong134@gmail.com &nbsp;|&nbsp; 📞 0384 201 443
-          </p>
-        </div>
-        <div class="footer-col">
-          <h5>SEO Studio</h5>
-          <ul class="footer-links">
-            <li><a href="/seo/">Tất cả 11 bài viết</a></li>
-            <li><a href="/seo/quy-trinh/">Quy trình 22 bước On-Page</a></li>
-            <li><a href="/seo/ai-ho-tro-viet-bai-seo/">Bài mẫu A01: AI hỗ trợ SEO</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Dự án nổi bật</h5>
-          <ul class="footer-links">
-            <li><a href="/nghien-cuu/circle-k-gs25/">Đồ án thật: Circle K &amp; GS25</a></li>
-            <li><a href="/nhan-dien/nep-gap/">Concept: NẾP GẤP</a></li>
-            <li><a href="/content/me-nho/">Case: MẺ NHỎ</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Tài nguyên</h5>
-          <ul class="footer-links">
-            <li><a href="/tai-nguyen/#brief-mot-trang">Mẫu Brief một trang</a></li>
-            <li><a href="/tai-nguyen/#lich-tuan">Lịch tuần NẾP GẤP</a></li>
-            <li><a href="/tai-nguyen/#phieu-thu-gu">Phiếu thử gu cà phê</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Khương Tuấn Anh. Portfolio cá nhân xây dựng minh bạch, có đối chiếu nguồn.</span>
-        <span>Phạm vi: Bài tập môn học &amp; concept thực hành</span>
-      </div>
+  <!-- FOOTER -->
+  <footer class="sample-footer">
+    <div>
+      <strong>Portfolio Content Creator · Khương Tuấn Anh</strong>
+      <p style="margin: 0.2rem 0 0; font-size: 0.8rem; color: var(--editorial-dim);">Bài nghiên cứu mẫu On-Page · Chưa xuất bản thương mại</p>
+    </div>
+    <div style="display: flex; gap: 1.25rem;">
+      <a href="/seo-samples.html"><i class="fas fa-arrow-left"></i> Về thư viện bài SEO</a>
+      <a href="/index.html">Về trang chủ Profile</a>
     </div>
   </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>

@@ -1,223 +1,308 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh mục Dự án &amp; Nghiên cứu · Tuấn Anh Portfolio</title>
-  <meta name="description" content="Danh mục đầy đủ các dự án thực tế, đồ án nhóm, nghiên cứu thị trường, nhận diện thương hiệu concept và SEO Studio của Khương Tuấn Anh.">
-  <link rel="canonical" href="https://cv-two-pi-94.vercel.app/du-an/">
-  <link rel="stylesheet" href="../assets/portfolio/editorial-system.css">
+  <title>Portfolio Content Creator | Khương Tuấn Anh</title>
+  <meta name="description" content="Các case học tập và concept cá nhân về Content Social, thiết kế nội dung và SEO của Khương Tuấn Anh.">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="/projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-  
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="site-logo">
-        <div class="logo-badge">TA</div>
-        <div class="logo-text">
-          <span class="logo-name">Tuấn Anh</span>
-          <span class="logo-tag">Góc làm nội dung</span>
-        </div>
-      </a>
-      <nav class="main-nav">
-        <a href="/" class="nav-link ">Trang chủ</a>
-        <a href="/du-an/" class="nav-link active">Dự án</a>
-        <a href="/seo/" class="nav-link ">SEO</a>
-        <a href="/content/" class="nav-link ">Content</a>
-        <a href="/tai-nguyen/" class="nav-link ">Tài nguyên</a>
-        <a href="/lien-he/" class="btn btn-primary btn-sm">Liên hệ</a>
-      </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="/index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
+    <div class="navbar-right">
+      <a href="/index.html" class="nav-link-btn"><i class="fas fa-arrow-left"></i> Về Profile</a>
+      <button class="theme-toggle" id="themeToggle" title="Đổi giao diện"><i class="fas fa-sun"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="projects-hero">
+    <div class="hero-badge">
+      <i class="fas fa-briefcase"></i> SHOWCASE & CASE STUDIES
+    </div>
+    <h1>Content <span>& Case</span></h1>
+    <p>Đồ án học tập và concept cá nhân: từ kế hoạch social, thiết kế bài đăng đến những bài viết SEO mình muốn đọc và tự viết.</p>
+
+    <!-- QUICK STATS BAR -->
+    <div class="quick-stats-strip">
+      <div class="stat-box">
+        <span class="stat-val" id="totalProjectsCount">6</span>
+        <span class="stat-lbl">Đồ án & concept cá nhân</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <span class="stat-val">160+</span>
+        <span class="stat-lbl">Trang báo cáo nhóm</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <span class="stat-val">19+</span>
+        <span class="stat-lbl">Kích thước banner trong đồ án</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <span class="stat-val">28+</span>
+        <span class="stat-lbl">Ngày lịch nội dung mẫu</span>
+      </div>
     </div>
   </header>
-  
 
-  <main class="container" style="padding-top: 48px; padding-bottom: 80px;">
-    <!-- Hero Header -->
-    <div style="max-width: 800px; margin-bottom: 48px;">
-      <nav class="breadcrumb">
-        <a href="/">Trang chủ</a>
-        <span class="breadcrumb-sep">/</span>
-        <span style="color: var(--text-main); font-weight: 500;">Dự án</span>
-      </nav>
-      <h1 style="font-size: 40px; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">
-        Dự án, Nghiên cứu &amp; Thiết kế
-      </h1>
-      <p style="font-size: 18px; color: var(--text-muted); line-height: 1.6;">
-        Tập hợp các sản phẩm đã hoàn thiện: đồ án nhóm thực tế tại VTC Academy, nghiên cứu nguồn công khai, bộ nhận diện concept và thư viện SEO Studio.
-      </p>
+  <!-- TOOLBAR: BỘ LỌC DANH MỤC & TÌM KIẾM -->
+  <section class="toolbar-section">
+    <div class="toolbar-container">
+
+      <!-- Ô TÌM KIẾM THÔNG MINH -->
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm theo tên dự án, công cụ (Canva, Sheets...), từ khóa...">
+        <button id="clearSearchBtn" class="clear-search-btn" title="Xóa tìm kiếm" style="display: none;">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- THANH DANH MỤC (CATEGORY FILTER TABS) -->
+      <div class="filter-pills-bar" id="filterPillsBar">
+        <!-- Render động từ JavaScript để tự cập nhật số lượng dự án -->
+      </div>
+
     </div>
+  </section>
 
-    <!-- 1. DỰ ÁN THỰC TẾ (CRITICAL: Circle K & GS25) -->
-    <section style="margin-bottom: 64px;">
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
-        <span class="badge badge-real">⭐ DỰ ÁN THỰC TẾ · ƯU TIÊN TRƯNG BÀY</span>
-        <h2 style="font-size: 24px; font-weight: 700; color: var(--text-main);">Đồ án môn học &amp; Nghiên cứu thương hiệu</h2>
+  <!-- KHU VỰC THÔNG TIN DANH MỤC ĐANG CHỌN -->
+  <div class="category-header-wrap" id="categoryHeaderWrap">
+    <div class="category-info-card">
+      <div class="cat-info-icon" id="catInfoIcon"><i class="fas fa-layer-group"></i></div>
+      <div class="cat-info-text">
+        <div class="cat-info-top">
+          <h2 id="catInfoTitle">Tất Cả Dự Án</h2>
+          <span class="cat-count-pill" id="catCountPill">13 dự án</span>
+        </div>
+        <p id="catInfoDesc">Case học tập và concept cá nhân trong Content, Social, SEO và thiết kế truyền thông.</p>
       </div>
+    </div>
+  </div>
 
-      <div class="card" style="border: 2px solid var(--accent); background: #FAFDFB; padding: 36px;">
-        <div class="split-grid-hero">
-          <div>
-            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
-              <span class="badge badge-real">Đồ án nhóm Bee Chăm Chỉ</span>
-              <span class="badge badge-note">Lớp K25DBMF02 · VTC Academy</span>
-            </div>
-            <h3 style="font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 12px;">
-              Circle K và GS25: Nghiên cứu nhận thức thương hiệu
-            </h3>
-            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-              Khảo sát 93 mẫu hợp lệ tại Hà Nội (tháng 04/2026) về thói quen, mức độ nhận diện logo và đánh giá trải nghiệm giữa hai chuỗi cửa hàng tiện lợi. Phân tích đối chiếu 3 kết quả thực tế và đề xuất giải pháp truyền thông tại điểm bán.
-            </p>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="/nghien-cuu/circle-k-gs25/" class="btn btn-primary">Xem case chi tiết &amp; số liệu đối chiếu →</a>
-              <a href="https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Mở báo cáo gốc của nhóm (Google Docs) ↗</a>
-            </div>
-          </div>
-          <div>
-            <img src="../assets/research/circle-k-gs25-charts.svg" alt="Biểu đồ kết quả nghiên cứu Circle K và GS25" style="border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. BỘ NHẬN DIỆN CONCEPT (3 Brands) -->
-    <section style="margin-bottom: 64px;">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
-        <h2 style="font-size: 24px; font-weight: 700; color: var(--text-main);">Bộ nhận diện Concept</h2>
-        <a href="/nhan-dien/" style="font-size: 14px; font-weight: 600;">Xem cả 3 bộ nhận diện →</a>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
-        <!-- NẾP GẤP -->
-        <div class="card">
-          <img src="../assets/brands/nep-gap-logo.svg" alt="Logo NẾP GẤP" style="height: 60px; margin-bottom: 16px;">
-          <h3 style="font-size: 20px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">NẾP GẤP</h3>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-            Concept văn phòng phẩm &amp; công cụ ghi chép. Logo góc gấp trang giấy, bảng màu đất nung và xanh rừng, hệ thống ấn phẩm sổ planner, thiệp và nhãn đóng gói.
-          </p>
-          <a href="/nhan-dien/nep-gap/" class="btn btn-secondary btn-sm" style="width: 100%;">Xem nhận diện NẾP GẤP →</a>
-        </div>
-
-        <!-- MẺ NHỎ -->
-        <div class="card">
-          <img src="../assets/brands/me-nho-logo.svg" alt="Logo MẺ NHỎ" style="height: 60px; margin-bottom: 16px;">
-          <h3 style="font-size: 20px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">MẺ NHỎ</h3>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-            Concept cà phê pha tại nhà: “Pha theo gu của bạn”. Dấu nhận diện từ miệng phin và nhịp giọt cà phê, thẻ hỏi gu, phiếu thử ly và bộ banner quảng cáo.
-          </p>
-          <a href="/nhan-dien/me-nho/" class="btn btn-secondary btn-sm" style="width: 100%;">Xem nhận diện MẺ NHỎ →</a>
-        </div>
-
-        <!-- QUAI VẢI -->
-        <div class="card">
-          <img src="../assets/brands/quai-vai-logo.svg" alt="Logo QUAI VẢI" style="height: 60px; margin-bottom: 16px;">
-          <h3 style="font-size: 20px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">QUAI VẢI</h3>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-            Concept túi dùng hằng ngày: “Mang vừa một ngày”. Dấu quai uốn cong và đường chỉ may, bộ 6 icon phân loại đồ đạc và phiếu đo lòng túi thực tế.
-          </p>
-          <a href="/nhan-dien/quai-vai/" class="btn btn-secondary btn-sm" style="width: 100%;">Xem nhận diện QUAI VẢI →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. NGHIÊN CỨU NGUỒN CÔNG KHAI -->
-    <section style="margin-bottom: 64px;">
-      <h2 style="font-size: 24px; font-weight: 700; color: var(--text-main); margin-bottom: 24px;">Nghiên cứu bổ sung nguồn công khai</h2>
-      <div class="split-grid-2col">
-        <div class="card">
-          <span class="badge badge-seo" style="margin-bottom: 12px;">Desk Research</span>
-          <h3 style="font-size: 19px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">
-            MUJI và KOKUYO Campus: Cách giải thích giá trị đồ dùng ghi chép
-          </h3>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-            Quan sát tài liệu công khai về nguyên tắc phát triển sản phẩm của MUJI và tình huống sử dụng thực tế của KOKUYO Campus để rút ra bài học cho NẾP GẤP.
-          </p>
-          <a href="/nghien-cuu/muji-kokuyo/" style="font-size: 14px; font-weight: 600;">Xem phân tích đối chiếu →</a>
-        </div>
-
-        <div class="card">
-          <span class="badge badge-seo" style="margin-bottom: 12px;">Content Audit</span>
-          <h3 style="font-size: 19px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">
-            Highlands Coffee: Đọc menu từ nhóm món đến câu hỏi chọn đồ uống
-          </h3>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-            Khảo sát phân nhóm thực đơn công khai của Highlands trên website và phác thảo wireframe hỗ trợ chọn đồ uống theo gu cho concept MẺ NHỎ.
-          </p>
-          <a href="/nghien-cuu/highlands-menu/" style="font-size: 14px; font-weight: 600;">Xem audit menu &amp; wireframe →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. THIẾT KẾ KHÁC & TÀI NGUYÊN -->
-    <section>
-      <h2 style="font-size: 24px; font-weight: 700; color: var(--text-main); margin-bottom: 24px;">Các sản phẩm trải nghiệm khác</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-        <div class="card">
-          <h4 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Bộ Banner MẺ NHỎ</h4>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">8 kích thước hiển thị đáp ứng chuẩn bố cục, kèm giả thuyết A/B test tiêu đề.</p>
-          <a href="/thiet-ke/banner-me-nho/" style="font-size: 14px; font-weight: 600;">Mở bộ banner →</a>
-        </div>
-        <div class="card">
-          <h4 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Cửa hàng Concept NẾP GẤP</h4>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Web demo bên trong portfolio: bộ lọc nhu cầu ghi chép và xem layout ruột sổ.</p>
-          <a href="/web/nep-gap/" style="font-size: 14px; font-weight: 600;">Xem web demo →</a>
-        </div>
-        <div class="card">
-          <h4 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Thư viện Biểu mẫu &amp; Template</h4>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Mẫu Brief một trang, checklist du lịch, lịch tuần và bảng kiểm chứng claim tải được.</p>
-          <a href="/tai-nguyen/" style="font-size: 14px; font-weight: 600;">Đến trang tài nguyên →</a>
-        </div>
-      </div>
-    </section>
-
+  <!-- LƯỚI DANH SÁCH DỰ ÁN -->
+  <main class="projects-container">
+    <div class="projects-grid" id="projectsGrid">
+      <!-- JavaScript sẽ tự động render các thẻ dự án vào đây -->
+    </div>
   </main>
 
-  
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Góc làm nội dung · Khương Tuấn Anh</h5>
-          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
-            Học Digital Marketing tại VTC Academy. Thực hành viết SEO, thiết kế nhận diện thương hiệu và nghiên cứu dữ liệu thực tế.
-          </p>
-          <p style="font-size: 13px; color: var(--text-muted);">
-            📧 anhkhuong134@gmail.com &nbsp;|&nbsp; 📞 0384 201 443
-          </p>
-        </div>
-        <div class="footer-col">
-          <h5>Dự án tiêu biểu</h5>
-          <ul class="footer-links">
-            <li><a href="/nghien-cuu/circle-k-gs25/">Đồ án thật: Circle K &amp; GS25</a></li>
-            <li><a href="/nhan-dien/nep-gap/">Nhận diện: NẾP GẤP</a></li>
-            <li><a href="/content/me-nho/">Content Lab: MẺ NHỎ</a></li>
-            <li><a href="/seo/">SEO Studio: 11 bài viết</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Nghiên cứu &amp; Thiết kế</h5>
-          <ul class="footer-links">
-            <li><a href="/nghien-cuu/muji-kokuyo/">MUJI vs KOKUYO Campus</a></li>
-            <li><a href="/nghien-cuu/highlands-menu/">Menu Audit Highlands Coffee</a></li>
-            <li><a href="/thiet-ke/banner-me-nho/">Bộ Banner MẺ NHỎ</a></li>
-            <li><a href="/web/nep-gap/">Cửa hàng Concept NẾP GẤP</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Tài nguyên &amp; Quy trình</h5>
-          <ul class="footer-links">
-            <li><a href="/seo/quy-trinh/">Quy trình 22 bước SEO</a></li>
-            <li><a href="/tai-nguyen/#brief-mot-trang">Mẫu Brief một trang</a></li>
-            <li><a href="/tai-nguyen/#lich-tuan">Lịch tuần NẾP GẤP</a></li>
-            <li><a href="/tai-nguyen/#phieu-thu-gu">Phiếu thử gu cà phê</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Khương Tuấn Anh. Portfolio xây dựng trung thực, minh bạch nguồn đối chiếu.</span>
-        <span>Portfolio học viên Digital Marketing · Minh bạch nguồn đối chiếu và phạm vi thực hiện</span>
-      </div>
-    </div>
-  </footer>
-  
+  <script src="/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectsGrid = document.getElementById('projectsGrid');
+      const searchInput = document.getElementById('searchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      const filterPillsBar = document.getElementById('filterPillsBar');
+      const totalProjectsCountEl = document.getElementById('totalProjectsCount');
+
+      const catInfoTitle = document.getElementById('catInfoTitle');
+      const catInfoDesc = document.getElementById('catInfoDesc');
+      const catInfoIcon = document.getElementById('catInfoIcon');
+      const catCountPill = document.getElementById('catCountPill');
+
+      let currentCategory = 'all';
+      let currentSearchQuery = '';
+
+      // 1. Khởi tạo thanh bộ lọc danh mục với số lượng động
+      function renderCategoryPills() {
+        const counts = getCategoryCounts();
+        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 13;
+
+        filterPillsBar.innerHTML = Object.keys(categoriesConfig).map(catKey => {
+          const cat = categoriesConfig[catKey];
+          const count = counts[catKey] || 0;
+          const isActive = catKey === currentCategory ? 'active' : '';
+
+          return `
+            <button class="filter-pill ${isActive}" data-category="${catKey}">
+              <i class="${cat.icon}"></i>
+              <span>${cat.name}</span>
+              <span class="pill-count">${count}</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // 2. Cập nhật Banner mô tả danh mục đang chọn
+      function updateCategoryBanner(matchCount) {
+        const catConfig = categoriesConfig[currentCategory] || categoriesConfig.all;
+        catInfoTitle.textContent = catConfig.name;
+        catInfoDesc.textContent = catConfig.desc;
+        catInfoIcon.innerHTML = `<i class="${catConfig.icon}"></i>`;
+
+        if (currentSearchQuery.trim()) {
+          catCountPill.textContent = `${matchCount} kết quả tìm kiếm`;
+        } else {
+          catCountPill.textContent = `${matchCount} dự án`;
+        }
+      }
+
+      // 3. Render danh sách thẻ dự án
+      function renderProjects() {
+        projectsGrid.innerHTML = '';
+        const projectIds = Object.keys(projectsData);
+        let matchCount = 0;
+
+        projectIds.forEach(id => {
+          const project = projectsData[id];
+          const matchesCategory = (currentCategory === 'all') || (project.category === currentCategory);
+          const query = currentSearchQuery.toLowerCase().trim();
+
+          const matchesSearch = !query ||
+            project.title.toLowerCase().includes(query) ||
+            project.type.toLowerCase().includes(query) ||
+            (project.categoryName && project.categoryName.toLowerCase().includes(query)) ||
+            (project.description && project.description.toLowerCase().includes(query)) ||
+            (project.frameworks && project.frameworks.some(f => f.toLowerCase().includes(query))) ||
+            project.tools.some(t => t.toLowerCase().includes(query));
+
+          if (matchesCategory && matchesSearch) {
+            matchCount++;
+            const card = document.createElement('div');
+            card.className = `project-card ${project.featured ? 'is-featured' : ''}`;
+            card.onclick = () => goToProject(id);
+
+            const catColor = project.categoryColor || 'var(--accent)';
+
+            // Render KPI mini strip
+            const kpiHtml = project.kpis ? `
+              <div class="card-kpi-strip">
+                ${project.kpis.map(k => `
+                  <div class="card-kpi-item">
+                    <span class="card-kpi-number" style="color: ${catColor}">${k.number}</span>
+                    <span class="card-kpi-label">${k.label}</span>
+                  </div>
+                `).join('')}
+              </div>` : '';
+
+            // Render tools với màu sắc
+            const toolsHtml = project.tools.map(t => {
+              const color = toolColors[t] || '#6b7280';
+              return `<span class="tool-pill" style="--tool-color:${color}">${t}</span>`;
+            }).join('');
+
+            // Render frameworks nếu có
+            const frameworksHtml = project.frameworks ? `
+              <div class="card-frameworks-row">
+                ${project.frameworks.slice(0, 3).map(f => `<span class="framework-mini-badge">${f}</span>`).join('')}
+                ${project.frameworks.length > 3 ? `<span class="framework-mini-badge more">+${project.frameworks.length - 3}</span>` : ''}
+              </div>
+            ` : '';
+
+            // Render direct action links nếu có (như web potty.vn & ladipage)
+            const linksHtml = project.links ? `
+              <div class="card-direct-links-row" onclick="event.stopPropagation();">
+                ${project.links.map(l => `
+                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="card-direct-link-btn" title="${l.title}">
+                    <i class="${l.icon}"></i> ${l.btnText}
+                  </a>
+                `).join('')}
+              </div>
+            ` : '';
+
+            card.innerHTML = `
+              <div class="card-top-bar" style="background: linear-gradient(90deg, ${catColor}, transparent);"></div>
+
+              <div class="project-header">
+                <div class="project-cat-badge" style="color:${catColor}; background:${catColor}18; border-color:${catColor}44;">
+                  <i class="${project.categoryIcon || 'fas fa-folder'}"></i>
+                  <span>${project.type}</span>
+                </div>
+                <span class="project-duration"><i class="far fa-calendar-alt"></i> ${project.duration || '2026'}</span>
+              </div>
+
+              <h3>${project.title}</h3>
+              <p class="project-desc">${project.description || ''}</p>
+
+              ${linksHtml}
+              ${kpiHtml}
+              ${frameworksHtml}
+
+              <div class="card-footer">
+                <div class="tools-pill-row">${toolsHtml}</div>
+                <div class="card-action-btn" style="color: ${catColor};">
+                  <span>Khám phá Case Study</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            `;
+
+            projectsGrid.appendChild(card);
+          }
+        });
+
+        updateCategoryBanner(matchCount);
+
+        // Hiển thị trạng thái không tìm thấy
+        if (matchCount === 0) {
+          projectsGrid.innerHTML = `
+            <div class="empty-state-box">
+              <div class="empty-icon"><i class="fas fa-folder-open"></i></div>
+              <h3>Không tìm thấy dự án phù hợp</h3>
+              <p>Thử tìm với từ khóa khác hoặc chuyển sang danh mục khác xem sao nhé!</p>
+              <button class="btn-primary" onclick="resetFilters()">
+                <i class="fas fa-undo"></i> Xem Tất Cả Dự Án
+              </button>
+            </div>`;
+        }
+      }
+
+      // Xử lý click chọn Tab danh mục
+      filterPillsBar.addEventListener('click', (e) => {
+        const pill = e.target.closest('.filter-pill');
+        if (pill) {
+          document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+          pill.classList.add('active');
+          currentCategory = pill.getAttribute('data-category');
+          renderProjects();
+        }
+      });
+
+      // Xử lý tìm kiếm
+      searchInput.addEventListener('input', (e) => {
+        currentSearchQuery = e.target.value;
+        if (currentSearchQuery.trim()) {
+          clearSearchBtn.style.display = 'flex';
+        } else {
+          clearSearchBtn.style.display = 'none';
+        }
+        renderProjects();
+      });
+
+      // Xóa tìm kiếm
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchQuery = '';
+        clearSearchBtn.style.display = 'none';
+        searchInput.focus();
+        renderProjects();
+      });
+
+      // Hàm reset bộ lọc
+      window.resetFilters = function() {
+        currentCategory = 'all';
+        currentSearchQuery = '';
+        searchInput.value = '';
+        clearSearchBtn.style.display = 'none';
+        renderCategoryPills();
+        renderProjects();
+      };
+
+      // Khởi chạy ban đầu
+      renderCategoryPills();
+      renderProjects();
+    });
+  </script>
 </body>
+
 </html>

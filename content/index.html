@@ -1,128 +1,628 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Content Lab · Kế hoạch &amp; Nội dung Social · Tuấn Anh Portfolio</title>
-  <meta name="description" content="Content Lab: 4 case study lập kế hoạch nội dung social tuần mẫu: NẾP GẤP, MẺ NHỎ, QUAI VẢI và NHỊP VIỆC. Đầy đủ caption, carousel 6 slide, story và storyboard video.">
+  <title>Content Lab · Tuyển Tập Bài Viết Social Viral & Kế Hoạch Tuần | Khương Tuấn Anh</title>
+  <meta name="description" content="Content Lab: Tuyển tập 8 bài viết social viral thực chiến đa ngành kèm ảnh chụp thực tế và 4 case study lập kế hoạch nội dung tuần C01–C04 (NẾP GẤP, MẺ NHỎ, QUAI VẢI, NHỊP VIỆC).">
   <link rel="canonical" href="https://cv-two-pi-94.vercel.app/content/">
-  <link rel="stylesheet" href="../assets/portfolio/editorial-system.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="/assets/portfolio/editorial-system.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    .viral-post-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .viral-post-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .post-header-bar {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-muted);
+    }
+    .post-author-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .post-author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+    }
+    .post-author-name {
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+    .post-author-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .post-body-content {
+      padding: 1.5rem;
+    }
+    .post-hook-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.4;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+    .post-text-body {
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: var(--text-main);
+      white-space: pre-line;
+      margin-bottom: 1.5rem;
+    }
+    .post-real-image-wrap {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1rem;
+      background: var(--bg-muted);
+      border: 1px solid var(--border-light);
+    }
+    .post-real-image {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+    .post-image-caption {
+      padding: 0.65rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      background: var(--bg-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+    .post-tags-row {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .post-tag {
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: rgba(135, 81, 60, 0.08);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .filter-pills-wrap {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 2.5rem 0;
+    }
+    .filter-btn {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+  </style>
 </head>
 <body>
-  
-  <header class="site-header" style="background: var(--bg-card); border-bottom: 1px solid var(--border);">
-    <div class="container header-inner" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
+
+  <!-- GLOBAL SITE HEADER -->
+  <header class="site-header" style="background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100;">
+    <div class="container header-inner" style="display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.5rem;">
       <a href="/index.html" class="site-logo" style="text-decoration: none; font-weight: 700; font-size: 1.25rem; color: var(--text-main);">
         Khương Tuấn <span style="color: var(--accent);">Anh</span>
       </a>
       <nav class="main-nav" style="display: flex; gap: 1.25rem; align-items: center;">
         <a href="/index.html" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Profile</a>
-        <a href="/projects.html" class="nav-link" style="text-decoration: none; font-weight: 600; color: var(--accent);">Dự án</a>
-        <a href="/seo-samples.html" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Bài SEO mẫu</a>
+        <a href="/du-an/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Dự án</a>
+        <a href="/seo/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Bài SEO mẫu</a>
+        <a href="/content/" class="nav-link active" style="text-decoration: none; font-weight: 700; color: var(--accent);">Content Lab</a>
+        <a href="/nhan-dien/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Nhận Diện</a>
+        <a href="/nghien-cuu/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Nghiên Cứu</a>
         <a href="/tai-nguyen/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Tài nguyên</a>
       </nav>
     </div>
   </header>
-  
-  <main class="container" style="padding-top: 48px; padding-bottom: 80px;">
-    <div style="max-width: 800px; margin-bottom: 48px;">
-      <nav class="breadcrumb">
-        <a href="/">Trang chủ</a><span class="breadcrumb-sep">/</span>
-        <span style="color: var(--text-main); font-weight: 500;">Content Lab</span>
+
+  <main class="container" style="padding-top: 40px; padding-bottom: 80px; max-width: 960px;">
+    <!-- BREADCRUMB & HERO -->
+    <div style="margin-bottom: 2rem;">
+      <nav class="breadcrumb" style="font-size: 0.88rem; margin-bottom: 0.75rem;">
+        <a href="/" style="color: var(--text-muted); text-decoration: none;">Trang chủ</a>
+        <span style="color: var(--text-muted); margin: 0 0.5rem;">/</span>
+        <span style="color: var(--accent); font-weight: 600;">Content Lab & Social Viral</span>
       </nav>
-      <h1 style="font-size: 40px; font-weight: 700; color: var(--text-main); margin-bottom: 16px;">
-        Từ một đề bài đến nội dung có thể sản xuất
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16, 185, 129, 0.12); color: #059669; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.75rem;">
+        <i class="fas fa-fire"></i> THỰC CHIẾN CONTENT SOCIAL VIRAL & CAMPAIGN
+      </div>
+      <h1 style="font-size: 2.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.85rem; line-height: 1.3;">
+        Tuyển Tập Bài Viết Social Viral & Kế Hoạch 7 Ngày
       </h1>
-      <p style="font-size: 18px; color: var(--text-muted); line-height: 1.6;">
-        Mỗi case study bao gồm chân dung người đọc giả định, 3 tuyến nội dung (pillars), lịch tuần mẫu 7 ngày, caption hoàn chỉnh, carousel nhiều slide và kịch bản phân cảnh (storyboard).
+      <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.65; max-width: 820px;">
+        Nghiên cứu tâm lý độc giả, bóc tách insight thực tế và áp dụng các công thức mở đầu (Hook) giật gân, dẫn dắt câu chuyện (Storytelling) và kích thích tương tác/lưu bài. <strong>Mỗi bài viết đều có ảnh chụp thực tế (Real Editorial Photography) đặt ngay dưới bài, không dùng ảnh AI.</strong>
       </p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
-      <div class="card">
-        <span class="badge badge-concept" style="margin-bottom: 12px;">C01 · Văn phòng phẩm</span>
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">NẾP GẤP: Một tuần tìm cách ghi</h3>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-          Giúp người đọc thử một trang tuần trước khi mua sổ. Đầy đủ 3 caption hoàn chỉnh, carousel 6 slide và kịch bản video 20s.
-        </p>
-        <a href="/content/nep-gap/" class="btn btn-secondary btn-sm" style="width: 100%;">Mở case NẾP GẤP →</a>
-      </div>
+    <!-- FILTER BUTTONS -->
+    <div class="filter-pills-wrap">
+      <button class="filter-btn active" onclick="filterPosts('all', this)"><i class="fas fa-layer-group"></i> Tất Cả (8 Bài Viral + 4 Case)</button>
+      <button class="filter-btn" onclick="filterPosts('lifestyle', this)"><i class="fas fa-book-open"></i> Sổ Tay & Ghi Chép</button>
+      <button class="filter-btn" onclick="filterPosts('fnb', this)"><i class="fas fa-mug-hot"></i> F&B / Cà Phê</button>
+      <button class="filter-btn" onclick="filterPosts('fashion', this)"><i class="fas fa-shopping-bag"></i> Thời Trang / Túi Canvas</button>
+      <button class="filter-btn" onclick="filterPosts('workspace', this)"><i class="fas fa-desktop"></i> Setup Bàn Làm Việc</button>
+      <button class="filter-btn" onclick="filterPosts('hobby', this)"><i class="fas fa-robot"></i> Mô Hình Gunpla</button>
+      <button class="filter-btn" onclick="filterPosts('b2b', this)"><i class="fas fa-briefcase"></i> Quy Trình Content B2B</button>
+    </div>
 
-      <div class="card">
-        <span class="badge badge-concept" style="margin-bottom: 12px;">C02 · F&amp;B / Cà phê</span>
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">MẺ NHỎ: Đặt câu hỏi khi mua cà phê</h3>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-          Giúp người mới diễn đạt gu uống đen hay sữa và hỏi đúng thông tin gói. Caption, carousel 6 slide và thẻ hỏi gu.
-        </p>
-        <a href="/content/me-nho/" class="btn btn-secondary btn-sm" style="width: 100%;">Mở case MẺ NHỎ →</a>
+    <!-- 4 CASE STUDY TUẦN NỔI BẬT (C01 - C04) -->
+    <div style="background: var(--bg-muted); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; margin-bottom: 3rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); font-weight: 700;">
+          <i class="fas fa-calendar-alt" style="color: var(--accent);"></i> 4 Case Study Kế Hoạch Tuần C01–C04 (Lịch Đăng, Carousel & Video)
+        </h3>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Đầy đủ ma trận phân bổ & shot list video</span>
       </div>
-
-      <div class="card">
-        <span class="badge badge-concept" style="margin-bottom: 12px;">C03 · Phụ kiện</span>
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">QUAI VẢI: Chọn túi từ đồ sẽ mang</h3>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-          Đo kích thước laptop, bình nước và đồ đạc trước khi mua túi tote. Caption, carousel 4 điểm đo và storyboard.
-        </p>
-        <a href="/content/quai-vai/" class="btn btn-secondary btn-sm" style="width: 100%;">Mở case QUAI VẢI →</a>
-      </div>
-
-      <div class="card">
-        <span class="badge badge-concept" style="margin-bottom: 12px;">C04 · Dịch vụ số / B2B</span>
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">NHỊP VIỆC: Chốt brief cho nhóm nhỏ</h3>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-          Thống nhất đề bài và tiêu chí duyệt bài viết qua brief một trang. Caption, carousel và kịch bản phân cảnh 25s.
-        </p>
-        <a href="/content/nhip-viec/" class="btn btn-secondary btn-sm" style="width: 100%;">Mở case NHỊP VIỆC →</a>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <a href="/content/nep-gap/" style="background: var(--surface-card); border: 1px solid var(--border-light); padding: 1rem; border-radius: 10px; text-decoration: none; color: var(--text-main); display: block;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #df7900; margin-bottom: 0.25rem;">CASE C01 · VĂN PHÒNG PHẨM</div>
+          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem;">NẾP GẤP: Một tuần tìm cách ghi</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">3 Caption • 6 Slide Carousel • Video 20s</div>
+        </a>
+        <a href="/content/me-nho/" style="background: var(--surface-card); border: 1px solid var(--border-light); padding: 1rem; border-radius: 10px; text-decoration: none; color: var(--text-main); display: block;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #87513c; margin-bottom: 0.25rem;">CASE C02 · F&B CÀ PHÊ</div>
+          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem;">MẺ NHỎ: Hỏi gu khi mua cà phê</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">5 Điều trao đổi • Thẻ hỏi gu • Video 20s</div>
+        </a>
+        <a href="/content/quai-vai/" style="background: var(--surface-card); border: 1px solid var(--border-light); padding: 1rem; border-radius: 10px; text-decoration: none; color: var(--text-main); display: block;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #2563eb; margin-bottom: 0.25rem;">CASE C03 · PHỤ KIỆN</div>
+          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem;">QUAI VẢI: Chọn túi từ đồ sẽ mang</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Checklist đo túi • Carousel 4 điểm đo</div>
+        </a>
+        <a href="/content/nhip-viec/" style="background: var(--surface-card); border: 1px solid var(--border-light); padding: 1rem; border-radius: 10px; text-decoration: none; color: var(--text-main); display: block;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; margin-bottom: 0.25rem;">CASE C04 · B2B SERVICE</div>
+          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem;">NHỊP VIỆC: Chốt brief nhóm nhỏ</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Brief 1 trang • Kiểm claim • Video 25s</div>
+        </a>
       </div>
     </div>
+
+    <!-- DANH SÁCH 8 BÀI VIẾT VIRAL MẪU CÓ ẢNH THẬT -->
+    <div id="postsList">
+
+      <!-- BÀI 1: NẾP GẤP (LIFESTYLE) -->
+      <article class="viral-post-card" data-category="lifestyle">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Định hướng Lifestyle & Năng suất</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(223, 121, 0, 0.12); color: #df7900; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-book-open"></i> LỐI SỐNG · SỔ TAY
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Mua cuốn sổ 200k về viết đúng 3 trang rồi vứt xó? Bóc trần "bẫy planner" và cách thoát ra.</h2>
+          <div class="post-text-body">Thú thật đi, bạn đã từng bao nhiêu lần bước vào nhà sách, mê mẩn một cuốn planner bìa da dập nhũ vàng lấp lánh, tự hứa "năm nay mình sẽ kỷ luật gấp đôi"… rồi đúng 2 tuần sau cuốn sổ biến thành đồ kê chuột?
+
+Cái bẫy lớn nhất của người mua sổ là: CHÚNG TA MUA CUỐN SỔ VÌ MƠ ƯỚC VỀ MỘT BẢN THÂN HOÀN HẢO, chứ không mua vì thói quen thực tế.
+
+Khi mở một trang sổ chia sẵn 24 khung giờ chi tiết từng phút, tâm lý bạn sẽ bị tê liệt vì sợ viết xấu, sợ không làm đúng lịch trình. Kết quả: một ngày lỡ hẹn biến thành một tuần bỏ rơi cuốn sổ.
+
+💡 Kỹ thuật "Thử 1 trang trước khi mua 1 cuốn" từ concept NẾP GẤP:
+1. Đừng vội mua sổ mới: Lấy một tờ giấy A4 gấp đôi lại.
+2. Chia thành 3 vùng tối giản: "3 Việc ưu tiên nhất tuần", "Lịch hẹn cố định", và "Vùng ý tưởng phát sinh".
+3. Chừa một góc giấy gấp lại: Nơi ghi những việc bất ngờ xảy ra mà không làm đảo lộn kế hoạch ban đầu.
+4. Dùng thử trong 7 ngày: Mục nào bạn không bao giờ đụng đến? Đó là thứ bạn KHÔNG CẦN trong cuốn sổ tương lai.
+
+Trang giấy đầu tiên không cần kín chữ. Ý tưởng chưa cần hoàn hảo để được bắt đầu ghi lại.
+
+👇 Nếu mở sổ lúc này, bạn sẽ ghi điều gì trước? Một việc gấp phải nộp hay một ý tưởng đang ấp ủ?</div>
+          
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=80" alt="Bàn làm việc với sổ tay mở phẳng và bút mực gỗ bên cửa sổ ngập nắng" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Góc làm việc mộc mạc với trang sổ mở phẳng bên khung cửa sổ tự nhiên (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#NepGap</span>
+            <span class="post-tag">#GhiChepThucTe</span>
+            <span class="post-tag">#ThoiQuenLamViec</span>
+            <span class="post-tag">#BulletJournalVietNam</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 2: MẺ NHỎ (FNB CÀ PHÊ) -->
+      <article class="viral-post-card" data-category="fnb">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Khám phá F&B & Cà phê thủ công</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(135, 81, 60, 0.12); color: #87513c; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-mug-hot"></i> F&B · SPECIALTY COFFEE
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Vào quán specialty nói "Cho em ly ngon nhất" là câu nói khiến barista bối rối nhất thế giới.</h2>
+          <div class="post-text-body">Vì "ngon" trong cà phê là khái niệm mang tính cá nhân tuyệt đối. 
+
+Nếu bạn là người thích vị đậm đà, đắng ngậy, hậu vị chocolate bùi bùi để uống cùng sữa đặc… mà barista lại mang ra một ly Pour-over hạt Geisha giá 150k có vị chua thanh của chanh vàng và hương hoa nhài thoang thoảng, chắc chắn bạn sẽ cảm thấy mình vừa bị "lừa" mua một ly nước trà đắt đỏ!
+
+Ngược lại, nếu bạn sợ say tim đập chân run mà lại uống phải một shot Robusta sẻ nguyên chất rang đậm, thì cả buổi sáng hôm đó xem như bỏ đi.
+
+☕ 3 Câu hỏi "vàng" giúp bạn luôn gọi đúng ly cà phê chân ái:
+1. "Em muốn uống đen hay thêm sữa?": Gu sữa ngọt béo hay gu đen đá đậm tỉnh táo?
+2. "Em thích vị đắng đầm chocolate hay vị chua thanh hoa quả?": Câu này phân loại ngay giữa Robusta truyền thống và Arabica hiện đại.
+3. "Hôm nay có loại hạt nào vừa rang trong vòng 14 ngày không?": Hỏi câu này, barista sẽ tự động biết bạn là người sành và sẽ chọn cho bạn mẻ cà phê tươi mới nhất!
+
+Không có ly cà phê "chuẩn nhất", chỉ có ly cà phê hợp với gu thưởng thức của bạn sáng hôm nay.
+
+👇 Sáng nay bạn vừa nạp năng lượng bằng cà phê phin truyền thống hay cà phê máy? Thả nhẹ một tấm ảnh ly nước của bạn nhé!</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80" alt="Cận cảnh phin cà phê nhôm truyền thống đang nhỏ từng giọt sánh đậm xuống ly sữa đá" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Phin cà phê nhôm truyền thống đang nhỏ giọt chuẩn vị tại quán cà phê mộc (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#MeNho</span>
+            <span class="post-tag">#CaPhePhaPhin</span>
+            <span class="post-tag">#GuCaPheCuaBan</span>
+            <span class="post-tag">#CoffeeLoversVN</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 3: QUAI VẢI (FASHION) -->
+      <article class="viral-post-card" data-category="fashion">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Đánh giá phụ kiện sinh viên</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(37, 99, 235, 0.12); color: #2563eb; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-shopping-bag"></i> THỜI TRANG · PHỤ KIỆN
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Chiếc túi canvas 150k cứu rỗi đôi vai sinh viên: Đừng mua túi tote nếu chưa đo 3 thứ này!</h2>
+          <div class="post-text-body">Hình ảnh quen thuộc của sinh viên Gen Z: một tay cầm ly trà sữa, vai đeo chiếc túi tote vải canvas nhét đủ thứ từ laptop, sạc dự phòng, bình nước 1 lít đến giáo trình 300 trang… và bước đi với tư thế một bên vai lệch hẳn sang phải vì đau buốt!
+
+Sai lầm lớn nhất của 90% bạn trẻ khi mua túi canvas online là chỉ nhìn ảnh mẫu chụp ngoại cảnh rất thơ mà quên mất kiểm tra kết cấu chịu lực.
+
+📏 3 Điểm bắt buộc phải kiểm tra trước khi bấm "Mua ngay":
+1. Bề rộng quai túi: Quai túi dưới 3cm sẽ biến thành một sợi dây thừng siết chặt vào xương quai xanh khi bạn đựng trên 2kg đồ. Hãy chọn quai bản rộng từ 3.8cm đến 4.5cm bọc đường chỉ kép.
+2. Kích thước lòng túi kèm lớp chống sốc: Chiếc laptop 14 inch sau khi bọc bao chống sốc sẽ có kích thước thực tế tương đương thân máy 15.6 inch. Nếu đáy túi không có độ dày mở rộng (tối thiểu 8cm), túi sẽ bị phồng căng và giật đứt đường chỉ mép.
+3. Nút bấm hoặc khóa kéo miệng túi: Đi xe buýt hoặc để túi dưới sàn giảng đường mà túi không có khóa miệng thì đồ đạc bên trong xem như "mở cửa đón thần gió"!
+
+Chọn túi từ những thứ bạn mang mỗi ngày, đừng chọn chỉ vì một tấm ảnh lookbook.
+
+👇 Chiếc túi bạn đang đi học mỗi ngày có thể nhét vừa được bao nhiêu món đồ? Thử liệt kê xem ai là "kiện tướng gánh đồ" nào!</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1000&q=80" alt="Túi tote vải canvas be mộc đeo trên vai người đi bộ trên phố phong cách Minimalist" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Túi tote canvas mộc phong cách tối giản bền bỉ trên phố (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#QuaiVai</span>
+            <span class="post-tag">#TuiCanvasDiHoc</span>
+            <span class="post-tag">#MeoChonDoSinhVien</span>
+            <span class="post-tag">#MinimalistStyle</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 4: WORKSPACE / SETUP DESK -->
+      <article class="viral-post-card" data-category="workspace">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Không gian làm việc & Công thái học</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(99, 102, 241, 0.12); color: #6366f1; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-desktop"></i> SETUP BÀN LÀM VIỆC
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Tại sao chiếc bàn làm việc bừa bộn lại ngốn hết 40% năng lượng mỗi sáng của bạn?</h2>
+          <div class="post-text-body">Các nhà tâm lý học gọi đây là hiện tượng "Visual Clutter" (Rác thị giác). Mỗi chiếc dây cáp sạc lòng thòng, cốc cà phê cũ chưa rửa, hay tờ hóa đơn vứt góc bàn đều là một lời nhắc vô thức gửi đến não bộ: "Còn việc này chưa xong đấy!".
+
+Bạn chưa kịp gõ dòng code hay viết câu mở đầu nào, não bạn đã phải tiêu tốn một lượng Dopamine quý giá chỉ để… phớt lờ đống đồ bừa bộn trước mắt.
+
+🖥️ 3 Bước "detox" góc làm việc trong 15 phút:
+1. Nguyên tắc "Bề mặt 0 vật thể thừa": Bàn làm việc chỉ để 3 thứ: Màn hình, Bàn phím/Chuột, và 1 Cuốn sổ ghi chép. Tất cả đồ khác cho vào ngăn kéo hoặc hộp lưu trữ.
+2. Đèn Screenbar cứu rỗi thị giác: Đèn treo màn hình giúp chiếu sáng đúng khu vực thao tác bàn phím mà không bị lóa vào mắt hay phản chiếu lên màn hình, tạo nên một "kén tập trung" (Focus Cocoon) cực kỳ mạnh mẽ vào ban đêm.
+3. Giấu toàn bộ dây cáp: Một máng đi dây dưới gầm bàn giá 80k có thể nâng tầm thẩm mỹ góc máy của bạn ngang ngửa những setup Pinterest hàng nghìn đô.
+
+Bàn làm việc gọn gàng không phải để khoe ảnh sống ảo, mà là để tâm trí bạn được yên tĩnh sáng tạo.
+
+👇 Chụp nhanh góc máy làm việc của bạn hiện tại vào phần bình luận nhé, xem bàn ai đang gọn gàng nhất nào!</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=80" alt="Bàn làm việc WFH tối giản với đèn screenbar, bàn phím cơ và chậu cây xanh" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Góc setup bàn làm việc tối giản công thái học tạo cảm hứng tập trung cao độ (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#DeskSetup</span>
+            <span class="post-tag">#GocLamViecMinimal</span>
+            <span class="post-tag">#NangSuatWFH</span>
+            <span class="post-tag">#CongThaiHoc</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 5: HOBBY / GUNPLA -->
+      <article class="viral-post-card" data-category="hobby">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Văn hóa Pop Culture & Đồ chơi mô hình</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(239, 68, 68, 0.12); color: #ef4444; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-robot"></i> ĐAM MÊ & MÔ HÌNH
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Người lớn chi hàng triệu đồng cho những mảnh nhựa vụn: Có phải trò chơi trẻ con?</h2>
+          <div class="post-text-body">"Lớn tồng ngồng rồi còn ngồi cặm cụi dán hình người máy!" — Câu nói quen thuộc mà bất kỳ người chơi Gunpla nào cũng từng nghe ít nhất một lần từ phụ huynh hoặc người yêu.
+
+Nhưng người ngoài cuộc không hiểu được rằng: GIÂY PHÚT CẦM KÌM CẮT TỪNG CHI TIẾT RUNNER LÀ LÚC CHÚNG TÔI ĐƯỢC THIỀN ĐỊNH.
+
+Trong một thế giới đầy những deadline vô hình, thông báo tin nhắn nhảy liên tục 24/7 và những dự án mơ hồ không biết bao giờ mới xong… thì việc lắp một mô hình Gundam mang lại một cảm giác kiểm soát tuyệt đối:
+• Cắt chi tiết A12 ghép vào B4 -> Khớp nối kêu một tiếng "Click" giòn tan.
+• Dũa mịn một vết ghẻ nhựa (Nubmark) -> Bề mặt giáp phẳng lỳ hoàn hảo.
+• Sau 6 tiếng kiên nhẫn -> Một tác phẩm cơ khí thu nhỏ đứng sừng sững trên bàn làm việc.
+
+Đó là cảm giác được hoàn thành trọn vẹn một thứ bằng chính đôi bàn tay và sự tập trung cao độ của mình. Không áp lực KPI, không ai phán xét, chỉ có bạn và sự tĩnh lặng của niềm đam mê thời thơ ấu.
+
+Đàn ông không bao giờ thực sự lớn lên, chỉ có đồ chơi của họ trở nên tinh xảo và đắt giá hơn mà thôi!
+
+👇 Mẫu mô hình đầu tiên đưa bạn vào "con đường đam mê" này là gì? Chia sẻ câu chuyện của bạn nhé!</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=80" alt="Bàn làm việc chế tác mô hình Gunpla với kìm cắt tỉa chuyên dụng và kit robot chi tiết" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Góc bàn chế tác và lắp ráp mô hình robot cơ khí với dụng cụ thủ công tỉ mỉ (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#GunplaVietNam</span>
+            <span class="post-tag">#DanChoiMoHinh</span>
+            <span class="post-tag">#DamMeTuoiTho</span>
+            <span class="post-tag">#HobbyGundam</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 6: NHỊP VIỆC (B2B CONTENT) -->
+      <article class="viral-post-card" data-category="b2b">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Quy trình sản xuất & Ứng dụng AI</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(16, 185, 129, 0.12); color: #10b981; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-briefcase"></i> QUY TRÌNH B2B & CONTENT
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Dùng AI viết content nhưng bị sếp chê "văn sáo rỗng vô hồn"? Bạn đang thiếu bước này.</h2>
+          <div class="post-text-body">"Viết cho anh một bài 2.000 từ chuẩn SEO cực hay về cà phê phin nhé ChatGPT!"
+Và kết quả là: "Cà phê phin là biểu tượng văn hóa sâu sắc, đánh thức mọi giác quan, mang đến nguồn cảm hứng bùng nổ vượt bậc…"
+
+Nếu bạn nạp vào AI một cái prompt lười biếng và chung chung, bạn sẽ nhận lại một mớ chữ rác khuôn mẫu không ai muốn đọc!
+
+AI không bao giờ thay thế được tư duy chiến lược của người làm Content. Công cụ chỉ mạnh khi người ra lệnh biết chính xác ranh giới của đề bài.
+
+📋 Công thức "Humanize 3 lớp" từ quy trình NHỊP VIỆC:
+1. Lớp 1 - Khóa chặt Brief 1 trang: Trước khi chạm vào AI, hãy tự trả lời: Bài này viết cho ai đọc? Tình huống họ gặp phải là gì? Điều gì TUYỆT ĐỐI KHÔNG ĐƯỢC khẳng định quá đà?
+2. Lớp 2 - Yêu cầu AI tạo khung so sánh, không viết văn xuôi: Giao nhiệm vụ cho AI lập dàn ý đối chiếu góc nhìn hoặc tìm 5 câu hỏi thường gặp nhất của người dùng.
+3. Lớp 3 - Bơm "chất người" vào bài viết: Thay thế toàn bộ các tính từ mơ hồ ("vô cùng", "đột phá", "đỉnh cao") bằng dữ kiện thực tế, trích dẫn nguồn sơ cấp và chia sẻ trải nghiệm chân thật của chính bạn.
+
+Đừng biến mình thành một người bấm nút copy-paste từ AI. Hãy là một Tổng biên tập thông minh biết định hướng và chịu trách nhiệm về từng con chữ xuất bản!
+
+👇 Tải ngay Mẫu Brief Content 1 trang và Bảng kiểm chứng Claim tại /tai-nguyen/ để nâng cấp quy trình làm việc của nhóm bạn ngay hôm nay!</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" alt="Màn hình máy tính hiển thị mã nguồn và tài liệu nghiên cứu bên cạnh sổ tay ghi chép" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Góc làm việc kiểm duyệt nội dung và đối chiếu tài liệu kỹ thuật chuyên nghiệp (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#NhipViec</span>
+            <span class="post-tag">#VietContentBangAI</span>
+            <span class="post-tag">#QuyTrinhBienTap</span>
+            <span class="post-tag">#ContentMarketingB2B</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 7: MATCHA & HOME CAFE -->
+      <article class="viral-post-card" data-category="fnb">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Trải nghiệm ẩm thực Home Cafe</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(5, 150, 105, 0.12); color: #059669; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-seedling"></i> HOME CAFE · ẨM THỰC
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Uống Matcha ở quán thấy thơm ngọt, mua bột về tự pha lại đắng ngắt và tanh? Đây là 3 lỗi sai chết người.</h2>
+          <div class="post-text-body">Bột Matcha Uji Ceremonial loại xịn giá nửa triệu một hũ, sữa yến mạch xịn sò… nhưng pha ra vẫn có màu vàng đục và vị tanh như rong biển?
+
+Khoa học chiết xuất đằng sau một ly Matcha Latte hoàn hảo:
+❌ Lỗi 1: Dùng nước sôi 100°C: Nước trên 80°C sẽ phá hủy toàn bộ chất diệp lục (Chlorophyll) và làm cháy các axit amin tạo ngọt tự nhiên (L-theanine), khiến bột trà bị biến tính giải phóng vị đắng ngắt! Nhiệt độ chuẩn xác là 70°C - 75°C.
+❌ Lỗi 2: Dùng muỗng khuấy tròn: Bột Matcha không tan trong nước như cà phê hòa tan mà là các hạt mịn lơ lửng. Dùng muỗng khuấy sẽ làm bột vón cục dưới đáy. Bạn phải dùng chổi tre Chasen đánh nhanh tay theo hình chữ W hoặc chữ M để tạo lớp bọt mịn dày ngọc bích.
+❌ Lỗi 3: Không rây bột trước khi đánh: Bột Matcha hút ẩm rất nhanh từ không khí. 10 giây rây bột qua lưới mịn sẽ quyết định độ mượt như nhung của ngụm trà đầu tiên.
+
+🍵 Công thức Home Cafe chuẩn vị: 3g bột Matcha rây mịn + 40ml nước ấm 75°C (đánh bọt 20s) + 120ml sữa yến mạch không đường + 15ml mật ong hoặc siro agave + đá viên mát lạnh!
+
+👇 Bạn là team Matcha Latte ngọt béo hay team Usucha thanh mát nguyên bản? Comment công thức ruột của bạn nhé!</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=1000&q=80" alt="Bát trà Matcha xanh ngọc bích được đánh bông mịn bên cạnh chổi tre Chasen truyền thống" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Bát bột trà xanh Matcha đánh bông mịn với bọt ngọc bích và chổi tre truyền thống (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#MatchaLatte</span>
+            <span class="post-tag">#HomeCafeVN</span>
+            <span class="post-tag">#MeoPhaChe</span>
+            <span class="post-tag">#TraXanhNhatBan</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÀI 8: THÓI QUEN REVIEW NGÀY -->
+      <article class="viral-post-card" data-category="lifestyle">
+        <div class="post-header-bar">
+          <div class="post-author-box">
+            <img src="/image/avatar.jpg" alt="Khương Tuấn Anh" class="post-author-avatar">
+            <div>
+              <div class="post-author-name">Khương Tuấn Anh</div>
+              <div class="post-author-meta">Content Creator · Phát triển bản thân & Mindset</div>
+            </div>
+          </div>
+          <span style="font-size: 0.78rem; background: rgba(223, 121, 0, 0.12); color: #df7900; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">
+            <i class="fas fa-moon"></i> NĂNG SUẤT · TƯ DUY
+          </span>
+        </div>
+        <div class="post-body-content">
+          <h2 class="post-hook-title">Tại sao những người làm việc hiệu quả nhất đều giữ thói quen "Review ngày" 5 phút trước khi ngủ?</h2>
+          <div class="post-text-body">Bạn đặt lưng xuống giường lúc 11h đêm, mắt mỏi nhừ nhưng đầu óc vẫn chạy đua với hàng chục suy nghĩ dở dang: "Ngày mai phải gửi mail cho ai?", "Hôm nay mình đã làm được cái gì ra hồn chưa?", "Sao cảm giác lúc nào cũng bận rộn mà không thấy tiến bộ?"...
+
+Tâm lý học gọi đây là Hiệu ứng Zeigarnik: Não người có xu hướng ghi nhớ và ám ảnh dai dẳng bởi những nhiệm vụ chưa hoàn thành. Khi bạn không có một nghi thức để "đóng lại" một ngày, não bạn sẽ tiếp tục làm việc tăng ca trong giấc ngủ!
+
+🌙 3 Câu hỏi giải phóng tâm trí trong 5 phút trước khi gập sổ:
+1. "Hôm nay điều gì đã diễn ra tốt đẹp?": Ghi nhận ít nhất 1 việc bạn đã hoàn thành trọn vẹn, dù là việc nhỏ như dọn góc bàn hay đọc xong 1 chương sách. Sự tự công nhận tạo ra nguồn năng lượng tích cực bền vững.
+2. "Việc gì chưa xong và ngày mai xử lý lúc mấy giờ?": Viết rõ thời điểm xử lý ra giấy là cách bạn ra lệnh cho não bộ: "Yên tâm đi ngủ, việc này đã có lịch hẹn rõ ràng vào 9h sáng mai rồi!".
+3. "Bài học lớn nhất hôm nay là gì?": Một sai lầm được đúc kết thành bài học sẽ không còn là sự thất bại, mà trở thành kinh nghiệm quý giá.
+
+Đừng mang những lo toan dở dang của ngày hôm nay vào giấc ngủ của ngày mai. Hãy viết chúng ra trang giấy và cho phép bản thân được nghỉ ngơi trọn vẹn.
+
+👇 Tối nay trước khi ngủ, bạn muốn tự thưởng cho bản thân một lời khen nào vì sự nỗ lực suốt ngày dài hôm nay?</div>
+
+          <div class="post-real-image-wrap">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=80" alt="Không gian đọc sách và ghi chép buổi tối với đèn bàn ánh sáng vàng dịu và tách trà ấm" class="post-real-image">
+            <div class="post-image-caption">
+              <i class="fas fa-camera"></i> Ảnh chụp thực tế: Không gian đọc sách và ghi chép tĩnh lặng buổi tối bên ánh đèn ấm (Unsplash Editorial).
+            </div>
+          </div>
+
+          <div class="post-tags-row">
+            <span class="post-tag">#ReviewNgay</span>
+            <span class="post-tag">#TamLyHoc</span>
+            <span class="post-tag">#NguNgonMoiDem</span>
+            <span class="post-tag">#PhatTrienBanThan</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </main>
-  
-  <footer class="site-footer">
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="background: var(--bg-card); border-top: 1px solid var(--border); padding: 3rem 0 2rem 0;">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Góc làm nội dung · Khương Tuấn Anh</h5>
-          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
-            Học Digital Marketing tại VTC Academy. Thực hành viết SEO, thiết kế nhận diện thương hiệu và nghiên cứu dữ liệu thực tế.
-          </p>
-          <p style="font-size: 13px; color: var(--text-muted);">
-            📧 anhkhuong134@gmail.com &nbsp;|&nbsp; 📞 0384 201 443
-          </p>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+        <div>
+          <h4 style="margin: 0 0 0.35rem 0; font-size: 1.15rem; color: var(--text-main);">Khương Tuấn Anh · Content Creator Portfolio</h4>
+          <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Sinh viên Digital Marketing tại VTC Academy · Trung thực dữ liệu, chuẩn hóa E-E-A-T.</p>
         </div>
-        <div class="footer-col">
-          <h5>Dự án tiêu biểu</h5>
-          <ul class="footer-links">
-            <li><a href="/nghien-cuu/circle-k-gs25/">Đồ án thật: Circle K &amp; GS25</a></li>
-            <li><a href="/nhan-dien/nep-gap/">Nhận diện: NẾP GẤP</a></li>
-            <li><a href="/content/me-nho/">Content Lab: MẺ NHỎ</a></li>
-            <li><a href="/seo-samples.html">SEO Studio: 11 bài viết</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Nghiên cứu &amp; Thiết kế</h5>
-          <ul class="footer-links">
-            <li><a href="/nghien-cuu/muji-kokuyo/">MUJI vs KOKUYO Campus</a></li>
-            <li><a href="/nghien-cuu/highlands-menu/">Menu Audit Highlands Coffee</a></li>
-            <li><a href="/thiet-ke/banner-me-nho/">Bộ Banner MẺ NHỎ</a></li>
-            <li><a href="/web/nep-gap/">Cửa hàng Concept NẾP GẤP</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Tài nguyên &amp; Quy trình</h5>
-          <ul class="footer-links">
-            <li><a href="/seo/quy-trinh/">Quy trình 22 bước SEO</a></li>
-            <li><a href="/tai-nguyen/#brief-mot-trang">Mẫu Brief một trang</a></li>
-            <li><a href="/tai-nguyen/#lich-tuan">Lịch tuần NẾP GẤP</a></li>
-            <li><a href="/tai-nguyen/#phieu-thu-gu">Phiếu thử gu cà phê</a></li>
-          </ul>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <a href="/du-an/" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem;">Dự Án</a>
+          <a href="/seo/" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem;">SEO On-Page</a>
+          <a href="/content/" style="color: var(--accent); text-decoration: none; font-size: 0.88rem; font-weight: 700;">Content Lab</a>
+          <a href="/tai-nguyen/" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem;">Tài Nguyên</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Khương Tuấn Anh. Portfolio xây dựng trung thực, minh bạch nguồn đối chiếu.</span>
-        <span>Portfolio học viên Digital Marketing · Minh bạch nguồn đối chiếu và phạm vi thực hiện</span>
+      <div style="border-top: 1px solid var(--border-light); padding-top: 1.5rem; text-align: center; font-size: 0.82rem; color: var(--text-muted);">
+        © 2026 Khương Tuấn Anh. Mọi hình ảnh trong tuyển tập bài viết đều là ảnh tư liệu thực tế (Unsplash Editorial / Sản phẩm thật), không sử dụng ảnh AI.
       </div>
     </div>
   </footer>
-  
+
+  <script>
+    function filterPosts(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.viral-post-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
