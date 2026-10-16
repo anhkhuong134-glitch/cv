@@ -9,7 +9,7 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Tuyển tập 13 đồ án và case study chuyên sâu: Nghiên cứu thị trường, Nhận diện thương hiệu, Content Lab, Banner Ads, Website Concept và SEO On-Page."
+    desc: "Tuyển tập 10 đồ án và case study chuyên sâu: Nghiên cứu thị trường (3), Nhận diện thương hiệu (3), Tuyển tập Content Lab (C01–C04), Banner Ads, Website Concept và Tuyển tập 15 Bài viết SEO On-Page."
   },
   research: {
     id: "research",
@@ -45,7 +45,7 @@ const categoriesConfig = {
     id: "seo",
     name: "SEO Content",
     icon: "fas fa-search",
-    desc: "Tuyển tập 11 bài viết SEO On-Page đa ngành dài 2.500 từ kèm SERP Inspector và hồ sơ kỹ thuật On-Page Blueprint 8 phần minh bạch."
+    desc: "Tuyển tập 15 bài viết SEO On-Page đa ngành dài 2.000 - 2.800 từ kèm SERP Inspector, trích dẫn ảnh chụp thực tế và hồ sơ kỹ thuật On-Page Blueprint 8 phần minh bạch."
   }
 };
 
@@ -486,206 +486,56 @@ const projectsData = {
     }
   },
 
-  // ==================== DỰ ÁN 30: CONTENT LAB C01 (NẾP GẤP) ====================
+    // ==================== DỰ ÁN 30: TUYỂN TẬP CONTENT LAB (C01 - C04 & 13 BÀI VIRAL) ====================
   30: {
     id: 30,
-    title: "Content Lab C01: NẾP GẤP — Một Tuần Để Tìm Cách Ghi Phù Hợp",
-    type: "Social Content Lab · Kế Hoạch 7 Ngày",
+    title: "Tuyển Tập Content Lab: 4 Kế Hoạch Tuần C01–C04 & 13 Bài Viết Viral Thực Chiến",
+    type: "Social Content Strategy & Copywriting Lab",
     category: "content",
     categoryName: "Kế Hoạch Content",
     categoryIcon: "fas fa-pen-nib",
     categoryColor: "#df7900",
     duration: "10/2026",
-    results: "Lịch đăng 7 ngày • 3 Caption hoàn chỉnh • 6 Slide Carousel • Shot list 20s",
-    tools: ["Content Strategy", "Copywriting", "Carousel Design", "Video Storyboard"],
-    description: "Kế hoạch tuần giải quyết vấn đề của người học và người làm nội dung khi chọn sổ planner: mua vì ảnh bìa nhưng khó dùng. Cung cấp bài mẫu phân tích, carousel 6 slide, story tương tác và kịch bản video phân cảnh 20 giây.",
-    featured: false,
+    results: "4 Kế hoạch tuần mẫu • 13 Bài viết viral thực chiến • 24 Slide Carousel • 4 Storyboard video",
+    tools: ["Content Strategy", "Social Copywriting", "Editorial Planning", "Carousel Design", "Storyboarding"],
+    description: "Hệ thống kế hoạch nội dung mạng xã hội và copywriting thực chiến bao gồm 4 case study tuần hoàn chỉnh (NẾP GẤP, MÈ NHỎ, QUAI VẢI, NHỊP VIỆC B2B) cùng tuyển tập 13 bài viết social viral đa ngành kèm hình ảnh chụp thực tế và phân tích cấu trúc hook-body-cta chuẩn chỉnh.",
+    featured: true,
     links: [
-      { url: "/content/nep-gap/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Copy", title: "Mở toàn văn case C01" },
-      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện NẾP GẤP" },
-      { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Mẫu Lịch Tuần", title: "Tải bản lịch tuần A5" }
+      { url: "/content/", icon: "fas fa-layer-group", btnText: "Khám Phá Tuyển Tập (Hub)", title: "Mở trung tâm Content Lab" },
+      { url: "/content/nep-gap/", icon: "fas fa-pen-nib", btnText: "Case C01: NẾP GẤP", title: "Mở kế hoạch tuần NẾP GẤP" },
+      { url: "/content/me-nho/", icon: "fas fa-coffee", btnText: "Case C02: MÈ NHỎ", title: "Mở kế hoạch tuần MÈ NHỎ" },
+      { url: "/content/quai-vai/", icon: "fas fa-shopping-bag", btnText: "Case C03: QUAI VẢI", title: "Mở kế hoạch tuần QUAI VẢI" },
+      { url: "/content/nhip-viec/", icon: "fas fa-briefcase", btnText: "Case C04: NHỊP VIỆC", title: "Mở kế hoạch tuần NHỊP VIỆC" }
     ],
     academicInfo: {
       institution: "VTC Academy",
       instructor: "Đồ Án Content Marketing",
-      class: "Social Content Strategy 2026",
+      class: "Social Content Strategy & Copywriting 2026",
       team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
       time: "Tháng 10/2026",
-      docPages: "Kế hoạch 7 ngày & Storyboard 20s"
+      docPages: "4 Kế hoạch tuần & 13 Bài viết viral"
     },
-    executiveSummary: "Chiến dịch nội dung tuần mẫu cho concept NẾP GẤP với thông điệp: 'Thử cách ghi trước khi chọn sổ'. Xây dựng 3 trụ cột nội dung: Ghi có mục đích (giải thích), Thử trên một trang (hướng dẫn thực hành) và Một ý đang mở (đối thoại cộng đồng).",
+    executiveSummary: "Hệ thống nội dung đa kênh tập trung giải quyết bài toán giao tiếp thực tế: chuyển đổi insight người dùng thành kế hoạch tuần có định hướng rõ ràng, loại bỏ ngôn từ sáo rỗng, và thử nghiệm các định dạng bài đăng tương tác cao (Carousel chia sẻ kinh nghiệm, Story thăm dò ý kiến, Video ngắn phân cảnh).",
     kpis: [
-      { number: "7", label: "Ngày trong lịch xuất bản", icon: "fas fa-calendar-week" },
-      { number: "3", label: "Bài viết kèm Caption chuẩn", icon: "fas fa-align-left" },
-      { number: "6", label: "Slide Carousel chi tiết", icon: "fas fa-clone" },
-      { number: "20s", label: "Kịch bản phân cảnh video", icon: "fas fa-video" }
+      { number: "4", label: "Case Study tuần chi tiết", icon: "fas fa-calendar-alt" },
+      { number: "13", label: "Bài viết viral thực chiến", icon: "fas fa-fire" },
+      { number: "24", label: "Slide Carousel thiết kế", icon: "fas fa-clone" },
+      { number: "100%", label: "Ảnh chụp tư liệu thực tế", icon: "fas fa-camera" }
     ],
     surveyData: [
-      { number: "NG-P1", tag: "Ngày 1 · Ảnh đơn", title: "Trang trống không cần được lấp đầy", desc: "Giúp người đọc giảm áp lực phải viết kín trang sổ; tập trung vào một việc quan trọng nhất." },
-      { number: "NG-C1", tag: "Ngày 2 · Carousel", title: "Chọn planner theo thứ cần ghi", desc: "So sánh 3 phong cách ghi chép: theo giờ, theo checklist việc linh hoạt và theo hạn mốc lớn." },
-      { number: "NG-V1", tag: "Ngày 7 · Video 20s", title: "Từ 3 việc rời đến 1 trang tuần", desc: "Shot list phân cảnh tay sắp xếp 3 mẩu note rời vào các ô lịch tuần NẾP GẤP có định hướng." }
+      { number: "C01", tag: "NẾP GẤP", title: "Một tuần để tìm cách ghi phù hợp", desc: "Giải quyết bẫy mua sổ vì ảnh bìa nhưng khó dùng; hướng dẫn thử 1 trang ruột trước khi mua." },
+      { number: "C02", tag: "MÈ NHỎ", title: "Giúp người mới hỏi đúng khi mua cà phê", desc: "Xây dựng các câu hỏi gợi ý khi trao đổi với barista; tránh sáo rỗng, tập trung vào trải nghiệm vị giác." },
+      { number: "C03", tag: "QUAI VẢI", title: "Chọn túi từ những món sẽ mang", desc: "Biểu mẫu 4 bước kiểm tra kích thước vật dụng và lớp chống sốc trước khi chọn túi canvas." },
+      { number: "C04", tag: "NHỊP VIỆC", title: "Dịch vụ số & B2B cho nhóm nhỏ", desc: "Quy trình phân luồng công việc, chuẩn hóa brief 1 trang và nghiệm thu chất lượng bài viết." }
     ],
     recommendations: {
       circleK: [
-        { title: "Bài NG-P2: Ô cho việc phát sinh", desc: "Chia sẻ kỹ thuật chừa một vùng trống ở cạnh trang để đón nhận các ý tưởng bất ngờ xuất hiện." },
-        { title: "Bài NG-P3: Thử một trang trước khi mua", desc: "Dẫn dắt người đọc tới trang tài nguyên tải mẫu lịch tuần A5 in thử tại nhà." }
+        { title: "Liên kết chéo đa định dạng", desc: "Mỗi case study đều tích hợp liên kết trực tiếp tới Brand Identity, Web Concept và Mẫu biểu tải về thực tế." },
+        { title: "Thực nghiệm tương tác", desc: "Các bài đăng đều có phân tích cơ chế tạo thảo luận cộng đồng và giữ chân người đọc." }
       ],
       gs25: [
-        { title: "Story tương tác NG-S1 & S2", desc: "Tạo thăm dò ý kiến về thói quen nhìn cả tuần hay từng ngày và giải đáp thắc mắc ghi chép." },
-        { title: "Không cam kết tăng năng suất", desc: "Tránh hứa hẹn sổ tay giúp tăng gấp đôi năng suất; tập trung vào sự rõ ràng và cảm giác thoải mái." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 31: CONTENT LAB C02 (MẺ NHỎ) ====================
-  31: {
-    id: 31,
-    title: "Content Lab C02: MẺ NHỎ — Giúp Người Mới Đặt Câu Hỏi Khi Mua Cà Phê",
-    type: "Social Content Lab · Kế Hoạch 7 Ngày",
-    category: "content",
-    categoryName: "Kế Hoạch Content",
-    categoryIcon: "fas fa-pen-nib",
-    categoryColor: "#df7900",
-    duration: "10/2026",
-    results: "Lịch 7 ngày • 3 Caption thực chiến • Carousel 5 điều trao đổi • Kịch bản video",
-    tools: ["Editorial Strategy", "Social Copy", "Poll Strategy", "Storyboard"],
-    description: "Giúp khách hàng mới diễn đạt nhu cầu với người bán: uống đen hay sữa, đang có phin gì, cỡ xay ra sao. Tránh sáo rỗng, tập trung vào trải nghiệm thực tế và cung cấp phiếu thử gu tải về.",
-    featured: false,
-    links: [
-      { url: "/content/me-nho/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Copy", title: "Mở toàn văn case C02" },
-      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện MẺ NHỎ" },
-      { url: "/tai-nguyen/#phieu-thu-gu", icon: "fas fa-download", btnText: "Tải Phiếu Thử Gu", title: "Tải phiếu thử gu cà phê" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Content Marketing",
-      class: "Social Content Strategy 2026",
-      team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
-      time: "Tháng 10/2026",
-      docPages: "Kế hoạch 7 ngày & Storyboard 20s"
-    },
-    executiveSummary: "Chiến dịch nội dung tuần mẫu cho concept MẺ NHỎ với thông điệp: 'Pha theo gu của bạn'. Cung cấp bộ câu hỏi cụ thể để người mới tự tin trao đổi với người bán cà phê hạt và bột pha tại nhà.",
-    kpis: [
-      { number: "7", label: "Ngày trong lịch xuất bản", icon: "fas fa-calendar-week" },
-      { number: "3", label: "Bài viết hoàn chỉnh kèm caption", icon: "fas fa-align-left" },
-      { number: "5", label: "Gợi ý trao đổi với người bán", icon: "fas fa-comments" },
-      { number: "1", label: "Phiếu thử gu đính kèm", icon: "fas fa-file-alt" }
-    ],
-    surveyData: [
-      { number: "MN-P1", tag: "Ngày 1 · Ảnh đơn", title: "'Ngon nhất' cần thêm ngữ cảnh", desc: "Giải thích lý do câu hỏi 'cho mình loại ngon nhất' thường khó nhận được câu trả lời chính xác nếu chưa rõ gu uống." },
-      { number: "MN-C1", tag: "Ngày 2 · Carousel", title: "5 Điều nên nói với người bán cà phê", desc: "Cách uống (đen/sữa), dụng cụ pha, mua hạt hay bột, mức độ đắng và hương vị ưa thích." },
-      { number: "MN-P3", tag: "Ngày 5 · Bài link", title: "Đổi một thứ trong lần pha tiếp theo", desc: "Hướng dẫn chỉ thay đổi một biến số (lượng bột hoặc lượng nước) để biết điều gì tạo nên sự khác biệt." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Bài MN-P2: Đọc hướng dẫn gói", desc: "Nhắc nhở độc giả tuân thủ hướng dẫn của nhà sản xuất trước khi thử nghiệm công thức trên mạng." },
-        { title: "Story hỏi đáp MN-S2", desc: "Mở hộp câu hỏi thu thập những vướng mắc phổ biến của người mới bắt đầu pha cà phê phin tại nhà." }
-      ],
-      gs25: [
-        { title: "Kịch bản video MN-V1", desc: "Storyboard 20 giây minh họa tình huống cầm thẻ hỏi gu tự tin bước vào cửa hàng cà phê." },
-        { title: "Liên kết bài viết chuyên sâu", desc: "Dẫn dắt tự nhiên sang bài On-Page SEO 'Chọn cà phê pha phin: Bắt đầu từ gu uống'." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 32: CONTENT LAB C03 (QUAI VẢI) ====================
-  32: {
-    id: 32,
-    title: "Content Lab C03: QUAI VẢI — Chọn Túi Từ Những Món Sẽ Mang",
-    type: "Social Content Lab · Kế Hoạch 7 Ngày",
-    category: "content",
-    categoryName: "Kế Hoạch Content",
-    categoryIcon: "fas fa-pen-nib",
-    categoryColor: "#df7900",
-    duration: "10/2026",
-    results: "Lịch 7 ngày • Bài post đo túi • Carousel 6 slide • Checklist đồ mang",
-    tools: ["Copywriting", "Checklist Design", "Social Visuals"],
-    description: "Hướng dẫn người đi học và đi làm cách kiểm tra kích thước đồ dùng thực tế (laptop có bao chống sốc, bình nước, sổ) trước khi mua túi vải canvas để tránh mua nhầm size.",
-    featured: false,
-    links: [
-      { url: "/content/quai-vai/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Copy", title: "Mở toàn văn case C03" },
-      { url: "/nhan-dien/quai-vai/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện QUAI VẢI" },
-      { url: "/tai-nguyen/#phieu-do-tui", icon: "fas fa-download", btnText: "Tải Phiếu Đo Túi", title: "Tải biểu mẫu đo kích thước túi" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Content Marketing",
-      class: "Social Content Strategy 2026",
-      team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
-      time: "Tháng 10/2026",
-      docPages: "Kế hoạch 7 ngày & Checklist đo túi"
-    },
-    executiveSummary: "Chiến dịch nội dung tuần mẫu cho concept QUAI VẢI với thông điệp: 'Mang vừa một ngày'. Nhấn mạnh trải nghiệm sử dụng thực tế và cách bảo quản vải canvas thay vì chỉ chụp ảnh lookbook thời trang bóng bẩy.",
-    kpis: [
-      { number: "7", label: "Ngày trong lịch xuất bản", icon: "fas fa-calendar-week" },
-      { number: "1", label: "Quy trình đo 4 bước", icon: "fas fa-ruler" },
-      { number: "6", label: "Slide Carousel hướng dẫn", icon: "fas fa-clone" },
-      { number: "1", label: "Checklist đồ dùng thực tế", icon: "fas fa-tasks" }
-    ],
-    surveyData: [
-      { number: "QV-P1", tag: "Ngày 1 · Bài Post", title: "Ảnh đẹp chưa cho biết túi có vừa đồ", desc: "Chỉ ra sai lầm phổ biến khi mua túi canvas online chỉ nhìn ảnh mẫu đeo vai mà quên kiểm tra đáy túi." },
-      { number: "QV-C1", tag: "Ngày 2 · Carousel", title: "Đo cả lớp chống sốc của laptop", desc: "Lưu ý quan trọng: chiếc laptop 14 inch sau khi bọc bao nỉ sẽ tương đương kích thước thân máy 15.6 inch." },
-      { number: "QV-P3", tag: "Ngày 5 · Bài link", title: "Tải phiếu đo túi trước khi đặt hàng", desc: "Dẫn người xem tới trang tài nguyên để tải bản PDF phiếu đo lòng túi và độ mở miệng túi." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Quy chuẩn bảo quản canvas", desc: "Hướng dẫn chi tiết cách vệ sinh vết bẩn cục bộ bằng bàn chải mềm thay vì giặt máy." },
-        { title: "Card tóm tắt 4 bước", desc: "Ấn phẩm mạng xã hội tóm tắt: Liệt kê → Đo → Thử → Kiểm tra hướng dẫn chăm sóc." }
-      ],
-      gs25: [
-        { title: "Không quảng cáo chống nước tuyệt đối", desc: "Minh bạch về đặc tính thấm hút tự nhiên của vải canvas mộc, gợi ý sử dụng túi phụ chống ẩm." },
-        { title: "Dẫn link sang bài SEO A07", desc: "Điều hướng người đọc sang bài viết chuyên sâu: 'Chọn túi canvas đi học: Kiểm tra kích thước và cách dùng'." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 33: CONTENT LAB C04 (NHỊP VIỆC) ====================
-  33: {
-    id: 33,
-    title: "Content Lab C04: NHỊP VIỆC — Dịch Vụ Số & B2B Cho Nhóm Nhỏ",
-    type: "Content Lab · B2B Service & Workflow",
-    category: "content",
-    categoryName: "Kế Hoạch Content",
-    categoryIcon: "fas fa-pen-nib",
-    categoryColor: "#df7900",
-    duration: "10/2026",
-    results: "Quy trình brief 1 trang • Ma trận 3 tầng Humanize • Biểu mẫu kiểm soát claim",
-    tools: ["B2B Content", "Workflow Automation", "AI Ethics", "Documentation"],
-    description: "Thiết lập quy trình bàn giao việc viết nội dung và ứng dụng AI có trách nhiệm cho nhóm nhỏ: từ brief một trang có giới hạn, kỹ thuật đối chiếu nguồn sơ cấp đến checklist 15 tiêu chí duyệt bản nháp.",
-    featured: false,
-    links: [
-      { url: "/content/nhip-viec/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Quy Trình", title: "Mở toàn văn case C04" },
-      { url: "/seo-brief-content.html", icon: "fas fa-file-contract", btnText: "Xem Bài Mẫu Brief A11", title: "Xem bài viết mẫu brief content" },
-      { url: "/tai-nguyen/#brief-mot-trang", icon: "fas fa-download", btnText: "Tải Mẫu Brief", title: "Tải mẫu brief một trang" }
-    ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Đồ Án Content Marketing",
-      class: "B2B Content & Operations 2026",
-      team: "Khương Tuấn Anh (Biên tập & Quy trình)",
-      time: "Tháng 10/2026",
-      docPages: "Quy trình làm việc & Biểu mẫu B2B"
-    },
-    executiveSummary: "NHỊP VIỆC xây dựng bộ khung chuẩn hóa quy trình sáng tạo nội dung giữa người quản lý, copywriter và công cụ AI. Giải quyết triệt để tình trạng prompt chung chung dẫn đến bản nháp sáo rỗng và thiếu số liệu kiểm chứng.",
-    kpis: [
-      { number: "1", label: "Bản Brief chuẩn 1 trang", icon: "fas fa-file-contract" },
-      { number: "3", label: "Tầng kiểm duyệt Humanize", icon: "fas fa-filter" },
-      { number: "15", label: "Tiêu chí On-Page nghiệm thu", icon: "fas fa-clipboard-check" },
-      { number: "0", label: "Claim phóng đại thiếu nguồn", icon: "fas fa-shield-alt" }
-    ],
-    surveyData: [
-      { number: "Bước 1", tag: "Briefing", title: "Khóa chặt đề bài và điều không khẳng định", desc: "Xác định rõ người đọc mục tiêu, tình huống thực tế và các ranh giới không được hứa hẹn quá đà." },
-      { number: "Bước 2", tag: "AI Draft", title: "Tạo khung nháp có kiểm soát", desc: "Sử dụng AI như một trợ lý lập dàn ý và tìm kiếm góc nhìn mở, không copy-paste nguyên văn để xuất bản." },
-      { number: "Bước 3", tag: "Fact-Check", title: "Đối chiếu nguồn sơ cấp và biên tập E-E-A-T", desc: "Kiểm tra từng con số với tài liệu gốc, viết lại câu chữ theo giọng văn điềm tĩnh và bổ sung trải nghiệm thực tế." }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Bảng kiểm chứng claim CSV", desc: "Mẫu theo dõi nguồn gốc từng số liệu trích dẫn để đảm bảo tính minh bạch trước khi xuất bản." },
-        { title: "Quy ước liên kết nội bộ chặt chẽ", desc: "Xây dựng sơ đồ Internal Links Silo kết nối mạch lạc giữa bài viết, trang tài nguyên và case study." }
-      ],
-      gs25: [
-        { title: "Minh bạch về sự hỗ trợ của AI", desc: "Ghi nhận rõ ràng vai trò định hướng của con người và sự hỗ trợ kỹ thuật của AI trong portfolio." },
-        { title: "Tuân thủ chính sách Google E-E-A-T", desc: "Nội dung phục vụ con người trước tiên, không viết bài chỉ nhằm mục đích thao túng công cụ tìm kiếm." }
+        { title: "Trung thực về kết quả", desc: "Ghi nhận minh bạch trạng thái dự án thực hành học tập và portfolio cá nhân, không khai khống số liệu ảo." },
+        { title: "Chuẩn hóa giọng điệu thương hiệu", desc: "Mỗi thương hiệu giả định có một Tone of Voice nhất quán, tránh lẫn lộn phong cách viết." }
       ]
     }
   },
@@ -853,7 +703,7 @@ const projectPrimaryUrls = {
   10: "/nhan-dien/nep-gap/",
   11: "/nhan-dien/me-nho/",
   12: "/nhan-dien/quai-vai/",
-  30: "/content/nep-gap/",
+  30: "/content/",
   31: "/content/me-nho/",
   32: "/content/quai-vai/",
   33: "/content/nhip-viec/",
