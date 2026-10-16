@@ -2,6 +2,30 @@
 <html lang="vi" data-theme="light">
 
 <head>
+  <!-- TỰ ĐỘNG CHUYỂN HƯỚNG SANG TRANG SHOWCASE CHUYÊN SÂU TƯƠNG ỨNG -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id');
+      var map = {
+        '1': '/nghien-cuu/circle-k-gs25/',
+        '20': '/nghien-cuu/muji-kokuyo/',
+        '21': '/nghien-cuu/highlands-menu/',
+        '10': '/nhan-dien/nep-gap/',
+        '11': '/nhan-dien/me-nho/',
+        '12': '/nhan-dien/quai-vai/',
+        '30': '/content/nep-gap/',
+        '31': '/content/me-nho/',
+        '32': '/content/quai-vai/',
+        '33': '/content/nhip-viec/',
+        '4': '/thiet-ke/banner-me-nho/',
+        '7': '/web/nep-gap/',
+        '5': '/seo/'
+      };
+      var target = (id && map[id]) ? map[id] : '/du-an/';
+      window.location.replace(target);
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi Tiết Dự Án | KHƯƠNG TUẤN ANH</title>

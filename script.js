@@ -794,21 +794,21 @@ const projectsData = {
   // ==================== DỰ ÁN 5: BỘ BÀI SEO MẪU (SEO) ====================
   5: {
     id: 5,
-    title: "Tuyển Tập 11 Bài Viết SEO On-Page Đa Ngành & Technical Blueprint",
+    title: "Tuyển Tập 15 Bài Viết SEO On-Page Đa Ngành & Technical Blueprint",
     type: "SEO Content & Technical On-Page Lab",
     category: "seo",
     categoryName: "SEO Content",
     categoryIcon: "fas fa-search",
     categoryColor: "#df7900",
     duration: "10/2026",
-    results: "11 Bài viết mẫu chuyên sâu • SERP Inspector • Bảng 8 phần Blueprint Masterclass",
+    results: "15 Bài viết mẫu chuyên sâu • SERP Inspector • Bảng 8 phần Blueprint Masterclass",
     tools: ["On-Page SEO", "Schema.org", "Keyword Research", "SERP Simulator", "E-E-A-T"],
     description: "Tuyển tập 11 bài viết chuẩn On-Page SEO dài 2.000 - 2.500 từ trải dài qua 6 nhóm ngành (Công nghệ AI, Gunpla, Phần cứng PC, Anime Manga, Game Dev 2D, F&B Cà phê, Thời trang Canvas, Văn phòng phẩm, Cây cảnh, Du lịch, Quản trị Content). Mỗi bài đều có mô phỏng SERP và hồ sơ kỹ thuật 8 phần minh bạch.",
     featured: true,
     links: [
-      { url: "/seo-samples.html", icon: "fas fa-search", btnText: "Xem Tuyển Tập 11 Bài Viết", title: "Mở hub 11 bài SEO mẫu" },
-      { url: "/seo-aiktp.html", icon: "fas fa-robot", btnText: "Xem Bài 1 (AIKTP & Gemini)", title: "Mở bài viết mẫu số 1" },
-      { url: "/seo-brief-content.html", icon: "fas fa-file-contract", btnText: "Xem Bài 11 (Brief Content)", title: "Mở bài viết mẫu số 11" }
+      { url: "/seo/", icon: "fas fa-search", btnText: "Xem Tuyển Tập 15 Bài Viết", title: "Mở hub 15 bài SEO chuyên sâu" },
+      { url: "/seo/ai-ho-tro-viet-bai-seo/", icon: "fas fa-robot", btnText: "Xem Bài 1 (AIKTP & Gemini)", title: "Mở bài viết mẫu số 1" },
+      { url: "/seo/chon-dien-thoai-quay-chup-sinh-vien/", icon: "fas fa-mobile-alt", btnText: "Xem Bài 12 (Điện thoại)", title: "Mở bài viết Điện thoại" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -845,8 +845,26 @@ const projectsData = {
 
 // ================== CÁC CHỨC NĂNG ĐIỀU HƯỚNG & HELPER ==================
 
+// Bảng ánh xạ 13 đồ án và case study sang URL showcase chuyên sâu tương ứng
+const projectPrimaryUrls = {
+  1: "/nghien-cuu/circle-k-gs25/",
+  20: "/nghien-cuu/muji-kokuyo/",
+  21: "/nghien-cuu/highlands-menu/",
+  10: "/nhan-dien/nep-gap/",
+  11: "/nhan-dien/me-nho/",
+  12: "/nhan-dien/quai-vai/",
+  30: "/content/nep-gap/",
+  31: "/content/me-nho/",
+  32: "/content/quai-vai/",
+  33: "/content/nhip-viec/",
+  4: "/thiet-ke/banner-me-nho/",
+  7: "/web/nep-gap/",
+  5: "/seo/"
+};
+
 function goToProject(projectId) {
-  window.location.href = `/project-detail.html?id=${projectId}`;
+  const targetUrl = projectPrimaryUrls[projectId] || "/du-an/";
+  window.location.href = targetUrl;
 }
 
 function getProjectFromURL() {
