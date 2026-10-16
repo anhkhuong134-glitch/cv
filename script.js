@@ -9,43 +9,43 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Các đồ án học tập và concept cá nhân trong Content, Social, SEO và thiết kế truyền thông."
+    desc: "Tuyển tập 13 đồ án và case study chuyên sâu: Nghiên cứu thị trường, Nhận diện thương hiệu, Content Lab, Banner Ads, Website Concept và SEO On-Page."
   },
   research: {
     id: "research",
     name: "Nghiên Cứu Thị Trường",
     icon: "fas fa-chart-pie",
-    desc: "Đồ án nhóm so sánh Circle K và GS25; trình bày phương pháp nghiên cứu và các nhận xét trong báo cáo."
-  },
-  content: {
-    id: "content",
-    name: "Kế Hoạch Content",
-    icon: "fas fa-pen-nib",
-    desc: "Lập tuyến nội dung, chọn góc khai thác, viết caption và dựng lịch đăng cho Facebook, Instagram hoặc TikTok."
+    desc: "Đồ án nhóm nghiên cứu Circle K & GS25 (sản phẩm thật), đối sánh MUJI & KOKUYO Campus và Content Audit thực đơn Highlands Coffee."
   },
   branding: {
     id: "branding",
     name: "Nhận Diện Thương Hiệu",
     icon: "fas fa-palette",
-    desc: "Đồ án nhận diện cơ bản: moodboard, bảng màu, kiểu chữ và ứng dụng lên các ấn phẩm."
+    desc: "Bộ 3 nhận diện concept nguyên bản: NẾP GẤP (Văn phòng phẩm), MẺ NHỎ (Cà phê pha tại nhà) và QUAI VẢI (Túi dùng hằng ngày) với logo vector và 6 ấn phẩm/case."
+  },
+  content: {
+    id: "content",
+    name: "Kế Hoạch Content",
+    icon: "fas fa-pen-nib",
+    desc: "Content Lab với 4 case study thực chiến (NẾP GẤP, MẺ NHỎ, QUAI VẢI, NHỊP VIỆC): kế hoạch 7 ngày, caption hoàn chỉnh, carousel và kịch bản video."
   },
   design: {
     id: "design",
     name: "Media & Banner Ads",
     icon: "fas fa-image",
-    desc: "Thiết kế ấn phẩm quảng cáo và thích ứng key visual qua các kích thước banner trong đồ án."
+    desc: "Thiết kế bộ Banner Ads MẺ NHỎ 'Pha theo gu của bạn' thích ứng 8 kích thước chuẩn đa nền tảng và thử nghiệm thông điệp A/B."
   },
   web: {
     id: "web",
     name: "Website & Landing Page",
     icon: "fas fa-laptop-code",
-    desc: "Thiết kế giao diện website thương mại điện tử (potty.vn) và landing page chuyển đổi cao trên nền tảng LadiPage."
+    desc: "Website Concept NẾP GẤP: Cửa hàng văn phòng phẩm trực tuyến hỗ trợ người dùng chọn bố cục sổ theo nhu cầu thực tế."
   },
   seo: {
     id: "seo",
     name: "SEO Content",
     icon: "fas fa-search",
-    desc: "Bài mẫu theo search intent, tiêu đề và cấu trúc rõ ràng; chưa xuất bản và chưa có dữ liệu thứ hạng."
+    desc: "Tuyển tập 11 bài viết SEO On-Page đa ngành dài 2.500 từ kèm SERP Inspector và hồ sơ kỹ thuật On-Page Blueprint 8 phần minh bạch."
   }
 };
 
@@ -69,6 +69,7 @@ const toolColors = {
 
 // ================== DỮ LIỆU CÁC DỰ ÁN ==================
 const projectsData = {
+  // ==================== DỰ ÁN 1: CIRCLE K & GS25 (SẢN PHẨM THẬT) ====================
   1: {
     id: 1,
     title: "Nghiên Cứu Nhận Thức Thương Hiệu: Circle K vs GS25",
@@ -80,6 +81,10 @@ const projectsData = {
     duration: "Học kỳ 1 — 2026",
     results: "Báo cáo 160+ trang • 93+ Khảo sát thực tế",
     tools: ["Google Forms", "Google Sheets", "Canva"],
+    links: [
+      { url: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0", icon: "fas fa-file-word", btnText: "Báo Cáo Gốc (160+ Trang)", title: "Mở toàn văn báo cáo Google Docs" },
+      { url: "/nghien-cuu/circle-k-gs25/", icon: "fas fa-chart-pie", btnText: "Xem Case Tóm Tắt", title: "Mở trang tóm tắt nghiên cứu" }
+    ],
     googleDocUrl: "https://docs.google.com/document/d/1DwkfLBnoLzQpye0wTN1edLt3hCfaGIdbJcxBiiON-5E/edit?tab=t.0",
     buttonText: "Mở Toàn Văn Báo Cáo (160+ Trang)",
     description: "Khảo sát định lượng & định tính hành vi tiêu dùng Gen Z, giải mã chiến lược 7P Marketing Mix và định vị thương hiệu giữa hai chuỗi CVS 500+ cửa hàng.",
@@ -223,360 +228,620 @@ const projectsData = {
     ]
   },
 
+  // ==================== DỰ ÁN 20: MUJI VS KOKUYO CAMPUS (NGHIÊN CỨU) ====================
+  20: {
+    id: 20,
+    title: "Nghiên Cứu Đối Sánh Văn Phòng Phẩm: MUJI vs KOKUYO Campus",
+    type: "Desk Research Cá Nhân · Nguồn Công Khai",
+    category: "research",
+    categoryName: "Nghiên Cứu Thị Trường",
+    categoryIcon: "fas fa-chart-pie",
+    categoryColor: "#607965",
+    duration: "10/2026",
+    results: "3 Nguồn đối chiếu sơ cấp • Bảng so sánh 3 khía cạnh",
+    tools: ["Desk Research", "Content Audit", "Comparative Matrix"],
+    description: "Tìm hiểu cách hai thương hiệu văn phòng phẩm hàng đầu Nhật Bản diễn giải giá trị sản phẩm: MUJI ở nguyên tắc phát triển tinh giản, KOKUYO Campus ở tình huống sử dụng thực tế khi viết và mở sổ. Rút ra bài học ứng dụng cho concept NẾP GẤP.",
+    featured: false,
+    links: [
+      { url: "/nghien-cuu/muji-kokuyo/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Nghiên Cứu", title: "Mở chi tiết desk research" },
+      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Xem Ứng Dụng NẾP GẤP", title: "Xem concept văn phòng phẩm NẾP GẤP" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Desk Research Tự Do",
+      class: "Digital Marketing Portfolio 2026",
+      team: "Nghiên cứu cá nhân (Có hỗ trợ AI)",
+      time: "Tháng 10/2026",
+      docPages: "Nguồn công khai đối chiếu"
+    },
+    executiveSummary: "Nghiên cứu đối chiếu cách MUJI và KOKUYO Campus xây dựng niềm tin cho người dùng bằng thông tin chức năng cụ thể thay vì tuyên bố chung chung. Kết quả phân tích chỉ ra rằng khách hàng mua văn phòng phẩm quan tâm sâu sắc đến góc mở sổ, độ phẳng của gáy, cữ dòng kẻ và khả năng tương thích của giấy với các loại bút.",
+    kpis: [
+      { number: "3", label: "Nguồn tài liệu sơ cấp", icon: "fas fa-book" },
+      { number: "3", label: "Khía cạnh so sánh", icon: "fas fa-columns" },
+      { number: "100%", label: "Dữ kiện có trích dẫn", icon: "fas fa-check-double" },
+      { number: "1", label: "Khung ứng dụng NẾP GẤP", icon: "fas fa-lightbulb" }
+    ],
+    surveyData: [
+      { number: "MUJI", tag: "Triết lý vật liệu", title: "Giải thích qua nguyên tắc tinh giản", desc: "Tài liệu What is MUJI nhấn mạnh việc lựa chọn chất liệu và bao gói tối giản để giữ mức giá hợp lý và tính trung thực." },
+      { number: "KOKUYO", tag: "Trải nghiệm viết", title: "Tập trung giải quyết vướng mắc khi mở sổ", desc: "Campus Binder và Campus Notebook mô tả chi tiết giải pháp tránh vòng gáy chạm tay và thiết kế góc mở phẳng 180 độ." },
+      { number: "Áp dụng", tag: "Đề xuất cho NẾP GẤP", title: "Trưng bày trang ruột thay vì chỉ chụp bìa", desc: "Không hứa hẹn tăng năng suất sáo rỗng; cho người dùng xem trước cữ dòng kẻ và bố cục phân chia tuần/ngày." }
+    ],
+    comparisonMatrix: [
+      { p: "Định vị cốt lõi", circleK: "Tối giản, không nhãn mác, giá trị từ bản chất vật liệu", gs25: "Công năng học đường, tối ưu thao tác ghi chép và độ bền gáy" },
+      { p: "Cách chứng minh sản phẩm", circleK: "Giải thích quá trình tinh giản sản xuất và tiết chế chi tiết thừa", gs25: "Mô tả cơ chế gáy thông minh, không cấn tay, cữ kẻ tam giác định vị" },
+      { p: "Bài học cho Content", circleK: "Rõ ràng, điềm tĩnh, trung thực về nguồn gốc và chất liệu", gs25: "Đi thẳng vào vấn đề người học gặp phải trong từng buổi ghi chép" }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Nêu rõ kích thước và cữ kẻ ruột sổ", desc: "Người dùng cần biết khoảng cách giữa các dòng kẻ trước khi chọn mua sổ tay." },
+        { title: "Không kể chuyện bền vững khi chưa có kiểm định", desc: "Chỉ tuyên bố chất liệu tái chế khi có chứng nhận FSC hoặc số liệu sản xuất thực tế." }
+      ],
+      gs25: [
+        { title: "Minh họa góc mở phẳng thực tế", desc: "Chụp hoặc dựng hình chi tiết gáy sổ mở 180 độ trên mặt bàn làm việc." },
+        { title: "Cung cấp bản in thử một trang", desc: "Cho phép độc giả tải file PDF in thử trước khi quyết định mua một cuốn sổ hoàn chỉnh." }
+      ]
+    }
+  },
 
-  3: {
-    id: 3,
-    title: "Xây Dựng Bộ Nhận Diện Thương Hiệu: NEXUS LABS — High-End Gaming Gear & Desk Setup Ecosystem",
-    type: "Đồ Án Học Tập · Brand Identity & Packaging Design",
+  // ==================== DỰ ÁN 21: HIGHLANDS COFFEE MENU AUDIT (NGHIÊN CỨU) ====================
+  21: {
+    id: 21,
+    title: "Audit Nội Dung Thực Đơn Website: Highlands Coffee",
+    type: "Content Audit · Nguồn Công Khai",
+    category: "research",
+    categoryName: "Nghiên Cứu Thị Trường",
+    categoryIcon: "fas fa-chart-pie",
+    categoryColor: "#87513c",
+    duration: "10/2026",
+    results: "Audit 4 nhóm đồ uống • Đề xuất Wireframe 4 bước chọn gu",
+    tools: ["Content Audit", "Information Architecture", "Wireframing"],
+    description: "Phân tích cách cấu trúc thực đơn trực tuyến của chuỗi cà phê lớn nhất Việt Nam. Đề xuất quy trình 4 bước hỏi gu uống (đen/sữa, dụng cụ, cỡ xay) để ứng dụng vào concept cà phê pha tại nhà MẺ NHỎ.",
+    featured: false,
+    links: [
+      { url: "/nghien-cuu/highlands-menu/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Audit", title: "Mở chi tiết audit thực đơn Highlands" },
+      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Xem Ứng Dụng MẺ NHỎ", title: "Xem concept cà phê MẺ NHỎ" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Content Audit Độc Lập",
+      class: "Digital Marketing Portfolio 2026",
+      team: "Nghiên cứu cá nhân (Có hỗ trợ AI)",
+      time: "Tháng 10/2026",
+      docPages: "Trang thực đơn chính thức Highlands"
+    },
+    executiveSummary: "Phân tích trải nghiệm đọc thực đơn trực tuyến tại website Highlands Coffee. Nhận thấy người dùng mới thường gặp khó khăn khi hình dung độ đậm nhạt và hương vị thực tế. Đề xuất một wireframe chọn gu 4 bước cho concept MẺ NHỎ để giúp người mua tại nhà dễ dàng gọi tên món mình thích.",
+    kpis: [
+      { number: "4", label: "Nhóm thức uống phân tích", icon: "fas fa-mug-hot" },
+      { number: "1", label: "Wireframe đề xuất mới", icon: "fas fa-sitemap" },
+      { number: "4", label: "Bước trắc nghiệm chọn gu", icon: "fas fa-filter" },
+      { number: "0", label: "Khẳng định cảm tính", icon: "fas fa-shield-alt" }
+    ],
+    surveyData: [
+      { number: "Nhóm món", tag: "Phân loại hiện tại", title: "Cà phê, Trà, Freeze, Thức uống khác", desc: "Thực đơn hiện phân nhóm theo dòng sản phẩm truyền thống nhưng chưa có bộ lọc theo mức độ đậm vị hoặc hàm lượng caffeine." },
+      { number: "Vấn đề", tag: "Góc nhìn người mới", title: "Khó hình dung gu uống phù hợp", desc: "Khách hàng mua cà phê pha tại nhà thường không biết ly cà phê pha ra sẽ ngọt béo hay đắng đậm nếu chỉ đọc tên mỹ miều." },
+      { number: "Đề xuất", tag: "Giải pháp cho MẺ NHỎ", title: "Quy trình hỏi gu trước khi gợi ý gói hạt", desc: "Bắt đầu từ câu hỏi: 'Bạn muốn uống đen hay thêm sữa?' và 'Dụng cụ bạn đang có ở nhà là gì?'." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Bổ sung thanh đo độ đậm (Roast Level)", desc: "Giúp người mua phân biệt rõ giữa rang vừa (Medium) và rang đậm (Dark roast)." },
+        { title: "Hướng dẫn tỷ lệ pha gợi ý", desc: "Cung cấp công thức pha phin chuẩn (tỷ lệ bột:nước) ngay trên bao bì hoặc thẻ kẹp." }
+      ],
+      gs25: [
+        { title: "Phiếu thử gu kèm theo đơn hàng", desc: "Gửi kèm phiếu ghi chú cảm nhận để khách hàng đánh giá sau lần pha đầu tiên." },
+        { title: "Không dùng thuật ngữ nếm quá hàn lâm", desc: "Thay vì 'hương hoa cam acidity sáng', dùng cách diễn đạt gần gũi: 'vị chua thanh nhẹ dễ uống'." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 10: NẾP GẤP (NHẬN DIỆN THƯƠNG HIỆU) ====================
+  10: {
+    id: 10,
+    title: "Bộ Nhận Diện NẾP GẤP — Văn Phòng Phẩm & Công Cụ Ghi Chép",
+    type: "Concept Cá Nhân · Brand Identity & Packaging",
     category: "branding",
     categoryName: "Nhận Diện Thương Hiệu",
     categoryIcon: "fas fa-palette",
-    categoryColor: "#8b5cf6",
-    description: "Nghiên cứu định vị thương hiệu Gaming Gear & hệ sinh thái Custom Mechanical Keyboard cao cấp; phát triển trọn bộ Brand Identity System bao gồm: Logo Guidelines, Bảng màu Cyberpunk & Dark-Mode, Hệ thống bao bì hộp bàn phím nhôm CNC, hộp Keycap PBT, hũ switch cơ học, ống deskmat và bộ thẻ bảo hành kim loại Authenticity Pass.",
-    duration: "Tháng 04/2026",
-    results: "Brand Guidelines • 06 Hạng mục bao bì & Gaming Gear • Bảng màu Pantone công nghệ • Bộ ấn phẩm thẻ kim loại bảo hành",
-    tools: ["Canva Pro", "Brand Guidelines", "Packaging Mockups", "Google Sheets", "Typography System"],
-    kpis: [
-      { number: "01", label: "Brand Guidelines Hoàn Chỉnh", icon: "📐" },
-      { number: "06", label: "Hạng Mục Bao Bì & Gear Cao Cấp", icon: "⌨️" },
-      { number: "05", label: "Màu Nhận Diện Cyberpunk Chuẩn", icon: "🎨" },
-      { number: "100%", label: "Quy Chuẩn In Ép Kim Hologram", icon: "🏷️" }
-    ],
-
-    brandPhilosophy: {
-      concept: "Cyberpunk Precision & Minimalist Ergonomics",
-      tagline: "Định hình trải nghiệm gõ phím & không gian làm việc đỉnh cao",
-      persona: "Lập trình viên, Content Creator, Designer và Game thủ đam mê văn hóa Custom Mechanical Keyboard, đề cao tính công thái học, âm thanh gõ \"Thocky\" đầm chắc và góc setup bàn làm việc tối giản (Clean Desk Setup)."
-    },
-
-    brandPalette: [
-      { name: "Cyber Cyan", hex: "#06B6D4", rgb: "6, 182, 212", meaning: "Đại diện cho xung nhịp RGB, công nghệ vi xử lý tương lai và độ phản hồi tức thời cực nhanh của switch cơ học." },
-      { name: "Deep Obsidian Black", hex: "#0F172A", rgb: "15, 23, 42", meaning: "Sắc đen bóng đêm của khung nhôm nguyên khối anodized, tạo chiều sâu thị giác và cảm giác vững chãi, cao cấp." },
-      { name: "Neon Ultraviolet", hex: "#8B5CF6", rgb: "139, 92, 246", meaning: "Sắc tím điện tử khơi gợi cảm hứng sáng tạo vô tận và chất thẩm mỹ gaming công nghệ cao." },
-      { name: "Titanium Gunmetal", hex: "#475569", rgb: "71, 85, 105", meaning: "Màu kim loại lạnh lùng của plate đồng và tạ tản lực CNC, biểu trưng cho độ bền cơ học vượt thời gian." },
-      { name: "Ghost White Accent", hex: "#F8FAFC", rgb: "248, 250, 252", meaning: "Điểm nhấn tương phản cực đại trên ký tự keycap và các đường viền kỹ thuật sắc nét." }
-    ],
-
-    brandTypography: {
-      display: {
-        name: "Space Grotesk / Syne",
-        type: "Geometric Tech Sans-Serif Góc Cạnh",
-        usage: "Tiêu đề chiến dịch, logo thương hiệu, số hiệu phiên bản giới hạn Limited Edition",
-        sample: "NEXUS LABS — TACTILE EXCELLENCE 75%"
-      },
-      body: {
-        name: "JetBrains Mono / Plus Jakarta Sans",
-        type: "Monospace Kỹ Thuật & Clean Sans",
-        usage: "Thông số lực nhấn (Actuation Force), hành trình switch (Pre-Travel) và hướng dẫn mod phím",
-        sample: "Actuation: 45g · Travel: 2.0mm · Hot-swap PCB · VIA/QMK Supported"
-      }
-    },
-
-    brandProducts: [
-      {
-        id: "prod-1",
-        title: "Hộp Cứng Đựng Bàn Phím Cơ Custom Nhôm CNC 75% (Custom 75% Keyboard Rigid Gift Box)",
-        category: "BAO BÌ SẢN PHẨM CỐT LÕI · CORE PACKAGING",
-        capacity: "Layout 75% · Khung Nhôm Anodized 1.8kg",
-        material: "Hộp cứng carton 1600gsm bồi giấy mỹ thuật đen mờ chống xước; khay mút EVA mật độ cao cắt CNC định hình 360 độ; nắp gập nam châm hít ẩn.",
-        printSpecs: "Ép kim Hologram phản quang 7 màu logo vi mạch; phủ bóng UV định hình mạch PCB trên nền đen mờ; dán tem niêm phong Void chống hàng giả.",
-        desc: "Thiết kế bao bì dạng Unboxing Experience cao cấp như một kiện hàng công nghệ tương lai. Bên trong chia ngăn khoa học cho bàn phím, cáp kết nối, switch puller và thẻ chứng nhận phiên bản giới hạn đánh số thủ công.",
-        img: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "prod-2",
-        title: "Hộp Trưng Bày Bộ Keycap PBT Dyesub 142 Phím (Keycap Set Display Box)",
-        category: "PHỤ KIỆN TÙY BIẾN · CUSTOMIZATION ACCESSORY",
-        capacity: "Set 142 Phím · Profile Cherry/OEM",
-        material: "Hộp trượt dạng bao diêm (Drawer Box); khay nhựa PET trong suốt 2 tầng chống trầy xước phím; vỏ hộp carton cứng 450gsm phủ màng mờ Soft-Touch.",
-        printSpecs: "In offset 5 màu sắc nét chuẩn hệ màu Pantone; dập nổi Typography tên bộ keycap; cửa sổ mica lộ diện các nút Novelties độc bản.",
-        desc: "Bao bì giải quyết trọn vẹn bài toán vừa bảo vệ bề mặt nhựa PBT cao cấp vừa trưng bày được toàn bộ ký tự Novelties độc quyền của set keycap.",
-        img: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "prod-3",
-        title: "Hũ Thủy Tinh Kháng Tĩnh Điện Đựng Switch Cơ Pre-Lubed (Pre-Lubed Linear Switches Storage Tube)",
-        category: "LINH KIỆN CƠ HỌC · MECHANICAL COMPONENTS",
-        capacity: "Set 35 Switches · Hũ Ø75 x 95mm",
-        material: "Hũ thủy tinh Borosilicate tối màu kháng tĩnh điện; nắp nhôm ren vặn Anodized đen mờ dập nổi biểu tượng Switch stem; gioăng cao su kín khí.",
-        printSpecs: "Nhãn decal trong suốt in mực trắng tương phản cao; tem phụ thể hiện thông số lực nhấn 45g, điểm nhận phím 2.0mm và stem POM mạ bạc.",
-        desc: "Thiết kế hũ lưu trữ switch sang trọng như các linh kiện âm thanh High-End, có thể tái sử dụng để decor góc setup hoặc bảo quản switch cơ học dự phòng.",
-        img: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "prod-4",
-        title: "Ống Tròn Cuộn Deskmat Da PU & Vải Cordura 900x400mm (Extended Deskmat Tube Packaging)",
-        category: "THẨM MỸ BÀN LÀM VIỆC · DESK SETUP AESTHETICS",
-        capacity: "Khổ lớn 900 x 400 x 4mm · Ống Ø85 x 430mm",
-        material: "Ống carton xoắn ép cứng chịu lực 2.5mm; hai đầu nắp thiếc dập nổi logo; quai xách sợi dù dệt phản quang chịu lực.",
-        printSpecs: "In màng chuyển nhiệt Full Artwork họa tiết Topology/Cyber Grid quanh thân ống, cán màng mờ Soft-Touch chống bám vân tay và chống thấm nước.",
-        desc: "Ống bảo quản chống gãy gập deskmat, kèm ô tròn trải nghiệm sờ chất liệu vải dệt (Touch & Feel Swatch) trên thân ống trước khi mở hộp.",
-        img: "https://images.unsplash.com/photo-1585792180666-f7547c6a28c5?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "prod-5",
-        title: "Hộp Đựng Cáp Bàn Phím Xoắn Rời Khớp Nối Aviator GX16 (Custom Coiled Aviator Cable Box)",
-        category: "PHỤ KIỆN KẾT NỐI · CONNECTIVITY HARDWARE",
-        capacity: "Dài 1.8m · Cáp bọc dù Paracord + Techflex",
-        material: "Hộp nắp âm dương giấy mỹ thuật cán vân kim loại Titanium; khay lót bọc vải nhung đen định hình vòng xoắn cáp và đầu cắm GX16 5-pin.",
-        printSpecs: "Ép kim vàng hồng (Rose Gold Foil) trên đầu nối kim loại GX16 minh họa; in thông số chuẩn truyền dữ liệu USB 2.0 Type-C mạ vàng 24K.",
-        desc: "Sợi cáp xoắn được cố định tỉ mỉ trong khay nhung đen, tôn vinh độ hoàn thiện của từng mắt đan dù Paracord + Techflex và khớp nối phi công hầm hố.",
-        img: "https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "prod-6",
-        title: "Bộ Thẻ Thép Khắc Laser Authenticity Pass & Tool Kit (Maintenance Kit & Warranty Pass)",
-        category: "BỘ ẤN PHẨM BẢO HÀNH & HỖ TRỢ · POST-PURCHASE COLLATERAL",
-        capacity: "Thẻ thép 85.6 x 54mm + Sổ hướng dẫn Z-fold 6 trang",
-        material: "Thẻ thép không gỉ nguyên khối phay xước mờ mạ PVD đen bóng; sổ tay hướng dẫn mod phím bằng giấy Kraft Nhật cao cấp.",
-        printSpecs: "Khắc Laser Fiber số Serial Number độc bản và mã QR Code động dẫn về trang cấu hình phím qua web; in mực dầu bóng trên giấy Kraft.",
-        desc: "Gia tăng tối đa giá trị thương hiệu và tính độc quyền của sản phẩm cao cấp, biến mỗi khách hàng sở hữu trở thành một thành viên trong cộng đồng đam mê Gear.",
-        img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
-      }
-    ],
-
-    findingsTitle: "Điểm Nhấn Nhận Diện Thương Hiệu NEXUS LABS",
-    findings: [
-      "<strong>Chuẩn Hóa Nhận Diện Cyberpunk:</strong> Xây dựng bảng màu tương phản cao (Cyan / Neon Purple / Obsidian) cùng <strong>bộ font chữ kỹ thuật cơ khí</strong> đại diện cho tính cách công nghệ chính xác và hiện đại.",
-      "<strong>Moodboard & Key Visual Đậm Chất Gear:</strong> Phát triển định hướng hình ảnh kim loại xước Anodized và ánh sáng RGB tinh tế giúp thương hiệu <strong>nổi bật & ghi dấu ấn mạnh mẽ</strong> trong mắt cộng đồng công nghệ.",
-      "<strong>Quy Chuẩn Ứng Dụng Đa Nền Tảng:</strong> Đồng bộ thiết kế logo vi mạch, khung bài đăng unboxing gear, banner quảng cáo ra mắt & ấn phẩm bao bì sản phẩm thực tế."
-    ],
-    skills: [
-      { icon: "🎨", name: "Visual Identity & Tech Branding", desc: "Tư duy màu sắc công nghệ, typography góc cạnh và thiết kế Key Visual tạo diện mạo đồng nhất cho thương hiệu Gear." },
-      { icon: "📐", name: "Packaging & Unboxing Experience", desc: "Xây dựng quy chuẩn bao bì hộp cứng, khay EVA chống sốc và ấn phẩm bảo hành cao cấp." },
-      { icon: "💡", name: "Creative Moodboard & Cyber Aesthetics", desc: "Chuyển hóa văn hóa bàn phím cơ và thẩm mỹ Clean Desk Setup thành ngôn ngữ thị giác sinh động." }
-    ],
-    objectives: [
-      "Phân tích thị trường Custom Mechanical Keyboard và định vị thương hiệu NEXUS LABS trong phân khúc Gaming Gear cao cấp",
-      "Lựa chọn bảng màu Cyberpunk tương phản cao, phông chữ kỹ thuật và phong cách hình ảnh kim loại nguyên khối",
-      "Xây dựng Moodboard & phát triển Key Visual chính cho chiến dịch ra mắt sản phẩm",
-      "Thiết kế trọn bộ 06 hạng mục bao bì sản phẩm và ấn phẩm bảo hành thẻ kim loại độc quyền"
-    ],
-    process: [
-      { icon: "🔍", title: "Nghiên Cứu Brand DNA", desc: "Xác định 3–5 giá trị cốt lõi: Độ đầm chắc, Tính công thái học, Thẩm mỹ tối giản và Khả năng tùy biến sâu" },
-      { icon: "🎨", title: "Xây Dựng Moodboard & Palette", desc: "Chọn bảng màu Cyber Cyan & Obsidian Black cùng cặp phông chữ Space Grotesk & JetBrains Mono" },
-      { icon: "🖼️", title: "Thiết Kế Key Visual & Bao Bì", desc: "Phát triển bao bì hộp phím CNC 75%, hộp keycap PBT và các phụ kiện gear đồng bộ" },
-      { icon: "📱", title: "Ứng Dụng Đa Nền Tảng", desc: "Hoàn thiện Brand Guidelines, khung truyền thông mạng xã hội và banner chiến dịch Pre-Order" }
-    ],
-    frameworks: ["Brand Identity System", "Packaging Design Standards", "Visual Hierarchy", "Unboxing Experience Design"],
-    takeaways: [
-      { icon: "🎨", title: "Ngôn ngữ thiết kế định hình giá trị", desc: "Trong ngành Gaming Gear, từng đường nét góc cạnh, chất liệu bao bì và độ đầm của hộp quyết định trực tiếp cảm nhận cao cấp của khách hàng." },
-      { icon: "🔗", title: "Nhất quán trên từng chi tiết nhỏ", desc: "Từ màu sắc LED, vi mạch in UV đến từng mắt đan của cáp xoắn đều phải tuân thủ nghiêm ngặt theo Brand Guidelines." },
-      { icon: "💡", title: "Bao bì là một phần của trải nghiệm sản phẩm", desc: "Với người chơi phím cơ, trải nghiệm mở hộp (Unboxing) đem lại cảm xúc phấn khích tương đương chính sản phẩm bên trong." }
-    ]
-  },
-
-  4: {
-    id: 4,
-    title: "Thiết Kế Banner Ads — Gaming Gear & Mechanical Keyboard Campaign",
-    type: "Media & Ad Design",
-    category: "design",
-    categoryName: "Media & Banner Ads",
-    categoryIcon: "fas fa-image",
-    categoryColor: "#fb923c",
-    description: "Bộ thiết kế banner quảng cáo trực tuyến đa kích thước (GDN / Web Ads / Social Ads) cho chiến dịch ra mắt dòng bàn phím cơ & hệ sinh thái Gaming Gear NEXUS LABS bao gồm 19 kích thước chuẩn (Key Visual, 300x250, 728x90, 300x600, 160x600...).",
-    duration: "Tháng 03/2026",
-    results: "19+ Kích thước Banner Standard • Key Visual Chiến Dịch • Dynamic Display Ads",
-    tools: ["Canva", "GDN Standard", "Facebook Ads", "Web Banner"],
-    googleDocUrl: "https://drive.google.com/drive/folders/1FIMbxTAAZG_FNkwCagiJpDGlaQPSqqpy?usp=drive_link",
-    buttonText: "Xem Trọn Bộ Ấn Phẩm Thiết Kế (Google Drive) →",
-    kpis: [
-      { number: "19+",  label: "Kích thước banner chuẩn", icon: "🖼️" },
-      { number: "3",    label: "Nền tảng quảng cáo", icon: "📡" },
-      { number: "1",    label: "Key Visual chiến dịch", icon: "🎨" }
-    ],
-
-    findingsTitle: "Điểm Nổi Bật Trong Thiết Kế & Quảng Cáo",
-    findings: [
-      "<strong>Đa Dạng Kích Thước Chuẩn GDN:</strong> Thiết kế trọn bộ <strong>19+ kích thước banner chuẩn</strong> (Google Display Network, Facebook Ads, Web Banners) phủ kín mọi vị trí hiển thị trên các trang tin công nghệ và diễn đàn game thủ lớn.",
-      "<strong>Phân Cấp Thị Giác Công Nghệ Cao:</strong> Tối ưu góc phối cảnh 3D của bàn phím cơ, ánh sáng LED RGB tinh tế, thông điệp ra mắt và nút <strong>Call-To-Action (Pre-Order / Mua Ngay)</strong> sắc nét giúp kích thích <strong>tỷ lệ nhấp (CTR)</strong> vượt trội.",
-      "<strong>Đồng Bộ Nhận Diện Thương Hiệu NEXUS LABS:</strong> Chuẩn hóa bảng màu Cyberpunk tương phản cao (Cyan / Neon Purple / Obsidian Black) mang lại cảm giác <strong>mạnh mẽ, cao cấp và đậm chất công nghệ</strong>."
-    ],
-    skills: [
-      { icon: "🎨", name: "Canva Media & Graphic Design", desc: "Tạo hình ảnh truyền thông chất lượng cao, bài đăng mạng xã hội, poster & banner quảng cáo." },
-      { icon: "🖼️", name: "Ad Banner & Poster Layout", desc: "Sắp xếp bố cục hình ảnh, thông điệp và điểm nhấn thị giác tối ưu tỷ lệ nhấp (CTR)." },
-      { icon: "📱", name: "Multi-Platform Format Adapting", desc: "Tối ưu dung lượng và kích thước ấn phẩm chuẩn nét cho từng kênh mạng xã hội." }
-    ],
-    objectives: [
-      "Thiết kế hệ thống ấn phẩm banner truyền thông cho chiến dịch Pre-Order bàn phím cơ và phụ kiện setup góc máy công nghệ",
-      "Sản xuất bài đăng dạng Instagram/Facebook Carousel và ảnh bìa Fanpage thu hút thị giác",
-      "Bảo đảm bố cục rõ ràng, phân cấp thông tin hợp lý và nhất quán với nhận diện thương hiệu NEXUS LABS"
-    ],
-    process: [
-      { icon: "📋", title: "Tiếp Nhận Brief Chiến Dịch", desc: "Xác định mục tiêu hình ảnh: Đẩy mạnh Pre-Order đợt 1 dòng bàn phím cơ custom nhôm nguyên khối" },
-      { icon: "🖊️", title: "Phác Thảo Layout Đa Kích Thước", desc: "Sắp xếp vị trí góc chụp phím cơ 3D, thông điệp ưu đãi và nút Call-To-Action theo chuẩn mắt nhìn người dùng" },
-      { icon: "🎨", title: "Thiết Kế Ấn Phẩm Hoàn Thiện", desc: "Hoàn thiện 19+ kích thước banner tĩnh và carousel đa trang trên Canva theo chuẩn nhận diện thương hiệu" },
-      { icon: "✅", title: "Xuất Bản & Kiểm Thử Hiển Thị", desc: "Kiểm tra hiển thị thực tế trên di động và PC, xuất file chuẩn độ phân giải tối ưu dung lượng cho từng nền tảng" }
-    ],
-    frameworks: ["Visual Hierarchy", "Ad Creative Framework", "GDN Banner Standards", "CTR Optimization"],
-    takeaways: [
-      { icon: "👁️", title: "Phân cấp thị giác quyết định CTR", desc: "Vị trí của headline, hình ảnh sản phẩm và nút CTA ảnh hưởng trực tiếp đến tỷ lệ nhấp — thiết kế đẹp chưa đủ, phải đúng hướng dẫn thị giác." },
-      { icon: "📐", title: "Chuẩn hóa kích thước là kỷ luật", desc: "Thiết kế 19+ kích thước cho cùng một chiến dịch giúp tôi hiểu kỷ luật trong sản xuất ấn phẩm quảng cáo chuyên nghiệp." },
-      { icon: "🎨", title: "Nhận diện thương hiệu không thể đánh đổi", desc: "Dù kích thước nào, màu sắc và font chữ thương hiệu phải nhất quán — đây là nguyên tắc bất di bất dịch trong Ad Design." }
-    ]
-  },
-
-  5: {
-    id: 5,
-    title: "Bộ Bài SEO Mẫu Theo Sở Thích",
-    type: "Concept Cá Nhân · SEO Content",
-    category: "seo",
-    categoryName: "SEO Content",
-    categoryIcon: "fas fa-search",
-    categoryColor: "#87513c",
-    description: "Bốn bài mẫu về mô hình lắp ráp, build PC, Dragon Ball và game/RPG. Mỗi bài có cấu trúc rõ, ảnh chụp tư liệu có ghi nguồn và đường dẫn tham khảo; chưa xuất bản.",
-    duration: "Concept cá nhân · 10/2026",
-    results: "4 bài mẫu • 4 chủ đề sở thích • 0 bài đã xuất bản",
-    tools: ["HTML & CSS", "Google Search Central", "Nguồn chính thức theo chủ đề"],
-    googleDocUrl: "/seo-samples.html",
-    buttonText: "Mở bộ sưu tập bài SEO mẫu →",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Logo Vector 24 đơn vị • 6 Ứng dụng NG01–NG06 • Bảng màu Xanh Mực & Vàng Giấy",
+    tools: ["SVG Vector", "Brand Guidelines", "Packaging Design", "Typography"],
+    description: "NẾP GẤP bắt đầu từ chi tiết góc giấy được gấp lại để đánh dấu điều muốn quay về. Nhận diện sử dụng góc gấp làm nguyên tắc đồ họa nhất quán từ dấu logo, đai giấy, bìa sổ A5 đến ruột lịch tuần 2 trang.",
     featured: true,
+    links: [
+      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Khám Phá Brand Case", title: "Mở trang showcase nhận diện NẾP GẤP" },
+      { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Xem Website Concept", title: "Mở cửa hàng concept NẾP GẤP" },
+      { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Lịch Tuần A5", title: "Tải biểu mẫu lịch tuần" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Thiết Kế Nhận Diện",
+      class: "Brand Identity Design 2026",
+      team: "Khương Tuấn Anh (Định hướng & Thiết kế)",
+      time: "Tháng 10/2026",
+      docPages: "Brand Guidelines & 6 Ấn phẩm SVG"
+    },
+    executiveSummary: "NẾP GẤP được xây dựng cho người học và người làm sáng tạo nội dung cần một công cụ ghi chép có cấu trúc vừa đủ để bắt đầu nhưng có khoảng trống để linh hoạt điều chỉnh. Tagline: 'Ghi một ý, mở một hướng'. Bảng màu lấy cảm hứng từ chất liệu thực tế: Xanh mực (#273B4A), Vàng giấy (#F2D97C) và Giấy trắng (#FAFBF8).",
     kpis: [
-      { number: "04", label: "Bài mẫu đã viết", icon: "📝" },
-      { number: "04", label: "Chủ đề sở thích", icon: "🔎" },
-      { number: "0", label: "Bài đã xuất bản", icon: "↗️" }
+      { number: "24", label: "Đơn vị lưới căn chỉnh Logo", icon: "fas fa-th" },
+      { number: "6", label: "Ấn phẩm ứng dụng hoàn chỉnh", icon: "fas fa-layer-group" },
+      { number: "4", label: "Mã màu nhận diện chuẩn", icon: "fas fa-swatchbook" },
+      { number: "100%", label: "Artwork Vector SVG nguyên bản", icon: "fas fa-bezier-curve" }
     ],
-    findingsTitle: "Bốn Góc Nội Dung Trong Bộ Mẫu",
-    findings: [
-      "<strong>Mô hình lắp ráp:</strong> Hướng dẫn người mới chọn bộ đầu tiên, đọc hướng dẫn và chuẩn bị mặt bàn làm việc.",
-      "<strong>Build PC:</strong> Bắt đầu từ nhu cầu và ngân sách, sau đó kiểm tra tương thích linh kiện trước khi mua.",
-      "<strong>Dragon Ball & RPG 2D:</strong> Bài giải thích theo sở thích, có đường dẫn tham khảo chính thức và ảnh tư liệu được ghi nguồn."
+    surveyData: [
+      { number: "NG01", tag: "Bìa Sổ A5", title: "Artwork Bìa Sổ 148×210mm Mặt Trước & Sau", desc: "Mặt trước nền giấy thoáng với logo góc trái và góc gấp vàng đặc trưng. Mặt sau in thông điệp: 'Ý tưởng chưa cần hoàn chỉnh để được ghi lại'." },
+      { number: "NG02", tag: "Ruột Lịch Tuần", title: "Bố cục lịch tuần 2 trang mở phẳng", desc: "Trang trái ưu tiên lịch Thứ hai - Thứ tư và ô việc gấp. Trang phải dành cho Thứ năm - Chủ nhật và vùng 'Ý tưởng đang mở'." },
+      { number: "NG03", tag: "Bộ 3 Thẻ Note", title: "Thẻ ghi chú 90×120mm phân loại tác vụ", desc: "3 màu thẻ riêng biệt: 'Việc cần làm' (Xanh mực), 'Điều cần hỏi' (Vàng giấy), và 'Ý tưởng mới' (Xanh nhạt)." }
     ],
-    objectives: [
-      "Chọn một câu hỏi có thật trong từng sở thích thay vì gom nhiều từ khóa vào một bài",
-      "Viết bốn bài mẫu với cấu trúc H1, H2, H3 và đường dẫn tham khảo rõ ràng",
-      "Chuẩn bị title, meta description, slug và alt text như một gói on-page",
-      "Tách thông tin theo nguồn, lời khuyên biên tập và nội dung cần cập nhật trước khi xuất bản"
-    ],
-    process: [
-      { icon: "🎯", title: "Chọn Chủ Đề", desc: "Lấy mô hình lắp ráp, PC, Dragon Ball và game/RPG làm bốn nhóm nội dung khác nhau." },
-      { icon: "🔎", title: "Xác Định Câu Hỏi", desc: "Mỗi bài trả lời một nhu cầu rõ: bắt đầu từ đâu, chọn gì, hoặc sắp xếp thứ tự ra sao." },
-      { icon: "✍️", title: "Viết & Biên Tập", desc: "Viết theo câu hỏi cụ thể, bỏ câu chung chung và ghi rõ chỗ nào cần kiểm tra lại." },
-      { icon: "🧭", title: "Gắn Nguồn & Ghi Chú", desc: "Dẫn nguồn chính thức; ghi rõ bài chưa đăng và thông tin nào cần cập nhật trước khi dùng thật." }
-    ],
-    frameworks: ["Search Intent", "H1–H3", "Meta Title & Description", "Image Alt", "Source Notes"],
-    takeaways: [
-      { icon: "🧭", title: "Viết từ điều mình thật sự quan tâm", desc: "Chủ đề quen giúp bài có ví dụ cụ thể hơn; chỗ nào cần kiến thức chuyên môn thì phải dẫn nguồn." },
-      { icon: "✂️", title: "Một bài chỉ nên giải quyết một việc", desc: "Người đọc tìm cách chọn bộ lắp ráp cần câu trả lời khác với người đang xem thứ tự một series anime." },
-      { icon: "🔄", title: "Bài mẫu chưa phải kết quả SEO", desc: "Muốn kết luận hiệu quả cần xuất bản, theo dõi truy vấn và cập nhật theo dữ liệu thật." }
-    ]
+    recommendations: {
+      circleK: [
+        { title: "Đai giấy sổ NG04", desc: "Mặt chính in tagline 'Ghi một ý, mở một hướng', mặt phụ ghi rõ nhãn 'Thiết kế concept / Chưa xác nhận vật liệu sản xuất'." },
+        { title: "Header cửa hàng NG06", desc: "Thiết kế banner web concept 1440×640 và 390×560 nhấn mạnh thông điệp: 'Thử bố cục trước, chọn sổ sau'." }
+      ],
+      gs25: [
+        { title: "Quy chuẩn khoảng trống tối thiểu", desc: "Clearspace quanh logo luôn bằng 2 lần cạnh góc gấp (4 đơn vị lưới) để đảm bảo độ nhận diện." },
+        { title: "Tone of Voice điềm tĩnh", desc: "Giọng văn chia sẻ nhẹ nhàng, tôn trọng thói quen của người dùng, không phán xét người quên ghi chép." }
+      ]
+    }
   },
 
-  6: {
-    id: 6,
-    title: "Tuyển Tập Concept Social: 'Ma Túy Nhựa' & Lifestyle",
-    type: "Concept Cá Nhân · Social Content & Moodboard",
+  // ==================== DỰ ÁN 11: MẺ NHỎ (NHẬN DIỆN THƯƠNG HIỆU) ====================
+  11: {
+    id: 11,
+    title: "Bộ Nhận Diện MẺ NHỎ — Cà Phê Cho Việc Pha Tại Nhà",
+    type: "Concept Cá Nhân · Brand Identity & Packaging",
+    category: "branding",
+    categoryName: "Nhận Diện Thương Hiệu",
+    categoryIcon: "fas fa-palette",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Logo phin 32 đơn vị • 6 Ứng dụng MN01–MN06 • Bảng màu Nâu Rang & Xanh Lá Trầm",
+    tools: ["Packaging Concept", "Brand Voice", "SVG Vector", "Information Hierarchy"],
+    description: "MẺ NHỎ là concept cà phê pha tại nhà với định hướng giúp người mới diễn đạt gu uống và chọn cách pha phù hợp. Logo 2 vòng cung hở gợi nhịp phin nhỏ giọt, đi kèm hệ bao bì và phiếu hỏi gu thực tế.",
+    featured: false,
+    links: [
+      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Khám Phá Brand Case", title: "Mở trang showcase nhận diện MẺ NHỎ" },
+      { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Bộ Banner Ads", title: "Xem 8 banner quảng cáo MẺ NHỎ" },
+      { url: "/tai-nguyen/#phieu-thu-gu", icon: "fas fa-download", btnText: "Tải Phiếu Thử Gu", title: "Tải biểu mẫu thử gu cà phê" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Thiết Kế Nhận Diện",
+      class: "Brand Identity Design 2026",
+      team: "Khương Tuấn Anh (Định hướng & Thiết kế)",
+      time: "Tháng 10/2026",
+      docPages: "Brand Guidelines & 6 Ấn phẩm SVG"
+    },
+    executiveSummary: "MẺ NHỎ ưu tiên những thứ người mua cần đọc: tên sản phẩm, cách dùng dự kiến và chỗ ghi chú sau khi thử. Tagline: 'Pha theo gu của bạn'. Bảng màu: Nâu rang (#593B2F), Xanh lá trầm (#2F6257), Nền sữa (#F6F1E8) và Cam nhạt (#E7B080).",
+    kpis: [
+      { number: "32", label: "Đơn vị lưới căn chỉnh Logo", icon: "fas fa-th" },
+      { number: "6", label: "Ấn phẩm ứng dụng bao bì", icon: "fas fa-box" },
+      { number: "4", label: "Tông màu tự nhiên mộc mạc", icon: "fas fa-swatchbook" },
+      { number: "8", label: "Kích thước Banner quảng cáo", icon: "fas fa-images" }
+    ],
+    surveyData: [
+      { number: "MN01", tag: "Bao Bì Túi Cà Phê", title: "Artwork túi cà phê 160×240mm trước & sau", desc: "Mặt trước in tên MẺ NHỎ và tagline. Mặt sau in thông điệp nhắc nhở hỏi về cỡ xay và hạn sử dụng trước khi bóc gói." },
+      { number: "MN02", tag: "Thẻ Hỏi Gu", title: "Thẻ trắc nghiệm chọn gu 100×150mm", desc: "Hỗ trợ người mua chọn nhanh: Đen đậm / Thêm sữa / Chưa rõ, ghi nhận dụng cụ phin đang có ở nhà." },
+      { number: "MN03", tag: "Phiếu Thử Ly Pha", title: "Bảng ghi nhận trải nghiệm A5", desc: "Các ô ghi lại lượng bột, lượng nước, nhiệt độ và cảm nhận thực tế sau lần pha đầu tiên." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Ly giấy dựng concept MN04", desc: "Ly giấy mang sleeve cách nhiệt in logo và thông điệp 'Một khoảng nghỉ, một ly theo gu'." },
+        { title: "Nguyên tắc trung thực dữ liệu", desc: "Không bịa đặt chứng nhận Organic hay nguồn gốc hạt khi chưa có kiểm nghiệm thực tế." }
+      ],
+      gs25: [
+        { title: "Bố cục bao bì phân cấp rõ", desc: "Đặt tên món và cách pha ở vị trí mắt dễ quét nhất, không nhồi nhét chữ nhỏ lấp chỗ." },
+        { title: "Giọng văn cởi mở", desc: "Hỏi về thói quen uống hàng ngày thay vì dùng các từ sáo rỗng như 'đánh thức mọi giác quan'." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 12: QUAI VẢI (NHẬN DIỆN THƯƠNG HIỆU) ====================
+  12: {
+    id: 12,
+    title: "Bộ Nhận Diện QUAI VẢI — Túi Vải Dùng Hằng Ngày",
+    type: "Concept Cá Nhân · Brand Identity & Packaging",
+    category: "branding",
+    categoryName: "Nhận Diện Thương Hiệu",
+    categoryIcon: "fas fa-palette",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Logo thân túi lưới 28 đơn vị • 6 Ứng dụng QV01–QV06 • Bộ 6 icon đồ dùng nguyên bản",
+    tools: ["Iconography", "Packaging", "Brand Identity", "SVG"],
+    description: "QUAI VẢI lấy đường quai làm hình ảnh chính. Một nét cong chữ U nối vào thân vuông tạo dấu nhận diện, đi kèm thông điệp 'Mang vừa một ngày' giúp người dùng chọn túi từ những thứ mình thực sự mang theo.",
+    featured: false,
+    links: [
+      { url: "/nhan-dien/quai-vai/", icon: "fas fa-palette", btnText: "Khám Phá Brand Case", title: "Mở trang showcase nhận diện QUAI VẢI" },
+      { url: "/content/quai-vai/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch Content", title: "Xem bài viết content QUAI VẢI" },
+      { url: "/tai-nguyen/#phieu-do-tui", icon: "fas fa-download", btnText: "Tải Phiếu Đo Túi", title: "Tải biểu mẫu đo kích thước đồ dùng" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Thiết Kế Nhận Diện",
+      class: "Brand Identity Design 2026",
+      team: "Khương Tuấn Anh (Định hướng & Thiết kế)",
+      time: "Tháng 10/2026",
+      docPages: "Brand Guidelines & 6 Ấn phẩm SVG"
+    },
+    executiveSummary: "Một thương hiệu phụ kiện giả định hướng đến sự thực tế: túi có vừa với vật dụng hàng ngày và cách lấy đồ hay không. Tagline: 'Mang vừa một ngày'. Bảng màu: Xanh chàm (#2F435C), Hồng đất (#C47E71), Vải sáng (#EEE8DF) và Chữ than (#233142).",
+    kpis: [
+      { number: "28", label: "Đơn vị lưới căn chỉnh Logo", icon: "fas fa-th" },
+      { number: "6", label: "Icon đồ dùng nguyên bản", icon: "fas fa-icons" },
+      { number: "6", label: "Ấn phẩm ứng dụng đồng bộ", icon: "fas fa-shopping-bag" },
+      { number: "1", label: "Phiếu đo kích thước thực tế", icon: "fas fa-ruler-combined" }
+    ],
+    surveyData: [
+      { number: "QV01", tag: "Artwork In Túi", title: "Mặt trước in logo quai vải, mặt sau sơ đồ đồ dùng", desc: "Họa tiết đường chỉ may ngắt quãng đặc trưng gợi nhắc sự tỉ mỉ của kỹ thuật may thủ công." },
+      { number: "QV02", tag: "Hangtag Hai Mặt", title: "Thẻ treo sản phẩm 60×100mm", desc: "Mặt trước logo và tagline 'Chọn từ đồ bạn mang'. Mặt sau nhắc kiểm tra lớp chống sốc của laptop." },
+      { number: "QV04", tag: "Bộ 6 Icon", title: "Sổ, bình nước, hộp bút, laptop, điện thoại, ví", desc: "Được vẽ cùng nét 2px quy chuẩn, không mang logo thương hiệu thiết bị của bên thứ ba." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Phiếu đo túi QV03", desc: "Biểu mẫu hướng dẫn đo kích thước món lớn nhất và độ mở miệng túi trước khi đặt mua." },
+        { title: "Card hướng dẫn mua QV06", desc: "Quy trình 4 bước: Liệt kê → Đo → Thử → Kiểm tra hướng dẫn chăm sóc vải canvas." }
+      ],
+      gs25: [
+        { title: "Không tuyên bố tải trọng quá đà", desc: "Tránh các lời hứa phóng đại như 'chiếc túi cân mọi hành trình' khi chưa thử nghiệm cơ học." },
+        { title: "Rõ ràng về cách giặt và bảo quản", desc: "Cung cấp lưu ý giặt tay và phơi bóng râm để tránh làm co rút sợi vải canvas tự nhiên." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 30: CONTENT LAB C01 (NẾP GẤP) ====================
+  30: {
+    id: 30,
+    title: "Content Lab C01: NẾP GẤP — Một Tuần Để Tìm Cách Ghi Phù Hợp",
+    type: "Social Content Lab · Kế Hoạch 7 Ngày",
     category: "content",
     categoryName: "Kế Hoạch Content",
     categoryIcon: "fas fa-pen-nib",
-    categoryColor: "#87513c",
-    description: "Bộ tuyển tập concept content social đa ngành nghề: từ văn hóa sở thích 'Ma túy nhựa' (Gunpla/Mô hình phái mạnh), góc máy Tech Desk Setup đến thời trang lifestyle. Đầy đủ Content Pillars, lịch 7 ngày, moodboard và kịch bản video.",
-    duration: "Concept cá nhân · 10/2026",
-    results: "4 Case đa ngành • Lịch 28+ ngày • 12 Khung Moodboard • 4 Kịch bản video/shot list",
-    tools: ["Facebook", "Instagram", "TikTok", "Content Calendar", "Visual Direction"],
-    googleDocUrl: "/social-content-sample.html",
-    buttonText: "Mở kế hoạch social & moodboard",
-    featured: true,
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Lịch đăng 7 ngày • 3 Caption hoàn chỉnh • 6 Slide Carousel • Shot list 20s",
+    tools: ["Content Strategy", "Copywriting", "Carousel Design", "Video Storyboard"],
+    description: "Kế hoạch tuần giải quyết vấn đề của người học và người làm nội dung khi chọn sổ planner: mua vì ảnh bìa nhưng khó dùng. Cung cấp bài mẫu phân tích, carousel 6 slide, story tương tác và kịch bản video phân cảnh 20 giây.",
+    featured: false,
+    links: [
+      { url: "/content/nep-gap/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Copy", title: "Mở toàn văn case C01" },
+      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện NẾP GẤP" },
+      { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Mẫu Lịch Tuần", title: "Tải bản lịch tuần A5" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Content Marketing",
+      class: "Social Content Strategy 2026",
+      team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
+      time: "Tháng 10/2026",
+      docPages: "Kế hoạch 7 ngày & Storyboard 20s"
+    },
+    executiveSummary: "Chiến dịch nội dung tuần mẫu cho concept NẾP GẤP với thông điệp: 'Thử cách ghi trước khi chọn sổ'. Xây dựng 3 trụ cột nội dung: Ghi có mục đích (giải thích), Thử trên một trang (hướng dẫn thực hành) và Một ý đang mở (đối thoại cộng đồng).",
     kpis: [
-      { number: "04", label: "Concept ngành nghề", icon: "📑" },
-      { number: "28+", label: "Ngày lịch nội dung mẫu", icon: "📅" },
-      { number: "04", label: "Kịch bản video / shot list", icon: "🎬" }
+      { number: "7", label: "Ngày trong lịch xuất bản", icon: "fas fa-calendar-week" },
+      { number: "3", label: "Bài viết kèm Caption chuẩn", icon: "fas fa-align-left" },
+      { number: "6", label: "Slide Carousel chi tiết", icon: "fas fa-clone" },
+      { number: "20s", label: "Kịch bản phân cảnh video", icon: "fas fa-video" }
     ],
-    findingsTitle: "Điểm Nhấn Của Các Concept",
-    findings: [
-      "<strong>Case 'Ma túy nhựa' (Gunpla):</strong> Bắt đúng tâm lý đam mê cơ khí, nỗi lo 'giấu giá với nóc nhà' và niềm vui xả stress sau giờ làm việc của phái mạnh.",
-      "<strong>Case Tech Desk Setup:</strong> Kết hợp giữa hiệu năng phần cứng, âm thanh phím cơ gõ đầm tay (thocky sound) và ánh sáng ambient truyền cảm hứng.",
-      "<strong>Case Lifestyle & Anime:</strong> Từ nghiên cứu kỹ lưỡng bảng size thời trang đến kích hoạt thảo luận ký ức tuổi thơ trên mạng xã hội."
+    surveyData: [
+      { number: "NG-P1", tag: "Ngày 1 · Ảnh đơn", title: "Trang trống không cần được lấp đầy", desc: "Giúp người đọc giảm áp lực phải viết kín trang sổ; tập trung vào một việc quan trọng nhất." },
+      { number: "NG-C1", tag: "Ngày 2 · Carousel", title: "Chọn planner theo thứ cần ghi", desc: "So sánh 3 phong cách ghi chép: theo giờ, theo checklist việc linh hoạt và theo hạn mốc lớn." },
+      { number: "NG-V1", tag: "Ngày 7 · Video 20s", title: "Từ 3 việc rời đến 1 trang tuần", desc: "Shot list phân cảnh tay sắp xếp 3 mẩu note rời vào các ô lịch tuần NẾP GẤP có định hướng." }
     ],
-    objectives: [
-      "Xây dựng kế hoạch social chạm đúng vào insight và tiếng lóng (slang) của từng cộng đồng đặc thù",
-      "Lập lịch nội dung mẫu 7 ngày cho từng case, phân bổ cân bằng giữa bài tương tác và chia sẻ giá trị",
-      "Dựng khung Moodboard trực quan với phong cách hình ảnh sắc nét, thẩm mỹ cao",
-      "Viết kịch bản ngắn (Reels/TikTok 15s) kèm shot list chi tiết và câu thoại bắt trend"
-    ],
-    process: [
-      { icon: "🔎", title: "Nghiên Cứu Insight", desc: "Đào sâu vào thói quen, tiếng lóng và tâm lý thật của người chơi/người mua trong từng cộng đồng." },
-      { icon: "🧭", title: "3 Tuyến Content Pillars", desc: "Phân chia rõ ràng: Tuyến tạo đồng cảm/meme viral, Tuyến chia sẻ kỹ thuật/mẹo hay, và Tuyến showcase tự hào." },
-      { icon: "📅", title: "Lên Lịch & Định Dạng", desc: "Phân bổ Carousel giải thích, Story hỏi đáp nhanh và Video ngắn bùng nổ theo từng ngày trong tuần." },
-      { icon: "🎨", title: "Moodboard & Script", desc: "Chọn lọc hình ảnh tư liệu chuẩn thẩm mỹ; viết kịch bản phân cảnh chi tiết cho khâu quay dựng." }
-    ],
-    frameworks: ["Community Insight", "Content Pillars", "Social Calendar", "Visual Moodboard", "Short-Form Script"],
-    takeaways: [
-      { icon: "🤖", title: "Nói đúng ngôn ngữ của cộng đồng", desc: "Hiểu tiếng lóng 'ma túy nhựa' hay 'thocky switch' giúp bài viết tự nhiên như một người trong cuộc chia sẻ." },
-      { icon: "📱", title: "Mỗi định dạng phục vụ một mục tiêu", desc: "Carousel để kích thích nút Lưu (Save), Story để kéo tương tác bình chọn, Video ngắn để kéo lượt xem mới." },
-      { icon: "🎥", title: "Kịch bản tiền kỳ rõ ràng", desc: "Shot list phân định rõ thời lượng, góc máy và text on screen giúp khâu quay dựng thực hiện nhanh gấp đôi." }
-    ]
+    recommendations: {
+      circleK: [
+        { title: "Bài NG-P2: Ô cho việc phát sinh", desc: "Chia sẻ kỹ thuật chừa một vùng trống ở cạnh trang để đón nhận các ý tưởng bất ngờ xuất hiện." },
+        { title: "Bài NG-P3: Thử một trang trước khi mua", desc: "Dẫn dắt người đọc tới trang tài nguyên tải mẫu lịch tuần A5 in thử tại nhà." }
+      ],
+      gs25: [
+        { title: "Story tương tác NG-S1 & S2", desc: "Tạo thăm dò ý kiến về thói quen nhìn cả tuần hay từng ngày và giải đáp thắc mắc ghi chép." },
+        { title: "Không cam kết tăng năng suất", desc: "Tránh hứa hẹn sổ tay giúp tăng gấp đôi năng suất; tập trung vào sự rõ ràng và cảm giác thoải mái." }
+      ]
+    }
   },
 
+  // ==================== DỰ ÁN 31: CONTENT LAB C02 (MẺ NHỎ) ====================
+  31: {
+    id: 31,
+    title: "Content Lab C02: MẺ NHỎ — Giúp Người Mới Đặt Câu Hỏi Khi Mua Cà Phê",
+    type: "Social Content Lab · Kế Hoạch 7 Ngày",
+    category: "content",
+    categoryName: "Kế Hoạch Content",
+    categoryIcon: "fas fa-pen-nib",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Lịch 7 ngày • 3 Caption thực chiến • Carousel 5 điều trao đổi • Kịch bản video",
+    tools: ["Editorial Strategy", "Social Copy", "Poll Strategy", "Storyboard"],
+    description: "Giúp khách hàng mới diễn đạt nhu cầu với người bán: uống đen hay sữa, đang có phin gì, cỡ xay ra sao. Tránh sáo rỗng, tập trung vào trải nghiệm thực tế và cung cấp phiếu thử gu tải về.",
+    featured: false,
+    links: [
+      { url: "/content/me-nho/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Copy", title: "Mở toàn văn case C02" },
+      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện MẺ NHỎ" },
+      { url: "/tai-nguyen/#phieu-thu-gu", icon: "fas fa-download", btnText: "Tải Phiếu Thử Gu", title: "Tải phiếu thử gu cà phê" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Content Marketing",
+      class: "Social Content Strategy 2026",
+      team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
+      time: "Tháng 10/2026",
+      docPages: "Kế hoạch 7 ngày & Storyboard 20s"
+    },
+    executiveSummary: "Chiến dịch nội dung tuần mẫu cho concept MẺ NHỎ với thông điệp: 'Pha theo gu của bạn'. Cung cấp bộ câu hỏi cụ thể để người mới tự tin trao đổi với người bán cà phê hạt và bột pha tại nhà.",
+    kpis: [
+      { number: "7", label: "Ngày trong lịch xuất bản", icon: "fas fa-calendar-week" },
+      { number: "3", label: "Bài viết hoàn chỉnh kèm caption", icon: "fas fa-align-left" },
+      { number: "5", label: "Gợi ý trao đổi với người bán", icon: "fas fa-comments" },
+      { number: "1", label: "Phiếu thử gu đính kèm", icon: "fas fa-file-alt" }
+    ],
+    surveyData: [
+      { number: "MN-P1", tag: "Ngày 1 · Ảnh đơn", title: "'Ngon nhất' cần thêm ngữ cảnh", desc: "Giải thích lý do câu hỏi 'cho mình loại ngon nhất' thường khó nhận được câu trả lời chính xác nếu chưa rõ gu uống." },
+      { number: "MN-C1", tag: "Ngày 2 · Carousel", title: "5 Điều nên nói với người bán cà phê", desc: "Cách uống (đen/sữa), dụng cụ pha, mua hạt hay bột, mức độ đắng và hương vị ưa thích." },
+      { number: "MN-P3", tag: "Ngày 5 · Bài link", title: "Đổi một thứ trong lần pha tiếp theo", desc: "Hướng dẫn chỉ thay đổi một biến số (lượng bột hoặc lượng nước) để biết điều gì tạo nên sự khác biệt." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Bài MN-P2: Đọc hướng dẫn gói", desc: "Nhắc nhở độc giả tuân thủ hướng dẫn của nhà sản xuất trước khi thử nghiệm công thức trên mạng." },
+        { title: "Story hỏi đáp MN-S2", desc: "Mở hộp câu hỏi thu thập những vướng mắc phổ biến của người mới bắt đầu pha cà phê phin tại nhà." }
+      ],
+      gs25: [
+        { title: "Kịch bản video MN-V1", desc: "Storyboard 20 giây minh họa tình huống cầm thẻ hỏi gu tự tin bước vào cửa hàng cà phê." },
+        { title: "Liên kết bài viết chuyên sâu", desc: "Dẫn dắt tự nhiên sang bài On-Page SEO 'Chọn cà phê pha phin: Bắt đầu từ gu uống'." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 32: CONTENT LAB C03 (QUAI VẢI) ====================
+  32: {
+    id: 32,
+    title: "Content Lab C03: QUAI VẢI — Chọn Túi Từ Những Món Sẽ Mang",
+    type: "Social Content Lab · Kế Hoạch 7 Ngày",
+    category: "content",
+    categoryName: "Kế Hoạch Content",
+    categoryIcon: "fas fa-pen-nib",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Lịch 7 ngày • Bài post đo túi • Carousel 6 slide • Checklist đồ mang",
+    tools: ["Copywriting", "Checklist Design", "Social Visuals"],
+    description: "Hướng dẫn người đi học và đi làm cách kiểm tra kích thước đồ dùng thực tế (laptop có bao chống sốc, bình nước, sổ) trước khi mua túi vải canvas để tránh mua nhầm size.",
+    featured: false,
+    links: [
+      { url: "/content/quai-vai/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Copy", title: "Mở toàn văn case C03" },
+      { url: "/nhan-dien/quai-vai/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện QUAI VẢI" },
+      { url: "/tai-nguyen/#phieu-do-tui", icon: "fas fa-download", btnText: "Tải Phiếu Đo Túi", title: "Tải biểu mẫu đo kích thước túi" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Content Marketing",
+      class: "Social Content Strategy 2026",
+      team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
+      time: "Tháng 10/2026",
+      docPages: "Kế hoạch 7 ngày & Checklist đo túi"
+    },
+    executiveSummary: "Chiến dịch nội dung tuần mẫu cho concept QUAI VẢI với thông điệp: 'Mang vừa một ngày'. Nhấn mạnh trải nghiệm sử dụng thực tế và cách bảo quản vải canvas thay vì chỉ chụp ảnh lookbook thời trang bóng bẩy.",
+    kpis: [
+      { number: "7", label: "Ngày trong lịch xuất bản", icon: "fas fa-calendar-week" },
+      { number: "1", label: "Quy trình đo 4 bước", icon: "fas fa-ruler" },
+      { number: "6", label: "Slide Carousel hướng dẫn", icon: "fas fa-clone" },
+      { number: "1", label: "Checklist đồ dùng thực tế", icon: "fas fa-tasks" }
+    ],
+    surveyData: [
+      { number: "QV-P1", tag: "Ngày 1 · Bài Post", title: "Ảnh đẹp chưa cho biết túi có vừa đồ", desc: "Chỉ ra sai lầm phổ biến khi mua túi canvas online chỉ nhìn ảnh mẫu đeo vai mà quên kiểm tra đáy túi." },
+      { number: "QV-C1", tag: "Ngày 2 · Carousel", title: "Đo cả lớp chống sốc của laptop", desc: "Lưu ý quan trọng: chiếc laptop 14 inch sau khi bọc bao nỉ sẽ tương đương kích thước thân máy 15.6 inch." },
+      { number: "QV-P3", tag: "Ngày 5 · Bài link", title: "Tải phiếu đo túi trước khi đặt hàng", desc: "Dẫn người xem tới trang tài nguyên để tải bản PDF phiếu đo lòng túi và độ mở miệng túi." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Quy chuẩn bảo quản canvas", desc: "Hướng dẫn chi tiết cách vệ sinh vết bẩn cục bộ bằng bàn chải mềm thay vì giặt máy." },
+        { title: "Card tóm tắt 4 bước", desc: "Ấn phẩm mạng xã hội tóm tắt: Liệt kê → Đo → Thử → Kiểm tra hướng dẫn chăm sóc." }
+      ],
+      gs25: [
+        { title: "Không quảng cáo chống nước tuyệt đối", desc: "Minh bạch về đặc tính thấm hút tự nhiên của vải canvas mộc, gợi ý sử dụng túi phụ chống ẩm." },
+        { title: "Dẫn link sang bài SEO A07", desc: "Điều hướng người đọc sang bài viết chuyên sâu: 'Chọn túi canvas đi học: Kiểm tra kích thước và cách dùng'." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 33: CONTENT LAB C04 (NHỊP VIỆC) ====================
+  33: {
+    id: 33,
+    title: "Content Lab C04: NHỊP VIỆC — Dịch Vụ Số & B2B Cho Nhóm Nhỏ",
+    type: "Content Lab · B2B Service & Workflow",
+    category: "content",
+    categoryName: "Kế Hoạch Content",
+    categoryIcon: "fas fa-pen-nib",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "Quy trình brief 1 trang • Ma trận 3 tầng Humanize • Biểu mẫu kiểm soát claim",
+    tools: ["B2B Content", "Workflow Automation", "AI Ethics", "Documentation"],
+    description: "Thiết lập quy trình bàn giao việc viết nội dung và ứng dụng AI có trách nhiệm cho nhóm nhỏ: từ brief một trang có giới hạn, kỹ thuật đối chiếu nguồn sơ cấp đến checklist 15 tiêu chí duyệt bản nháp.",
+    featured: false,
+    links: [
+      { url: "/content/nhip-viec/", icon: "fas fa-pen-nib", btnText: "Xem Kế Hoạch & Quy Trình", title: "Mở toàn văn case C04" },
+      { url: "/seo-brief-content.html", icon: "fas fa-file-contract", btnText: "Xem Bài Mẫu Brief A11", title: "Xem bài viết mẫu brief content" },
+      { url: "/tai-nguyen/#brief-mot-trang", icon: "fas fa-download", btnText: "Tải Mẫu Brief", title: "Tải mẫu brief một trang" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Content Marketing",
+      class: "B2B Content & Operations 2026",
+      team: "Khương Tuấn Anh (Biên tập & Quy trình)",
+      time: "Tháng 10/2026",
+      docPages: "Quy trình làm việc & Biểu mẫu B2B"
+    },
+    executiveSummary: "NHỊP VIỆC xây dựng bộ khung chuẩn hóa quy trình sáng tạo nội dung giữa người quản lý, copywriter và công cụ AI. Giải quyết triệt để tình trạng prompt chung chung dẫn đến bản nháp sáo rỗng và thiếu số liệu kiểm chứng.",
+    kpis: [
+      { number: "1", label: "Bản Brief chuẩn 1 trang", icon: "fas fa-file-contract" },
+      { number: "3", label: "Tầng kiểm duyệt Humanize", icon: "fas fa-filter" },
+      { number: "15", label: "Tiêu chí On-Page nghiệm thu", icon: "fas fa-clipboard-check" },
+      { number: "0", label: "Claim phóng đại thiếu nguồn", icon: "fas fa-shield-alt" }
+    ],
+    surveyData: [
+      { number: "Bước 1", tag: "Briefing", title: "Khóa chặt đề bài và điều không khẳng định", desc: "Xác định rõ người đọc mục tiêu, tình huống thực tế và các ranh giới không được hứa hẹn quá đà." },
+      { number: "Bước 2", tag: "AI Draft", title: "Tạo khung nháp có kiểm soát", desc: "Sử dụng AI như một trợ lý lập dàn ý và tìm kiếm góc nhìn mở, không copy-paste nguyên văn để xuất bản." },
+      { number: "Bước 3", tag: "Fact-Check", title: "Đối chiếu nguồn sơ cấp và biên tập E-E-A-T", desc: "Kiểm tra từng con số với tài liệu gốc, viết lại câu chữ theo giọng văn điềm tĩnh và bổ sung trải nghiệm thực tế." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "Bảng kiểm chứng claim CSV", desc: "Mẫu theo dõi nguồn gốc từng số liệu trích dẫn để đảm bảo tính minh bạch trước khi xuất bản." },
+        { title: "Quy ước liên kết nội bộ chặt chẽ", desc: "Xây dựng sơ đồ Internal Links Silo kết nối mạch lạc giữa bài viết, trang tài nguyên và case study." }
+      ],
+      gs25: [
+        { title: "Minh bạch về sự hỗ trợ của AI", desc: "Ghi nhận rõ ràng vai trò định hướng của con người và sự hỗ trợ kỹ thuật của AI trong portfolio." },
+        { title: "Tuân thủ chính sách Google E-E-A-T", desc: "Nội dung phục vụ con người trước tiên, không viết bài chỉ nhằm mục đích thao túng công cụ tìm kiếm." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 4: BANNER ADS MẺ NHỎ (DESIGN) ====================
+  4: {
+    id: 4,
+    title: "Thiết Kế Bộ Banner Ads MẺ NHỎ: 'Pha Theo Gu Của Bạn'",
+    type: "Media & Ad Design · Concept Campaign",
+    category: "design",
+    categoryName: "Media & Banner Ads",
+    categoryIcon: "fas fa-image",
+    categoryColor: "#eab308",
+    duration: "10/2026",
+    results: "8 Kích thước hiển thị chuẩn • 2 Giả thuyết Headline A/B • Key Visual Vector",
+    tools: ["Photoshop", "Illustrator", "SVG Vector", "Media Planning"],
+    description: "Hệ thống banner quảng cáo đa kích thước từ 1600x900 (Wide), 1080x1350 (Portrait), 1080x1080 (Square), 1080x1920 (Story) đến các kích thước Google Display Ads (300x250, 728x90, 300x600, 780x600). So sánh giả thuyết thông điệp A/B dựa trên tâm lý người mới bắt đầu.",
+    featured: false,
+    links: [
+      { url: "/thiet-ke/banner-me-nho/", icon: "fas fa-image", btnText: "Xem Bộ 8 Banner & Thử Nghiệm", title: "Mở trang showcase banner MẺ NHỎ" },
+      { url: "/nhan-dien/me-nho/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện MẺ NHỎ" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Thiết Kế Truyền Thông",
+      class: "Digital Advertising Design 2026",
+      team: "Khương Tuấn Anh (Thiết kế đồ họa)",
+      time: "Tháng 10/2026",
+      docPages: "Bộ 8 Banner chuẩn Vector & Thử nghiệm A/B"
+    },
+    executiveSummary: "Thay thế bộ banner gaming gear cũ bằng một Key Visual thích nghi linh hoạt trên 8 khung hình quảng cáo đa kênh. Key Visual trung tâm là biểu tượng phin cà phê góc nghiêng nhẹ và giọt nối xuống thẻ hỏi gu. Thử nghiệm hai hướng thông điệp A/B: 'Pha theo gu của bạn' vs 'Bạn uống đen hay thêm sữa?'.",
+    kpis: [
+      { number: "8", label: "Kích thước thích ứng đa nền tảng", icon: "fas fa-expand-arrows-alt" },
+      { number: "2", label: "Giả thuyết thông điệp A/B", icon: "fas fa-vial" },
+      { number: "100%", label: "Key Visual Vector nguyên bản", icon: "fas fa-vector-square" },
+      { number: "3", label: "Màu sắc tương phản chuẩn", icon: "fas fa-adjust" }
+    ],
+    surveyData: [
+      { number: "mn-kv-wide", tag: "1600×900", title: "Banner ngang lớn cho Website & YouTube", desc: "Bố cục cân đối: Phin vector bên trái, Headline 'Pha theo gu của bạn' và nút CTA 'Mở phiếu hỏi gu' bên phải." },
+      { number: "mn-social-portrait", tag: "1080×1350", title: "Banner dọc cho Facebook & Instagram Feed", desc: "Tối ưu diện tích hiển thị trên điện thoại: Đặt câu hỏi trực tiếp 'Bạn uống đen hay thêm sữa?'." },
+      { number: "mn-story", tag: "1080×1920", title: "Định dạng Story & TikTok dọc toàn màn hình", desc: "Chừa khoảng an toàn (Safe Zone) 250px ở mép trên và dưới để tránh bị che bởi thanh điều hướng ứng dụng." }
+    ],
+    recommendations: {
+      circleK: [
+        { title: "mn-display-rect (300×250)", desc: "Kích thước hình chữ nhật trong bài viết: Lược bỏ văn bản phụ quá nhỏ, tập trung logo và nút hành động." },
+        { title: "mn-display-wide (728×90)", desc: "Banner Leaderboard ngang: Phân bố Logo góc trái, thông điệp ở giữa và CTA góc phải." }
+      ],
+      gs25: [
+        { title: "Giả thuyết thử nghiệm A/B", desc: "Ghi nhận rõ ràng: Câu hỏi cụ thể có thể giúp người mới dễ nhận ra nhu cầu của mình hơn câu khẳng định chung." },
+        { title: "Không bịa đặt số liệu chuyển đổi", desc: "Minh bạch nhãn 'Bộ thiết kế concept, chưa chạy quảng cáo thực tế' để đảm bảo tính liêm chính." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 7: WEBSITE CONCEPT NẾP GẤP (WEB) ====================
   7: {
     id: 7,
-    title: "Thiết Kế Website & Landing Page (LadiPage)",
-    type: "Thực Hành & Triển Khai · Web & Landing Page",
+    title: "Cửa Hàng Concept NẾP GẤP: Trải Nghiệm Lựa Chọn Văn Phòng Phẩm",
+    type: "Website Concept · UX / UI Design",
     category: "web",
     categoryName: "Website & Landing Page",
     categoryIcon: "fas fa-laptop-code",
-    categoryColor: "#0284c7",
-    description: "Bộ đôi sản phẩm thiết kế giao diện thực chiến: Website thương mại điện tử chuẩn SEO Potty.vn (Tinh dầu thiên nhiên & Máy khuếch tán) và Landing Page chuyển đổi cao trên nền tảng LadiPage cho Khóa học Digital Marketing VTC Academy.",
-    duration: "06/2026 – Hiện tại",
-    results: "01 Website E-commerce hoàn chỉnh • 01 Landing Page CRO • 100% Mobile-First Responsive",
-    tools: ["LadiPage", "Web Builder", "UI/UX Design", "Canva", "HTML & CSS"],
-    featured: true,
-    kpis: [
-      { number: "02", label: "Nền tảng hoàn thiện", icon: "💻" },
-      { number: "100%", label: "Tối ưu Mobile-First", icon: "📱" },
-      { number: "AIDA", label: "Cấu trúc chuyển đổi CRO", icon: "🎯" }
-    ],
+    categoryColor: "#10b981",
+    duration: "10/2026",
+    results: "Giao diện Concept có thể tương tác • Bộ lọc nhu cầu động • Bảng so sánh 3 dòng sổ",
+    tools: ["HTML5", "CSS3", "JavaScript", "UX Research", "Interactive Prototype"],
+    description: "Website concept cho thương hiệu văn phòng phẩm NẾP GẤP. Tích hợp bộ lọc chọn sổ theo nhu cầu ghi chép (nhìn cả tuần, ghi từng ngày, ghi ý rời), bảng so sánh cấu trúc ruột sổ và nút tải mẫu lịch tuần thực tế.",
+    featured: false,
     links: [
-      {
-        title: "Website Thương Mại Điện Tử: potty.vn",
-        tag: "E-Commerce Website",
-        url: "https://potty.vn",
-        btnText: "Ghé Thăm Website potty.vn ↗",
-        icon: "fas fa-globe",
-        desc: "Thương hiệu Tinh Dầu Thiên Nhiên & Máy Khuếch Tán Cao Cấp. Giao diện trực quan, bảng màu tự nhiên, tối ưu danh mục sản phẩm, bộ lọc giá và trải nghiệm đặt hàng thuận tiện."
-      },
-      {
-        title: "Landing Page Tuyển Sinh: VTC Academy (LadiPage)",
-        tag: "CRO Landing Page",
-        url: "http://preview.ladipage.me/6a33f016a44bf10012276660",
-        btnText: "Xem Preview LadiPage ↗",
-        icon: "fas fa-rocket",
-        desc: "Landing Page tuyển sinh Khóa học Digital Marketing 15 tháng trên nền tảng LadiPage. Cấu trúc AIDA thuyết phục, form đăng ký nhận tư vấn nổi bật, bảng lộ trình học tập và section cam kết đầu ra việc làm."
-      }
+      { url: "/web/nep-gap/", icon: "fas fa-laptop-code", btnText: "Trải Nghiệm Cửa Hàng Concept", title: "Mở website concept NẾP GẤP" },
+      { url: "/nhan-dien/nep-gap/", icon: "fas fa-palette", btnText: "Xem Brand Case", title: "Mở nhận diện NẾP GẤP" },
+      { url: "/tai-nguyen/#lich-tuan", icon: "fas fa-download", btnText: "Tải Bản Lịch Tuần", title: "Tải mẫu lịch tuần A5" }
     ],
-    findingsTitle: "Phân Tích Bố Cục & Trải Nghiệm Người Dùng (UI/UX)",
-    findings: [
-      "<strong>Website Potty.vn (E-commerce):</strong> Tập trung xây dựng niềm tin thương hiệu thông qua phong cách tối giản, hình ảnh sản phẩm tinh dầu & máy xông sắc nét, thông tin xuất xứ minh bạch và các chính sách bảo hành, đổi trả được làm nổi bật trên thanh điều hướng.",
-      "<strong>Landing Page VTC Academy (LadiPage):</strong> Tối ưu từng điểm chạm chuyển đổi (CRO) với thông điệp mạnh mẽ ngay First Screen (Hero Section), tích hợp Form đăng ký nhận tư vấn nhanh, đếm ngược thời gian ưu đãi và các khối chứng chỉ / đối tác doanh nghiệp.",
-      "<strong>Trải Nghiệm Đa Màn Hình (Mobile-First):</strong> Cả hai sản phẩm đều được thiết kế thích ứng tuyệt đối trên điện thoại di động (Mobile Responsive), đảm bảo cỡ chữ dễ đọc, nút bấm lớn vừa vặn ngón tay cái và menu điều hướng vuốt chạm mượt mà."
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Thiết Kế Website",
+      class: "UI/UX & Web Development 2026",
+      team: "Khương Tuấn Anh (UI/UX & Front-End)",
+      time: "Tháng 10/2026",
+      docPages: "Giao diện Web Concept tương tác"
+    },
+    executiveSummary: "Cửa hàng concept NẾP GẤP giúp người dùng giải quyết vướng mắc chọn sổ: xem kỹ bố cục trang ruột trước khi quan tâm đến ảnh bìa. Giao diện tích hợp bộ lọc nhu cầu ghi chép thông minh, bảng so sánh đa dòng sổ và cho phép tải mẫu in thử một trang tại chỗ.",
+    kpis: [
+      { number: "3", label: "Dòng sản phẩm concept chính", icon: "fas fa-book-open" },
+      { number: "3", label: "Lựa chọn nhu cầu tương tác", icon: "fas fa-sliders-h" },
+      { number: "100%", label: "Responsive chuẩn thiết bị di động", icon: "fas fa-mobile-alt" },
+      { number: "0", label: "Chức năng thanh toán giả", icon: "fas fa-shield-alt" }
     ],
-    skills: [
-      { icon: "🎨", name: "UI/UX Layout & Wireframing", desc: "Phân bổ bố cục trực quan, điều hướng mắt người xem theo luồng thị giác từ trên xuống dưới." },
-      { icon: "⚡", name: "LadiPage & Web Builder Mastery", desc: "Thành thạo công cụ thiết kế kéo thả, cấu hình form dữ liệu, hiệu ứng tương tác và tối ưu tải trang." },
-      { icon: "🎯", name: "CRO & Conversion Architecture", desc: "Áp dụng mô hình AIDA để bố trí tiêu đề, minh chứng xã hội (Social Proof) và nút kêu gọi hành động (CTA)." }
+    surveyData: [
+      { number: "Sản phẩm 1", tag: "Sổ Tuần Mở", title: "Bố cục lịch tuần và vùng ý tưởng đang mở", desc: "Thích hợp cho người cần bao quát công việc trong 7 ngày và có chỗ ghi các việc phát sinh linh hoạt." },
+      { number: "Sản phẩm 2", tag: "Thẻ Một Ý", title: "Thẻ ghi chú một việc, một câu hỏi hoặc ý mới", desc: "Dành cho người thường xuyên di chuyển hoặc muốn phân loại việc cần làm theo mức độ ưu tiên." },
+      { number: "Sản phẩm 3", tag: "Trang Ngày Rộng", title: "Một trang dành riêng cho ngày cần ghi chú nhiều", desc: "Dành cho các buổi học, cuộc họp kéo dài hoặc phiên lên kế hoạch chi tiết từng bước." }
     ],
-    objectives: [
-      "Xây dựng giao diện website thương mại điện tử chuyên nghiệp, thể hiện đúng tinh thần thiên nhiên và thư giãn của thương hiệu Potty.vn",
-      "Thiết kế Landing Page chuẩn CRO trên LadiPage phục vụ chiến dịch tuyển sinh ngành Digital Marketing của VTC Academy",
-      "Bảo đảm tính tương thích hoàn hảo giữa màn hình máy tính để bàn (Desktop) và điện thoại di động (Mobile)",
-      "Tối ưu hóa các nút Call-To-Action (CTA) và luồng thao tác của người dùng để giảm thiểu tỷ lệ thoát trang (Bounce Rate)"
+    recommendations: {
+      circleK: [
+        { title: "Bảng so sánh trực quan", desc: "So sánh 3 dòng sổ theo phạm vi nhìn, cách bắt đầu và trường hợp nên thử thay vì thông số kỹ thuật khô khan." },
+        { title: "Trải nghiệm chọn theo nhu cầu", desc: "Bấm chọn 'Mình muốn thấy cả tuần' hoặc 'Mình cần ghi từng ngày' sẽ tự động làm nổi bật dòng sản phẩm tương ứng." }
+      ],
+      gs25: [
+        { title: "Minh bạch nhãn Concept", desc: "Gắn nhãn lớn 'Cửa hàng concept · Không nhận thanh toán/đơn hàng' để tránh người xem hiểu nhầm là sàn thương mại điện tử thật." },
+        { title: "Dẫn link tải tài nguyên thật", desc: "Nút 'Tải bản lịch tuần' liên kết trực tiếp tới file in thử A5 tại trang tài nguyên." }
+      ]
+    }
+  },
+
+  // ==================== DỰ ÁN 5: BỘ BÀI SEO MẪU (SEO) ====================
+  5: {
+    id: 5,
+    title: "Tuyển Tập 11 Bài Viết SEO On-Page Đa Ngành & Technical Blueprint",
+    type: "SEO Content & Technical On-Page Lab",
+    category: "seo",
+    categoryName: "SEO Content",
+    categoryIcon: "fas fa-search",
+    categoryColor: "#df7900",
+    duration: "10/2026",
+    results: "11 Bài viết mẫu chuyên sâu • SERP Inspector • Bảng 8 phần Blueprint Masterclass",
+    tools: ["On-Page SEO", "Schema.org", "Keyword Research", "SERP Simulator", "E-E-A-T"],
+    description: "Tuyển tập 11 bài viết chuẩn On-Page SEO dài 2.000 - 2.500 từ trải dài qua 6 nhóm ngành (Công nghệ AI, Gunpla, Phần cứng PC, Anime Manga, Game Dev 2D, F&B Cà phê, Thời trang Canvas, Văn phòng phẩm, Cây cảnh, Du lịch, Quản trị Content). Mỗi bài đều có mô phỏng SERP và hồ sơ kỹ thuật 8 phần minh bạch.",
+    featured: true,
+    links: [
+      { url: "/seo-samples.html", icon: "fas fa-search", btnText: "Xem Tuyển Tập 11 Bài Viết", title: "Mở hub 11 bài SEO mẫu" },
+      { url: "/seo-aiktp.html", icon: "fas fa-robot", btnText: "Xem Bài 1 (AIKTP & Gemini)", title: "Mở bài viết mẫu số 1" },
+      { url: "/seo-brief-content.html", icon: "fas fa-file-contract", btnText: "Xem Bài 11 (Brief Content)", title: "Mở bài viết mẫu số 11" }
     ],
-    process: [
-      { icon: "🔍", title: "Nghiên Cứu Sản Phẩm & Khách Hàng", desc: "Xác định chân dung khách hàng mua tinh dầu Potty.vn và học viên tiềm năng quan tâm khóa học Digital Marketing." },
-      { icon: "📐", title: "Xây Dựng Bố Cục Wireframe", desc: "Lên khung sườn các section: Hero banner, Giá trị cốt lõi, Danh mục sản phẩm/Lộ trình học, Bằng chứng xã hội và Form đăng ký." },
-      { icon: "💻", title: "Thiết Kế Thực Tế Trên Web & LadiPage", desc: "Phối màu, lựa chọn font chữ hiện đại, cắt ghép hình ảnh và cấu hình các nút bấm chuyển đổi." },
-      { icon: "📱", title: "Tối Ưu Giao Diện Di Động & Tốc Độ", desc: "Kiểm tra hiển thị đa kích thước màn hình, sửa lỗi tràn viền (overflow) và đo lường trải nghiệm thực tế." }
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Khóa Học SEO & Content Automation",
+      class: "SEO On-Page & Technical Writing 2026",
+      team: "Khương Tuấn Anh (Nghiên cứu & Biên tập)",
+      time: "Tháng 10/2026",
+      docPages: "11 Bài On-Page & 11 Bảng Blueprint"
+    },
+    executiveSummary: "Tuyển tập bài viết On-Page SEO chứng minh năng lực triển khai nội dung chuyên sâu, chuẩn hóa cấu trúc heading H1-H3, tối ưu Featured Snippet TL;DR, đan cài liên kết nội bộ tự nhiên, dẫn nguồn sơ cấp bảo chứng và xây dựng hồ sơ kỹ thuật On-Page Blueprint 8 phần minh bạch.",
+    kpis: [
+      { number: "11", label: "Bài viết On-Page chuyên sâu", icon: "fas fa-file-alt" },
+      { number: "6", label: "Nhóm ngành đa dạng", icon: "fas fa-cubes" },
+      { number: "8", label: "Phần trong On-Page Blueprint", icon: "fas fa-code" },
+      { number: "100%", label: "Ảnh bản quyền / Unsplash có nguồn", icon: "fas fa-image" }
     ],
-    frameworks: ["AIDA Funnel", "CRO Principles", "Mobile-First Design", "Visual Hierarchy", "Call-To-Action (CTA)"],
-    takeaways: [
-      { icon: "🎯", title: "Landing Page phục vụ chuyển đổi, không chỉ để ngắm", desc: "Mọi khối thông tin trên Landing Page phải dẫn dắt người dùng đến hành động cụ thể (Điền form / Đặt hàng) thay vì đưa thông tin lan man." },
-      { icon: "📱", title: "Ưu tiên tuyệt đối cho giao diện điện thoại", desc: "Hơn 80% lưu lượng truy cập từ mạng xã hội đến từ smartphone, vì vậy thiết kế mobile phải được chăm chút tỉ mỉ từng pixel." },
-      { icon: "🛡️", title: "Xây dựng niềm tin là chìa khóa bán hàng", desc: "Đối với website bán lẻ như Potty.vn, chính sách rõ ràng và hình ảnh chân thực là yếu tố quyết định người dùng có bấm Mua Ngay hay không." }
+    surveyData: [
+      { number: "Nhóm 1", tag: "Tech & Gaming", title: "AI Content, Gunpla, Build PC, Dragon Ball, Game Dev", desc: "5 bài viết kỹ thuật và sở thích cá nhân dài 2.500 từ có ảnh thực tế và kiểm chứng thông số chuyên sâu." },
+      { number: "Nhóm 2", tag: "Lifestyle & F&B", title: "Cà phê pha phin, Túi Canvas, Sổ tay Planner, Cây cảnh, Du lịch", desc: "5 bài viết phong cách sống hướng dẫn người đọc lựa chọn sản phẩm từ tình huống sử dụng hàng ngày." },
+      { number: "Nhóm 3", tag: "Management", title: "Mẫu Brief Content SEO cho nhóm nhỏ", desc: "Bài viết phương pháp luận chuẩn hóa quy trình giao việc, kiểm soát bản nháp AI và nghiệm thu 15 tiêu chí On-Page." }
     ],
-    googleDocUrl: "https://potty.vn",
-    buttonText: "Truy Cập Website Potty.vn (potty.vn)"
+    recommendations: {
+      circleK: [
+        { title: "Bảng On-Page Blueprint 8 phần", desc: "Mỗi bài viết đều có hồ sơ minh bạch: Brief, Chùm từ khóa, Voice guide, Silo liên kết, Nguồn sơ cấp, Kế hoạch backlink, Audit ảnh và Đánh giá E-E-A-T." },
+        { title: "SERP Preview Inspector", desc: "Thanh mô phỏng hiển thị Google trên máy tính và điện thoại giúp biên tập thẻ tiêu đề và mô tả chuẩn SEO." }
+      ],
+      gs25: [
+        { title: "Không cam kết thứ hạng ảo", desc: "Ghi nhận minh bạch trạng thái 'Bài mẫu concept portfolio, chưa có dữ liệu click/CTR thực tế' để đảm bảo tính trung thực." },
+        { title: "Cấu trúc 2 cột linh hoạt", desc: "Bố cục đọc nội dung chính kèm cột bên Sticky Aside hiển thị mục lục điều hướng động và thẻ bài viết tiếp theo." }
+      ]
+    }
   }
-};
+};;
 
 // ================== CÁC CHỨC NĂNG ĐIỀU HƯỚNG & HELPER ==================
 

@@ -82,7 +82,7 @@
       <div class="cat-info-text">
         <div class="cat-info-top">
           <h2 id="catInfoTitle">Tất Cả Dự Án</h2>
-          <span class="cat-count-pill" id="catCountPill">6 dự án</span>
+          <span class="cat-count-pill" id="catCountPill">13 dự án</span>
         </div>
         <p id="catInfoDesc">Case học tập và concept cá nhân trong Content, Social, SEO và thiết kế truyền thông.</p>
       </div>
@@ -116,7 +116,7 @@
       // 1. Khởi tạo thanh bộ lọc danh mục với số lượng động
       function renderCategoryPills() {
         const counts = getCategoryCounts();
-        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 6;
+        if (totalProjectsCountEl) totalProjectsCountEl.textContent = counts.all || 13;
 
         filterPillsBar.innerHTML = Object.keys(categoriesConfig).map(catKey => {
           const cat = categoriesConfig[catKey];
