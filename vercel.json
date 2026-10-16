@@ -1,63 +1,151 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": true,
+  "cleanUrls": false,
+  "trailingSlash": false,
   "redirects": [
     {
-      "source": "/seo-samples.html",
-      "destination": "/seo/",
-      "permanent": true
+      "source": "/seo-model-kit",
+      "destination": "/seo-model-kit.html",
+      "permanent": false
     },
     {
-      "source": "/seo-aiktp.html",
-      "destination": "/seo/ai-ho-tro-viet-bai-seo/",
-      "permanent": true
+      "source": "/seo-model-kit/",
+      "destination": "/seo-model-kit.html",
+      "permanent": false
     },
     {
-      "source": "/seo-model-kit.html",
-      "destination": "/seo/gunpla-cho-nguoi-moi/",
-      "permanent": true
+      "source": "/seo-aiktp",
+      "destination": "/seo-aiktp.html",
+      "permanent": false
     },
     {
-      "source": "/seo-pc-build.html",
-      "destination": "/seo/build-pc-theo-nhu-cau/",
-      "permanent": true
+      "source": "/seo-aiktp/",
+      "destination": "/seo-aiktp.html",
+      "permanent": false
     },
     {
-      "source": "/seo-dragon-ball.html",
-      "destination": "/seo/dragon-ball-daima-cho-nguoi-moi/",
-      "permanent": true
+      "source": "/seo-pc-build",
+      "destination": "/seo-pc-build.html",
+      "permanent": false
     },
     {
-      "source": "/seo-rpg.html",
-      "destination": "/seo/prototype-rpg-2d/",
-      "permanent": true
+      "source": "/seo-pc-build/",
+      "destination": "/seo-pc-build.html",
+      "permanent": false
     },
     {
-      "source": "/social-content-sample.html",
-      "destination": "/content/",
-      "permanent": true
+      "source": "/seo-dragon-ball",
+      "destination": "/seo-dragon-ball.html",
+      "permanent": false
     },
     {
-      "source": "/projects.html",
-      "destination": "/du-an/",
-      "permanent": true
+      "source": "/seo-dragon-ball/",
+      "destination": "/seo-dragon-ball.html",
+      "permanent": false
     },
     {
-      "source": "/project-detail.html",
-      "has": [
-        {
-          "type": "query",
-          "key": "id",
-          "value": "1"
-        }
-      ],
-      "destination": "/nghien-cuu/circle-k-gs25/",
-      "permanent": true
+      "source": "/seo-rpg",
+      "destination": "/seo-rpg.html",
+      "permanent": false
     },
     {
-      "source": "/project-detail.html",
-      "destination": "/du-an/",
-      "permanent": true
+      "source": "/seo-rpg/",
+      "destination": "/seo-rpg.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-samples",
+      "destination": "/seo-samples.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo-samples/",
+      "destination": "/seo-samples.html",
+      "permanent": false
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects.html",
+      "permanent": false
+    },
+    {
+      "source": "/projects/",
+      "destination": "/projects.html",
+      "permanent": false
+    },
+    {
+      "source": "/social-content-sample",
+      "destination": "/social-content-sample.html",
+      "permanent": false
+    },
+    {
+      "source": "/social-content-sample/",
+      "destination": "/social-content-sample.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/ai-ho-tro-viet-bai-seo/:path*",
+      "destination": "/seo-aiktp.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/gunpla-cho-nguoi-moi/:path*",
+      "destination": "/seo-model-kit.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/build-pc-theo-nhu-cau/:path*",
+      "destination": "/seo-pc-build.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/dragon-ball-daima-cho-nguoi-moi/:path*",
+      "destination": "/seo-dragon-ball.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/prototype-rpg-2d/:path*",
+      "destination": "/seo-rpg.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo/:path*",
+      "destination": "/seo-samples.html",
+      "permanent": false
+    },
+    {
+      "source": "/seo",
+      "destination": "/seo-samples.html",
+      "permanent": false
+    },
+    {
+      "source": "/du-an/:path*",
+      "destination": "/projects.html",
+      "permanent": false
+    },
+    {
+      "source": "/du-an",
+      "destination": "/projects.html",
+      "permanent": false
+    },
+    {
+      "source": "/content/:path*",
+      "destination": "/social-content-sample.html",
+      "permanent": false
+    },
+    {
+      "source": "/content",
+      "destination": "/social-content-sample.html",
+      "permanent": false
+    },
+    {
+      "source": "/nghien-cuu/circle-k-gs25/:path*",
+      "destination": "/project-detail.html?id=1",
+      "permanent": false
+    },
+    {
+      "source": "/nghien-cuu/circle-k-gs25",
+      "destination": "/project-detail.html?id=1",
+      "permanent": false
     }
   ]
 }

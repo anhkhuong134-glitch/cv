@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi Tiết Dự Án | KHƯƠNG TUẤN ANH</title>
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="project-detail.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="/project-detail.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
@@ -17,18 +17,18 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
+    <a href="/index.html" class="logo">KHƯƠNG TUẤN <span>ANH</span></a>
 
     <div class="breadcrumb-nav">
-      <a href="index.html">Profile</a>
+      <a href="/index.html">Profile</a>
       <i class="fas fa-chevron-right breadcrumb-sep"></i>
-      <a href="projects.html">Dự Án</a>
+      <a href="/projects.html">Dự Án</a>
       <i class="fas fa-chevron-right breadcrumb-sep"></i>
       <span class="breadcrumb-current" id="breadcrumbProject">Chi Tiết</span>
     </div>
 
     <div class="navbar-right">
-      <a href="projects.html" class="nav-link-btn"><i class="fas fa-arrow-left"></i> Danh sách Dự án</a>
+      <a href="/projects.html" class="nav-link-btn"><i class="fas fa-arrow-left"></i> Danh sách Dự án</a>
       <button class="theme-toggle" id="themeToggle" title="Đổi giao diện"><i class="fas fa-sun"></i></button>
     </div>
   </nav>
@@ -144,7 +144,7 @@
 
       <!-- 8. NÚT ĐIỀU HƯỚNG VÀ XEM SẢN PHẨM / TÀI LIỆU -->
       <div class="detail-cta">
-        <a href="projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
+        <a href="/projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
         <a id="docLink" href="#" target="_blank" rel="noopener noreferrer" class="doc-btn">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
@@ -156,7 +156,7 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
   <script>
     // Copy link dự án
     function copyProjectLink() {
@@ -629,7 +629,7 @@
               <h3><i class="fas fa-file-lines" style="color:var(--accent);"></i> Bộ Sưu Tập Bài Viết Mẫu Chuẩn SEO</h3>
               <p>Khám phá 4 bài viết mẫu hoàn chỉnh về Mô hình lắp ráp, Build PC, Dragon Ball và Game RPG với đầy đủ cấu trúc On-Page, metadata và nguồn ảnh minh bạch.</p>
             </div>
-            <a href="seo-samples.html" class="doc-callout-btn">
+            <a href="/seo-samples.html" class="doc-callout-btn">
               Mở Bộ Sưu Tập Bài SEO Mẫu <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           `;
@@ -641,7 +641,7 @@
               <h3><i class="fas fa-pen-nib" style="color:var(--accent);"></i> Tuyển Tập Kế Hoạch Social & Moodboard Thực Chiến</h3>
               <p>Xem chi tiết 4 bộ kế hoạch content đa ngành nghề: Gunpla, Tech Desk Setup, Lifestyle & Dragon Ball với lịch 28+ ngày, kịch bản video và bài mẫu Facebook.</p>
             </div>
-            <a href="social-content-sample.html" class="doc-callout-btn">
+            <a href="/social-content-sample.html" class="doc-callout-btn">
               Mở Kế Hoạch Social & Moodboard <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           `;
@@ -698,7 +698,7 @@
         // Thanh footer chỉ cần duy nhất nút "Quay Lại Danh Sách" để tránh lặp lại nút.
         if (hasCallout) {
           detailCta.innerHTML = `
-            <a href="projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
+            <a href="/projects.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại Danh Sách</a>
           `;
         } else if (project.googleDocUrl) {
           if (docLink) {
@@ -717,7 +717,7 @@
           if (docLink) docLink.style.display = 'none';
         }
       } else {
-        document.body.innerHTML = '<div style="text-align:center; padding: 10rem 1rem; color: var(--text);"><h2>Dự án không tồn tại hoặc đã bị gỡ bỏ.</h2><br><a href="projects.html" class="btn-primary">Quay lại danh sách dự án</a></div>';
+        document.body.innerHTML = '<div style="text-align:center; padding: 10rem 1rem; color: var(--text);"><h2>Dự án không tồn tại hoặc đã bị gỡ bỏ.</h2><br><a href="/projects.html" class="btn-primary">Quay lại danh sách dự án</a></div>';
       }
     });
   </script>

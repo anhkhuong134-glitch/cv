@@ -428,7 +428,7 @@ const projectsData = {
     duration: "Concept cá nhân · 10/2026",
     results: "4 bài mẫu • 4 chủ đề sở thích • 0 bài đã xuất bản",
     tools: ["HTML & CSS", "Google Search Central", "Nguồn chính thức theo chủ đề"],
-    googleDocUrl: "seo-samples.html",
+    googleDocUrl: "/seo-samples.html",
     buttonText: "Mở bộ sưu tập bài SEO mẫu →",
     featured: true,
     kpis: [
@@ -474,7 +474,7 @@ const projectsData = {
     duration: "Concept cá nhân · 10/2026",
     results: "4 Case đa ngành • Lịch 28+ ngày • 12 Khung Moodboard • 4 Kịch bản video/shot list",
     tools: ["Facebook", "Instagram", "TikTok", "Content Calendar", "Visual Direction"],
-    googleDocUrl: "social-content-sample.html",
+    googleDocUrl: "/social-content-sample.html",
     buttonText: "Mở kế hoạch social & moodboard",
     featured: true,
     kpis: [
@@ -581,7 +581,7 @@ const projectsData = {
 // ================== CÁC CHỨC NĂNG ĐIỀU HƯỚNG & HELPER ==================
 
 function goToProject(projectId) {
-  window.location.href = `project-detail.html?id=${projectId}`;
+  window.location.href = `/project-detail.html?id=${projectId}`;
 }
 
 function getProjectFromURL() {
