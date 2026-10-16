@@ -28,7 +28,7 @@ const categoriesConfig = {
     id: "seo",
     name: "SEO Content",
     icon: "fas fa-search",
-    desc: "Tuyển tập 15 bài viết SEO On-Page đa ngành dài 2.000 - 2.800 từ kèm SERP Inspector, trích dẫn ảnh chụp thực tế và hồ sơ kỹ thuật On-Page Blueprint 8 phần minh bạch."
+    desc: "Tuyển tập 16 bài viết SEO On-Page đa ngành dài 2.000 - 2.800 từ kèm SERP Inspector, trích dẫn ảnh chụp thực tế và hồ sơ kỹ thuật On-Page Blueprint 8 phần minh bạch."
   }
 };
 
@@ -366,21 +366,21 @@ const projectsData = {
   // ==================== DỰ ÁN 5: BỘ BÀI SEO MẪU (SEO) ====================
   5: {
     id: 5,
-    title: "Tuyển Tập 15 Bài Viết SEO On-Page Đa Ngành & Technical Blueprint",
+    title: "Tuyển Tập 16 Bài Viết SEO On-Page Đa Ngành & Technical Blueprint",
     type: "SEO Content & Technical On-Page Lab",
     category: "seo",
     categoryName: "SEO Content",
     categoryIcon: "fas fa-search",
     categoryColor: "#df7900",
     duration: "10/2026",
-    results: "15 Bài viết mẫu chuyên sâu • SERP Inspector • Bảng 8 phần Blueprint Masterclass",
+    results: "16 Bài viết mẫu chuyên sâu • SERP Inspector • Bảng 8 phần Blueprint Masterclass",
     tools: ["On-Page SEO", "Schema.org", "Keyword Research", "SERP Simulator", "E-E-A-T"],
-    description: "Tuyển tập 11 bài viết chuẩn On-Page SEO dài 2.000 - 2.500 từ trải dài qua 6 nhóm ngành (Công nghệ AI, Gunpla, Phần cứng PC, Anime Manga, Game Dev 2D, F&B Cà phê, Thời trang Canvas, Văn phòng phẩm, Cây cảnh, Du lịch, Quản trị Content). Mỗi bài đều có mô phỏng SERP và hồ sơ kỹ thuật 8 phần minh bạch.",
+    description: "Tuyển tập 16 bài viết chuẩn On-Page SEO dài 2.000 - 2.800 từ trải dài qua nhiều nhóm ngành (Gaming Liên Quân Mobile, Công nghệ AI, Gunpla, Phần cứng PC, Anime Manga, Game Dev 2D, F&B Cà phê, Thời trang Canvas, Văn phòng phẩm, Cây cảnh, Du lịch, Quản trị Content, Điện thoại, Laptop, Spa, Skincare). Mỗi bài đều có mô phỏng SERP và hồ sơ kỹ thuật 8 phần minh bạch.",
     featured: true,
     links: [
-      { url: "/seo/", icon: "fas fa-search", btnText: "Xem Tuyển Tập 15 Bài Viết", title: "Mở hub 15 bài SEO chuyên sâu" },
-      { url: "/seo/ai-ho-tro-viet-bai-seo/", icon: "fas fa-robot", btnText: "Xem Bài 1 (AIKTP & Gemini)", title: "Mở bài viết mẫu số 1" },
-      { url: "/seo/chon-dien-thoai-quay-chup-sinh-vien/", icon: "fas fa-mobile-alt", btnText: "Xem Bài 12 (Điện thoại)", title: "Mở bài viết Điện thoại" }
+      { url: "/seo/", icon: "fas fa-search", btnText: "Xem Tuyển Tập 16 Bài Viết", title: "Mở hub 16 bài SEO chuyên sâu" },
+      { url: "/seo/cach-leo-rank-lien-quan-mobile/", icon: "fas fa-gamepad", btnText: "Xem Bài 16 (Liên Quân Mobile)", title: "Mở bài viết Leo rank Liên Quân" },
+      { url: "/seo/ai-ho-tro-viet-bai-seo/", icon: "fas fa-robot", btnText: "Xem Bài 1 (AIKTP & Gemini)", title: "Mở bài viết mẫu số 1" }
     ],
     academicInfo: {
       institution: "VTC Academy",

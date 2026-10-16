@@ -113,6 +113,31 @@
       "permanent": true
     },
     {
+      "source": "/seo-lien-quan.html",
+      "destination": "/seo/cach-leo-rank-lien-quan-mobile/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-lien-quan",
+      "destination": "/seo/cach-leo-rank-lien-quan-mobile/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-lien-quan/",
+      "destination": "/seo/cach-leo-rank-lien-quan-mobile/",
+      "permanent": true
+    },
+    {
+      "source": "/seo/lien-quan",
+      "destination": "/seo/cach-leo-rank-lien-quan-mobile/",
+      "permanent": true
+    },
+    {
+      "source": "/seo/lien-quan/",
+      "destination": "/seo/cach-leo-rank-lien-quan-mobile/",
+      "permanent": true
+    },
+    {
       "source": "/seo-aiktp.html",
       "destination": "/seo/ai-ho-tro-viet-bai-seo/",
       "permanent": true
