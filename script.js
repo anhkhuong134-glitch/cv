@@ -1086,7 +1086,7 @@ function initSerpFilterAndSearch() {
       const desc = art.querySelector('.google-result-description')?.textContent.toLowerCase() || '';
       const keyword = (art.getAttribute('data-keyword') || '').toLowerCase();
 
-      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      const matchesCategory = activeCategory === 'all' || category === activeCategory || (activeCategory === 'new-seo' && art.getAttribute('data-is-new') === 'true');
       const matchesSearch = !searchQuery || title.includes(searchQuery) || desc.includes(searchQuery) || keyword.includes(searchQuery);
 
       if (matchesCategory && matchesSearch) {
