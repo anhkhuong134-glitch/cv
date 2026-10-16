@@ -138,6 +138,46 @@
       "permanent": true
     },
     {
+      "source": "/seo-tham-hut-calo.html",
+      "destination": "/seo/cach-tham-hut-calo-giam-mo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-tham-hut-calo",
+      "destination": "/seo/cach-tham-hut-calo-giam-mo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-tham-hut-calo/",
+      "destination": "/seo/cach-tham-hut-calo-giam-mo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo/tham-hut-calo/",
+      "destination": "/seo/cach-tham-hut-calo-giam-mo/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-tai-chinh-gen-z.html",
+      "destination": "/seo/quan-ly-tai-chinh-gen-z/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-tai-chinh-gen-z",
+      "destination": "/seo/quan-ly-tai-chinh-gen-z/",
+      "permanent": true
+    },
+    {
+      "source": "/seo-tai-chinh-gen-z/",
+      "destination": "/seo/quan-ly-tai-chinh-gen-z/",
+      "permanent": true
+    },
+    {
+      "source": "/seo/tai-chinh-gen-z/",
+      "destination": "/seo/quan-ly-tai-chinh-gen-z/",
+      "permanent": true
+    },
+    {
       "source": "/seo-aiktp.html",
       "destination": "/seo/ai-ho-tro-viet-bai-seo/",
       "permanent": true
