@@ -28,13 +28,13 @@
       <i class="fas fa-briefcase"></i> SHOWCASE & CASE STUDIES
     </div>
     <h1>Content <span>& Case</span></h1>
-    <p>Đồ án học tập và concept cá nhân: từ kế hoạch social, thiết kế bài đăng đến những bài viết SEO mình muốn đọc và tự viết.</p>
+    <p>Dự án thực tế và đồ án học tập: từ website thương mại điện tử potty.vn tự tay xây dựng 100%, kế hoạch social, đến các bài viết SEO On-Page chuyên sâu.</p>
 
     <!-- QUICK STATS BAR -->
     <div class="quick-stats-strip">
       <div class="stat-box">
-        <span class="stat-val" id="totalProjectsCount">7</span>
-        <span class="stat-lbl">Đồ án & concept cá nhân</span>
+        <span class="stat-val" id="totalProjectsCount">4</span>
+        <span class="stat-lbl">Dự án & đồ án thực chiến</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-box">
@@ -174,6 +174,24 @@
 
             const catColor = project.categoryColor || 'var(--accent)';
 
+            // Render card preview image nếu có (như web potty.vn)
+            const previewImageHtml = project.image ? `
+              <div class="card-preview-image-wrap">
+                <img src="${project.image}" alt="${project.imageAlt || project.title}" class="card-preview-image" loading="lazy">
+                ${project.imageBadge ? `<span class="preview-badge"><i class="fas fa-circle-check"></i> ${project.imageBadge}</span>` : ''}
+              </div>
+            ` : '';
+
+            // Render khẳng định tác quyền nếu có
+            const authorshipHtml = project.authorshipNote ? `
+              <div class="card-authorship-callout">
+                <i class="fas fa-award"></i>
+                <div class="authorship-text">
+                  <strong>Khẳng định tác quyền:</strong> ${project.authorshipNote}
+                </div>
+              </div>
+            ` : '';
+
             // Render KPI mini strip
             const kpiHtml = project.kpis ? `
               <div class="card-kpi-strip">
@@ -199,11 +217,11 @@
               </div>
             ` : '';
 
-            // Render direct action links nếu có (như web potty.vn & ladipage)
+            // Render direct action links nếu có (như nút dẫn tới potty.vn)
             const linksHtml = project.links ? `
               <div class="card-direct-links-row" onclick="event.stopPropagation();">
                 ${project.links.map(l => `
-                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="card-direct-link-btn" title="${l.title}">
+                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="card-direct-link-btn ${l.isPrimary ? 'btn-potty-visit' : ''}" title="${l.title}">
                     <i class="${l.icon}"></i> ${l.btnText}
                   </a>
                 `).join('')}
@@ -221,9 +239,12 @@
                 <span class="project-duration"><i class="far fa-calendar-alt"></i> ${project.duration || '2026'}</span>
               </div>
 
+              ${previewImageHtml}
+
               <h3>${project.title}</h3>
               <p class="project-desc">${project.description || ''}</p>
 
+              ${authorshipHtml}
               ${linksHtml}
               ${kpiHtml}
               ${frameworksHtml}
@@ -231,7 +252,7 @@
               <div class="card-footer">
                 <div class="tools-pill-row">${toolsHtml}</div>
                 <div class="card-action-btn" style="color: ${catColor};">
-                  <span>Khám phá Case Study</span>
+                  <span>${project.category === 'website' ? 'Truy cập potty.vn' : 'Khám phá Case Study'}</span>
                   <i class="fas fa-arrow-right"></i>
                 </div>
               </div>

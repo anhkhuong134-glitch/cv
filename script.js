@@ -9,13 +9,19 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Tuyển tập 4 đồ án và case study chuyên sâu: Nghiên cứu thị trường (Circle K vs GS25, MUJI vs KOKUYO, Highlands), Tuyển tập Content Lab (12 bài viết viral social) và Tuyển tập Bài viết SEO On-Page."
+    desc: "Tuyển tập 4 dự án và đồ án thực chiến tiêu biểu: Website thương mại điện tử Potty.vn (tự tay phát triển 100%), Nghiên cứu thị trường Circle K & GS25, Tuyển tập Content Lab (12 bài viral) và Tuyển tập Bài viết SEO On-Page."
+  },
+  website: {
+    id: "website",
+    name: "Website Potty.vn",
+    icon: "fas fa-globe",
+    desc: "Dự án website thương mại điện tử thực tế potty.vn do Khương Tuấn Anh trực tiếp tự tay lên ý tưởng, thiết kế UI/UX và phát triển toàn diện (WordPress, WooCommerce, cổng thanh toán tự động 9Pay VietQR & tối ưu Rank Math SEO)."
   },
   research: {
     id: "research",
     name: "Nghiên Cứu Thị Trường",
     icon: "fas fa-chart-pie",
-    desc: "Đồ án nhóm nghiên cứu Circle K & GS25 (sản phẩm thật), đối sánh MUJI & KOKUYO Campus và Content Audit thực đơn Highlands Coffee."
+    desc: "Đồ án nhóm nghiên cứu Circle K & GS25 (sản phẩm thật 160+ trang, khảo sát 93+ người tiêu dùng, bóc tách 7P & SWOT)."
   },
   content: {
     id: "content",
@@ -23,7 +29,6 @@ const categoriesConfig = {
     icon: "fas fa-pen-nib",
     desc: "Content Lab tuyển tập 12 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop, Điện thoại, Trend TikTok) kèm ảnh tư liệu thực tế và phân tích hook-body-cta chuẩn format Facebook."
   },
-  
   seo: {
     id: "seo",
     name: "SEO Content",
@@ -34,6 +39,13 @@ const categoriesConfig = {
 
 // Map màu sắc cho từng tool
 const toolColors = {
+  'WordPress': '#21759b',
+  'WooCommerce': '#96588a',
+  'Elementor': '#92003b',
+  'Rank Math SEO': '#e8380d',
+  '9Pay Gateway': '#0052cc',
+  'HTML & CSS': '#e34f26',
+  'UI/UX Design': '#10b981',
   'Google Forms': '#4285f4',
   'Google Sheets': '#0f9d58',
   'Canva': '#00c4cc',
@@ -45,9 +57,7 @@ const toolColors = {
   'Facebook Ads': '#1877f2',
   'Web Banner': '#f97316',
   'LadiPage': '#0052cc',
-  'Web Builder': '#06b6d4',
-  'UI/UX Design': '#8b5cf6',
-  'HTML & CSS': '#e34f26'
+  'Web Builder': '#06b6d4'
 };
 
 // ================== DỮ LIỆU CÁC DỰ ÁN ==================
@@ -210,107 +220,53 @@ const projectsData = {
     ]
   },
 
-  // ==================== DỰ ÁN 20: MUJI VS KOKUYO CAMPUS (NGHIÊN CỨU) ====================
-  20: {
-    id: 20,
-    title: "Nghiên Cứu Đối Sánh Văn Phòng Phẩm: MUJI vs KOKUYO Campus",
-    type: "Desk Research Cá Nhân · Nguồn Công Khai",
-    category: "research",
-    categoryName: "Nghiên Cứu Thị Trường",
-    categoryIcon: "fas fa-chart-pie",
-    categoryColor: "#607965",
-    duration: "10/2026",
-    results: "3 Nguồn đối chiếu sơ cấp • Bảng so sánh 3 khía cạnh",
-    tools: ["Desk Research", "Content Audit", "Comparative Matrix"],
-    description: "Tìm hiểu cách hai thương hiệu văn phòng phẩm hàng đầu Nhật Bản diễn giải giá trị sản phẩm: MUJI ở nguyên tắc phát triển tinh giản, KOKUYO Campus ở tình huống sử dụng thực tế khi viết và mở sổ. Rút ra bài học ứng dụng cho thiết kế sản phẩm văn phòng phẩm học đường.",
-    featured: false,
+  // ==================== DỰ ÁN 10: WEBSITE THƯƠNG MẠI ĐIỆN TỬ POTTY.VN ====================
+  10: {
+    id: 10,
+    title: "Website Thương Mại Điện Tử: Tinh Dầu Thiên Nhiên & Máy Khuếch Tán Potty.vn",
+    type: "Website Thực Tế · Tự Tay Xây Dựng 100% (Solo Developer & Creator)",
+    category: "website",
+    categoryName: "Website Potty.vn",
+    categoryIcon: "fas fa-globe",
+    categoryColor: "#10b981",
+    duration: "2026 · Đang Hoạt Động (Live)",
+    results: "Website E-Commerce hoàn chỉnh • Tích hợp cổng thanh toán 9Pay QR • Chuẩn hóa On-Page SEO",
+    tools: ["WordPress", "WooCommerce", "UI/UX Design", "Elementor", "Rank Math SEO", "9Pay Gateway", "HTML & CSS"],
+    image: "/image/potty-vn-showcase.png",
+    imageAlt: "Giao diện website thương mại điện tử Tinh Dầu Potty (potty.vn) do Khương Tuấn Anh tự tay thiết kế và xây dựng",
+    imageBadge: "🟢 Live Website · potty.vn",
+    authorshipNote: "Website thực tế 100% do Khương Tuấn Anh trực tiếp tự tay lên ý tưởng, thiết kế giao diện UI/UX, lập trình cấu hình WordPress & WooCommerce, tích hợp cổng thanh toán trực tuyến 9Pay quét mã VietQR và tối ưu toàn diện SEO On-Page.",
+    description: "Dự án website thương mại điện tử thực tế do Khương Tuấn Anh trực tiếp tự tay phát triển toàn diện (Solo Developer & Content Creator): từ thiết kế giao diện UI/UX xanh tự nhiên, tối ưu trải nghiệm responsive đa thiết bị, thiết lập hệ thống danh mục sản phẩm & giỏ hàng WooCommerce, tích hợp cổng thanh toán tự động 9Pay quét mã VietQR, đến tối ưu On-Page SEO toàn diện theo chuẩn Rank Math.",
+    featured: true,
     links: [
-      { url: "/nghien-cuu/muji-kokuyo/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Nghiên Cứu", title: "Mở chi tiết desk research" },
-      ],
-    academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Desk Research Tự Do",
-      class: "Digital Marketing Portfolio 2026",
-      team: "Nghiên cứu cá nhân (Có hỗ trợ AI)",
-      time: "Tháng 10/2026",
-      docPages: "Nguồn công khai đối chiếu"
-    },
-    executiveSummary: "Nghiên cứu đối chiếu cách MUJI và KOKUYO Campus xây dựng niềm tin cho người dùng bằng thông tin chức năng cụ thể thay vì tuyên bố chung chung. Kết quả phân tích chỉ ra rằng khách hàng mua văn phòng phẩm quan tâm sâu sắc đến góc mở sổ, độ phẳng của gáy, cữ dòng kẻ và khả năng tương thích của giấy với các loại bút.",
-    kpis: [
-      { number: "3", label: "Nguồn tài liệu sơ cấp", icon: "fas fa-book" },
-      { number: "3", label: "Khía cạnh so sánh", icon: "fas fa-columns" },
-      { number: "100%", label: "Dữ kiện có trích dẫn", icon: "fas fa-check-double" },
-      { number: "1", label: "Khung ứng dụng văn phòng phẩm", icon: "fas fa-lightbulb" }
-    ],
-    surveyData: [
-      { number: "MUJI", tag: "Triết lý vật liệu", title: "Giải thích qua nguyên tắc tinh giản", desc: "Tài liệu What is MUJI nhấn mạnh việc lựa chọn chất liệu và bao gói tối giản để giữ mức giá hợp lý và tính trung thực." },
-      { number: "KOKUYO", tag: "Trải nghiệm viết", title: "Tập trung giải quyết vướng mắc khi mở sổ", desc: "Campus Binder và Campus Notebook mô tả chi tiết giải pháp tránh vòng gáy chạm tay và thiết kế góc mở phẳng 180 độ." },
-      { number: "Áp dụng", tag: "Đề xuất thiết kế ruột sổ", title: "Trưng bày trang ruột thay vì chỉ chụp bìa", desc: "Không hứa hẹn tăng năng suất sáo rỗng; cho người dùng xem trước cữ dòng kẻ và bố cục phân chia tuần/ngày." }
-    ],
-    comparisonMatrix: [
-      { p: "Định vị cốt lõi", circleK: "Tối giản, không nhãn mác, giá trị từ bản chất vật liệu", gs25: "Công năng học đường, tối ưu thao tác ghi chép và độ bền gáy" },
-      { p: "Cách chứng minh sản phẩm", circleK: "Giải thích quá trình tinh giản sản xuất và tiết chế chi tiết thừa", gs25: "Mô tả cơ chế gáy thông minh, không cấn tay, cữ kẻ tam giác định vị" },
-      { p: "Bài học cho Content", circleK: "Rõ ràng, điềm tĩnh, trung thực về nguồn gốc và chất liệu", gs25: "Đi thẳng vào vấn đề người học gặp phải trong từng buổi ghi chép" }
-    ],
-    recommendations: {
-      circleK: [
-        { title: "Nêu rõ kích thước và cữ kẻ ruột sổ", desc: "Người dùng cần biết khoảng cách giữa các dòng kẻ trước khi chọn mua sổ tay." },
-        { title: "Không kể chuyện bền vững khi chưa có kiểm định", desc: "Chỉ tuyên bố chất liệu tái chế khi có chứng nhận FSC hoặc số liệu sản xuất thực tế." }
-      ],
-      gs25: [
-        { title: "Minh họa góc mở phẳng thực tế", desc: "Chụp hoặc dựng hình chi tiết gáy sổ mở 180 độ trên mặt bàn làm việc." },
-        { title: "Cung cấp bản in thử một trang", desc: "Cho phép độc giả tải file PDF in thử trước khi quyết định mua một cuốn sổ hoàn chỉnh." }
-      ]
-    }
-  },
-
-  // ==================== DỰ ÁN 21: HIGHLANDS COFFEE MENU AUDIT (NGHIÊN CỨU) ====================
-  21: {
-    id: 21,
-    title: "Audit Nội Dung Thực Đơn Website: Highlands Coffee",
-    type: "Content Audit · Nguồn Công Khai",
-    category: "research",
-    categoryName: "Nghiên Cứu Thị Trường",
-    categoryIcon: "fas fa-chart-pie",
-    categoryColor: "#87513c",
-    duration: "10/2026",
-    results: "Audit 4 nhóm đồ uống • Đề xuất Wireframe 4 bước chọn gu",
-    tools: ["Content Audit", "Information Architecture", "Wireframing"],
-    description: "Phân tích cách cấu trúc thực đơn trực tuyến của chuỗi cà phê lớn nhất Việt Nam. Đề xuất quy trình 4 bước hỏi gu uống (đen/sữa, dụng cụ, cỡ xay) để nâng cao trải nghiệm chọn món F&B trực tuyến.",
-    featured: false,
-    links: [
-      { url: "/nghien-cuu/highlands-menu/", icon: "fas fa-arrow-up-right-from-square", btnText: "Xem Báo Cáo Audit", title: "Mở chi tiết audit thực đơn Highlands" }
+      { url: "https://potty.vn", icon: "fas fa-arrow-up-right-from-square", btnText: "Truy Cập Website potty.vn", isPrimary: true, title: "Mở trực tiếp website potty.vn (Sản phẩm thật)" }
     ],
     academicInfo: {
-      institution: "VTC Academy",
-      instructor: "Content Audit Độc Lập",
-      class: "Digital Marketing Portfolio 2026",
-      team: "Nghiên cứu cá nhân (Có hỗ trợ AI)",
-      time: "Tháng 10/2026",
-      docPages: "Trang thực đơn chính thức Highlands"
+      institution: "Dự Án Thực Tế Cá Nhân (Live Production)",
+      instructor: "Khương Tuấn Anh (Tự tay thực hiện 100%)",
+      class: "E-Commerce & Full Website Building 2026",
+      team: "Khương Tuấn Anh (Solo Developer / UI/UX / Content)",
+      time: "2026 · Đang vận hành chính thức",
+      docPages: "Hệ thống website E-Commerce đầy đủ"
     },
-    executiveSummary: "Phân tích trải nghiệm đọc thực đơn trực tuyến tại website Highlands Coffee. Nhận thấy người dùng mới thường gặp khó khăn khi hình dung độ đậm nhạt và hương vị thực tế. Đề xuất một wireframe chọn gu 4 bước trực quan để giúp người mua tại nhà dễ dàng gọi tên món mình thích.",
+    executiveSummary: "Potty.vn là website thương mại điện tử thực tế chuyên cung cấp các giải pháp hương thơm tự nhiên: tinh dầu nguyên chất, tinh dầu treo xe ô tô và máy khuếch tán. Website được xây dựng với mục tiêu tối ưu trải nghiệm mua sắm tinh tế, tốc độ tải trang nhanh, thiết kế responsive trên mọi thiết bị và hệ thống thanh toán tự động tiện lợi cho người dùng Việt Nam.",
     kpis: [
-      { number: "4", label: "Nhóm thức uống phân tích", icon: "fas fa-mug-hot" },
-      { number: "1", label: "Wireframe đề xuất mới", icon: "fas fa-sitemap" },
-      { number: "4", label: "Bước trắc nghiệm chọn gu", icon: "fas fa-filter" },
-      { number: "0", label: "Khẳng định cảm tính", icon: "fas fa-shield-alt" }
+      { number: "100%", label: "Tự tay thiết kế & code", icon: "fas fa-laptop-code" },
+      { number: "Woo", label: "Cửa hàng & Giỏ hàng E-Com", icon: "fas fa-shopping-bag" },
+      { number: "9Pay", label: "Cổng thanh toán QR Code", icon: "fas fa-qrcode" },
+      { number: "SEO", label: "Chuẩn hóa Schema & Meta", icon: "fas fa-search" }
     ],
     surveyData: [
-      { number: "Nhóm món", tag: "Phân loại hiện tại", title: "Cà phê, Trà, Freeze, Thức uống khác", desc: "Thực đơn hiện phân nhóm theo dòng sản phẩm truyền thống nhưng chưa có bộ lọc theo mức độ đậm vị hoặc hàm lượng caffeine." },
-      { number: "Vấn đề", tag: "Góc nhìn người mới", title: "Khó hình dung gu uống phù hợp", desc: "Khách hàng mua cà phê pha tại nhà thường không biết ly cà phê pha ra sẽ ngọt béo hay đắng đậm nếu chỉ đọc tên mỹ miều." },
-      { number: "Đề xuất", tag: "Giải pháp trải nghiệm", title: "Quy trình hỏi gu trước khi gợi ý thức uống", desc: "Bắt đầu từ câu hỏi: 'Bạn muốn uống đen hay thêm sữa?' và 'Dụng cụ bạn đang có ở nhà là gì?'." }
+      { number: "100%", tag: "Tự phát triển", title: "Khẳng định quyền tác giả tuyệt đối", desc: "Khương Tuấn Anh trực tiếp quản lý toàn bộ quy trình: Tên miền, Hosting, Theme con (Child Theme), cấu trúc danh mục và tối ưu CSS." },
+      { number: "9Pay", tag: "Cổng thanh toán", title: "Tích hợp cổng thanh toán VietQR", desc: "Tự động tạo mã QR thanh toán ngân hàng khi khách đặt hàng, đồng bộ trạng thái đơn hàng tức thì trên WooCommerce." },
+      { number: "Rank Math", tag: "Tối ưu hóa SEO", title: "Chuẩn hóa On-Page & Rich Snippets", desc: "Cấu hình Schema Organization, Store, Product, tối ưu OpenGraph mạng xã hội và tốc độ tải trang cho trải nghiệm mượt mà." }
     ],
-    recommendations: {
-      circleK: [
-        { title: "Bổ sung thanh đo độ đậm (Roast Level)", desc: "Giúp người mua phân biệt rõ giữa rang vừa (Medium) và rang đậm (Dark roast)." },
-        { title: "Hướng dẫn tỷ lệ pha gợi ý", desc: "Cung cấp công thức pha phin chuẩn (tỷ lệ bột:nước) ngay trên bao bì hoặc thẻ kẹp." }
-      ],
-      gs25: [
-        { title: "Phiếu thử gu kèm theo đơn hàng", desc: "Gửi kèm phiếu ghi chú cảm nhận để khách hàng đánh giá sau lần pha đầu tiên." },
-        { title: "Không dùng thuật ngữ nếm quá hàn lâm", desc: "Thay vì 'hương hoa cam acidity sáng', dùng cách diễn đạt gần gũi: 'vị chua thanh nhẹ dễ uống'." }
-      ]
-    }
+    frameworks: ["UI/UX Design", "E-Commerce UX", "Responsive Web", "Conversion Optimization", "On-Page SEO"],
+    takeaways: [
+      { icon: "🌐", title: "Năng lực làm chủ quy trình phát triển website từ A - Z", desc: "Tự tay quản lý toàn diện từ đăng ký tên miền, hosting, dựng theme, thiết kế visual thương hiệu đến vận hành cửa hàng trực tuyến thực tế." },
+      { icon: "💳", title: "Tích hợp cổng thanh toán tự động & thương mại điện tử", desc: "Cấu hình thành công luồng thanh toán chuyển khoản quét mã VietQR tự động qua 9Pay và quản lý đơn hàng WooCommerce thông suốt." },
+      { icon: "📈", title: "Tối ưu hóa On-Page SEO & trải nghiệm di động", desc: "Tối ưu tốc độ tải trang, cấu trúc heading, meta description, thẻ open graph và trải nghiệm chạm vuốt trực quan trên điện thoại." }
+    ]
   },
 
   // ==================== DỰ ÁN 30: TUYỂN TẬP CONTENT LAB (C01 - C04 & 13 BÀI VIRAL) ====================
@@ -421,15 +377,18 @@ const projectsData = {
 // Bảng ánh xạ 13 đồ án và case study sang URL showcase chuyên sâu tương ứng
 const projectPrimaryUrls = {
   1: "/nghien-cuu/circle-k-gs25/",
-  20: "/nghien-cuu/muji-kokuyo/",
-  21: "/nghien-cuu/highlands-menu/",
-        30: "/content/",
+  10: "https://potty.vn",
+  30: "/content/",
   5: "/seo/"
 };
 
 function goToProject(projectId) {
   const targetUrl = projectPrimaryUrls[projectId] || "/du-an/";
-  window.location.href = targetUrl;
+  if (targetUrl.startsWith('http')) {
+    window.open(targetUrl, '_blank', 'noopener,noreferrer');
+  } else {
+    window.location.href = targetUrl;
+  }
 }
 
 function getProjectFromURL() {

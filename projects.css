@@ -625,3 +625,101 @@
     font-size: 1.3rem;
   }
 }
+
+
+/* ================== THẺ PREVIEW HÌNH ẢNH WEBSITE & KHẲNG ĐỊNH TÁC QUYỀN ================== */
+.card-preview-image-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  margin-bottom: 1.15rem;
+  background: #0d131f;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover .card-preview-image-wrap {
+  transform: translateY(-2px);
+  border-color: var(--card-border-hover);
+}
+
+.card-preview-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-preview-image {
+  transform: scale(1.02);
+}
+
+.preview-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* KHẲNG ĐỊNH TÁC QUYỀN */
+.card-authorship-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.85rem 1rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.15rem;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.card-authorship-callout i {
+  color: #10b981;
+  font-size: 1.15rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.card-authorship-callout strong {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* NÚT TRUY CẬP POTTY.VN NỔI BẬT */
+.card-direct-link-btn.btn-potty-visit {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-direct-link-btn.btn-potty-visit:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+}
