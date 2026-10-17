@@ -9,7 +9,7 @@ const categoriesConfig = {
     id: "all",
     name: "Tất Cả Dự Án",
     icon: "fas fa-layer-group",
-    desc: "Tuyển tập 4 dự án và đồ án thực chiến tiêu biểu: Website thương mại điện tử Potty.vn (tự tay phát triển 100%), Nghiên cứu thị trường Circle K & GS25, Tuyển tập Content Lab (10 bài viral) và Tuyển tập Bài viết SEO On-Page."
+    desc: "Tuyển tập 4 dự án và đồ án thực chiến tiêu biểu: Website thương mại điện tử Potty.vn (tự tay phát triển 100%), Nghiên cứu thị trường Circle K & GS25, Tuyển tập Content Lab (9 bài viral) và Tuyển tập Bài viết SEO On-Page."
   },
   website: {
     id: "website",
@@ -27,7 +27,7 @@ const categoriesConfig = {
     id: "content",
     name: "Kế Hoạch Content",
     icon: "fas fa-pen-nib",
-    desc: "Content Lab tuyển tập 10 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop, Điện thoại, Trend TikTok) kèm ảnh tư liệu thực tế và phân tích hook-body-cta chuẩn format Facebook."
+    desc: "Content Lab tuyển tập 9 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop, Điện thoại, Trend TikTok) kèm ảnh tư liệu thực tế và phân tích hook-body-cta chuẩn format Facebook."
   },
   seo: {
     id: "seo",
@@ -273,19 +273,19 @@ const projectsData = {
   // ==================== DỰ ÁN 30: TUYỂN TẬP CONTENT LAB (C01 - C04 & 13 BÀI VIRAL) ====================
   30: {
     id: 30,
-    title: "Tuyển Tập Content Lab: 10 Bài Viết Social Viral Thực Chiến",
+    title: "Tuyển Tập Content Lab: 9 Bài Viết Social Viral Thực Chiến",
     type: "Social Content Strategy & Copywriting Lab",
     category: "content",
     categoryName: "Kế Hoạch Content",
     categoryIcon: "fas fa-pen-nib",
     categoryColor: "#df7900",
     duration: "10/2026",
-    results: "10 Bài viết viral thực chiến đa ngành • Ảnh tư liệu thực tế • Hook & Caption chuẩn Facebook",
+    results: "9 Bài viết viral thực chiến đa ngành • Ảnh tư liệu thực tế • Hook & Caption chuẩn Facebook",
     tools: ["Content Strategy", "Social Copywriting", "Editorial Planning", "Carousel Design", "Storyboarding"],
-    description: "Tuyển tập 10 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop sinh viên, Smartphone quay chụp, Trend TikTok) có hook giữ chân người xem, caption chuẩn format Facebook và ảnh chụp thực tế dưới bài (không dùng ảnh AI).",
+    description: "Tuyển tập 9 bài viết social viral đa ngành (Liên Quân Mobile ĐTDV 2026, Marketing, Laptop sinh viên, Smartphone quay chụp, Trend TikTok) có hook giữ chân người xem, caption chuẩn format Facebook và ảnh chụp thực tế dưới bài (không dùng ảnh AI).",
     featured: true,
     links: [
-      { url: "/content/", icon: "fas fa-layer-group", btnText: "Khám Phá Tuyển Tập (Hub)", title: "Mở trung tâm Content Lab (10 Bài Viral)" }
+      { url: "/content/", icon: "fas fa-layer-group", btnText: "Khám Phá Tuyển Tập (Hub)", title: "Mở trung tâm Content Lab (9 Bài Viral)" }
     ],
     academicInfo: {
       institution: "VTC Academy",
@@ -293,7 +293,7 @@ const projectsData = {
       class: "Social Content Strategy & Copywriting 2026",
       team: "Khương Tuấn Anh (Biên tập & Lập kế hoạch)",
       time: "Tháng 10/2026",
-      docPages: "10 Bài viết viral đa ngành"
+      docPages: "9 Bài viết viral đa ngành"
     },
     executiveSummary: "Hệ thống nội dung đa kênh tập trung giải quyết bài toán giao tiếp thực tế: chuyển đổi insight người dùng thành kế hoạch tuần có định hướng rõ ràng, loại bỏ ngôn từ sáo rỗng, và thử nghiệm các định dạng bài đăng tương tác cao (Carousel chia sẻ kinh nghiệm, Story thăm dò ý kiến, Video ngắn phân cảnh).",
     kpis: [
@@ -303,7 +303,7 @@ const projectsData = {
       { number: "100%", label: "Ảnh chụp tư liệu thực tế", icon: "fas fa-camera" }
     ],
     surveyData: [
-      { number: "Nhóm 1", tag: "Esports & Game", title: "Liên Quân Mobile ĐTDV 2026 & Tướng Mới", desc: "4 bài viết phân tích đại chiến Chung kết ĐTDV Mùa Đông 2026, tướng mới Heino, highlight lật kèo 1HP và chiến thuật meta." },
+      { number: "Nhóm 1", tag: "Esports & Game", title: "Liên Quân Mobile ĐTDV 2026 & Tướng Mới", desc: "bài viết phân tích tướng mới Evita Chung kết ĐTDV Mùa Đông 2026, tướng mới Heino, highlight lật kèo 1HP và chiến thuật meta." },
       { number: "Nhóm 2", tag: "Marketing 2026", title: "Xu Hướng De-influencing & AI Customer Insight", desc: "2 bài viết giải mã xu hướng KOC chân thực trên TikTok Shop và quy trình ứng dụng GenAI đào sâu insight khách hàng." },
       { number: "Nhóm 3", tag: "Thiết Bị", title: "Laptop Sinh Viên & Điện Thoại Quay Chụp", desc: "3 bài viết tư vấn chọn laptop học tập 15-20 triệu, cảnh báo bẫy thermal throttling và so sánh smartphone làm content." },
       { number: "Nhóm 4", tag: "Trend TikTok", title: "CapCut Template, Lối Sống Low-Buy & Deep Work", desc: "3 bài viết bóc tách công thức Hook 3 giây beat drop, trào lưu tiêu dùng bền vững và phương pháp chống burnout." }
