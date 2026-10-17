@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ Thống Thiết Kế 19+ Kích Thước Banner Ads · Case Study | Khương Tuấn Anh</title>
+  <meta name="description" content="Case study thiết kế bộ ấn phẩm truyền thông và 19+ kích thước banner quảng cáo đa nền tảng (GDN, Facebook, Instagram) cho chiến dịch Tinh Dầu Thiên Nhiên của Khương Tuấn Anh.">
+  <link rel="canonical" href="https://cv-two-pi-94.vercel.app/du-an/thiet-ke-banner/">
+  <link rel="stylesheet" href="/assets/portfolio/editorial-system.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    .banner-preview-frame {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      margin: 28px 0 40px;
+    }
+    .banner-preview-img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .banner-caption {
+      padding: 14px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      background: var(--bg-card);
+    }
+    .tech-pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 24px;
+    }
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+    }
+    .tech-badge i {
+      color: #f59e0b;
+    }
+    .stat-metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .stat-metric-val {
+      font-size: 28px;
+      font-weight: 800;
+      color: #f59e0b;
+      line-height: 1.2;
+    }
+    .stat-metric-lbl {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .design-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .design-card:hover {
+      border-color: #f59e0b;
+      transform: translateY(-2px);
+    }
+    .design-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .design-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+    .design-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" style="background: var(--bg-card); border-bottom: 1px solid var(--border);">
+    <div class="container header-inner" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
+      <a href="/index.html" class="site-logo" style="text-decoration: none; font-weight: 700; font-size: 1.25rem; color: var(--text-main);">
+        Khương Tuấn <span style="color: var(--accent);">Anh</span>
+      </a>
+      <nav class="main-nav" style="display: flex; gap: 1.25rem; align-items: center;">
+        <a href="/index.html" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Profile</a>
+        <a href="/du-an/" class="nav-link" style="text-decoration: none; font-weight: 600; color: var(--accent);">Dự án</a>
+        <a href="/content/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Content Lab</a>
+        <a href="/seo/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Bài SEO mẫu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 36px; padding-bottom: 80px;">
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" style="margin-bottom: 24px; font-size: 14px; color: var(--text-muted);">
+      <a href="/" style="text-decoration: none; color: var(--text-muted);">Trang chủ</a>
+      <span class="breadcrumb-sep" style="margin: 0 8px;">/</span>
+      <a href="/du-an/" style="text-decoration: none; color: var(--text-muted);">Dự án</a>
+      <span class="breadcrumb-sep" style="margin: 0 8px;">/</span>
+      <span style="color: var(--text-main); font-weight: 600;">Thiết Kế Banner Ads (19+ Kích Thước)</span>
+    </nav>
+
+    <!-- CASE HEADER -->
+    <div style="max-width: 900px; margin-bottom: 32px;">
+      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
+        <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #b45309; border: 1px solid rgba(245, 158, 11, 0.35); font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 13px;">
+          ⭐ DỰ ÁN THIẾT KẾ · BỘ ẤN PHẨM THỰC CHIẾN
+        </span>
+        <span class="badge" style="background: rgba(56, 189, 248, 0.12); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 13px;">
+          GDN &amp; Social Media Standard
+        </span>
+        <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16, 185, 129, 0.25); font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 13px;">
+          Google Drive Verified (19+ Files)
+        </span>
+      </div>
+
+      <h1 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: var(--text-main); margin-bottom: 16px; line-height: 1.25;">
+        Hệ Thống Thiết Kế 19+ Kích Thước Banner Ads Chuẩn GDN &amp; Social Media: Tinh Dầu Thiên Nhiên
+      </h1>
+      <p style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 22px;">
+        Dự án thiết kế ấn phẩm truyền thông và hệ thống banner quảng cáo trực tuyến đa nền tảng cho chiến dịch ra mắt sản phẩm <strong>Tinh Dầu Thiên Nhiên</strong>: chuẩn hóa Key Visual trung tâm, thích nghi linh hoạt trên 19+ kích thước hiển thị quảng cáo số (Google Display Network, Facebook, Instagram) và tối ưu phân cấp thị giác gia tăng tỷ lệ nhấp (CTR).
+      </p>
+
+      <div class="tech-pill-grid">
+        <span class="tech-badge"><i class="fas fa-palette"></i> Canva Media Design</span>
+        <span class="tech-badge"><i class="fas fa-vector-square"></i> Key Visual Vector</span>
+        <span class="tech-badge"><i class="fas fa-bullseye"></i> GDN Standard Sizes</span>
+        <span class="tech-badge"><i class="fab fa-facebook"></i> Facebook Ads Standard</span>
+        <span class="tech-badge"><i class="fas fa-eye"></i> Visual Hierarchy</span>
+        <span class="tech-badge"><i class="fas fa-chart-line"></i> CTR Optimization</span>
+      </div>
+
+      <div class="article-meta" style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14.5px; color: var(--text-muted); padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <span><i class="fas fa-user-check" style="color: #f59e0b;"></i> Người thiết kế: <strong>Khương Tuấn Anh</strong></span>
+        <span><i class="fas fa-box-archive" style="color: #f59e0b;"></i> Số lượng ấn phẩm: <strong>19+ Kích thước chuẩn hóa</strong></span>
+        <span><i class="fas fa-calendar-alt" style="color: #f59e0b;"></i> Thời gian thực hiện: <strong>Tháng 03/2026</strong></span>
+      </div>
+    </div>
+
+    <!-- CTA BANNER TO GOOGLE DRIVE -->
+    <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.06)); border: 1.5px solid rgba(245, 158, 11, 0.35); border-radius: 16px; padding: 22px 26px; margin-bottom: 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <h4 style="font-size: 17px; font-weight: 700; color: #b45309; margin-bottom: 4px;">
+          <i class="fab fa-google-drive"></i> Thư Viện Ấn Phẩm Thiết Kế 19+ Kích Thước Banner Ads (Google Drive)
+        </h4>
+        <p style="font-size: 14.5px; color: var(--text-muted); margin: 0;">
+          Truy cập thư mục Google Drive chứa trọn bộ file thiết kế gốc độ nét cao, các kích thước banner chuẩn GDN và social feed.
+        </p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1FIMbxTAAZG_FNkwCagiJpDGlaQPSqqpy?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #ffffff; text-decoration: none; padding: 10px 22px; border-radius: 30px; font-weight: 700; font-size: 14.5px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35); display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fab fa-google-drive"></i> <span>Mở Thư Mục Google Drive</span> <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- MAIN BANNER PREVIEW -->
+    <div class="banner-preview-frame">
+      <img src="/image/potty-banner.webp" alt="Key Visual chính thức chiến dịch Tinh Dầu Thiên Nhiên" class="banner-preview-img">
+      <div class="banner-caption">
+        <i class="fas fa-image"></i> <strong>Key Visual Chính Thức:</strong> Tinh dầu thiên nhiên lọ 10ml nắp gỗ và máy khuếch tán phun sương đặt trên bệ đá tự nhiên kèm hoa oải hương tươi.
+      </div>
+    </div>
+
+    <!-- QUICK STATS 4 COLUMNS -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 48px;">
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">19+</div>
+        <div class="stat-metric-lbl">Kích thước banner chuẩn GDN</div>
+      </div>
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">3</div>
+        <div class="stat-metric-lbl">Nền tảng quảng cáo số</div>
+      </div>
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">100%</div>
+        <div class="stat-metric-lbl">Đồng bộ nhận diện thương hiệu</div>
+      </div>
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">Safe</div>
+        <div class="stat-metric-lbl">Tương thích Safe Zone di động</div>
+      </div>
+    </div>
+
+    <!-- READING CONTENT -->
+    <div style="max-width: var(--reading-max);">
+
+      <!-- SECTION 1: MỤC TIÊU CHIẾN DỊCH -->
+      <section style="margin-bottom: 44px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          1. Mục Tiêu Chiến Dịch &amp; Nguyên Tắc Phân Cấp Thị Giác (Visual Hierarchy)
+        </h2>
+        <div style="background: rgba(245, 158, 11, 0.08); border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 10px 10px 0; margin-bottom: 18px;">
+          <p style="font-size: 15.5px; line-height: 1.6; margin: 0; color: var(--text-main);">
+            <strong>Thách thức thiết kế:</strong> Trong quảng cáo hiển thị (Display Ads), người xem chỉ lướt qua banner trong khoảng <strong>1.5 – 2 giây</strong>. Làm thế nào để vừa thể hiện đầy đủ logo, thông điệp cảm xúc, hình ảnh sản phẩm và nút kêu gọi hành động (Call-To-Action) trên các kích thước chênh lệch nhau từ hình chữ nhật lớn 1600×900 đến dải banner siêu hẹp 728×90 hay skyscraper dọc 160×600?
+          </p>
+        </div>
+        <p>
+          Để giải quyết bài toán này, tôi áp dụng nguyên tắc <strong>phân cấp thị giác 4 tầng nghiêm ngặt (Visual Hierarchy)</strong>:
+        </p>
+        <ul style="padding-left: 20px; font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+          <li><strong>Tầng 1 (Điểm dừng mắt):</strong> Hình ảnh sản phẩm thật và hoa cỏ tự nhiên (Key Visual) được xử lý độ nét cao, ánh sáng ấm áp.</li>
+          <li><strong>Tầng 2 (Nhận diện thương hiệu):</strong> Logo Potty đặt ở góc trên bên trái hoặc góc trên giữa theo thói quen đọc hình chữ F.</li>
+          <li><strong>Tầng 3 (Thông điệp cốt lõi):</strong> Tiêu đề ngắn gọn, chạm vào nhu cầu thư giãn: <em>"Hương thơm tự nhiên cho không gian sống trọn vẹn"</em>.</li>
+          <li><strong>Tầng 4 (Kích thích hành động):</strong> Nút bấm CTA màu xanh rừng nổi bật trên nền be ngà: <em>"Mua sắm ngay"</em> hoặc <em>"Khám phá ngay"</em>.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 2: BẢNG 19+ KÍCH THƯỚC CHUẨN GDN -->
+      <section style="margin-bottom: 44px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          2. Hệ Thống 19+ Kích Thước Banner Ads Chuẩn Hóa
+        </h2>
+        <p style="margin-bottom: 20px; color: var(--text-muted);">
+          Toàn bộ các kích thước được thiết kế và xuất file chuẩn tỷ lệ, tối ưu dung lượng hiển thị dưới 150KB theo đúng quy chuẩn Google Ad Manager:
+        </p>
+
+        <div class="table-wrap" style="margin: 20px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+            <thead>
+              <tr style="background: var(--bg-card); border-bottom: 2px solid var(--border);">
+                <th style="padding: 12px 16px; text-align: left;">Nhóm Kích Thước</th>
+                <th style="padding: 12px 16px; text-align: left;">Tỷ Lệ / Pixel</th>
+                <th style="padding: 12px 16px; text-align: left;">Vị Trí Hiển Thị Tối Ưu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Medium Rectangle</td>
+                <td style="padding: 14px 16px;"><strong>300 × 250 px</strong></td>
+                <td style="padding: 14px 16px;">Chèn trong nội dung bài viết báo điện tử, tỷ lệ CTR cao nhất trong mạng GDN.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Leaderboard Ngang</td>
+                <td style="padding: 14px 16px;"><strong>728 × 90 px &amp; 970 × 90 px</strong></td>
+                <td style="padding: 14px 16px;">Banner đỉnh trang web (Top header), mở rộng nhận diện thương hiệu.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Half Page / Large Ad</td>
+                <td style="padding: 14px 16px;"><strong>300 × 600 px</strong></td>
+                <td style="padding: 14px 16px;">Banner cột bên (Sidebar) diện tích lớn, truyền tải trọn vẹn thông điệp và hình ảnh.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Wide Skyscraper</td>
+                <td style="padding: 14px 16px;"><strong>160 × 600 px &amp; 120 × 600 px</strong></td>
+                <td style="padding: 14px 16px;">Banner dọc bám lề website (Sticky Sidebar), duy trì sự hiện diện liên tục khi cuộn trang.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Social Feed Square</td>
+                <td style="padding: 14px 16px;"><strong>1080 × 1080 px (1:1)</strong></td>
+                <td style="padding: 14px 16px;">Bài đăng quảng cáo Feed Facebook, Instagram Carousel đa sản phẩm.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Social Feed Portrait</td>
+                <td style="padding: 14px 16px;"><strong>1080 × 1350 px (4:5)</strong></td>
+                <td style="padding: 14px 16px;">Tối ưu diện tích chiếm trọn màn hình điện thoại khi lướt feed mạng xã hội.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: #f59e0b;">Full Screen Story</td>
+                <td style="padding: 14px 16px;"><strong>1080 × 1920 px (9:16)</strong></td>
+                <td style="padding: 14px 16px;">Định dạng Story &amp; Reels dọc toàn màn hình, chừa vùng an toàn 250px tránh bị che icon.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 3: KỸ NĂNG ĐƯỢC CHỨNG MINH -->
+      <section style="margin-bottom: 44px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          3. Kỹ Năng Thiết Kế Đồ Họa &amp; Tư Duy Chiến Dịch Được Đúc Rút
+        </h2>
+
+        <div class="design-card">
+          <div class="design-card-top">
+            <div class="design-card-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="design-card-title">Kỷ Luật Chuẩn Hóa Đa Khung Hình (Responsive Ad Creative)</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6;">
+            Thiết kế 19+ kích thước khác nhau cho cùng một chiến dịch đòi hỏi khả năng tư duy layout linh hoạt: biết chọn lọc thành phần nào cần giữ lại trên khung nhỏ (như 300x250 chỉ giữ sản phẩm + CTA) và thành phần nào được phép mở rộng trên khung lớn (như 1600x900 bổ sung thêm tagline và họa tiết cành lá).
+          </p>
+        </div>
+
+        <div class="design-card">
+          <div class="design-card-top">
+            <div class="design-card-icon"><i class="fas fa-eye"></i></div>
+            <div class="design-card-title">Tư Duy Tối Ưu Tỷ Lệ Nhấp Chuột (CTR-Driven Design)</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6;">
+            Banner quảng cáo không chỉ cần đẹp mắt, mà phải thúc đẩy người dùng hành động. Việc tạo độ tương phản cao cho nút bấm CTA, đặt thông điệp giải quyết nỗi đau khách hàng (tìm kiếm sự thư giãn, giảm căng thẳng) giúp chiến dịch tối ưu chi phí quảng cáo (CPC) hiệu quả hơn.
+          </p>
+        </div>
+
+        <div class="design-card">
+          <div class="design-card-top">
+            <div class="design-card-icon"><i class="fas fa-swatchbook"></i></div>
+            <div class="design-card-title">Tính Nhất Quán Của Bộ Nhận Diện Thương Hiệu</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6;">
+            Duy trì bảng màu sinh thái (Eco-Aesthetic) với sắc xanh rừng đậm, nền be ngà và font chữ có chân Cambria sang trọng xuyên suốt từ website Potty.vn sang toàn bộ hệ thống banner quảng cáo ngoài nền tảng, tạo nên trải nghiệm thương hiệu liền mạch và đáng tin cậy.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 4: KẾT LUẬN & TRUY CẬP GOOGLE DRIVE -->
+      <section style="margin-bottom: 48px; background: var(--bg-card); border: 2px solid #f59e0b; border-radius: 16px; padding: 32px 28px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 10px;">
+          Khám Phá Trọn Bộ 19+ File Thiết Kế Gốc Độ Nét Cao
+        </h3>
+        <p style="font-size: 15.5px; color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; line-height: 1.6;">
+          Toàn bộ các kích thước banner chuẩn hóa được lưu trữ và chia sẻ công khai trên thư mục Google Drive để nhà tuyển dụng và đối tác tiện kiểm tra quy cách kỹ thuật.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+          <a href="https://drive.google.com/drive/folders/1FIMbxTAAZG_FNkwCagiJpDGlaQPSqqpy?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #ffffff; text-decoration: none; padding: 12px 28px; border-radius: 30px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fab fa-google-drive"></i> <span>Mở Thư Mục Google Drive (19+ Banner)</span> <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <a href="/du-an/" class="btn" style="background: var(--bg-muted); color: var(--text-main); text-decoration: none; padding: 12px 24px; border-radius: 30px; font-weight: 600; font-size: 15px; border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-arrow-left"></i> <span>Quay Lại Danh Sách Dự Án</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="background: var(--bg-card); border-top: 1px solid var(--border); padding: 40px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--text-muted);">
+      <div>
+        <strong>Khương Tuấn Anh</strong> · Portfolio Content Creator &amp; Ad Designer
+      </div>
+      <div>
+        📧 anhkhuong134@gmail.com &nbsp;|&nbsp; 📞 0384 201 443
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

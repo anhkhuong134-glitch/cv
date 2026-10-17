@@ -17,6 +17,12 @@ const categoriesConfig = {
     icon: "fas fa-globe",
     desc: "Dự án website thương mại điện tử thực tế potty.vn do Khương Tuấn Anh trực tiếp tự tay lên ý tưởng, thiết kế UI/UX và phát triển toàn diện (WordPress, WooCommerce, cổng thanh toán tự động 9Pay VietQR & tối ưu Rank Math SEO)."
   },
+  design: {
+    id: "design",
+    name: "Dự Án Thiết Kế",
+    icon: "fas fa-palette",
+    desc: "Hệ thống thiết kế ấn phẩm truyền thông & 19+ kích thước banner quảng cáo đa nền tảng chuẩn Google Display Network (GDN) và Facebook Ads cho chiến dịch Tinh Dầu Thiên Nhiên."
+  },
   research: {
     id: "research",
     name: "Nghiên Cứu Thị Trường",
@@ -62,6 +68,56 @@ const toolColors = {
 
 // ================== DỮ LIỆU CÁC DỰ ÁN ==================
 const projectsData = {
+    // ==================== DỰ ÁN 4: THIẾT KẾ BANNER ADS TINH DẦU THIÊN NHIÊN (DESIGN) ====================
+  4: {
+    id: 4,
+    title: "Thiết Kế Banner Ads & Key Visual: Tinh Dầu Thiên Nhiên (19+ Kích Thước GDN & Social)",
+    type: "Media & Ad Design · Bộ Ấn Phẩm Thực Chiến",
+    category: "design",
+    categoryName: "Dự Án Thiết Kế",
+    categoryIcon: "fas fa-palette",
+    categoryColor: "#f59e0b",
+    duration: "Tháng 03/2026",
+    results: "19+ Kích thước Banner Standard • Key Visual Vector • Chiến dịch GDN & Facebook Ads",
+    tools: ["Canva", "GDN Standard", "Facebook Ads", "Web Banner", "Visual Hierarchy"],
+    image: "/image/potty-banner.webp",
+    imageAlt: "Bộ thiết kế banner quảng cáo Tinh Dầu Thiên Nhiên đa kích thước chuẩn GDN và Social Ads",
+    imageBadge: "19+ Kích Thước · Chuẩn GDN & Social Ads",
+    authorshipNote: "Toàn bộ hệ thống 19+ kích thước banner quảng cáo và Key Visual chiến dịch do Khương Tuấn Anh trực tiếp thiết kế, chuẩn hóa theo quy cách Google Display Network và Facebook Ads.",
+    description: "Bộ thiết kế ấn phẩm truyền thông và banner quảng cáo trực tuyến đa kích thước (GDN / Web Ads / Social Media) cho thương hiệu Tinh Dầu Thiên Nhiên bao gồm 19+ kích thước chuẩn (Key Visual, 300x250, 728x90, 300x600, 160x600, 1080x1080, 1080x1920 Story...). Tối ưu phân cấp thị giác, vị trí Call-To-Action (CTA) và thông điệp nhằm tối đa hóa tỷ lệ nhấp chuột (CTR).",
+    featured: true,
+    links: [
+      { url: "/du-an/thiet-ke-banner/", icon: "fas fa-layer-group", btnText: "Xem Case Study Thiết Kế", isPrimary: true, title: "Xem chi tiết hệ thống 19+ kích thước banner" },
+      { url: "https://drive.google.com/drive/folders/1FIMbxTAAZG_FNkwCagiJpDGlaQPSqqpy?usp=drive_link", icon: "fab fa-google-drive", btnText: "Mở Google Drive (19+ Banner)", isExternal: true, title: "Mở thư mục Google Drive chứa file thiết kế gốc" }
+    ],
+    academicInfo: {
+      institution: "VTC Academy",
+      instructor: "Đồ Án Thiết Kế Truyền Thông",
+      class: "Digital Advertising & Graphic Design 2026",
+      team: "Khương Tuấn Anh (Thiết kế đồ họa & Media)",
+      time: "Tháng 03/2026",
+      docPages: "19+ Banner Vector & Thư mục Google Drive"
+    },
+    executiveSummary: "Hệ thống banner quảng cáo đa nền tảng cho chiến dịch ra mắt sản phẩm Tinh Dầu Thiên Nhiên. Thử nghiệm linh hoạt trên 19+ khung hình quảng cáo phổ biến nhất trên Internet: từ màn hình máy tính (Desktop Leaderboard 728x90, Medium Rectangle 300x250, Half Page 300x600) đến mạng xã hội di động (Instagram Carousel 1080x1350, Story 1080x1920).",
+    kpis: [
+      { number: "19+", label: "Kích thước banner chuẩn GDN", icon: "fas fa-expand-arrows-alt" },
+      { number: "3", label: "Nền tảng quảng cáo số", icon: "fas fa-bullhorn" },
+      { number: "1", label: "Key Visual chiến dịch đồng bộ", icon: "fas fa-palette" },
+      { number: "100%", label: "Tương thích Safe Zone di động", icon: "fas fa-mobile-alt" }
+    ],
+    surveyData: [
+      { number: "KV-01", tag: "Desktop Wide", title: "1600×900 & Leaderboard 728×90", desc: "Bố cục cân đối: Logo góc trái, thông điệp 'Hương thơm tự nhiên cho không gian sống trọn vẹn', chai tinh dầu nắp gỗ nổi bật và nút CTA hành động rõ ràng." },
+      { number: "KV-02", tag: "Social Feed", title: "Vuông 1080×1080 & Dọc 1080×1350", desc: "Tối ưu hóa diện tích hiển thị trên Newsfeed điện thoại, làm nổi bật chi tiết nhãn chai thảo mộc và cành oải hương tự nhiên." },
+      { number: "KV-03", tag: "Story & Reels", title: "Toàn màn hình 1080×1920", desc: "Tuân thủ vùng an toàn (Safe Zone 250px) trên và dưới để không bị che bởi avatar tài khoản và thanh điều hướng ứng dụng." }
+    ],
+    frameworks: ["Visual Hierarchy", "Ad Creative Framework", "GDN Banner Standards", "CTR Optimization"],
+    takeaways: [
+      { icon: "👁️", title: "Phân cấp thị giác quyết định tỷ lệ nhấp (CTR)", desc: "Vị trí của headline, hình ảnh sản phẩm và nút CTA ảnh hưởng trực tiếp đến việc giữ chân mắt người dùng trong 2 giây đầu tiên." },
+      { icon: "📐", title: "Kỷ luật chuẩn hóa đa kích thước", desc: "Sản xuất 19+ kích thước đồng bộ cho cùng một chiến dịch đòi hỏi tính kỷ luật cao về tỷ lệ khoảng cách, căn lề và tính dễ đọc của văn bản." },
+      { icon: "🎨", title: "Tính nhất quán của nhận diện thương hiệu", desc: "Dù co giãn trên banner nhỏ 300x250 hay banner lớn 1600x900, màu sắc xanh rừng tự nhiên và font chữ thương hiệu phải luôn đồng nhất." }
+    ]
+  },
+
   // ==================== DỰ ÁN 1: CIRCLE K & GS25 (SẢN PHẨM THẬT) ====================
   1: {
     id: 1,
@@ -377,8 +433,9 @@ const projectsData = {
 
 // Bảng ánh xạ 13 đồ án và case study sang URL showcase chuyên sâu tương ứng
 const projectPrimaryUrls = {
-  1: "/nghien-cuu/circle-k-gs25/",
   10: "/du-an/potty-vn/",
+  4: "/du-an/thiet-ke-banner/",
+  1: "/nghien-cuu/circle-k-gs25/",
   30: "/content/",
   5: "/seo/"
 };
