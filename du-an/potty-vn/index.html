@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Thương Mại Điện Tử Potty.vn · Case Study Dự Án Thực Tế | Khương Tuấn Anh</title>
+  <meta name="description" content="Case study bóc tách toàn diện dự án website thương mại điện tử potty.vn do Khương Tuấn Anh tự tay xây dựng: nền tảng WordPress, WooCommerce, custom code PHP/CSS, cổng thanh toán 9Pay VietQR và Rank Math SEO.">
+  <link rel="canonical" href="https://cv-two-pi-94.vercel.app/du-an/potty-vn/">
+  <link rel="stylesheet" href="/assets/portfolio/editorial-system.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --potty-forest: #183421;
+      --potty-green: #244b2f;
+      --potty-emerald: #10b981;
+      --potty-ivory: #fbf8f1;
+      --potty-sage: #edf2e9;
+    }
+    .tech-pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 24px;
+    }
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+    }
+    .tech-badge i {
+      color: var(--potty-emerald);
+    }
+    .browser-frame {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #0f172a;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+      margin: 28px 0 40px;
+    }
+    .browser-bar {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      background: #1e293b;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+    .browser-address {
+      flex: 1;
+      background: #0f172a;
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 13px;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .browser-address a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .browser-img {
+      width: 100%;
+      display: block;
+    }
+    .stat-metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .stat-metric-val {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--potty-emerald);
+      line-height: 1.2;
+    }
+    .stat-metric-lbl {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .skill-card:hover {
+      border-color: var(--potty-emerald);
+      transform: translateY(-2px);
+    }
+    .skill-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .skill-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--potty-emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+    .skill-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .code-preview-block {
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 10px;
+      padding: 18px;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 13.5px;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin: 16px 0;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .code-comment { color: #64748b; }
+    .code-keyword { color: #f43f5e; }
+    .code-property { color: #38bdf8; }
+    .code-value { color: #10b981; }
+    .code-string { color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" style="background: var(--bg-card); border-bottom: 1px solid var(--border);">
+    <div class="container header-inner" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
+      <a href="/index.html" class="site-logo" style="text-decoration: none; font-weight: 700; font-size: 1.25rem; color: var(--text-main);">
+        Khương Tuấn <span style="color: var(--accent);">Anh</span>
+      </a>
+      <nav class="main-nav" style="display: flex; gap: 1.25rem; align-items: center;">
+        <a href="/index.html" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Profile</a>
+        <a href="/du-an/" class="nav-link" style="text-decoration: none; font-weight: 600; color: var(--accent);">Dự án</a>
+        <a href="/content/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Content Lab</a>
+        <a href="/seo/" class="nav-link" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Bài SEO mẫu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 36px; padding-bottom: 80px;">
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" style="margin-bottom: 24px; font-size: 14px; color: var(--text-muted);">
+      <a href="/" style="text-decoration: none; color: var(--text-muted);">Trang chủ</a>
+      <span class="breadcrumb-sep" style="margin: 0 8px;">/</span>
+      <a href="/du-an/" style="text-decoration: none; color: var(--text-muted);">Dự án</a>
+      <span class="breadcrumb-sep" style="margin: 0 8px;">/</span>
+      <span style="color: var(--text-main); font-weight: 600;">Website Potty.vn (E-Commerce)</span>
+    </nav>
+
+    <!-- CASE HEADER -->
+    <div style="max-width: 900px; margin-bottom: 32px;">
+      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
+        <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #047857; border: 1px solid rgba(16, 185, 129, 0.35); font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 13px;">
+          ⭐ DỰ ÁN THỰC TẾ · SẢN PHẨM THẬT
+        </span>
+        <span class="badge" style="background: rgba(33, 117, 155, 0.12); color: #1e40af; border: 1px solid rgba(33, 117, 155, 0.3); font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 13px;">
+          WordPress CMS &amp; Custom Code
+        </span>
+        <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.25); font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 13px;">
+          🟢 Live Production: potty.vn
+        </span>
+      </div>
+
+      <h1 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: var(--text-main); margin-bottom: 16px; line-height: 1.25;">
+        Xây Dựng Website Thương Mại Điện Tử Potty.vn Từ A Đến Z
+      </h1>
+      <p style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 22px;">
+        Hồ sơ chi tiết dự án website thương mại điện tử thực tế do <strong>Khương Tuấn Anh tự tay lên ý tưởng, trực tiếp thiết kế giao diện UI/UX, lập trình cấu hình WordPress &amp; WooCommerce, viết code tinh chỉnh giao diện, tích hợp cổng thanh toán 9Pay VietQR và tối ưu On-Page SEO toàn diện</strong>.
+      </p>
+
+      <div class="tech-pill-grid">
+        <span class="tech-badge"><i class="fab fa-wordpress"></i> WordPress Core</span>
+        <span class="tech-badge"><i class="fas fa-shopping-cart"></i> WooCommerce</span>
+        <span class="tech-badge"><i class="fas fa-code"></i> Child Theme &amp; Custom CSS</span>
+        <span class="tech-badge"><i class="fas fa-qrcode"></i> Cổng thanh toán 9Pay VietQR</span>
+        <span class="tech-badge"><i class="fas fa-palette"></i> Elementor UI/UX</span>
+        <span class="tech-badge"><i class="fas fa-search"></i> Rank Math SEO</span>
+        <span class="tech-badge"><i class="fas fa-mobile-alt"></i> Responsive Mobile First</span>
+      </div>
+
+      <div class="article-meta" style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14.5px; color: var(--text-muted); padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <span><i class="fas fa-user-check" style="color: var(--potty-emerald);"></i> Tác giả: <strong>Khương Tuấn Anh (Solo Developer &amp; Creator)</strong></span>
+        <span><i class="fas fa-globe" style="color: var(--potty-emerald);"></i> Tên miền: <strong>https://potty.vn</strong></span>
+        <span><i class="fas fa-calendar-alt" style="color: var(--potty-emerald);"></i> Năm thực hiện: <strong>2026 · Đang vận hành chính thức</strong></span>
+      </div>
+    </div>
+
+    <!-- CTA BANNER TO LIVE WEBSITE -->
+    <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 95, 70, 0.06)); border: 1.5px solid rgba(16, 185, 129, 0.35); border-radius: 16px; padding: 22px 26px; margin-bottom: 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <h4 style="font-size: 17px; font-weight: 700; color: #047857; margin-bottom: 4px;">
+          <i class="fas fa-external-link-alt"></i> Khám phá sản phẩm thật đang chạy trực tiếp trên Internet:
+        </h4>
+        <p style="font-size: 14.5px; color: var(--text-muted); margin: 0;">
+          Website bán hàng chính thức của thương hiệu Tinh Dầu Thiên Nhiên Potty Việt Nam.
+        </p>
+      </div>
+      <a href="https://potty.vn" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #10b981, #059669); color: #ffffff; text-decoration: none; padding: 10px 22px; border-radius: 30px; font-weight: 700; font-size: 14.5px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 8px;">
+        <span>Mở Website potty.vn</span> <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- MOCKUP BROWSER SCREENSHOT -->
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+        </div>
+        <div class="browser-address">
+          <i class="fas fa-lock" style="color: #10b981; font-size: 11px;"></i>
+          <span>https://</span><a href="https://potty.vn" target="_blank" rel="noopener">potty.vn</a>
+        </div>
+        <div style="color: #64748b; font-size: 12px;"><i class="fas fa-shield-alt"></i> SSL Secured</div>
+      </div>
+      <img src="/image/potty-vn-showcase.png" alt="Ảnh chụp màn hình thực tế website Potty.vn do Khương Tuấn Anh thiết kế và xây dựng" class="browser-img">
+    </div>
+
+    <!-- QUICK STATS 4 COLUMNS -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 48px;">
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">100%</div>
+        <div class="stat-metric-lbl">Tự tay thiết kế &amp; code</div>
+      </div>
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">Woo</div>
+        <div class="stat-metric-lbl">Cửa hàng &amp; Giỏ hàng E-Com</div>
+      </div>
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">VietQR</div>
+        <div class="stat-metric-lbl">Cổng thanh toán tự động 9Pay</div>
+      </div>
+      <div class="stat-metric-card">
+        <div class="stat-metric-val">SEO</div>
+        <div class="stat-metric-lbl">Schema Org &amp; On-Page Score</div>
+      </div>
+    </div>
+
+    <!-- READING CONTENT -->
+    <div style="max-width: var(--reading-max);">
+
+      <!-- SECTION 1: KHẲNG ĐỊNH QUYỀN TÁC GIẢ -->
+      <section style="margin-bottom: 44px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          1. Khẳng Định Vai Trò Cá Nhân &amp; Bối Cảnh Dự Án
+        </h2>
+        <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid var(--potty-emerald); padding: 16px 20px; border-radius: 0 10px 10px 0; margin-bottom: 18px;">
+          <p style="font-size: 15.5px; line-height: 1.6; margin: 0; color: var(--text-main);">
+            <strong>Tuyên bố quyền tác giả:</strong> Website <strong>potty.vn</strong> là dự án thương mại điện tử thực tế do <strong>Khương Tuấn Anh trực tiếp đảm nhiệm toàn diện vai trò Solo Creator &amp; Web Developer</strong>. Toàn bộ các công đoạn từ thuê tên miền, máy chủ, dựng hệ thống WordPress, viết code Child Theme, tùy biến giao diện CSS, chụp và chỉnh sửa ảnh sản phẩm, cho đến tối ưu luồng thanh toán và SEO đều do cá nhân tự tay thực hiện độc lập.
+          </p>
+        </div>
+        <p>
+          Khác với việc sử dụng các nền tảng đóng gói sẵn kéo thả đơn giản, dự án Potty.vn được xây dựng trên nền tảng mã nguồn mở độc lập (Self-hosted WordPress). Điều này đòi hỏi kiến thức sâu sắc về kiến trúc website, hệ quản trị cơ sở dữ liệu, khả năng viết code CSS/PHP tùy biến và tích hợp các API thanh toán bên thứ ba để đảm bảo trải nghiệm người dùng liền mạch và tin cậy nhất.
+        </p>
+      </section>
+
+      <!-- SECTION 2: CÁC NỀN TẢNG & CÔNG NGHỆ SỬ DỤNG -->
+      <section style="margin-bottom: 44px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          2. Các Nền Tảng, Công Nghệ &amp; Code Sử Dụng Để Tạo Nên Website
+        </h2>
+        <p style="margin-bottom: 20px; color: var(--text-muted);">
+          Dưới đây là các thành phần công nghệ cốt lõi được kết hợp chặt chẽ trong hệ thống của Potty.vn:
+        </p>
+
+        <!-- Kỹ thuật 1: WordPress & Child Theme -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-card-icon"><i class="fab fa-wordpress"></i></div>
+            <div class="skill-card-title">WordPress Core &amp; Kỹ Thuật Dựng Child Theme</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px;">
+            Sử dụng WordPress phiên bản 6.x làm hệ thống quản trị nội dung (CMS). Thay vì sửa trực tiếp vào theme gốc (gây nguy cơ mất dữ liệu khi cập nhật), tôi đã tự tay xây dựng <strong>Child Theme riêng biệt: <code>potty-child-theme-v3</code></strong> để quản lý toàn bộ các đoạn code tùy biến functions, style và asset.
+          </p>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+            <li>Quản trị máy chủ, cấu hình tên miền tại Registrar, trỏ DNS và cài đặt chứng chỉ bảo mật SSL (Let's Encrypt).</li>
+            <li>Phân bổ cấu trúc cây thư mục sạch, tối ưu bộ nhớ đệm cache và phân quyền tài khoản bảo mật.</li>
+          </ul>
+        </div>
+
+        <!-- Kỹ thuật 2: Custom Code CSS & Typography -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+            <div class="skill-card-title">Custom Code CSS &amp; Tối Ưu Hiển Thị Tiếng Việt</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">
+            Rất nhiều theme WordPress quốc tế bị lỗi font khi hiển thị tiếng Việt (dấu bị lệch hoặc vỡ khoảng cách). Tôi đã viết các đoạn CSS chuyên biệt để chuẩn hóa tính năng typography và trải nghiệm di động:
+          </p>
+          
+          <div class="code-preview-block">
+            <span class="code-comment">/* Potty: Tối ưu typography tiếng Việt liền nét &amp; tương phản nút CTA */</span><br>
+            <span class="code-keyword">html</span> {<br>
+            &nbsp;&nbsp;<span class="code-property">-webkit-font-smoothing</span>: <span class="code-value">antialiased</span>;<br>
+            &nbsp;&nbsp;<span class="code-property">font-feature-settings</span>: <span class="code-string">"kern" 1, "liga" 1</span>;<br>
+            }<br>
+            <span class="code-keyword">h1, h2, h3, h4</span> {<br>
+            &nbsp;&nbsp;<span class="code-property">font-family</span>: <span class="code-string">Cambria, "Times New Roman", serif</span>;<br>
+            }<br>
+            <span class="code-keyword">a.button.button-primary</span> {<br>
+            &nbsp;&nbsp;<span class="code-property">background-color</span>: <span class="code-value">#183421</span> !important;<br>
+            &nbsp;&nbsp;<span class="code-property">border-color</span>: <span class="code-value">#244b2f</span>;<br>
+            &nbsp;&nbsp;<span class="code-property">color</span>: <span class="code-value">#ffffff</span> !important;<br>
+            }
+          </div>
+
+          <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6;">
+            Đồng thời viết media queries xử lý riêng cho màn hình nhỏ <strong>(&lt;768px và &lt;360px)</strong> để đảm bảo thanh tìm kiếm thông minh, icon giỏ hàng và form checkout không bị tràn ngang layout.
+          </p>
+        </div>
+
+        <!-- Kỹ thuật 3: WooCommerce Engine -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-card-icon"><i class="fas fa-store"></i></div>
+            <div class="skill-card-title">Hệ Thống Bán Hàng E-Commerce WooCommerce</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">
+            Thiết lập kiến trúc danh mục sản phẩm logic và trực quan:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+            <li><strong>Phân nhóm sản phẩm:</strong> Tinh dầu thiên nhiên nguyên chất (Hương Lài, Oải Hương, Cam Ngọt, Sả Chanh, Quế...), Tinh dầu treo xe ô tô, Máy khuếch tán phun sương và Combo quà tặng.</li>
+            <li><strong>Biến thể linh hoạt (Variable Products):</strong> Quản lý dung tích lọ 10ml, 30ml, tự động cập nhật giá tiền tương ứng.</li>
+            <li><strong>Tối ưu giỏ hàng &amp; Checkout:</strong> Thu gọn các trường nhập thông tin không cần thiết để giảm tỷ lệ bỏ giỏ hàng (Cart Abandonment).</li>
+          </ul>
+        </div>
+
+        <!-- Kỹ thuật 4: 9Pay VietQR Gateway -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-card-icon"><i class="fas fa-qrcode"></i></div>
+            <div class="skill-card-title">Tích Hợp Cổng Thanh Toán Tự Động 9Pay VietQR</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">
+            Khách hàng mua sắm online tại Việt Nam rất chuộng chuyển khoản quét mã VietQR. Tôi đã cài đặt và cấu hình cổng thanh toán trung gian <strong>9Pay Gateway</strong>:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+            <li>Mỗi đơn hàng tạo ra một mã VietQR động với đúng số tiền và cú pháp mã đơn hàng.</li>
+            <li>Tích hợp Webhook đồng bộ: Khi khách hàng chuyển khoản thành công tại ngân hàng, hệ thống 9Pay gửi tín hiệu callback tức thì để WooCommerce tự động chuyển đơn sang trạng thái <em>Đang xử lý (Processing)</em> mà không cần nhân viên kiểm tra thủ công.</li>
+          </ul>
+        </div>
+
+        <!-- Kỹ thuật 5: UI/UX & Elementor Design -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-card-icon"><i class="fas fa-palette"></i></div>
+            <div class="skill-card-title">Thiết Kế UI/UX &amp; Bộ Nhận Diện Thương Hiệu (Eco-Aesthetic)</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">
+            Xây dựng phong cách thị giác mang đậm bản sắc thiên nhiên và thư giãn:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+            <li><strong>Bảng màu:</strong> Phối hợp màu xanh rừng lá đậm (<code>#183421</code>, <code>#244b2f</code>) tạo cảm giác thảo mộc nguyên bản, cùng tông nền kem ngà ấm (<code>#fbf8f1</code>, <code>#edf2e9</code>) tạo sự dịu mắt và cao cấp.</li>
+            <li><strong>Thanh bảo chứng niềm tin (Trust Strip):</strong> Nêu bật 5 cam kết rõ ràng: <em>Thông tin rõ ràng · Dùng đúng hướng dẫn · Tiêu chí rà soát · Bao bì bảo quản · Tư vấn tận tâm</em>.</li>
+            <li><strong>Chính sách minh bạch:</strong> Miễn phí vận chuyển từ 300K, đổi trả trong 7 ngày nếu không ưng ý mùi hương.</li>
+          </ul>
+        </div>
+
+        <!-- Kỹ thuật 6: Rank Math SEO -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-card-icon"><i class="fas fa-search"></i></div>
+            <div class="skill-card-title">Tối Ưu Hóa Kỹ Thuật SEO (Rank Math &amp; Schema JSON-LD)</div>
+          </div>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">
+            Cấu hình công cụ Rank Math SEO để tối ưu cấu trúc dữ liệu máy tìm kiếm:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+            <li>Khai báo Schema Markup chuẩn: <code>Organization</code>, <code>Store</code>, <code>WebSite</code> và <code>Product</code> kèm thông tin giá tiền, tồn kho.</li>
+            <li>Tối ưu thẻ OpenGraph preview, Twitter card khi chia sẻ link lên Facebook, Zalo hiển thị banner và tiêu đề bắt mắt.</li>
+            <li>Chuyển đổi toàn bộ hình ảnh sang định dạng WebP nén không giảm chất lượng, tích hợp lazy-load để tăng tốc độ tải trang.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 3: BỘ KỸ NĂNG ĐƯỢC CHỨNG MINH -->
+      <section style="margin-bottom: 44px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          3. Các Kỹ Năng (Skills) Được Đúc Rút &amp; Chứng Minh Qua Dự Án
+        </h2>
+        <div class="table-wrap" style="margin: 20px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+            <thead>
+              <tr style="background: var(--bg-card); border-bottom: 2px solid var(--border);">
+                <th style="padding: 12px 16px; text-align: left;">Nhóm Kỹ Năng</th>
+                <th style="padding: 12px 16px; text-align: left;">Thực Hành Cụ Thể Trên Potty.vn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: var(--potty-emerald);">Full-Stack Web Building</td>
+                <td style="padding: 14px 16px;">Tự quản lý từ Domain, DNS, SSL, Server, WordPress, Child Theme đến Custom Code CSS/PHP.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: var(--potty-emerald);">E-Commerce &amp; Payment</td>
+                <td style="padding: 14px 16px;">Vận hành hệ thống WooCommerce, tích hợp cổng thanh toán tự động quét mã QR VietQR (9Pay API/Webhooks).</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: var(--potty-emerald);">UI/UX &amp; Brand Visual</td>
+                <td style="padding: 14px 16px;">Thiết kế giao diện mua sắm tinh giản, thân thiện di động, phối màu thiên nhiên và thiết kế banner sản phẩm.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: var(--potty-emerald);">Technical SEO</td>
+                <td style="padding: 14px 16px;">Cấu hình cấu trúc dữ liệu Schema Rich Snippets, tối ưu On-Page theo Rank Math, nén WebP và tăng tốc trang.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 14px 16px; font-weight: 700; color: var(--potty-emerald);">Content Strategy</td>
+                <td style="padding: 14px 16px;">Viết mô tả công dụng từng loại tinh dầu, hướng dẫn sử dụng máy khuếch tán và bài viết blog phong cách sống.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 4: THƯ VIỆN HÌNH ẢNH DỰ ÁN -->
+      <section style="margin-bottom: 48px;">
+        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 14px; color: var(--text-main);">
+          4. Hình Ảnh Tư Liệu Thiết Kế Thương Hiệu Potty
+        </h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 18px;">
+          <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-card); padding: 14px;">
+            <img src="/image/potty-banner.webp" alt="Banner sản phẩm tinh dầu và máy khuếch tán Potty trong không gian xanh" style="width: 100%; border-radius: 8px;">
+            <div style="font-size: 13.5px; color: var(--text-muted); margin-top: 10px; text-align: center;">
+              <i class="fas fa-camera"></i> Phối cảnh sản phẩm tinh dầu lọ 10ml có nắp gỗ và máy khuếch tán phun sương Potty trên bệ đá tự nhiên.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: KẾT LUẬN & TRUY CẬP WEBSITE -->
+      <section style="margin-bottom: 48px; background: var(--bg-card); border: 2px solid var(--potty-emerald); border-radius: 16px; padding: 32px 28px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 10px;">
+          Trải Nghiệm Thực Tế Website Đang Hoạt Động
+        </h3>
+        <p style="font-size: 15.5px; color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; line-height: 1.6;">
+          Website Potty.vn hiện đang được vận hành thực tế trên môi trường Internet. Bạn có thể truy cập để kiểm tra giao diện, tốc độ tải trang và trải nghiệm quy trình mua sắm.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+          <a href="https://potty.vn" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #10b981, #059669); color: #ffffff; text-decoration: none; padding: 12px 28px; border-radius: 30px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); display: inline-flex; align-items: center; gap: 8px;">
+            <span>Truy Cập Trực Tiếp Website potty.vn</span> <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <a href="/du-an/" class="btn" style="background: var(--bg-muted); color: var(--text-main); text-decoration: none; padding: 12px 24px; border-radius: 30px; font-weight: 600; font-size: 15px; border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-arrow-left"></i> <span>Quay Lại Danh Sách Dự Án</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="background: var(--bg-card); border-top: 1px solid var(--border); padding: 40px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--text-muted);">
+      <div>
+        <strong>Khương Tuấn Anh</strong> · Portfolio Content Creator &amp; Web Builder
+      </div>
+      <div>
+        📧 anhkhuong134@gmail.com &nbsp;|&nbsp; 📞 0384 201 443
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

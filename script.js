@@ -239,7 +239,8 @@ const projectsData = {
     description: "Dự án website thương mại điện tử thực tế do Khương Tuấn Anh trực tiếp tự tay phát triển toàn diện (Solo Developer & Content Creator): từ thiết kế giao diện UI/UX xanh tự nhiên, tối ưu trải nghiệm responsive đa thiết bị, thiết lập hệ thống danh mục sản phẩm & giỏ hàng WooCommerce, tích hợp cổng thanh toán tự động 9Pay quét mã VietQR, đến tối ưu On-Page SEO toàn diện theo chuẩn Rank Math.",
     featured: true,
     links: [
-      { url: "https://potty.vn", icon: "fas fa-arrow-up-right-from-square", btnText: "Truy Cập Website potty.vn", isPrimary: true, title: "Mở trực tiếp website potty.vn (Sản phẩm thật)" }
+      { url: "/du-an/potty-vn/", icon: "fas fa-file-lines", btnText: "Xem Chi Tiết Kỹ Thuật & Kỹ Năng", isPrimary: true, title: "Xem chi tiết quy trình, kỹ thuật WordPress, Code và Skills xây dựng potty.vn" },
+      { url: "https://potty.vn", icon: "fas fa-arrow-up-right-from-square", btnText: "Mở Web potty.vn", isExternal: true, title: "Mở trực tiếp website potty.vn (Sản phẩm thật)" }
     ],
     academicInfo: {
       institution: "Dự Án Thực Tế Cá Nhân (Live Production)",
@@ -377,7 +378,7 @@ const projectsData = {
 // Bảng ánh xạ 13 đồ án và case study sang URL showcase chuyên sâu tương ứng
 const projectPrimaryUrls = {
   1: "/nghien-cuu/circle-k-gs25/",
-  10: "https://potty.vn",
+  10: "/du-an/potty-vn/",
   30: "/content/",
   5: "/seo/"
 };
